@@ -1,0 +1,29 @@
+RewriteEngine On
+
+# Redirect index.html to homepage
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.thecapitalbox.com/ [R=301,L]
+
+# Force non-www to www + HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.thecapitalbox\.com$ [NC]
+RewriteRule ^(.*)$ https://www.thecapitalbox.com/$1 [R=301,L]
+
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType image/avif .avif
+    AddType image/webp .webp
+</IfModule>
+
+<FilesMatch "\.(webp|avif|jpg|jpeg|png|gif|svg)$">
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</FilesMatch>
