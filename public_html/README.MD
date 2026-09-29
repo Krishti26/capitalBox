@@ -109,4 +109,4 @@ For more information, please contact:
 
 ## 📄 License
 
-© 2016 All rights reserved | The Capital Box
+© 2026 All rights reserved | The Capital Box

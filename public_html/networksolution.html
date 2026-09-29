@@ -14,6 +14,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -81,7 +82,7 @@
     <meta property="og:image" content="public/assets/logo-1.webp" />
     <meta
       property="og:url"
-      content="https://thecapitalbox.com/src/networksolution.html"
+      content="https://www.thecapitalbox.com/networksolution.html"
     />
     <meta property="og:type" content="website" />
 
@@ -182,6 +183,7 @@
     margin-bottom:14px;
     color:#ffffff;
     text-align:center;
+    line-height:1.35;
     }
     .tcb-network-card p{
     font-size:15px;
@@ -219,7 +221,7 @@
     .tcb-network-sub{text-align:center; font-size:15px; line-height:1.8;}
     .tcb-network-grid{grid-template-columns:1fr; gap:18px;}
     .tcb-network-card{padding:24px 20px; border-radius:16px;}
-    .tcb-network-card h3{font-size:20px;}
+    .tcb-network-card h3{font-size:20px; line-height:1.35;}
     .tcb-network-card p{font-size:14px; line-height:1.75;}
     .tcb-network-highlight{padding:30px 20px; text-align:center; border-radius:18px; margin-top:40px;}
     .tcb-network-highlight h3{font-size:22px; text-align:center;}
@@ -268,7 +270,7 @@
           >
 
           <!-- Dropdown Menu -->
-          <div class="dropdown relative w-full">
+          <div class="dropdown relative">
             <button
               class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
               id="dropdownToggle"
@@ -450,34 +452,42 @@
     <main>
       <!-- Hero Section -->
       <div class="relative">
-        <!-- Hero Image -->
-        <div
-          class="w-full h-screen bg-cover bg-center relative overflow-hidden"
-        >
+        <!-- Hero Image & Content -->
+        <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
           <img
             src="public/assets/SERVICES03.webp"
-            alt="Hero Image"
-            class="w-full h-full object-cover"
+            alt="Network Solutions Hero Image"
+            class="subpage-hero-img w-full h-full object-cover"
           />
 
-          <!-- Hero Content -->
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"
-          >
-            <div class="text-center text-white px-4">
-              <h1 class="text-xl md:text-4xl lg:text-6xl font-bold mb-4">
+          <!-- Hero Content Overlay -->
+          <div class="subpage-hero-overlay">
+            <div class="subpage-hero-content">
+              <div class="subpage-hero-badge">
+                <span class="subpage-hero-badge-dot"></span>
+                <span>Infrastructure & Connectivity</span>
+              </div>
+              <h1 class="subpage-hero-title">
                 Network Solutions
               </h1>
+              <p class="subpage-hero-desc">
+                Deploying resilient, secure, and enterprise-grade networking architectures designed to streamline communication, maximize uptime, and scale seamlessly with business growth.
+              </p>
+              <div class="subpage-hero-pills">
+                <span class="subpage-hero-pill">Enterprise IP Networks</span>
+                <span class="subpage-hero-pill">Scalable Architecture</span>
+                <span class="subpage-hero-pill">High Security</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Overlapping Cards Container -->
-        <div class="container mx-auto px-4 relative -mt-16 md:-mt-32 mb-16">
+        <!-- Feature Card Container -->
+        <div class="subpage-card-container container mx-auto px-4 relative">
           <div class="w-full">
             <!-- First Card -->
             <div
-              class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+              class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
             >
               <div class="p-6 flex flex-col gap-4 md:gap-8">
                 <h2
@@ -536,20 +546,32 @@
             <div class="relative">
               <!-- Border that extends behind the image -->
               <div
-                class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-md -z-5"
+                class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-xl md:rounded-2xl bg-white shadow-xl -z-5"
               ></div>
 
               <!-- The actual content -->
-              <p
-                class="relative z-10 py-10 p-8 text-md md:text-2xl text-gray-900 md:text-sm lg:text-lg font-medium"
-              >
-                As a Cisco Certified Gold and Advanced Enterprise Networking
-                Partner, TCB helps businesses unlock the true benefits of
-                networking — increasing productivity, enhancing flexibility, and
-                reducing operational costs. Our solutions are cost-effective,
-                multi-vendor compatible, and fully customizable to fit your
-                unique corporate requirements.
-              </p>
+              <div class="relative z-10 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+                <div class="w-full text-center mb-7 sm:mb-8 md:mb-10">
+                  <h3
+                    class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center tracking-tight leading-snug md:leading-tight"
+                  >
+                    Cisco Certified<br class="sm:hidden" /> Networking Partner
+                  </h3>
+                </div>
+
+                <div class="space-y-4 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose font-normal">
+                  <p>
+                    As a Cisco Certified Gold and Advanced Enterprise Networking
+                    Partner, TCB helps businesses unlock the true benefits of
+                    networking — increasing productivity, enhancing flexibility, and
+                    reducing operational costs.
+                  </p>
+                  <p>
+                    Our solutions are cost-effective, multi-vendor compatible, and fully
+                    customizable to fit your unique corporate requirements.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -560,32 +582,28 @@
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full px-4 py-8 bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
           >
-            <h2 class="text-3xl font-bold text-center">
-              Our Comprehensive Services Include:
-            </h2>
-            <ul
-              class="text-md md:text-lg mt-4 text-gray-700 font-medium list-disc list-inside"
-            >
-              <li>
-                Network Planning, Design, Implementation, Operation, and
-                Optimization
-              </li>
-              <li>Campus Switching and Routing for Voice, Video, and Data</li>
-              <li>Wireless LAN Solutions</li>
-              <li>VPN and Network Security Solutions</li>
-              <li>IP Telephony</li>
-              <li>
-                WAN Link Configurations (Frame Relay, Analog/Digital Leased
-                Circuits, ISDN PRI/BRI, Broadband)
-              </li>
-              <li>Media Conversion (UTP to Single/Multimode Fiber)</li>
-              <li>Third-Party Content Management and Load Balancing</li>
-              <li>LAN Infrastructure Audit and Analysis</li>
-              <li>WAN Traffic Audit, Analysis, Monitoring, and Shaping</li>
-              <li>Full Enterprise Network Support</li>
-            </ul>
+            <div class="p-6 md:p-8 flex flex-col gap-4">
+              <h2 class="text-xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
+                Our Comprehensive Services Include:
+              </h2>
+              <div class="text-gray-700 text-md md:text-lg font-medium">
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>Network Planning, Design, Implementation, Operation, and Optimization</li>
+                  <li>Campus Switching and Routing for Voice, Video, and Data</li>
+                  <li>Wireless LAN Solutions</li>
+                  <li>VPN and Network Security Solutions</li>
+                  <li>IP Telephony</li>
+                  <li>WAN Link Configurations (Frame Relay, Analog/Digital Leased Circuits, ISDN PRI/BRI, Broadband)</li>
+                  <li>Media Conversion (UTP to Single/Multimode Fiber)</li>
+                  <li>Third-Party Content Management and Load Balancing</li>
+                  <li>LAN Infrastructure Audit and Analysis</li>
+                  <li>WAN Traffic Audit, Analysis, Monitoring, and Shaping</li>
+                  <li>Full Enterprise Network Support</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -626,7 +644,7 @@ Modern networking requires security-first thinking. VPN frameworks, secure routi
 
 <div class="tcb-network-card">
 <span class="tcb-network-icon">⚡</span>
-<h3>Performance Optimization</h3>
+<h3>Performance<br>Optimization</h3>
 <p>
 High-performing networks reduce latency, improve collaboration, and enhance productivity across voice, video, cloud, and data infrastructure.
 </p>
@@ -650,7 +668,7 @@ As workplaces evolve, agile networking empowers remote capability, branch expans
 
 <div class="tcb-network-card">
 <span class="tcb-network-icon">📈</span>
-<h3>Strategic IT Efficiency</h3>
+<h3>Strategic IT<br>Efficiency</h3>
 <p>
 Optimized networking reduces operational costs while supporting innovation, profitability, and scalable enterprise performance.
 </p>
@@ -672,31 +690,27 @@ The Capital Box delivers networking solutions that combine performance, protecti
 <!-- NETWORK PAGE NEW ARTICLES END -->
       
       <!-- consultation -->
-      <section class="consultation-section my-16">
+      <section class="consultation-section my-16 md:my-24">
         <div class="container mx-auto px-4">
-          <div class="flex flex-col md:flex-row gap-8">
+          <div class="flex flex-col md:flex-row gap-8 items-stretch">
             <!-- Left Container with Image and Yellow Overlay -->
-            <div class="w-full md:w-1/2 relative">
-              <img
-                src="public/assets/tax-04.webp"
-                alt="Financial consultation"
-                class="w-full h-full object-cover hidden md:block"
-              />
+            <div class="w-full md:w-1/2 flex">
+              <div class="consultation-card transform transition duration-500 hover:scale-[1.01]">
+                <img
+                  src="public/assets/tax-04.webp"
+                  alt="Financial consultation"
+                  class="consultation-card-bg"
+                />
 
-              <div
-                class="relative md:absolute md:inset-0 bg-[#CBBA4F] bg-opacity-80 m-0 md:m-4 rounded-lg md:rounded-none transform transition duration-500 hover:scale-[1.02]"
-              >
-                <div
-                  class="p-6 md:p-8 h-full flex flex-col justify-evenly"
-                >
-                  <h2 class="text-base md:text-2xl font-medium text-black mb-4 md:mb-6">
+                <div class="consultation-card-overlay">
+                  <h2 class="text-base md:text-xl lg:text-2xl font-medium text-black mb-4 md:mb-6 leading-relaxed">
                     We use top-notch hardware and best-in-class infrastructure
                     to guarantee high performance. Every solution is rigorously
                     tested before deployment to ensure maximum reliability and
                     efficiency, helping your business increase profitability and
-                    move confidently towards success
+                    move confidently towards success.
                   </h2>
-                  <h2 class="text-base md:text-2xl font-medium text-black mb-0 md:mb-6">
+                  <h2 class="text-base md:text-xl lg:text-2xl font-medium text-black mb-0 leading-relaxed">
                     At TCB, we understand that robust networking is crucial to
                     business growth — and we are committed to delivering nothing
                     but the best.
@@ -706,7 +720,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
             </div>
 
             <!-- Right Container with Consultation Options -->
-            <div class="w-full md:w-1/2">
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
               <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Routers</h2>
               <div class="consultation-accordion">
                 <!-- Option 1 -->
@@ -825,7 +839,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               network, the internet, and cloud services.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>Primary Function:</strong> Facilitates communication
@@ -874,7 +888,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               security, and WAN services in a compact, modular form.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>Performance:</strong> Offers modular
@@ -926,7 +940,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               across wide-area networks.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>High Throughput:</strong> Designed to handle massive
@@ -978,7 +992,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               performance.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>High Performance:</strong> Powered by Cisco's
@@ -1027,7 +1041,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               functionalities without the need for physical appliances.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>Software-Defined:</strong> Operates as part of a
@@ -1081,7 +1095,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               infrastructure.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>Traditional Routers:</strong> Physical appliances like
@@ -1134,7 +1148,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               broadband, and LTE.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>Intelligent Path Control:</strong> Dynamically selects
@@ -1185,7 +1199,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
               standard hardware.
             </p>
             <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
+              class="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-lg"
             >
               <li>
                 <strong>Virtualized Network Functions (VNFs):</strong> Run key
@@ -1303,7 +1317,7 @@ The Capital Box delivers networking solutions that combine performance, protecti
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

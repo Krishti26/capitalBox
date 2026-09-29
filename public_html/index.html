@@ -14,6 +14,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta
       name="description"
       content="We help families and businesses grow and protect their wealth with personalized financial solutions, expert guidance, and trusted support."
@@ -480,7 +481,7 @@
         class="w-full h-full md:w-full relative py-4 sm:text-sm md:text-xl lg:text-lg xl:text-xl overflow-hidden"
       >
         <div
-          class="bg-primary absolute right-0 top-0 h-full w-[30vw]"
+          class="hidden md:block bg-primary absolute right-0 top-0 h-full w-[30vw]"
           style="width: 30vw; z-index: 0;"
         ></div>
         <div
@@ -648,13 +649,23 @@
             .tcb-dark .tcb-title{color:#d4af37;}
             .tcb-subtitle{font-size:14px;color:#d4af37;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;text-align:center;}
             .tcb-text{font-size:16px;line-height:1.9;color:#444;text-align:left;}
-            .tcb-dark .tcb-text{color:#f3f3f3;}
+            .tcb-dark .tcb-text{color:#f3f4f6;}
             .tcb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;}
-            .tcb-card{background:#fff;padding:35px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+            .tcb-card{background:#fff;padding:35px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.08);border-top:4px solid #d4af37;}
             .tcb-card .tcb-title{text-align:center;font-size:28px;}
             .tcb-section-pop .tcb-title{text-align:center;}
-            .tcb-featured .tcb-title{text-align:center;}
-            .tcb-featured{padding:45px;border-radius:14px;}
+            .tcb-featured{
+            background:linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            color:#fff;
+            padding:45px;
+            border-radius:20px;
+            border-top:4px solid #CBBA4F;
+            box-shadow:0 12px 32px rgba(0,0,0,0.12);
+            position:relative;
+            overflow:hidden;
+            }
+            .tcb-featured .tcb-title{color:#CBBA4F;text-align:center;}
+            .tcb-featured .tcb-text{color:#f3f4f6;}
             .tcb-badge{
             display:table;
             margin:0 auto 16px auto;
@@ -676,8 +687,8 @@
             }
             .tcb-section-pop{
             background:#ffffff;
-            border-left:6px solid #d4af37;
-            box-shadow:0 12px 32px rgba(0,0,0,0.07);
+            border-top:4px solid #d4af37;
+            box-shadow:0 8px 24px rgba(0,0,0,0.08);
             border-radius:14px;
             padding:45px;
             }
@@ -696,10 +707,10 @@
             .tcb-article-section{padding:36px 0;}
             .tcb-container{padding:0 16px;}
             .tcb-grid{grid-template-columns:1fr;gap:20px;}
-            .tcb-card{padding:24px 18px;border-radius:12px;}
+            .tcb-card{padding:24px 18px;border-radius:12px;border-top:4px solid #d4af37;}
             .tcb-card .tcb-title{font-size:22px;margin-bottom:14px;text-align:center;}
-            .tcb-section-pop{padding:24px 18px;border-radius:12px;border-left-width:5px;}
-            .tcb-featured{padding:26px 18px;border-radius:12px;}
+            .tcb-section-pop{padding:24px 18px;border-radius:12px;border-top:4px solid #d4af37;border-left:none;}
+            .tcb-featured{padding:26px 18px;border-radius:18px;border-top:4px solid #CBBA4F;}
             .tcb-title{font-size:24px;line-height:1.35;margin-bottom:16px;text-align:center;}
             .tcb-subtitle{font-size:13px;text-align:center;}
             .tcb-text{font-size:15px;line-height:1.8;text-align:left;}
@@ -902,8 +913,10 @@
         </section>
         
         <!-- ARTICLE 5 -->
-        <section class="tcb-article-section tcb-dark">
-        <div class="tcb-container tcb-featured">
+        <section class="tcb-article-section tcb-light" style="padding-top: 15px;">
+        <div class="tcb-container">
+        <div class="tcb-featured">
+        <div class="tcb-badge" style="background:#CBBA4F; color:#111;">Strategic Growth</div>
         <h4 class="tcb-title">Financial Planning for Entrepreneurs</h4>
         <p class="tcb-text">
         Entrepreneurs often focus intensely on growth, innovation, and operational success, but long-term business sustainability also depends on strategic financial planning. Unlike salaried professionals, entrepreneurs face fluctuating income, reinvestment decisions, tax complexities, and evolving risk exposure.
@@ -912,6 +925,7 @@
         <br><br>
         At The Capital Box, we understand that entrepreneurship requires both ambition and structure. Smart planning can help founders balance growth with resilience by addressing investments, savings, insurance, and succession planning. Entrepreneurs who prioritize financial clarity are often better positioned to scale confidently while reducing avoidable financial strain.
         </p>
+        </div>
         </div>
         </section>
         
@@ -951,7 +965,7 @@
       >
         <!-- Border that extends behind the image -->
         <div
-          class="bg-primary z-2 w-[30vw] md:w-[30vw] section3-bg h-full absolute left-0 top-0 -z-10"
+          class="hidden md:block bg-primary z-2 w-[30vw] md:w-[30vw] section3-bg h-full absolute left-0 top-0 -z-10"
         ></div>
         <div
           class="container mx-auto px-4 w-full flex flex-col md:flex-row gap-6 md:gap-8 justify-between py-3 md:py-12"
@@ -1480,7 +1494,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

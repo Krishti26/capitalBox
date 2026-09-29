@@ -15,6 +15,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>The Capital Box Disclaimer | Legal & Financial Information</title>
     <meta name="description" content="Read The Capital Box disclaimer for important information regarding financial content, liability limitations, external links.">
     <!-- Preload essential resources for better performance -->
@@ -46,57 +47,67 @@
             font-family: "Montserrat", sans-serif;
         }
 
-        /* Hero Section */
-        .hero-section {
-            margin-top: 80px;
-            padding: 60px 20px;
-            text-align: center;
-            background: rgba(75, 75, 75, 0.8);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-section h1 {
-            font-size: 48px;
-            font-weight: bold;
-            color: #CBBA4F;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .hero-section .updated {
-            color: #fff;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
         /* Policy container */
         .container {
             max-width: 900px;
-            margin: 40px auto 60px auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 120px auto 60px auto;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 48px 45px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border-top: 5px solid #CBBA4F;
+            text-align: left !important;
         }
 
-        /* Headings */
+        /* Headings & Text */
+        .container h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #111827;
+            text-align: left !important;
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .container .updated {
+            text-align: left !important;
+            margin-top: 8px;
+            margin-bottom: 28px;
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+        .container .updated strong {
+            color: #CBBA4F;
+            font-weight: 700;
+        }
+
         .container h2 {
-            margin-top: 30px;
+            margin-top: 32px;
+            margin-bottom: 12px;
             font-size: 24px;
-            color: #333;
+            font-weight: 700;
+            color: #111827;
+            text-align: left !important;
+            line-height: 1.35;
         }
 
         .container h3 {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #555;
+            margin-top: 22px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #374151;
+            text-align: left !important;
+            line-height: 1.4;
         }
 
         .container p {
-            line-height: 1.8;
-            color: #444;
-            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.85;
+            color: #374151;
+            margin-bottom: 16px;
+            text-align: left !important;
         }
 
         /* Important Notice Box */
@@ -105,24 +116,33 @@
             border-left: 4px solid #CBBA4F;
             padding: 20px;
             margin: 20px 0;
-            border-radius: 5px;
+            border-radius: 8px;
+            text-align: left !important;
         }
 
         .notice-box p {
             margin: 0;
             color: #333;
             font-weight: 500;
+            text-align: left !important;
         }
 
         /* Lists */
         .container ul {
-            padding-left: 20px;
-            margin-top: 10px;
+            list-style-type: disc !important;
+            list-style-position: outside !important;
+            padding-left: 24px !important;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            text-align: left !important;
         }
 
         .container li {
             margin-bottom: 8px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #374151;
+            text-align: left !important;
         }
 
         /* Footer improvements */
@@ -140,12 +160,57 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 32px;
+            .container {
+                margin: 100px 16px 50px 16px !important;
+                padding: 30px 20px !important;
+                border-radius: 14px !important;
+                width: auto !important;
+                max-width: 100% !important;
+                text-align: left !important;
             }
 
-            .container {
-                padding: 30px 20px;
+            .container h1 {
+                font-size: 28px !important;
+                text-align: left !important;
+                margin-bottom: 6px !important;
+            }
+
+            .container .updated {
+                font-size: 14px !important;
+                text-align: left !important;
+                margin-bottom: 20px !important;
+            }
+
+            .container h2 {
+                font-size: 20px !important;
+                text-align: left !important;
+                margin-top: 26px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .container h3 {
+                font-size: 17px !important;
+                text-align: left !important;
+                margin-top: 18px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .container p,
+            .container li {
+                font-size: 15px !important;
+                line-height: 1.75 !important;
+                text-align: left !important;
+            }
+
+            .container ul {
+                padding-left: 20px !important;
+                margin-bottom: 16px !important;
+                text-align: left !important;
+            }
+
+            .container .notice-box,
+            .container .notice-box p {
+                text-align: left !important;
             }
         }
     </style>
@@ -176,7 +241,7 @@
                     class="text-white hover:text-primary transition text-lg font-light uppercase">Home</a>
 
                 <!-- Dropdown Menu -->
-                <div class="dropdown relative w-full">
+                <div class="dropdown relative">
                     <button
                         class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
                         id="dropdownToggle">
@@ -268,15 +333,16 @@
     
 
     <!-- Content Container -->
-    <div class="container" style="margin-top: 100px;">
+    <div class="container">
 
-        <h1 style="text-align: center;color: rgb(1, 0, 0);font-size: 30px;">Disclaimer</h1> <br>
+        <h1>Disclaimer</h1>
+        <p class="updated"><strong>Last Updated:</strong> September 28, 2026</p>
 
         <p>
             The information provided on <strong>TheCapitalBox</strong> is intended for general informational purposes only.
         </p>
 
-        <h2>1. Information Accuracy</h2>
+        <h2 style="text-align: left !important;">1. Information Accuracy</h2>
 
         <p>
             While we strive to ensure that the information on this website is accurate and up to date, we make no guarantees regarding its completeness or reliability.
@@ -286,7 +352,7 @@
             The content provided may change without notice, and we cannot guarantee that all information is current or error-free at all times.
         </p>
 
-        <h2>2. Use at Your Own Risk</h2>
+        <h2 style="text-align: left !important;">2. Use at Your Own Risk</h2>
 
         <div class="notice-box">
             <p>
@@ -298,13 +364,13 @@
             You are solely responsible for how you use the information available on this website. We recommend consulting with qualified professionals before making any financial or business decisions.
         </p>
 
-        <h2>3. No Professional Advice</h2>
+        <h2 style="text-align: left !important;">3. No Professional Advice</h2>
 
         <p>
             The content on this website does not constitute professional financial, legal, or tax advice. Always seek guidance from certified professionals for matters requiring expert knowledge.
         </p>
 
-        <h2>4. Limitation of Liability</h2>
+        <h2 style="text-align: left !important;">4. Limitation of Liability</h2>
 
         <p>
             <strong>TheCapitalBox</strong> will not be responsible for any losses, damages, or issues arising from:
@@ -318,13 +384,13 @@
             <li>Third-party links or external resources</li>
         </ul>
 
-        <h2>5. External Links</h2>
+        <h2 style="text-align: left !important;">5. External Links</h2>
 
         <p>
             Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or policies of external sites. Accessing third-party links is at your own discretion and risk.
         </p>
 
-        <h2>6. Changes to Content</h2>
+        <h2 style="text-align: left !important;">6. Changes to Content</h2>
 
         <p>
             We reserve the right to modify, update, or remove any content on this website at any time without prior notice. It is your responsibility to review this disclaimer periodically for any updates.
@@ -424,7 +490,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

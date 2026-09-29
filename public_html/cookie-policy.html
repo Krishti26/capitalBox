@@ -15,6 +15,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>The Capital Box Cookie Policy | How We Use Cookies</title>
     <meta name="description" content="Learn how The Capital Box uses cookies to improve website functionality, enhance browsing experience, analyze traffic and security.">
     <!-- Preload essential resources for better performance -->
@@ -47,53 +48,87 @@
         }
 
         /* Policy container */
-
         .container {
             max-width: 900px;
             margin: 120px auto 60px auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.97);
+            padding: 48px 45px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border-top: 5px solid #CBBA4F;
+            text-align: left !important;
         }
 
         /* Headings */
-
         .container h1 {
-            text-align: center;
             font-size: 36px;
-            margin-bottom: 10px;
+            font-weight: 800;
+            color: #111827;
+            text-align: center !important;
+            margin-bottom: 8px;
+            line-height: 1.25;
         }
 
         .updated {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
+            text-align: center !important;
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 28px;
+        }
+
+        .updated strong {
+            color: #CBBA4F;
+            font-weight: 700;
         }
 
         .container h2 {
-            margin-top: 30px;
+            margin-top: 32px;
+            margin-bottom: 12px;
             font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            text-align: left !important;
+            line-height: 1.35;
         }
 
         .container h3 {
-            margin-top: 20px;
-            font-size: 20px;
+            margin-top: 22px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #374151;
+            text-align: left !important;
+            line-height: 1.4;
+        }
+
+        /* Paragraphs */
+        .container p {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #374151;
+            margin-bottom: 16px;
+            text-align: left !important;
         }
 
         /* Lists */
-
         .container ul {
-            padding-left: 20px;
-            margin-top: 10px;
+            list-style-type: disc !important;
+            list-style-position: outside !important;
+            padding-left: 24px !important;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            text-align: left !important;
         }
 
         .container li {
             margin-bottom: 8px;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #374151;
+            text-align: left !important;
         }
 
         /* Footer improvements */
-
         footer {
             margin-top: 60px;
         }
@@ -104,6 +139,55 @@
 
         footer a:hover {
             color: #CBBA4F;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 100px 16px 50px 16px;
+                padding: 30px 20px;
+                border-radius: 14px;
+                text-align: left !important;
+            }
+
+            .container h1 {
+                font-size: 28px;
+                text-align: left !important;
+                margin-bottom: 6px;
+            }
+
+            .updated {
+                font-size: 14px;
+                text-align: left !important;
+                margin-bottom: 20px;
+            }
+
+            .container h2 {
+                font-size: 20px;
+                text-align: left !important;
+                margin-top: 26px;
+                margin-bottom: 10px;
+            }
+
+            .container h3 {
+                font-size: 17px;
+                text-align: left !important;
+                margin-top: 18px;
+                margin-bottom: 8px;
+            }
+
+            .container p,
+            .container li {
+                font-size: 15px;
+                line-height: 1.75;
+                text-align: left !important;
+            }
+
+            .container ul {
+                padding-left: 20px !important;
+                margin-bottom: 16px;
+                text-align: left !important;
+            }
         }
     </style>
 
@@ -133,7 +217,7 @@
                     class="text-white hover:text-primary transition text-lg font-light uppercase">Home</a>
 
                 <!-- Dropdown Menu -->
-                <div class="dropdown relative w-full">
+                <div class="dropdown relative">
                     <button
                         class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
                         id="dropdownToggle">
@@ -223,10 +307,10 @@
     </nav>
 
 
-    <div class="container" style="margin-top: 100px;">
+    <div class="container">
 
         <h1>Cookie Policy</h1>
-        <p class="updated"><strong>Last Updated:</strong> March 10, 2026</p>
+        <p class="updated"><strong>Last Updated:</strong> September 28, 2026</p>
 
         <p>
             This Cookie Policy explains how <strong>TheCapitalBox</strong> uses cookies and similar technologies when
@@ -402,7 +486,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

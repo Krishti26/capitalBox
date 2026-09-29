@@ -14,6 +14,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta
       name="description"
       content="Learn how The Capital Box collects, uses, and protects your personal and financial data. Read our privacy policy for details."
@@ -108,7 +109,7 @@
             >Home</a
           >
           <!-- Dropdown Menu -->
-          <div class="dropdown relative w-full">
+          <div class="dropdown relative">
             <button
               class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
               id="dropdownToggle"
@@ -303,7 +304,7 @@
       <div class="policy-card">
         <div class="last-updated">
           <p>
-            <i class="fas fa-calendar-alt mr-2"></i> Last updated: July 15, 2016
+            <i class="fas fa-calendar-alt mr-2"></i> Last updated: September 28, 2026
           </p>
         </div>
 
@@ -319,21 +320,21 @@
         <div class="toc-container">
           <p class="toc-title">Table of Contents</p>
           <ul class="toc-list">
-            <li><a href="#introduction">Introduction and Scope</a></li>
-            <li><a href="#data-collected">Data Collected</a></li>
-            <li><a href="#data-collection">How Data is Collected</a></li>
+            <li><a href="#introduction">1. Introduction and Scope</a></li>
+            <li><a href="#data-collected">2. Data Collected</a></li>
+            <li><a href="#data-collection">3. How Data is Collected</a></li>
             <li>
-              <a href="#data-processing">Purposes for Data Processing</a>
+              <a href="#data-processing">4. Purposes for Data Processing</a>
             </li>
-            <li><a href="#data-sharing">Data Sharing and Disclosure</a></li>
-            <li><a href="#data-security">Data Security</a></li>
-            <li><a href="#data-retention">Data Retention</a></li>
-            <li><a href="#user-rights">User Rights</a></li>
+            <li><a href="#data-sharing">5. Data Sharing and Disclosure</a></li>
+            <li><a href="#data-security">6. Data Security</a></li>
+            <li><a href="#data-retention">7. Data Retention</a></li>
+            <li><a href="#user-rights">8. User Rights</a></li>
           </ul>
         </div>
 
         <section id="introduction">
-          <p class="font-semibold">1.</p><h2>Introduction and Scope</h2>
+          <h2>1. Introduction and Scope</h2>
           <div class="policy-content">
             <ul>
               <li>
@@ -355,7 +356,7 @@
         </section>
 
         <section id="data-collected">
-          <p class="font-semibold">2.</p><h2>Data Collected</h2>
+          <h2>2. Data Collected</h2>
           <div class="policy-content">
             <p>
               Financial companies collect various types of personal information
@@ -409,8 +410,8 @@
           </div>
         </section>
 
-        <section id="data-collection"><p class="font-semibold">3.</p>
-            <h2>How Data is Collected</h2>
+        <section id="data-collection">
+          <h2>3. How Data is Collected</h2>
           <div class="policy-content">
             <ul>
               <li>
@@ -447,8 +448,7 @@
         </section>
 
         <section id="data-processing">
-          <p class="font-semibold">4.</p>
-            <h2>Purposes of Data Processing</h2>
+          <h2>4. Purposes for Data Processing</h2>
           <div class="policy-content">
             <ul>
               <li>
@@ -481,7 +481,7 @@
         </section>
 
         <section id="data-sharing">
-            <p class="font-semibold">5.</p><h2>Data Sharing and Disclosure</h2>
+          <h2>5. Data Sharing and Disclosure</h2>
           <div class="policy-content">
             <!-- Simplified data sharing visualization that works on all screen sizes -->
             <div class="data-sharing-container">
@@ -553,7 +553,7 @@
         </section>
 
         <section id="data-security">
-          <p class="font-semibold">6.</p><h2>Data Security</h2>
+          <h2>6. Data Security</h2>
           <div class="policy-content">
             <div class="security-features">
               <div class="feature">
@@ -594,8 +594,7 @@
         </section>
 
         <section id="data-retention">
-          <p class="font-semibold">7.</p>
-            <h2>Data Retension</h2>
+          <h2>7. Data Retention</h2>
           <div class="policy-content">
             <!-- Responsive card-based retention display -->
             <div class="retention-cards">
@@ -651,8 +650,7 @@
         </section>
 
         <section id="user-rights">
-          <p class="font-semibold">8.</p>
-            <h2>User Rights</h2>
+          <h2>8. User Rights</h2>
           <div class="policy-content">
             <div class="rights-grid">
               <div class="right-card">
@@ -811,7 +809,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>
@@ -943,8 +941,9 @@
         margin: 2.5rem 0 1.5rem 0;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid var(--accent-color);
-        display: flex;
-        align-items: center;
+        display: block;
+        text-align: left;
+        line-height: 1.35;
       }
 
       @media (min-width: 768px) {

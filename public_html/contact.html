@@ -14,6 +14,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -75,7 +76,7 @@
     <meta property="og:image" content="public/assets/logo-1.webp" />
     <meta
       property="og:url"
-      content="https://yourwebsite.com/src/contact.html"
+      content="https://www.thecapitalbox.com/contact.html"
     />
     <meta property="og:type" content="website" />
 
@@ -158,7 +159,7 @@
           >
 
           <!-- Dropdown Menu -->
-          <div class="dropdown relative w-full">
+          <div class="dropdown relative">
             <button
               class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
               id="dropdownToggle"
@@ -340,35 +341,43 @@
     <main>
       <!-- Hero Section -->
       <div class="relative">
-        <!-- Hero Image -->
-        <div
-          class="w-full h-screen bg-cover bg-center relative overflow-hidden"
-        >
+        <!-- Hero Image & Content -->
+        <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
           <img
             src="public/assets/CONTACT.webp"
             alt="Contact The Capital Box Hero Image"
-            class="w-full h-full object-cover"
+            class="subpage-hero-img w-full h-full object-cover"
           />
 
-          <!-- Hero Content -->
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"
-          >
-            <div class="text-center text-white px-4">
-              <h1 class="text-xl md:text-4xl lg:text-6xl font-bold mb-4">
+          <!-- Hero Content Overlay -->
+          <div class="subpage-hero-overlay">
+            <div class="subpage-hero-content">
+              <div class="subpage-hero-badge">
+                <span class="subpage-hero-badge-dot"></span>
+                <span>Get In Touch</span>
+              </div>
+              <h1 class="subpage-hero-title">
                 Contact Us
               </h1>
+              <p class="subpage-hero-desc">
+                Have questions about wealth management, tax advisory, or financial planning? Our dedicated team is here to guide you toward financial clarity and peace of mind.
+              </p>
+              <div class="subpage-hero-pills">
+                <span class="subpage-hero-pill">Personalized Advisory</span>
+                <span class="subpage-hero-pill">Gurugram, India</span>
+                <span class="subpage-hero-pill">Rapid Response</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Overlapping Cards Container -->
-        <div class="container mx-auto px-4 relative -mt-16 md:-mt-32 mb-32">
+        <!-- Feature Card Container -->
+        <div class="subpage-card-container container mx-auto px-4 relative">
           <div class="w-full">
               
             <!-- First Card -->
         <div
-          class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+          class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
         >
           <div class="p-6 flex flex-col gap-2 md:gap-4">
             <h2
@@ -433,9 +442,9 @@
         </div>
         
         <!-- Second Card -->
-        <div class="w-full relative" style="top: 60px;">
+        <div class="w-full relative mt-8 md:mt-12">
           <div
-            class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary"
+            class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-1 border-t-4 border-primary"
           >
             <div class="p-8 flex flex-col gap-8">
               <h2
@@ -520,28 +529,549 @@
             </div>
           </div>
         </div>
-        <div style="height: 80px;"></div>
-        
-      <!--  -->
-      <!-- Map + Contact Form -->
-      <div
-        class="w-full h-full md:w-full relative px-4 my-6 lg:my-16 md:px-8 py-4 sm:text-sm md:text-xl lg:text-lg xl:text-xl"
-      >
+      </div>
+    </div>
+  </div>
+
+    <!-- CONTACT PAGE 8 ARTICLES START -->
+    <style>
+      .tcb-contact-article-card {
+        background: #ffffff;
+        border-top: 4px solid #CBBA4F;
+        border-radius: 14px;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+        padding: 30px 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .tcb-contact-article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.11);
+      }
+      @media (max-width: 640px) {
+        .tcb-contact-article-card {
+          padding: 24px 18px;
+        }
+      }
+      .tcb-pill-badge {
+        background: #CBBA4F;
+        color: #111111;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 5px 14px;
+        border-radius: 9999px;
+        display: inline-block;
+      }
+      .tcb-article-note {
+        margin-top: 18px;
+        padding: 12px 16px;
+        background: #fffdf0;
+        border-left: 4px solid #CBBA4F;
+        border-radius: 0 8px 8px 0;
+        font-size: 0.9rem;
+        color: #614d05;
+        font-style: italic;
+        line-height: 1.55;
+      }
+      .tcb-articles-header {
+        margin-bottom: 48px;
+      }
+      .tcb-articles-grid {
+        margin-top: 24px;
+      }
+      @media (max-width: 640px) {
+        .tcb-articles-header {
+          margin-bottom: 36px;
+        }
+        .tcb-articles-grid {
+          margin-top: 18px;
+        }
+      }
+    </style>
+
+    <section id="contact-articles" class="w-full py-16 bg-[#f8f9fa] border-t border-b border-gray-200 my-8 md:my-16">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <!-- Article Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 tcb-articles-grid">
+          
+          <!-- ARTICLE 1 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Advisory Prep</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  How to Prepare for Your First Financial Advisory Consultation
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Engaging with a financial advisor is a transformative step toward achieving clarity, resilience, and wealth acceleration. To maximize the return on your initial discovery session, thoughtful preparation is key. Begin by cataloging your core financial balance sheet: recent income tax returns, salary statements or corporate audited financials, bank deposits, mutual fund folios, equity portfolios, and existing life/health insurance policies.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Equally important is articulating your family's personal milestones—such as purchasing primary or commercial property, funding children's higher education abroad, or establishing an early retirement timeline. Arriving with clearly defined priorities and open questions allows our advisory team to diagnose inefficiencies immediately and craft a bespoke, actionable roadmap.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Preparation turns a standard advisory meeting into a strategic, high-impact blueprint for wealth creation.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 2 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Cross-Border Taxation</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Navigating NRI Taxation & Foreign Asset Disclosures in India
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                For Non-Resident Indians (NRIs) and global professionals with multi-jurisdictional earnings, Indian tax compliance is governed by intricate residency rules under Section 6 of the Income Tax Act. Residential status must be tracked annually based on physical presence, as a shift from Non-Resident (NR) to Resident and Ordinarily Resident (ROR) subjects worldwide income to domestic tax liabilities.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Furthermore, strict disclosure mandates under Schedule FA (Foreign Assets) and the Black Money Act penalize undisclosed offshore accounts or foreign ESOPs heavily. By proactively leveraging Double Taxation Avoidance Agreements (DTAA) through Tax Residency Certificates (TRC) and Form 10F, investors prevent double taxation on cross-border dividends, capital gains, and consulting royalties.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Proactive DTAA structuring and diligent reporting prevent harsh penalties and maximize post-tax international yields.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 3 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Wealth Preservation</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Structuring a Resilient Family Emergency Liquidity Reserve
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                An emergency fund is the shock absorber of personal finance, yet many families either hold inadequate liquidity or park excessive capital in low-yield traditional savings accounts that steadily lose purchasing power to inflation. A truly resilient safety net should cover 6 to 12 months of non-negotiable living expenses, including household overhead, loan EMIs, and insurance premiums.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                We recommend structuring emergency liquidity across three distinct tiers: Tier 1 maintains 1 to 2 months' requirements in instant-access high-interest accounts; Tier 2 holds 3 to 6 months in low-volatility arbitrage or overnight mutual funds offering T+1 redemption; Tier 3 deploys the remainder in flexible sweep-in fixed deposits. This architecture ensures unforeseen medical or economic shocks never force distress sales of long-term equities.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Tiered liquidity guards long-term compounding by ensuring market dips never force emergency asset liquidations.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 4 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Corporate Compliance</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Corporate Tax Compliance: Mitigating Audit & Scrutiny Notice Risks
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                With the Income Tax Department's deployment of AI-powered risk profiling, automated GST-to-ITR data reconciliation, and comprehensive Annual Information Statements (AIS), discrepancies between reported turnover and third-party data feeds are flagged automatically. For businesses, MSMEs, and high-earning consultants, a minor mismatch in TDS credits or vendor GST filings can swiftly trigger scrutiny notices under Section 143(1) or Section 148.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Mitigating audit risk requires instituting continuous quarterly book reconciliations, maintaining meticulous audit trails for business expenditure, ensuring strict arm's-length transfer pricing, and remitting advance tax installments accurately on statutory dates. Strategic compliance is not just about avoiding penalties—it safeguards corporate reputation and credit ratings.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Automated compliance reconciliations conducted year-round eliminate surprise scrutiny notices and costly interest penalties.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 5 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Retirement Architecture</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  The Mathematics of Retirement: 4% Rule vs. Dynamic Bucket Strategies
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>6 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Transitioning from wealth accumulation during your active working career to systematic decumulation in retirement is one of the most complex financial transitions. While the traditional 4% safe withdrawal rule provides a historical baseline, it often proves inadequate in developing economies experiencing sticky inflation and volatile interest rate cycles. Experiencing negative market returns in early retirement can permanently impair portfolio longevity.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                To mitigate Sequence of Returns Risk, The Capital Box recommends a dynamic Three-Bucket Strategy. Bucket 1 holds 2–3 years of living expenses in guaranteed cash and liquid debt; Bucket 2 manages 4–7 years in conservative hybrid income assets yielding regular cash flows; Bucket 3 keeps remaining capital in high-quality equities compounding undisturbed for 8+ years without forced mid-market withdrawals.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Dynamic bucket allocation prevents retirees from selling equities during bear markets to fund routine living expenses.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 6 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Risk Management</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Asset Protection & Liability Shielding for HNWIs and Business Owners
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                High-net-worth professionals, corporate executives, doctors, and business promoters frequently face legal, contractual, and operational exposure that can threaten accumulated family wealth. Personal guarantees, commercial disputes, and professional liability claims can inadvertently breach personal boundaries unless legal firewalls are established well in advance.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Vital protection instruments include purchasing life insurance policies registered under the Married Women's Property Act (MWPA, 1874), which legally ring-fences policy benefits exclusively for your spouse and children, placing them beyond the reach of creditors and court attachments. Additionally, establishing private family trusts separates asset ownership from operational business exposure, securing multi-generational stability.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> MWPA declarations and private trusts create legally impervious barriers protecting family wealth from commercial claims.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 7 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Investment Discipline</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Systematic Investment Planning: Exploiting Volatility via Rupee Cost Averaging
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Market corrections and volatility often provoke emotional anxiety among retail investors, leading to destructive habits such as panic selling during market troughs and FOMO buying at cyclical market highs. However, in institutional portfolio construction, volatility is recognized as the ultimate return-multiplier when channeled systematically through disciplined Rupee Cost Averaging.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Through Systematic Investment Plans (SIPs) and Systematic Transfer Plans (STPs), regular monthly allocations acquire more fund units when market valuations fall, and fewer units when markets become expensive. This systematically drives down the blended unit acquisition cost over multi-year horizons, ensuring that economic downturns actively accelerate long-term capital compounding.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Systematic averaging transforms market corrections from moments of anxiety into compounding accelerations.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 8 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Estate & Legacy</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Estate Planning & Will Structuring: Shielding Generational Wealth from Probate Disputes
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                A significant percentage of accumulated family wealth in India remains ensnared in protracted civil court disputes due to the absence of unambiguous testamentary documentation. Passing away intestate (without a valid will) triggers statutory succession laws, leading to fragmented asset splits, family discord, and frozen financial accounts during probate proceedings.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                A well-orchestrated estate plan combines a clearly articulated registered will, updated nominations across all demat, bank, and real estate titles, and an inventory of digital assets. For estates with substantial holdings or ongoing family businesses, establishing a private family trust provides uninterrupted wealth transmission, asset protection, and tax efficiency without the delays of court probate.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> A well-orchestrated will and trust structure prevent family conflict and guarantee your legacy unfolds exactly as intended.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 9 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Capital Gains</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Strategic Capital Gains Harvesting: Offsetting Realized Losses & Rebalancing
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Understanding the mechanics of Short-Term Capital Gains (STCG) and Long-Term Capital Gains (LTCG) is vital for active market participants and real estate owners. With recent revisions to capital gains tax slabs under the Union Budget, tax harvesting has become an essential year-end discipline. Tax-loss harvesting allows investors to sell underperforming equity or debt positions at an unrealized loss to offset realized gains from profitable asset sales, effectively lowering their net aggregate tax bill.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Furthermore, Section 54, 54EC, and 54F provide legal exemptions for reinvesting real estate capital gains into eligible residential property or specified capital gains bonds within statutory timelines. The Capital Box works alongside clients during portfolio review cycles to identify tax-loss harvesting windows, analyze grandfathering provisions, and optimize post-tax returns before statutory fiscal year deadlines.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Tax-loss harvesting turns paper losses into tax-reducing assets while re-aligning your target asset allocation.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 10 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Debt Optimization</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Good Debt vs. Toxic Leverage: Structuring Liabilities for Wealth Generation
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Not all liabilities are created equal. Toxic debt—such as revolving credit card balances, unsecured personal loans, and consumer electronics financing—carries punitive interest rates of 18% to 42% that compound against your net worth. Conversely, strategic low-cost leverage—such as tax-deductible home loans or business lines of credit secured against commercial assets—can enhance capital efficiency and preserve working liquidity when deployed prudently.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Managing leverage requires maintaining a Debt-to-Income (DTI) ratio below 35% and prioritizing the systematic retirement of high-interest debt using either the "Debt Avalanche" (highest interest rate first) or "Debt Snowball" (smallest balance first) methodologies. At The Capital Box, our advisors conduct thorough liability diagnostics, helping clients restructure costly borrowing into low-cost structured debt to liberate monthly cash flows for accelerated wealth building.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Eliminating toxic high-interest debt provides a guaranteed, risk-free return equivalent to the interest rate avoided.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 11 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Family Office</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  The Family Office Model: Centralizing Governance, Succession, and Philanthropy
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>6 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                When family wealth surpasses complex multi-asset thresholds, managing investments, real estate, philanthropy, and tax obligations across disparate accountants and brokers leads to administrative friction and strategic drift. A Family Office framework centralizes financial management into a single, cohesive governance structure designed to preserve intergenerational wealth and maintain family harmony.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Key functions include drafting a formal Family Constitution, creating an Investment Policy Statement (IPS) that dictates risk boundaries, setting up private family trusts to ring-fence operating businesses from family assets, and organizing philanthropic endeavors through Section 8 entities. The Capital Box acts as a trusted strategic partner for multi-generational business families, establishing robust oversight protocols that ensure wealth endures across generations.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Centralized family governance prevents wealth dissipation and aligns multi-generational financial values.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 12 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Health Shielding</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Healthcare Inflation Defense: Super Top-Ups and Critical Illness Structuring
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Medical inflation in India persistently outpaces general consumer inflation, averaging 12% to 14% annually. A severe medical diagnosis—such as advanced oncology treatment, organ transplantation, or cardiovascular intervention—can easily exhaust basic corporate health insurance covers of ₹5 Lakhs to ₹10 Lakhs in a matter of weeks, forcing families into devastating out-of-pocket liquidations.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                A robust healthcare risk structure pairs a foundational individual or family-floater indemnity policy (₹10–15 Lakhs) with a high-deductible "Super Top-Up" policy offering ₹50 Lakhs to ₹1 Crore in coverage at an extremely nominal premium. Supplementing this with a standalone, fixed-benefit Critical Illness cover provides lump-sum liquidity upon diagnosis, replacing lost income during recuperation. The Capital Box helps clients stress-test medical coverage against catastrophic healthcare scenarios.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Super Top-Ups and Critical Illness covers provide multi-crore hospitalization protection at a fraction of base policy costs.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 13 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Education Planning</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Funding Global Higher Education: Hedging Against Currency Depreciation
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Planning for your children's higher education at premier overseas institutions (in the US, UK, Canada, or Singapore) requires compounding two compounding variables simultaneously: educational tuition inflation (historically 6–8% annually in foreign currencies) and the steady long-term depreciation of the Indian Rupee against hard reserve currencies (averaging 3–4% annually against USD).
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Funding an overseas degree solely through domestic fixed deposits or conservative debt instruments leaves parents vulnerable to severe purchasing power shortfalls. An optimal global education strategy begins 7 to 10 years in advance, allocating capital into international equity feeder funds, US Dollar-denominated assets, and aggressive equity SIPs. The Capital Box engineers education savings plans that immunize family goals against currency volatility and foreign exchange conversion spikes.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Investing in foreign currency-denominated assets eliminates currency depreciation risk for future overseas tuition costs.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 14 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Portfolio Construction</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Asset Allocation Science: Blending Direct Stocks, Active Funds & Low-Cost ETFs
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                A common debate among investors is whether to pick direct individual stocks or rely on professional fund managers. Behavioral finance data reveals that over 85% of retail direct stock pickers underperform broad market benchmarks over rolling 5-year periods due to lack of diversification, emotional trading, and research fatigue. True portfolio excellence lies not in choosing one vehicle exclusively, but in engineering a Core-Satellite asset allocation.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                The "Core" portfolio (60–70% of assets) is anchored in low-cost passive index funds (Nifty 50, Nifty Next 50) and established large-and-mid-cap active mutual funds that generate steady market returns. The "Satellite" portfolio (30–40%) incorporates high-conviction direct equities, thematic opportunities, or specialized small-cap allocations aimed at generating market-beating alpha. The Capital Box helps clients construct balanced, objective asset allocations that harness professional management while capturing high-conviction growth.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Core-Satellite architecture captures broad market compounding while systematically limiting single-stock drawdown risks.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 15 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Treasury Management</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Treasury Management for MSMEs: Maximizing Yields on Idle Operational Cash
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Many small-to-midsize business enterprises (MSMEs) leave substantial operational cash balances sitting in current accounts earning zero percent interest, or in standard bank deposits with rigid lock-ins and TDS deductions. In an economic environment where capital efficiency dictates margins, permitting surplus working capital to sit idle constitutes a significant opportunity cost.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                Active corporate treasury management utilizes short-term liquid funds, ultra-short duration debt instruments, and overnight reverse-repo facilities that offer daily liquidity, higher yields, and immediate redemption without lock-in penalties. Furthermore, structuring sweep-in accounts between current accounts and overnight funds ensures that operational cash earns returns every single weekend and bank holiday. The Capital Box assists corporate clients in automating treasury cash sweeps to enhance bottom-line profitability.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Automated treasury cash sweeps transform idle operating balances into an active secondary revenue stream.
+              </div>
+            </div>
+          </article>
+
+          <!-- ARTICLE 16 -->
+          <article class="tcb-contact-article-card">
+            <div>
+              <div class="text-center mb-4">
+                <div class="flex justify-center mb-2.5">
+                  <span class="tcb-pill-badge">Investor Psychology</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2.5 text-center">
+                  Mastering Behavioral Bias: Why Mindset Outperforms Market Timing
+                </h3>
+                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left mb-3">
+                Nobel laureate Daniel Kahneman and behavioral economists have demonstrated that financial decisions are rarely driven by pure logic. Cognitive biases—such as Loss Aversion (the emotional pain of losing ₹1 Lakh is twice as intense as the joy of gaining ₹1 Lakh), Recency Bias (projecting current market rallies or crashes indefinitely into the future), and Overconfidence—consistently derail even the most mathematically sophisticated financial plans.
+              </p>
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed text-left">
+                An investor's greatest financial risk is not market volatility—it is their own emotional reaction to market volatility. The most critical role of an independent financial advisory firm is serving as an emotional behavioral anchor during periods of extreme euphoria and panic. The Capital Box institutes systematic rebalancing rules and mandatory cooling-off periods for major portfolio changes, shielding clients from impulsive errors that destroy generational wealth.
+              </p>
+            </div>
+            <div>
+              <div class="tcb-article-note text-left">
+                <strong>Key Takeaway:</strong> Disciplined behavioral frameworks consistently generate more alpha than chasing short-term market timing.
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT PAGE 16 ARTICLES END -->
+
+    <!-- Map + Contact Form -->
+    <div
+      id="contact-form"
+      class="relative isolate w-full px-4 md:px-8 py-6 my-6 lg:my-16 sm:text-sm md:text-xl lg:text-lg xl:text-xl"
+    >
         <div
-          class="hidden md:block bg-primary w-[30vw] h-full absolute left-0 top-0 -z-10"
+          class="block bg-primary w-[26vw] sm:w-[28vw] md:w-[30vw] h-full absolute left-0 top-0 -z-10 pointer-events-none"
         ></div>
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto relative z-10">
           <div class="grid md:grid-cols-2 gap-8 items-center relative">
             <!-- Image -->
             <div
               class="relative z-10 transform transition duration-500 hover:scale-105"
             >
               <!-- Map -->
-              <div class="overflow-hidden rounded shadow-lg w-full h-full">
+              <div class="overflow-hidden rounded-md shadow-lg w-full h-full">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.986624309473!2d77.05910061107345!3d28.457938275659437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18f13b9f9747%3A0x1d435dd79f8088a5!2sTHE%20CAPITAL%20BOX!5e1!3m2!1sen!2sin!4v1745922943606!5m2!1sen!2sin"
                   width="100%"
-                  height="450"
+                  height="400"
+                  class="w-full h-[380px] md:h-[450px]"
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
@@ -550,10 +1080,10 @@
               </div>
             </div>
             <!-- Text Content with border that extends behind the image -->
-            <div class="relative h-full py-8 px-4 md:py-12 md:px-8">
+            <div class="relative h-full py-8 px-4 md:py-12 md:px-8 z-10">
               <!-- Border that extends behind the image -->
               <div
-                class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-md -z-5"
+                class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-md -z-10 pointer-events-none"
               ></div>
               <!-- The actual content -->
               <!-- Contact Form -->
@@ -561,7 +1091,7 @@
               <form
                 action="https://api.web3forms.com/submit"
                 method="POST"
-                class="flex flex-col gap-4 relative"
+                class="flex flex-col gap-4 relative z-10"
                 data-aos="fade-left"
                 data-aos-delay="300"
                 data-aos-duration="800"
@@ -579,7 +1109,7 @@
                   name="name"
                   placeholder="Your Name"
                   required
-                  class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="400"
                 />
@@ -590,7 +1120,7 @@
                   name="email"
                   placeholder="Your Email"
                   required
-                  class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="500"
                 />
@@ -600,7 +1130,7 @@
                   name="subject"
                   placeholder="Subject"
                   required
-                  class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="600"
                 />
@@ -611,7 +1141,7 @@
                   rows="4"
                   placeholder="Message"
                   required
-                  class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary resize-none shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="700"
                 ></textarea>
@@ -619,7 +1149,7 @@
                 <!-- Submit Button -->
                 <button
                   type="submit"
-                  class="md:bg-primary/40 bg-primary hover:bg-primary shadow-lg text-white font-semibold py-2 px-6 rounded w-fit z-20"
+                  class="bg-primary hover:bg-[#b8a642] shadow-md text-white font-semibold py-2.5 px-6 rounded-md w-fit z-20 transition duration-200"
                   data-aos="zoom-in"
                   data-aos-delay="800"
                 >
@@ -718,7 +1248,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

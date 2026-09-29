@@ -15,6 +15,7 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="description"
     content="Explore careers at The Capital Box—join our expert team in Gurugram, grow your skills, and work on real financial challenges." />
   <meta name="keywords"
@@ -85,7 +86,7 @@
   <meta property="og:description"
     content="Explore career opportunities at The Capital Box. Join our team to work on financial insights, market trends, and investment strategies that make an impact." />
   <meta property="og:image" content="public/assets/logo-1.webp" />
-  <meta property="og:url" content="https://thecapitalbox.com/src/careers.html" />
+  <meta property="og:url" content="https://www.thecapitalbox.com/careers.html" />
   <meta property="og:type" content="website" />
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:title" content="Careers at The Capital Box" />
@@ -145,7 +146,7 @@
         <a href="/" class="text-white hover:text-primary transition text-lg font-light uppercase">Home</a>
 
         <!-- Dropdown Menu -->
-        <div class="dropdown relative w-full">
+        <div class="dropdown relative">
           <button class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
             id="dropdownToggle">
             Services
@@ -226,27 +227,39 @@
   <main>
     <!-- Hero Section -->
     <div class="relative">
-      <!-- Hero Image -->
-      <div class="w-full h-screen bg-cover bg-center relative overflow-hidden">
+      <!-- Hero Image & Content -->
+      <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
         <img src="public/assets/CAREERS.webp" alt="Careers at The Capital Box Hero Image"
-          class="w-full h-full object-cover" />
+          class="subpage-hero-img w-full h-full object-cover" />
 
-        <!-- Hero Content -->
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <div class="text-center text-white px-4">
-            <h1 class="text-xl md:text-4xl lg:text-6xl font-bold mb-4">
+        <!-- Hero Content Overlay -->
+        <div class="subpage-hero-overlay">
+          <div class="subpage-hero-content">
+            <div class="subpage-hero-badge">
+              <span class="subpage-hero-badge-dot"></span>
+              <span>Careers at TCB</span>
+            </div>
+            <h1 class="subpage-hero-title">
               Join Our Team
             </h1>
+            <p class="subpage-hero-desc">
+              Build a purpose-driven career with a dynamic advisory team shaping the future of accessible financial services, wealth consulting, and real-world impact.
+            </p>
+            <div class="subpage-hero-pills">
+              <span class="subpage-hero-pill">Impact & Innovation</span>
+              <span class="subpage-hero-pill">Mentorship & Growth</span>
+              <span class="subpage-hero-pill">Intern Opportunities</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Overlapping Cards Container -->
-      <div class="container mx-auto px-4 relative -mt-16 md:-mt-32 mb-16">
+      <!-- Feature Card Container -->
+      <div class="subpage-card-container container mx-auto px-4 relative">
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white">
+            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary">
             <div class="p-6 flex flex-col gap-4 md:gap-8">
               <h2 class="text-xl md:text-5xl font-bold text-gray-800 mb-4 text-center">
                 Come innovate with us
@@ -521,7 +534,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

@@ -15,6 +15,7 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="description"
     content="The Capital Box offers expert financial consulting, tailored products, and risk management strategies for individuals, families, and businesses." />
   <meta name="keywords"
@@ -49,7 +50,7 @@
   <meta property="og:description"
     content="Unparalleled financial consulting, products, and risk management designed for individuals, families, and businesses." />
   <meta property="og:image" content="/public/assets/logo-1.webp" />
-  <meta property="og:url" content="https://thecapitalbox.com/src/about.html" />
+  <meta property="og:url" content="https://www.thecapitalbox.com/about.html" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card Meta Tags -->
@@ -85,7 +86,7 @@
       }
     </script>
     <style>
-    .tcb-about-section{padding:90px 0;}
+    .tcb-about-section{padding:48px 0;}
     .tcb-about-container{max-width:1250px;margin:auto;padding:0 20px;}
     .tcb-about-title{font-size:42px;font-weight:800;line-height:1.3;margin-bottom:20px;text-align:center;}
     .tcb-about-text{font-size:16px;line-height:1.95;color:#4b5563;}
@@ -116,7 +117,7 @@
     background:linear-gradient(135deg,#111827,#1f2937);
     color:#fff;
     border-radius:18px;
-    padding:60px;
+    padding:48px;
     }
     .tcb-about-dark .tcb-about-text{color:#f3f4f6;}
     .tcb-about-divider{
@@ -134,8 +135,11 @@
     font-style:italic;
     }
     @media(max-width:768px){
-    .tcb-about-grid{grid-template-columns:1fr;}
-    .tcb-about-title{font-size:30px;text-align:center;}
+    .tcb-about-section{padding:28px 0;}
+    .tcb-about-dark{padding:28px 20px;}
+    .tcb-about-card{padding:26px 18px;}
+    .tcb-about-grid{grid-template-columns:1fr; gap:20px;}
+    .tcb-about-title{font-size:28px;text-align:center;}
     }
     </style>
 </head>
@@ -166,7 +170,7 @@
         <a href="/" class="text-white hover:text-primary transition text-lg font-light uppercase">Home</a>
         
         <!-- Dropdown Menu -->
-        <div class="dropdown relative w-full">
+        <div class="dropdown relative">
           <button class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
             id="dropdownToggle">
             Services
@@ -246,30 +250,42 @@
   <main>
     <!-- Hero Section -->
     <div class="relative">
-      <!-- Hero Image -->
-      <div class="w-full h-screen bg-cover bg-center relative overflow-hidden">
+      <!-- Hero Image & Content -->
+      <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
         <img src="public/assets/about-hero.webp" alt="About The Capital Box Hero Image"
-          class="w-full h-full object-cover" />
+          class="subpage-hero-img w-full h-full object-cover" />
 
-        <!-- Hero Content -->
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <div class="text-center text-white px-4">
-            <h1 class="text-xl md:text-4xl lg:text-6xl font-bold mb-4">
+        <!-- Hero Content Overlay -->
+        <div class="subpage-hero-overlay">
+          <div class="subpage-hero-content">
+            <div class="subpage-hero-badge">
+              <span class="subpage-hero-badge-dot"></span>
+              <span>Who We Are</span>
+            </div>
+            <h1 class="subpage-hero-title">
               About Us
             </h1>
+            <p class="subpage-hero-desc">
+              Founded on July 14, 2016, The Capital Box empowers families and businesses with bespoke financial strategies, enduring peace of mind, and transparent wealth advisory.
+            </p>
+            <div class="subpage-hero-pills">
+              <span class="subpage-hero-pill">Integrity & Trust</span>
+              <span class="subpage-hero-pill">Bespoke Advisory</span>
+              <span class="subpage-hero-pill">Founded July 2016</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Overlapping Cards Container -->
-      <div class="container mx-auto px-4 relative -mt-16 md:-mt-32 mb-16">
+      <!-- Feature Card Container -->
+      <div class="subpage-card-container container mx-auto px-4 relative">
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white">
+            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary">
             <div class="p-6 flex flex-col gap-4 md:gap-8">
               <h2 class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
-                A company with Integrity
+                A Company with Integrity
               </h2>
               <p class="text-gray-600 mb-4 text-md md:text-lg font-medium">
                 Since July 14 2016, the day we were founded, integrity has
@@ -312,22 +328,35 @@
           <div class="relative">
             <!-- Border that extends behind the image -->
             <div
-              class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-md -z-5">
+              class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-xl md:rounded-2xl bg-white shadow-xl -z-5">
             </div>
 
             <!-- The actual content -->
-            <p class="relative z-10 py-10 p-8 text-md md:text-2xl text-gray-900 md:text-sm lg:text-lg font-medium">
-              We firmly believe that it all starts with having a clear vision
-              of your unique goals. With this clarity, we combine objective
-              advice and experience-led execution to bring the collective
-              vision to life. We offer every client true peace of mind. We
-              define peace of mind as a deeply rooted confidence that comes
-              from feeling in control and knowing your financial plan is built
-              on a foundation of increasing self-knowledge and awareness. It
-              is at this critical juncture – the intersection of proactive
-              planning and peace of mind – that we believe our clients have
-              the highest potential to realize their goals.
-            </p>
+            <div class="relative z-10 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+              <div class="w-full text-center mb-5 md:mb-6">
+                <h3
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center tracking-tight"
+                >
+                  Clear Vision &amp; Peace of Mind
+                </h3>
+              </div>
+              <div class="space-y-4 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose font-normal">
+                <p>
+                  We firmly believe that it all starts with having a clear vision
+                  of your unique goals. With this clarity, we combine objective
+                  advice and experience-led execution to bring the collective
+                  vision to life. We offer every client true peace of mind.
+                </p>
+                <p>
+                  We define peace of mind as a deeply rooted confidence that comes
+                  from feeling in control and knowing your financial plan is built
+                  on a foundation of increasing self-knowledge and awareness. It
+                  is at this critical juncture – the intersection of proactive
+                  planning and peace of mind – that we believe our clients have
+                  the highest potential to realize their goals.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -337,7 +366,10 @@
         <!-- First Card -->
         <div
           class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white">
-          <div class="p-6">
+          <div class="p-6 md:p-8">
+            <h2 class="text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 text-center">
+              Our Purpose &amp; Mission
+            </h2>
             <p class="text-gray-600 mb-4 text-md md:text-lg font-medium">
               Our vision as a firm focuses on helping others achieve financial
               goals, as well as understanding of each client's unique purpose,
@@ -387,7 +419,7 @@
     </section>
     
     <!-- ARTICLE 2 -->
-    <section class="tcb-about-section">
+    <section class="tcb-about-section" style="padding-bottom: 16px;">
     <div class="tcb-about-container">
     <div class="tcb-about-dark">
     <div class="tcb-about-badge">Trust & Transparency</div>
@@ -403,7 +435,7 @@
     </section>
     
     <!-- ARTICLE 3 + 4 -->
-    <section class="tcb-about-section" style="background:#f8f8f8;">
+    <section class="tcb-about-section" style="background:#f8f8f8; padding-top: 16px;">
     <div class="tcb-about-container">
     <div class="tcb-about-grid">
     
@@ -459,35 +491,34 @@
     <!-- ABOUT PAGE NEW ARTICLES END -->
     
     <!-- consultation -->
-    <section class="consultation-section my-16">
+    <section class="consultation-section my-16 md:my-24">
       <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex flex-col md:flex-row gap-8 items-stretch">
           <!-- Left Container with Image and Yellow Overlay -->
-          <div class="w-full md:w-1/2 relative">
-            <img src="public/assets/consultation-img.webp" alt="Consultation Section Image"
-              class="w-full h-full object-cover hidden md:block" />
+          <div class="w-full md:w-1/2 flex">
+            <div class="consultation-card transform transition duration-500 hover:scale-[1.01]">
+              <img src="public/assets/consultation-img.webp" alt="Consultation Section Image"
+                class="consultation-card-bg" />
   
-            <div
-              class="relative md:absolute md:inset-0 bg-[#CBBA4F] bg-opacity-80 m-0 md:m-4 rounded-lg md:rounded-none transform transition duration-500 hover:scale-[1.02]">
-              <div class="p-6 md:p-8 h-full flex flex-col justify-center items-center">
+              <div class="consultation-card-overlay">
                 <h2 class="text-xl md:text-3xl font-bold text-black mb-6 text-center">
                   We Can Help you address:
                 </h2>
-                <ul class="text-black space-y-3 text-sm md:text-lg">
+                <ul class="text-black space-y-3.5 text-sm md:text-base lg:text-lg font-medium">
                   <li class="flex items-start">
-                    <span class="mr-2 font-bold">•</span>
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
                     <span>Investing principles and strategies</span>
                   </li>
                   <li class="flex items-start">
-                    <span class="mr-2 font-bold">•</span>
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
                     <span>Retirement investing and distribution strategies</span>
                   </li>
                   <li class="flex items-start">
-                    <span class="mr-2 font-bold">•</span>
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
                     <span>Estate conservation issues</span>
                   </li>
                   <li class="flex items-start">
-                    <span class="mr-2 font-bold">•</span>
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
                     <span>Risk management analysis</span>
                   </li>
                 </ul>
@@ -498,65 +529,149 @@
           <!-- Right Container with Consultation Options -->
           <div class="w-full md:w-1/2">
             <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Consultations</h2>
-            <div class="consultation-accordion">
-              <!-- Option 1 -->
-              <div class="border-b border-gray-300">
+            <div class="consultation-accordion flex flex-col gap-2">
+              <!-- Option 1: Taxation -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="taxation">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('taxation')">
-                  <span class="text-lg">Taxation</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Taxation</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Taxation plays a crucial role in funding essential public services such as infrastructure, healthcare, education, and national defense. Understanding taxation helps individuals and businesses make informed financial decisions.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Direct &amp; Indirect Taxes:</strong> Taxes collected directly on earnings or indirectly on consumption.</li>
+                      <li><strong>Types of Taxes:</strong> Income tax, corporate tax, sales tax/GST, capital gains, and customs duties.</li>
+                      <li><strong>Modern Trends:</strong> Digital taxation, green environmental levies, and global minimum tax frameworks.</li>
+                      <li><strong>Strategic Planning:</strong> Proactive compliance avoiding penalties while legally optimizing wealth.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 2 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 2: Business Tax -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="business">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('business')">
-                  <span class="text-lg">Business Tax</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Business Tax</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Business taxation forms the backbone of economic fairness and national development. It ensures companies contribute their fair share while maintaining profitability, expansion capability, and competitive advantage.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Corporate Income Tax:</strong> Taxes levied on net profits, shaping pricing, investment, and reinvestment strategies.</li>
+                      <li><strong>Sales Tax &amp; GST:</strong> Value-added transaction taxes impacting product margins and consumer demand.</li>
+                      <li><strong>Payroll &amp; Withholding:</strong> Mandatory employer tax withholdings, social security, and statutory compliances.</li>
+                      <li><strong>Global Tax Standards:</strong> Pillar Two global minimum taxation and cross-border transfer pricing compliance.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 3 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 3: Personal Funds -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="personal">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('personal')">
-                  <span class="text-lg">Personal Funds</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Personal Funds</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Managing personal funds wisely is essential for achieving financial independence, lifestyle security, and peace of mind. Structured budgeting, disciplined saving, and tactical asset allocation ensure a resilient financial future.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Sources of Wealth:</strong> Salaries, business dividends, investment yields, real estate, and family inheritances.</li>
+                      <li><strong>Budgeting Discipline:</strong> Aligning daily household liquidity with medium and long-term milestone goals.</li>
+                      <li><strong>Emergency Reserves:</strong> Tiered liquid reserves safeguarding families against career shifts or market volatility.</li>
+                      <li><strong>Financial Literacy:</strong> Ongoing advisory empowering informed decisions across every stage of wealth.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 4 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 4: Insurance -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="insurance">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('insurance')">
-                  <span class="text-lg">Insurance</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Insurance</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Insurance provides critical financial protection and risk management against life's unforeseen events—accidents, critical illness, and asset liabilities. It is the cornerstone of generational wealth preservation.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Tailored Life Cover:</strong> Pure term policies designed to replace human economic value and protect family dependents.</li>
+                      <li><strong>Comprehensive Health Shield:</strong> High-sum-insured policies insulating accumulated wealth from hospital inflation.</li>
+                      <li><strong>Asset &amp; Liability Protection:</strong> Commercial, property, and professional indemnity coverage shielding against claims.</li>
+                      <li><strong>Dedicated Claims Advocacy:</strong> End-to-end concierge guidance ensuring speedy settlement when you need it most.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 5 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 5: Mutual Funds -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="mutual">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('mutual')">
-                  <span class="text-lg">Mutual Funds</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Mutual Funds</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Mutual funds allow you to participate in capital markets through professionally managed, diversified portfolios of equities, debt, and gold, tailored to your unique investment horizon and risk tolerance.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Instant Diversification:</strong> Spreads exposure across sectors and market caps to curb single-stock risk.</li>
+                      <li><strong>Professional Fund Management:</strong> Veteran fund managers and analysts actively monitoring market conditions.</li>
+                      <li><strong>High Liquidity:</strong> Easily purchase or redeem units at transparent daily SEBI-regulated NAVs.</li>
+                      <li><strong>Tax-Advantaged Schemes:</strong> Equity-Linked Savings Schemes (ELSS) delivering 80C deductions plus equity compounding.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 6 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 6: SIPs -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="sips">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('sips')">
-                  <span class="text-lg">SIPs</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">SIPs</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      A Systematic Investment Plan (SIP) is a powerful, disciplined approach to long-term wealth accumulation. By investing fixed amounts at regular intervals, you bypass emotional market timing and harness compounding.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Disciplined Investing Habit:</strong> Automatically routes allocations on fixed dates without emotional bias.</li>
+                      <li><strong>Rupee Cost Averaging:</strong> Automatically accumulates more units during market dips and fewer at market peaks.</li>
+                      <li><strong>Power of Compounding:</strong> Returns reinvested over 5, 10, or 20 years multiply exponentially over time.</li>
+                      <li><strong>Flexible &amp; Accessible:</strong> Begin with amounts as low as ₹500, with full freedom to pause or step-up contributions.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -832,79 +947,219 @@
         </div>
       </div>
     </section>
-    <!-- questions -->
-    <section class="container mx-auto px-4 my-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
-        We also can answer your questions, including:
-      </h2>
-      <ul class="list-disc pl-5 text-md md:text-xl">
-        <div>
-          <li class="mb-2 transform transition duration-200 hover:text-primary cursor-pointer font-medium"
-            onclick="dropDescription(this)">
-            Can I retire early?
-          </li>
-          <p class="text-gray-600 mb-4 text-md md:text-lg font-medium hidden">
-            This depends on your current savings, income sources, and
-            financial goals. We can help analyze your plan.
-          </p>
-        </div>
-        <div>
-          <li class="mb-2 transform transition duration-200 hover:text-primary cursor-pointer font-medium"
-            onclick="dropDescription(this)">
-            Are my investments working hard enough?
-          </li>
-          <p class="text-gray-600 mb-4 text-md md:text-lg font-medium hidden">
-            We'll review your portfolio performance and suggest optimizations
-            if needed.
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-[#FAFAFA] border-y border-gray-100 relative">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <!-- Section Header -->
+        <div class="text-center mb-8 md:mb-12">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 mb-3 rounded-full bg-primary/15 border border-primary/30">
+            <span class="w-2 h-2 rounded-full bg-primary"></span>
+            <span class="text-xs md:text-sm font-semibold text-primary uppercase tracking-wider">Frequently Asked Questions</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+            We also can answer your questions, including:
+          </h2>
+          <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto font-light">
+            Click on any question below to see how our experienced advisors address critical financial, retirement, and investment decisions.
           </p>
         </div>
 
-        <div>
-          <li class="mb-2 transform transition duration-200 hover:text-primary cursor-pointer font-medium"
-            onclick="dropDescription(this)">
-            What's a good approach for college savings?
-          </li>
-          <p class="text-gray-600 mb-4 text-md md:text-lg font-medium hidden">
-            Options like 529 plans, custodial accounts, and more—we'll tailor
-            a solution to your family's needs.
-          </p>
+        <!-- FAQ Items Accordion -->
+        <div class="faq-container mt-8 sm:mt-10 md:mt-12" style="margin-top: 36px;">
+          <!-- FAQ 01 -->
+          <div class="faq-item active" data-faq="1">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">01</span>
+                <h3 class="faq-question">Can I retire early?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                Early retirement is entirely achievable with a disciplined, proactive roadmap. We analyze your current savings, projected passive income streams, lifestyle expenses, inflation factors, and healthcare needs to design a personalized strategy that protects your capital while funding your future with independence.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 02 -->
+          <div class="faq-item" data-faq="2">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">02</span>
+                <h3 class="faq-question">Are my investments working hard enough?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                Many portfolios carry unnecessary risk or underperform due to uncoordinated asset allocation and high expense ratios. Our team conducts an extensive portfolio audit to optimize risk-adjusted returns, ensure diversification across equities, fixed income, and alternatives, and maximize your capital efficiency.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 03 -->
+          <div class="faq-item" data-faq="3">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">03</span>
+                <h3 class="faq-question">What's a good approach for college savings?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                Education costs—both domestic and international—tend to inflate faster than standard living costs. We help you create targeted education funds utilizing high-growth mutual funds, diversified savings vehicles, and structured investment plans timed precisely to your child's academic milestones.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 04 -->
+          <div class="faq-item" data-faq="4">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">04</span>
+                <h3 class="faq-question">How do I choose the right investment strategy?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                The right strategy reflects your unique financial DNA: your time horizon, liquidity requirements, risk tolerance, and long-term milestones. We develop an objective, data-backed plan tailored specifically to your life stage rather than applying generic one-size-fits-all templates.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 05 -->
+          <div class="faq-item" data-faq="5">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">05</span>
+                <h3 class="faq-question">What are the elements of a sound estate strategy?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                A sound estate strategy ensures seamless wealth transfer and asset protection across generations. Key components include legally binding wills, family trusts, beneficiary nominations, durable powers of attorney, healthcare directives, and tax-efficient succession planning.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 06 -->
+          <div class="faq-item" data-faq="6">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">06</span>
+                <h3 class="faq-question">Do I have enough life insurance for my family?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                Adequate protection should cover outstanding liabilities, replace your future earning capacity, and secure your family's future standard of living. We run a comprehensive Human Life Value (HLV) calculation to identify coverage gaps and recommend cost-effective term insurance solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 07 -->
+          <div class="faq-item" data-faq="7">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">07</span>
+                <h3 class="faq-question">How can I minimize my tax liability legally?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                Strategic tax planning is an ongoing discipline, not a year-end rush. We evaluate both direct and indirect tax frameworks, utilizing legal exemptions, strategic capital gains harvesting, tax-advantaged accounts, and corporate entity structuring to preserve your wealth.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 08 -->
+          <div class="faq-item" data-faq="8">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">08</span>
+                <h3 class="faq-question">How do I build an effective emergency fund?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                We recommend setting aside 6 to 12 months of mandatory expenses in a tiered liquidity model. Combining high-yield savings accounts with ultra-short-term liquid instruments ensures instant accessibility for unforeseen emergencies without forfeiting inflation-beating yields.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 09 -->
+          <div class="faq-item" data-faq="9">
+            <div class="faq-header">
+              <div class="faq-header-left">
+                <span class="faq-number">09</span>
+                <h3 class="faq-question">When should I review or rebalance my portfolio?</h3>
+              </div>
+              <div class="faq-icon-wrapper">
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">
+                We recommend a formal review at least semi-annually or annually, and whenever major life events take place (such as marriage, career transitions, childbirth, or property acquisitions). Periodic rebalancing realigns drifted asset weights back to your target risk profile.
+              </p>
+            </div>
+          </div>
         </div>
-        <div>
-          <li class="mb-2 transform transition duration-200 hover:text-primary cursor-pointer font-medium"
-            onclick="dropDescription(this)">
-            How do I choose the right investment strategy?
-          </li>
-          <p class="text-gray-600 mb-4 text-md md:text-lg font-medium hidden">
-            We'll assess your risk tolerance and financial goals to create a
-            personalized investment plan.
-          </p>
+
+        <!-- Callout Banner Below -->
+        <div class="mt-12 bg-white rounded-2xl p-6 md:p-8 border border-primary/30 shadow-md flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div class="max-w-2xl">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Have a specific financial concern?</h3>
+            <p class="text-gray-600 text-sm md:text-base font-normal leading-relaxed">
+              Our experienced professionals have helped many people just like you with similar issues and concerns. We can help you create an approach that is designed to address your individual situation.
+            </p>
+          </div>
+          <a href="./contact.html" class="inline-block whitespace-nowrap bg-primary text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-[#1f2937] transition-colors duration-300 shadow-sm text-sm md:text-base">
+            Speak With An Advisor &gt;
+          </a>
         </div>
-        <div>
-          <li class="mb-2 transform transition duration-200 hover:text-primary cursor-pointer font-medium"
-            onclick="dropDescription(this)">
-            What are the elements of a sound estate strategy?
-          </li>
-          <p class="text-gray-600 mb-4 text-md md:text-lg font-medium hidden">
-            It includes wills, trusts, beneficiary designations, powers of
-            attorney, and tax planning.
-          </p>
-        </div>
-        <div>
-          <li class="mb-2 transform transition duration-200 hover:text-primary cursor-pointer font-medium"
-            onclick="dropDescription(this)">
-            Do I have enough life insurance for my family?
-          </li>
-          <p class="text-gray-600 mb-4 text-md md:text-lg font-medium hidden">
-            We'll calculate your needs based on income, debts, education, and
-            future family expenses.
-          </p>
-        </div>
-      </ul>
-      <p class="mt-4 font-normal text-lg md:text-2xl">
-        Our experienced professionals have helped many people just like you
-        with similar issues and concerns. We can help you create an approach
-        that is designed to address your individual situation.
-      </p>
+      </div>
     </section>
     <!-- Testimonial -->
     <section class="container mx-auto px-4 my-16">
@@ -912,23 +1167,22 @@
         STAR PERFORMER's
       </div>
 
-      <div class="carousel flex items-center justify-center w-full h-96 relative">
+      <div class="carousel flex items-center justify-center w-full relative">
         <ul class="carousel__list flex relative w-full justify-center items-center list-none p-0">
-          <li class="carousel__item max-w-md md:w-lg h-96 rounded-xl shadow-lg overflow-hidden cursor-pointer"
-            data-pos="-2">
-            <img src="public/assets/card-1.webp" alt="Testimonial Card 1" class="w-full h-full object-cover" />
+          <li class="carousel__item" data-pos="-2">
+            <img src="public/assets/star-performer-indranil.png" alt="Star Performer of the Week - Indranil Mukherjee" class="w-full h-full object-cover" />
           </li>
-          <li class="carousel__item w-lg h-96 rounded-xl shadow-lg overflow-hidden cursor-pointer" data-pos="-1">
-            <img src="public/assets/card-2.webp" alt="Testimonial Card 2" class="w-full h-full object-cover" />
+          <li class="carousel__item" data-pos="-1">
+            <img src="public/assets/star-performer-rozi.jpg" alt="Star Performer of the Week - Rozi Bisht" class="w-full h-full object-cover" />
           </li>
-          <li class="carousel__item w-lg h-96 rounded-xl shadow-lg overflow-hidden cursor-pointer" data-pos="0">
-            <img src="public/assets/card-1.webp" alt="Testimonial Card 3" class="w-full h-full object-cover" />
+          <li class="carousel__item" data-pos="0">
+            <img src="public/assets/star-performer-indranil.png" alt="Star Performer of the Week - Indranil Mukherjee" class="w-full h-full object-cover" />
           </li>
-          <li class="carousel__item w-lg h-96 rounded-xl shadow-lg overflow-hidden cursor-pointer" data-pos="1">
-            <img src="public/assets/card-1.webp" alt="Testimonial Card 4" class="w-full h-full object-cover" />
+          <li class="carousel__item" data-pos="1">
+            <img src="public/assets/star-performer-rozi.jpg" alt="Star Performer of the Week - Rozi Bisht" class="w-full h-full object-cover" />
           </li>
-          <li class="carousel__item w-lg h-96 rounded-xl shadow-lg overflow-hidden cursor-pointer" data-pos="2">
-            <img src="public/assets/card-2.webp" alt="Testimonial Card 5" class="w-full h-full object-cover" />
+          <li class="carousel__item" data-pos="2">
+            <img src="public/assets/star-performer-indranil.png" alt="Star Performer of the Week - Indranil Mukherjee" class="w-full h-full object-cover" />
           </li>
         </ul>
       </div>
@@ -1021,12 +1275,20 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>
 
   <script src="main.js"></script>
+  <script>
+    if (typeof initFaqAccordion === 'function') {
+      initFaqAccordion();
+    }
+    if (typeof initConsultationAccordion === 'function') {
+      initConsultationAccordion();
+    }
+  </script>
 </body>
 
 </html>

@@ -15,6 +15,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>The Capital Box Terms & Conditions | Usage Guidelines</title>
     <meta name="description" content="Review The Capital Box Terms & Conditions to understand website usage policies, intellectual property rights, liability limitations.">
     <!-- Preload essential resources for better performance -->
@@ -61,35 +62,36 @@
         backdrop-filter: blur(10px);
         position: relative;
         overflow: hidden;
+        text-align: left !important;
     }
 
     .container::before {
         content: "";
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 120px;
+        left: 55px;
+        width: 80px;
         height: 4px;
         background: #CBBA4F;
         border-radius: 999px;
     }
 
     /* Main Heading */
-   .container p {
-    font-size: 18px;
-    line-height: 1.95;
-    color: #374151;
-    margin-bottom: 18px;
-    font-weight: 400;
+    .container h1 {
+        font-size: 40px;
+        font-weight: 800;
+        color: #111827;
+        text-align: left !important;
+        margin-bottom: 12px;
+        line-height: 1.25;
     }
 
     /* Updated Text */
     .updated {
-        text-align: center;
+        text-align: left !important;
         color: #6B7280;
-        font-size: 18px;
-        margin-bottom: 42px;
+        font-size: 16px;
+        margin-bottom: 28px;
     }
 
     .updated strong {
@@ -99,24 +101,26 @@
 
     /* Intro Paragraph */
     .container>p:first-of-type {
-        text-align: center;
-        font-size: 20px;
-        line-height: 1.9;
+        text-align: left !important;
+        font-size: 19px;
+        line-height: 1.85;
         color: #374151;
-        max-width: 850px;
-        margin: 0 auto 55px auto;
+        max-width: 100%;
+        margin: 0 0 32px 0;
     }
 
     /* Section Headings */
     .container h2 {
-        margin-top: 38px;
+        margin-top: 36px;
         margin-bottom: 14px;
-        font-size: 32px;
+        font-size: 26px;
         font-weight: 700;
         color: #111827;
+        text-align: left !important;
         border-left: 5px solid #CBBA4F;
-        padding-left: 18px;
+        padding-left: 16px;
         transition: all 0.3s ease;
+        line-height: 1.35;
     }
 
     .container h2:hover {
@@ -125,10 +129,11 @@
 
     /* Paragraphs */
     .container p {
-        font-size: 18px;
-        line-height: 1.95;
+        font-size: 17px;
+        line-height: 1.85;
         color: #374151;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
+        text-align: left !important;
     }
 
     /* Bold Brand */
@@ -139,15 +144,18 @@
 
     /* Lists */
     .container ul {
-        padding-left: 24px;
+        padding-left: 20px;
         margin-top: 10px;
+        margin-bottom: 16px;
+        text-align: left !important;
     }
 
     .container li {
-        margin-bottom: 10px;
-        font-size: 18px;
+        margin-bottom: 8px;
+        font-size: 17px;
         line-height: 1.8;
         color: #374151;
+        text-align: left !important;
     }
 
     /* Footer spacing */
@@ -169,26 +177,46 @@
             margin: 110px 16px 50px 16px;
             padding: 35px 22px;
             border-radius: 18px;
+            text-align: left !important;
+        }
+
+        .container::before {
+            left: 22px;
+            width: 50px;
         }
 
         .container h1 {
-            font-size: 38px;
+            font-size: 28px;
+            text-align: left !important;
+            margin-bottom: 8px;
+            line-height: 1.25;
         }
 
         .container h2 {
-            font-size: 24px;
-            padding-left: 14px;
+            font-size: 20px;
+            padding-left: 12px;
+            text-align: left !important;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            line-height: 1.35;
         }
 
         .container p,
         .container li,
         .container>p:first-of-type {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.75;
+            text-align: left !important;
+        }
+
+        .container>p:first-of-type {
+            margin-bottom: 22px;
         }
 
         .updated {
-            font-size: 16px;
+            font-size: 14px;
+            text-align: left !important;
+            margin-bottom: 22px;
         }
     }
 </style>
@@ -219,7 +247,7 @@
                     class="text-white hover:text-primary transition text-lg font-light uppercase">Home</a>
 
                 <!-- Dropdown Menu -->
-                <div class="dropdown relative w-full">
+                <div class="dropdown relative">
                     <button
                         class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
                         id="dropdownToggle">
@@ -312,7 +340,7 @@
     <div class="container" style="margin-top: 100px;">
 
         <h1>Terms & Conditions</h1>
-        <p class="updated"><strong>Last Updated:</strong> March 10, 2026</p>
+        <p class="updated"><strong>Last Updated:</strong> September 28, 2026</p>
 
         <p>
             By accessing and using <strong>TheCapitalBox</strong>, you agree to comply with the following terms and conditions.
@@ -345,7 +373,7 @@
         <h2>5. Changes to Terms</h2>
 
         <p>
-            We reserve the right to modify or update these Terms & Conditions at any time without prior notice. Any updates will be posted on this page with the revised <strong>Last Updated.
+            We reserve the right to modify or update these Terms & Conditions at any time without prior notice. Any updates will be posted on this page with the revised <strong>Last Updated</strong> date.
         </p>
 
         
@@ -467,7 +495,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

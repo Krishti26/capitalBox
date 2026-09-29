@@ -14,6 +14,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -81,7 +82,7 @@
     <meta property="og:image" content="public/assets/logo-1.webp" />
     <meta
       property="og:url"
-      content="https://thecapitalbox.com/src/riskmanagement.html"
+      content="https://www.thecapitalbox.com/riskmanagement.html"
     />
     <meta property="og:type" content="website" />
 
@@ -148,17 +149,22 @@
     }
     .tcb-risk-card{
     background:#ffffff;
-    padding:36px;
-    border-radius:24px;
-    border:1px solid rgba(203,186,79,0.18);
-    box-shadow:0 12px 30px rgba(0,0,0,0.05);
+    padding:36px 28px;
+    border-radius:22px;
+    border:1px solid rgba(203,186,79,0.22);
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
     transition:all .35s ease;
     position:relative;
     overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
     }
     .tcb-risk-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 18px 40px rgba(203,186,79,0.18);
+    transform:translateY(-8px);
+    box-shadow:0 20px 42px rgba(203,186,79,0.22);
+    border-color:rgba(203,186,79,0.6);
     }
     .tcb-risk-card::before{
     content:'';
@@ -170,21 +176,44 @@
     background:#CBBA4F;
     }
     .tcb-risk-icon{
-    font-size:38px;
-    display:block;
-    margin-bottom:18px;
+    width:64px;
+    height:64px;
+    margin:0 auto 20px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    background:linear-gradient(135deg, rgba(203,186,79,0.16) 0%, rgba(203,186,79,0.06) 100%);
+    border:1.5px solid rgba(203,186,79,0.38);
+    color:#CBBA4F;
+    font-size:26px;
+    transition:all .35s ease;
+    box-shadow:0 4px 14px rgba(203,186,79,0.12);
+    flex-shrink:0;
+    }
+    .tcb-risk-card:hover .tcb-risk-icon{
+    background:#CBBA4F;
+    color:#ffffff;
+    transform:scale(1.08) rotate(3deg);
+    box-shadow:0 8px 22px rgba(203,186,79,0.35);
+    border-color:#CBBA4F;
     }
     .tcb-risk-card h3{
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
     color:#111827;
-    margin-bottom:14px;
+    margin-bottom:12px;
     text-align:center;
+    line-height:1.35;
+    width:100%;
     }
     .tcb-risk-card p{
     font-size:15px;
     line-height:1.85;
     color:#4b5563;
+    text-align:center;
+    margin:0;
+    width:100%;
     }
     .tcb-risk-banner{
     margin-top:85px;
@@ -220,12 +249,18 @@
     color:#e5e7eb;
     }
     @media(max-width:992px){
-    .tcb-risk-grid{grid-template-columns:1fr 1fr;}
+    .tcb-risk-grid{grid-template-columns:1fr 1fr; gap:26px;}
     }
     @media(max-width:768px){
-    .tcb-risk-grid{grid-template-columns:1fr;}
-    .tcb-risk-title{font-size:34px;}
-    .tcb-risk-banner{padding:45px 24px;}
+    .tcb-risk-grid{grid-template-columns:1fr; gap:22px;}
+    .tcb-risk-card{padding:28px 20px; border-radius:18px;}
+    .tcb-risk-icon{width:56px; height:56px; font-size:22px; border-radius:14px; margin-bottom:16px;}
+    .tcb-risk-card h3{font-size:20px; margin-bottom:10px;}
+    .tcb-risk-card p{font-size:14px; line-height:1.75;}
+    .tcb-risk-title{font-size:28px; line-height:1.3;}
+    .tcb-risk-banner{padding:40px 20px; border-radius:20px;}
+    .tcb-risk-banner h3{font-size:26px; line-height:1.3;}
+    .tcb-risk-banner p{font-size:15px; line-height:1.75;}
     }
     </style>
   </head>
@@ -271,7 +306,7 @@
           >
 
           <!-- Dropdown Menu -->
-          <div class="dropdown relative w-full">
+          <div class="dropdown relative">
             <button
               class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
               id="dropdownToggle"
@@ -454,34 +489,42 @@
     <main>
       <!-- Hero Section -->
       <div class="relative">
-        <!-- Hero Image -->
-        <div
-          class="w-full h-screen bg-cover bg-center relative overflow-hidden"
-        >
+        <!-- Hero Image & Content -->
+        <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
           <img
             src="public/assets/SERVICES04.webp"
-            alt="Hero Image"
-            class="w-full h-full object-cover"
+            alt="Risk Management Hero Image"
+            class="subpage-hero-img w-full h-full object-cover"
           />
 
-          <!-- Hero Content -->
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"
-          >
-            <div class="text-center text-white px-4">
-              <h1 class="text-xl md:text-4xl lg:text-6xl font-bold mb-4">
+          <!-- Hero Content Overlay -->
+          <div class="subpage-hero-overlay">
+            <div class="subpage-hero-content">
+              <div class="subpage-hero-badge">
+                <span class="subpage-hero-badge-dot"></span>
+                <span>Asset Protection</span>
+              </div>
+              <h1 class="subpage-hero-title">
                 Risk Management
               </h1>
+              <p class="subpage-hero-desc">
+                Identifying financial vulnerabilities and safeguarding your wealth against market uncertainties, economic volatility, and unforeseen life events with comprehensive mitigation.
+              </p>
+              <div class="subpage-hero-pills">
+                <span class="subpage-hero-pill">Asset Protection</span>
+                <span class="subpage-hero-pill">Market Volatility Shield</span>
+                <span class="subpage-hero-pill">Custom Mitigation</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Overlapping Cards Container -->
-        <div class="container mx-auto px-4 relative -mt-16 md:-mt-32 mb-16">
+        <!-- Feature Card Container -->
+        <div class="subpage-card-container container mx-auto px-4 relative">
           <div class="w-full">
             <!-- First Card -->
             <div
-              class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+              class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
             >
               <div class="p-6 flex flex-col gap-4 md:gap-8">
                 <h2
@@ -492,16 +535,15 @@
                 <div
                   class="text-gray-600 mb-4 text-md md:text-lg font-medium flex flex-col gap-4"
                 >
-                  <ul class="list-disc pl-5">
+                  <ul class="list-disc pl-5 space-y-2">
                     <li>What financial risks could impact your future?</li>
                     <li>Are your investments protected against market fluctuations?</li>
                     <li>Do you have strategies in place to manage unexpected financial challenges?</li>
                     <li>Is your financial plan prepared to handle uncertainty?</li>
-                    <p class="text-lg mt-4 text-gray-700 font-medium">
-                      Every financial decision carries a level of risk. Market changes, economic shifts, and unforeseen events can affect your financial stability if not managed properly. Effective risk management helps identify potential threats, protect your assets, and reduce financial losses. With the right strategies and professional guidance, you can safeguard your investments and maintain long-term financial security even during uncertain times.
-                    </p>
-                    <p></p>
                   </ul>
+                  <p class="text-lg mt-4 text-gray-700 font-medium leading-relaxed pl-5" style="padding-left: 1.25rem;">
+                    Every financial decision carries a level of risk. Market changes, economic shifts, and unforeseen events can affect your financial stability if not managed properly. Effective risk management helps identify potential threats, protect your assets, and reduce financial losses. With the right strategies and professional guidance, you can safeguard your investments and maintain long-term financial security even during uncertain times.
+                  </p>
                 </div>
               </div>
             </div>
@@ -557,11 +599,6 @@
                 Our professionals provide structured financial and tax advisory solutions designed to minimize risk and maximize financial efficiency. We work with multinational corporations, Indian companies, expatriates, non-residents, and resident Indians to ensure compliance, tax optimization, and financial stability. <br><br>With strong global tax knowledge and continuous engagement with regulatory authorities, we deliver reliable and strategic guidance that supports sustainable business growth.
                 
               </p>
-              <!--<p-->
-              <!--  class="relative z-10 py-10 p-8 text-md md:text-2xl text-gray-900 md:text-sm lg:text-lg font-medium mt-0"-->
-              <!-->-->
-              <!--  With strong global tax knowledge and continuous engagement with regulatory authorities, we deliver reliable and strategic guidance that supports sustainable business growth.-->
-              <!--</p>-->
              
             </div>
           </div>
@@ -573,473 +610,234 @@
         <div class="w-full flex flex-col md:flex-row gap-8">
           <!-- First Card -->
           <div
-            class="w-full md:w-1/2 px-4 py-8 bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+            class="w-full md:w-1/2 bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
           >
-            <h2 class="text-lg md:text-xl lg:text-3xl font-bold text-center">
-              Our Services Include:
-            </h2>
-            <ul
-              class="text-md md:text-lg mt-4 text-gray-700 font-medium list-disc list-inside"
-            >
-              <li>Direct and Indirect Tax Advisory  </li>
-              <li>International Tax and Transfer Pricing Solutions  </li>
-              <li>GST Transition and Compliance</li>
-              <li>Business Setup in India and Overseas</li>
-              <li>Corporate Structuring and Transaction Advisory</li>
-              <strong><br>
-               TCB has the expertise to make tax management easier, more intelligent, and integrated with your business objectives.
-              </strong>
-            </ul>
+            <div class="p-6 md:p-8 flex flex-col gap-4 md:gap-6">
+              <h2 class="text-xl md:text-3xl font-bold text-gray-800 text-center">
+                Our Services Include:
+              </h2>
+              <div class="text-gray-600 text-md md:text-lg font-medium flex flex-col gap-4">
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>Direct and Indirect Tax Advisory</li>
+                  <li>International Tax and Transfer Pricing Solutions</li>
+                  <li>GST Transition and Compliance</li>
+                  <li>Business Setup in India and Overseas</li>
+                  <li>Corporate Structuring and Transaction Advisory</li>
+                </ul>
+                <p class="text-base md:text-lg mt-4 text-gray-700 font-medium leading-relaxed pl-5" style="padding-left: 1.25rem;">
+                  TCB has the expertise to make tax management easier, more intelligent, and integrated with your business objectives.
+                </p>
+              </div>
+            </div>
           </div>
           <!--  -->
           <!-- Right Container with Consultation Options -->
           <div class="w-full md:w-1/2">
             <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Consultations</h2>
-            <div class="consultation-accordion">
-              <!-- Option 1 -->
-              <div class="border-b border-gray-300">
+            <div class="consultation-accordion flex flex-col gap-2">
+              <!-- Option 1: Taxation -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="taxation">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('taxation')"
-                >
-                  <span class="text-lg">Taxation</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Taxation</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Taxation plays a crucial role in funding essential public services such as infrastructure, healthcare, education, and national defense. Understanding taxation helps individuals and businesses make informed financial decisions.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Direct &amp; Indirect Taxes:</strong> Taxes collected directly on earnings or indirectly on consumption.</li>
+                      <li><strong>Types of Taxes:</strong> Income tax, corporate tax, sales tax/GST, capital gains, and customs duties.</li>
+                      <li><strong>Modern Trends:</strong> Digital taxation, green environmental levies, and global minimum tax frameworks.</li>
+                      <li><strong>Strategic Planning:</strong> Proactive compliance avoiding penalties while legally optimizing wealth.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 2 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 2: Business Tax -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="business">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('business')"
-                >
-                  <span class="text-lg">Business Tax</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Business Tax</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Business taxation forms the backbone of economic fairness and national development. It ensures companies contribute their fair share while maintaining profitability, expansion capability, and competitive advantage.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Corporate Income Tax:</strong> Taxes levied on net profits, shaping pricing, investment, and reinvestment strategies.</li>
+                      <li><strong>Sales Tax &amp; GST:</strong> Value-added transaction taxes impacting product margins and consumer demand.</li>
+                      <li><strong>Payroll &amp; Withholding:</strong> Mandatory employer tax withholdings, social security, and statutory compliances.</li>
+                      <li><strong>Global Tax Standards:</strong> Pillar Two global minimum taxation and cross-border transfer pricing compliance.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 3 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 3: Personal Funds -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="personal">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('personal')"
-                >
-                  <span class="text-lg">Personal Funds</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Personal Funds</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Managing personal funds wisely is essential for achieving financial independence, lifestyle security, and peace of mind. Structured budgeting, disciplined saving, and tactical asset allocation ensure a resilient financial future.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Sources of Wealth:</strong> Salaries, business dividends, investment yields, real estate, and family inheritances.</li>
+                      <li><strong>Budgeting Discipline:</strong> Aligning daily household liquidity with medium and long-term milestone goals.</li>
+                      <li><strong>Emergency Reserves:</strong> Tiered liquid reserves safeguarding families against career shifts or market volatility.</li>
+                      <li><strong>Financial Literacy:</strong> Ongoing advisory empowering informed decisions across every stage of wealth.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 4 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 4: Insurance -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="insurance">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('insurance')"
-                >
-                  <span class="text-lg">Insurance</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Insurance</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Insurance provides critical financial protection and risk management against life's unforeseen events—accidents, critical illness, and asset liabilities. It is the cornerstone of generational wealth preservation.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Tailored Life Cover:</strong> Pure term policies designed to replace human economic value and protect family dependents.</li>
+                      <li><strong>Comprehensive Health Shield:</strong> High-sum-insured policies insulating accumulated wealth from hospital inflation.</li>
+                      <li><strong>Asset &amp; Liability Protection:</strong> Commercial, property, and professional indemnity coverage shielding against claims.</li>
+                      <li><strong>Dedicated Claims Advocacy:</strong> End-to-end concierge guidance ensuring speedy settlement when you need it most.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 5 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 5: Mutual Funds -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="mutual">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('mutual')"
-                >
-                  <span class="text-lg">Mutual Funds</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Mutual Funds</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      Mutual funds allow you to participate in capital markets through professionally managed, diversified portfolios of equities, debt, and gold, tailored to your unique investment horizon and risk tolerance.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Instant Diversification:</strong> Spreads exposure across sectors and market caps to curb single-stock risk.</li>
+                      <li><strong>Professional Fund Management:</strong> Veteran fund managers and analysts actively monitoring market conditions.</li>
+                      <li><strong>High Liquidity:</strong> Easily purchase or redeem units at transparent daily SEBI-regulated NAVs.</li>
+                      <li><strong>Tax-Advantaged Schemes:</strong> Equity-Linked Savings Schemes (ELSS) delivering 80C deductions plus equity compounding.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <!-- Option 6 -->
-              <div class="border-b border-gray-300">
+              <!-- Option 6: SIPs -->
+              <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="sips">
                 <button
-                  class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                  onclick="togglePopup('sips')"
-                >
-                  <span class="text-lg">SIPs</span>
-                  <span class="text-xl">></span>
+                  type="button"
+                  class="consultation-header w-full py-4 px-3 flex justify-between items-center text-left transition-colors duration-200 group"
+                  aria-expanded="false">
+                  <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">SIPs</span>
+                  <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                 </button>
+                <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                  <div class="pb-5 pt-1 px-3 text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p class="mb-3 font-normal">
+                      A Systematic Investment Plan (SIP) is a powerful, disciplined approach to long-term wealth accumulation. By investing fixed amounts at regular intervals, you bypass emotional market timing and harness compounding.
+                    </p>
+                    <ul class="space-y-1.5 pl-3 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                      <li><strong>Disciplined Investing Habit:</strong> Automatically routes allocations on fixed dates without emotional bias.</li>
+                      <li><strong>Rupee Cost Averaging:</strong> Automatically accumulates more units during market dips and fewer at market peaks.</li>
+                      <li><strong>Power of Compounding:</strong> Returns reinvested over 5, 10, or 20 years multiply exponentially over time.</li>
+                      <li><strong>Flexible &amp; Accessible:</strong> Begin with amounts as low as ₹500, with full freedom to pause or step-up contributions.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- Popup containers (hidden by default) -->
-        <!-- taxation -->
-        <div
-          id="taxation"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Taxation Insights
-              </h3>
-
-              <button onclick="togglePopup('taxation')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Taxation plays a crucial role in funding essential public services
-              such as infrastructure, healthcare, education, and national
-              defense. Understanding taxation helps individuals and businesses
-              make informed financial decisions.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Direct and Indirect Taxes:</strong> Taxes are collected
-                either directly (e.g., income tax) or indirectly (e.g., sales
-                tax) based on earnings and consumption.
-              </li>
-              <li>
-                <strong>Types of Taxes:</strong> Income tax, sales tax, property
-                tax, excise duties, and customs duties each impact different
-                aspects of the economy.
-              </li>
-              <li>
-                <strong>Modern Tax Trends:</strong> Digital taxation,
-                environmental taxes, and international cooperation like the
-                Global Minimum Tax are reshaping global tax systems.
-              </li>
-              <li>
-                <strong>Challenges:</strong> Governments face issues like tax
-                evasion, regulatory complexity, and adapting to digital
-                economies.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- business -->
-        <div
-          id="business"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Business Taxation
-              </h3>
-
-              <button onclick="togglePopup('business')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Business taxation forms the backbone of economic fairness and
-              national development. It ensures that companies contribute their
-              fair share to the growth of public services and infrastructure.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Corporate Income Tax:</strong> Companies are taxed on
-                their net profits, impacting pricing, investment, and
-                operational strategies.
-              </li>
-              <li>
-                <strong>Sales Tax and VAT:</strong> Taxes applied to goods and
-                services, influencing consumer behavior and business margins.
-              </li>
-              <li>
-                <strong>Payroll and Excise Taxes:</strong> Businesses must
-                contribute taxes for employee salaries and specific goods like
-                fuel, alcohol, and tobacco.
-              </li>
-              <li>
-                <strong>Global Tax Reforms:</strong> Initiatives like the Global
-                Minimum Tax aim to create a level playing field internationally,
-                reducing tax evasion through offshore operations.
-              </li>
-              <li>
-                <strong>Digital and Green Taxation:</strong> Modern businesses,
-                especially digital platforms, are now subject to new taxes
-                promoting transparency and environmental responsibility.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Personal Fund -->
-        <div
-          id="personal"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Personal Funds
-              </h3>
-
-              <button onclick="togglePopup('personal')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Managing personal funds wisely is essential for achieving
-              financial security, independence, and peace of mind. Understanding
-              income sources and applying effective strategies ensures a stable
-              financial future.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Sources of Personal Funds:</strong> Salaries,
-                investments, savings, inheritances, and pensions contribute to
-                an individual's wealth.
-              </li>
-              <li>
-                <strong>Importance of Fund Management:</strong> Smart budgeting,
-                saving, and investing help meet daily needs, future goals, and
-                emergency requirements.
-              </li>
-              <li>
-                <strong>Modern Trends:</strong> Digital banking, automated
-                investments, and new asset classes like cryptocurrencies are
-                transforming personal finance management.
-              </li>
-              <li>
-                <strong>Challenges:</strong> Rising living costs, unpredictable
-                expenses, and lack of financial literacy can threaten financial
-                stability if not addressed.
-              </li>
-              <li>
-                <strong>Financial Literacy:</strong> Ongoing education in
-                managing money, investments, and retirement planning is more
-                important than ever for long-term success.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- insurance -->
-        <div
-          id="insurance"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Insurance
-              </h3>
-
-              <button onclick="togglePopup('insurance')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Insurance offers financial protection against unexpected events
-              such as accidents, illness, and emergencies. It is a crucial step
-              toward securing your future and that of your loved ones.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Tailored Coverage:</strong> Insurance plans customized
-                to meet your specific needs, ensuring optimal protection.
-              </li>
-              <li>
-                <strong>Affordable Premiums:</strong> Quality coverage at
-                competitive rates, helping you balance cost and protection.
-              </li>
-              <li>
-                <strong>Expert Support:</strong> Access to professional guidance
-                in selecting the right insurance plan and navigating claims.
-              </li>
-              <li>
-                <strong>Fast Claim Processing:</strong> Hassle-free and quick
-                claims, ensuring you get the support you need when it matters
-                most.
-              </li>
-              <li>
-                <strong>Comprehensive Tax Assistance:</strong> Maximize your tax
-                benefits through eligible insurance policies.
-              </li>
-              <li>
-                <strong>24/7 Customer Service:</strong> Access to help anytime,
-                ensuring you're never left without support.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- mutual -->
-        <div
-          id="mutual"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Mutual Funds
-              </h3>
-
-              <button onclick="togglePopup('mutual')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Mutual funds allow you to invest in a diversified portfolio
-              managed by professionals. They offer an opportunity to grow your
-              wealth with relatively low risk and are perfect for both new and
-              experienced investors.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Diversified Portfolio:</strong> Spread your investments
-                across different assets to minimize risk and maximize returns.
-              </li>
-              <li>
-                <strong>Professional Management:</strong> Expert fund managers
-                actively manage your investment for optimal growth.
-              </li>
-              <li>
-                <strong>Affordable Investment:</strong> Start investing with
-                small amounts and gradually build wealth over time.
-              </li>
-              <li>
-                <strong>High Liquidity:</strong> Buy or sell your mutual fund
-                units with ease when you need access to funds.
-              </li>
-              <li>
-                <strong>Tax Benefits:</strong> Certain mutual fund schemes, like
-                ELSS, offer tax-saving advantages under Section 80C.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- SIPs -->
-        <div
-          id="sips"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on SIP's
-              </h3>
-
-              <button onclick="togglePopup('sips')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              A Systematic Investment Plan (SIP) is an easy and efficient way to
-              invest in mutual funds regularly. It allows you to grow your
-              wealth steadily, without the stress of market fluctuations, by
-              investing small amounts at fixed intervals.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Disciplined Saving:</strong> Set aside a fixed amount
-                regularly, ensuring a consistent investment habit without
-                pressure.
-              </li>
-              <li>
-                <strong>Rupee Cost Averaging:</strong> Minimize market
-                volatility by investing at different price points, which
-                smoothens your investment journey.
-              </li>
-              <li>
-                <strong>Flexible Investment:</strong> You can start, stop, or
-                modify your SIP as per your needs and goals.
-              </li>
-              <li>
-                <strong>Power of Compounding:</strong> Over time, your
-                investments grow significantly due to the power of compounding.
-              </li>
-              <li>
-                <strong>Affordable Start:</strong> You can begin your investment
-                journey with amounts as low as ₹500, making SIPs accessible to
-                everyone.
-              </li>
-            </ul>
           </div>
         </div>
       </div>
       <!--  -->
       <!-- Tax Services Advantages TCB -->
-      <section class="consultation-section my-16">
+      <section class="consultation-section my-16 md:my-24">
         <div class="container mx-auto px-4">
-          <div class="flex flex-col md:flex-row-reverse gap-8 h-full">
-            <!-- Left Container with Image and Yellow Overlay -->
-            <div class="w-full relative md:h-[70vh]">
+          <div class="w-full flex">
+            <!-- Container with Image and Yellow Overlay -->
+            <div class="consultation-card max-w-4xl mx-auto transform transition duration-500 hover:scale-[1.01]">
               <img
                 src="public/assets/tax-04.webp"
                 alt="Financial consultation"
-                class="w-full h-full object-cover hidden md:block"
+                class="consultation-card-bg"
               />
-              <img
-                src="public/assets/tax-05.webp"
-                alt="Financial consultation"
-                class="w-full h-[100%] object-cover hidden md:hidden"
-              />
-              <div
-                class="md:absolute md:inset-0 bg-[#CBBA4F] bg-opacity-80 m-4 md:m-8 transform transition duration-500 hover:scale-[1.02]"
-              >
-                <div class="p-4 md:p-8 h-full flex flex-col">
-                  <h2 class="text-xl md:text-3xl font-bold text-black mb-6 text-center">
-                    Tax Services- Advantages TCB
-                  </h2>
-                  <ul
-                    class="text-black space-y-3 text-sm md:text-lg font-medium"
-                  >
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >TCB is the world's fastest network of audit, tax and
-                        consulting firms</span
-                      >
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span>TCB in India is consistently growing in India</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >Extensive experience in advisory, tax and accounting
-                        matters across various sectors</span
-                      >
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >Dedicated team of highly qualified, experienced and
-                        trained professionals</span
-                      >
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >Enhance certainty around financial and execution
-                        outcomes</span
-                      >
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span>Secure your transactions</span>
-                    </li>
-                  </ul>
-                </div>
+              <div class="consultation-card-overlay p-6 md:p-10">
+                <h2 class="text-xl md:text-3xl font-bold text-black mb-6 text-center">
+                  Tax Services- Advantages TCB
+                </h2>
+                <ul
+                  class="text-black space-y-3.5 text-sm md:text-base lg:text-lg font-medium"
+                >
+                  <li class="flex items-start">
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
+                    <span
+                      >TCB is the world's fastest network of audit, tax and
+                      consulting firms</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
+                    <span>TCB in India is consistently growing in India</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
+                    <span
+                      >Extensive experience in advisory, tax and accounting
+                      matters across various sectors</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
+                    <span
+                      >Dedicated team of highly qualified, experienced and
+                      trained professionals</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
+                    <span
+                      >Enhance certainty around financial and execution
+                      outcomes</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2.5 font-bold text-lg leading-none">•</span>
+                    <span>Secure your transactions</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1066,7 +864,7 @@
     <div class="tcb-risk-grid">
     
     <div class="tcb-risk-card">
-    <span class="tcb-risk-icon">🛡️</span>
+    <div class="tcb-risk-icon"><i class="fas fa-shield-alt"></i></div>
     <h3>Asset Protection Strategy</h3>
     <p>
     Wealth creation without protection can leave financial progress exposed. Strategic safeguards help preserve assets against volatility, liabilities, and unexpected disruptions.
@@ -1074,7 +872,7 @@
     </div>
     
     <div class="tcb-risk-card">
-    <span class="tcb-risk-icon">📉</span>
+    <div class="tcb-risk-icon"><i class="fas fa-chart-line"></i></div>
     <h3>Market Volatility Preparedness</h3>
     <p>
     Economic cycles and market uncertainty are inevitable. Risk-aware planning helps minimize financial shocks while maintaining strategic stability.
@@ -1082,7 +880,7 @@
     </div>
     
     <div class="tcb-risk-card">
-    <span class="tcb-risk-icon">👨‍👩‍👧</span>
+    <div class="tcb-risk-icon"><i class="fas fa-user-shield"></i></div>
     <h3>Family Security Planning</h3>
     <p>
     From healthcare disruptions to income instability, structured protection strategies help families maintain confidence during life’s uncertainties.
@@ -1090,7 +888,7 @@
     </div>
     
     <div class="tcb-risk-card">
-    <span class="tcb-risk-icon">🏢</span>
+    <div class="tcb-risk-icon"><i class="fas fa-building"></i></div>
     <h3>Business Continuity Protection</h3>
     <p>
     Operational, regulatory, and financial risks can impact growth. Smart business protection frameworks strengthen resilience and decision-making.
@@ -1098,7 +896,7 @@
     </div>
     
     <div class="tcb-risk-card">
-    <span class="tcb-risk-icon">📊</span>
+    <div class="tcb-risk-icon"><i class="fas fa-balance-scale"></i></div>
     <h3>Diversification & Stability</h3>
     <p>
     Balanced financial structures reduce overexposure while improving adaptability across investments, insurance, and long-term planning.
@@ -1106,7 +904,7 @@
     </div>
     
     <div class="tcb-risk-card">
-    <span class="tcb-risk-icon">🔍</span>
+    <div class="tcb-risk-icon"><i class="fas fa-search-dollar"></i></div>
     <h3>Proactive Risk Intelligence</h3>
     <p>
     Identifying vulnerabilities before they become financial threats allows stronger planning, faster response, and better long-term outcomes.
@@ -1215,7 +1013,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>

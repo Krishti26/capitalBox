@@ -14,6 +14,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- SEO Meta Tags -->
     <meta
@@ -83,7 +84,7 @@
     <meta property="og:image" content="public/assets/logo-1.webp" />
     <meta
       property="og:url"
-      content="https://thecapitalbox.com/src/taxsolution.html"
+      content="https://www.thecapitalbox.com/taxsolution.html"
     />
     <meta property="og:type" content="website" />
 
@@ -123,7 +124,8 @@
     padding:42px;
     border-radius:18px;
     box-shadow:0 14px 36px rgba(0,0,0,0.08);
-    border-left:5px solid #CBBA4F;
+    border-top:4px solid #CBBA4F;
+    border-left:none;
     transition:0.35s ease;
     }
     .tcb-tax-card:hover{transform:translateY(-8px);}
@@ -131,6 +133,7 @@
     background:linear-gradient(135deg,#111827,#1f2937);
     padding:65px;
     border-radius:20px;
+    border-top:4px solid #CBBA4F;
     color:#fff;
     }
     .tcb-tax-dark .tcb-tax-title{color:#ffffff;text-align:center;}
@@ -155,9 +158,67 @@
     .tcb-tax-grid{grid-template-columns:1fr; gap:20px;}
     .tcb-tax-title{font-size:26px; line-height:1.3; text-align:center;}
     .tcb-tax-text{font-size:15px; line-height:1.8;}
-    .tcb-tax-card{padding:24px 20px; border-radius:14px;}
-    .tcb-tax-dark{padding:28px 20px; border-radius:16px;}
+    .tcb-tax-card{padding:24px 20px; border-radius:14px; border-top:4px solid #CBBA4F; border-left:none;}
+    .tcb-tax-dark{padding:28px 20px; border-radius:16px; border-top:4px solid #CBBA4F;}
     .tcb-tax-dark .tcb-tax-title{color:#ffffff; text-align:center;}
+    }
+
+    /* Tax Capsule Tab Buttons (Horizontal Layout Guarantee) */
+    .tax-tab-capsule {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+      box-sizing: border-box !important;
+    }
+    .tax-tab-btn {
+      display: inline-flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      white-space: nowrap !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+    @media (max-width: 640px) {
+      .tax-tab-capsule {
+        width: 100% !important;
+        gap: 6px !important;
+        padding: 4px !important;
+      }
+      .tax-tab-btn {
+        flex: 1 1 0% !important;
+        padding: 8px 10px !important;
+        font-size: 13px !important;
+        gap: 6px !important;
+      }
+    }
+
+    /* Consultation Accordion Polish - Generous Padding */
+    .consultation-item {
+      border-radius: 12px !important;
+      margin-bottom: 8px !important;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .consultation-item.consultation-active {
+      background-color: rgba(203, 186, 79, 0.08) !important;
+      border-left: 4px solid #CBBA4F !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+    }
+    .consultation-header {
+      padding: 18px 24px !important;
+    }
+    .consultation-content > div {
+      padding: 8px 24px 28px 24px !important;
+    }
+    @media (max-width: 640px) {
+      .consultation-header {
+        padding: 16px 20px !important;
+      }
+      .consultation-content > div {
+        padding: 6px 20px 24px 20px !important;
+      }
     }
     </style>
   </head>
@@ -200,7 +261,7 @@
             >Home</a
           >
           <!-- Dropdown Menu -->
-          <div class="dropdown relative w-full">
+          <div class="dropdown relative">
             <button
               class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
               id="dropdownToggle"
@@ -380,34 +441,42 @@
     <main>
       <!-- Hero Section -->
       <div class="relative">
-        <!-- Hero Image -->
-        <div
-          class="w-full h-screen bg-cover bg-center relative overflow-hidden"
-        >
+        <!-- Hero Image & Content -->
+        <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
           <img
             src="public/assets/SERVICES01.webp"
-            alt="Hero Image"
-            class="w-full h-full object-cover"
+            alt="Tax Solutions Hero Image"
+            class="subpage-hero-img w-full h-full object-cover"
           />
 
-          <!-- Hero Content -->
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"
-          >
-            <div class="text-center text-white px-4">
-              <h1 class="text-xl md:text-4xl lg:text-6xl font-bold mb-4">
+          <!-- Hero Content Overlay -->
+          <div class="subpage-hero-overlay">
+            <div class="subpage-hero-content">
+              <div class="subpage-hero-badge">
+                <span class="subpage-hero-badge-dot"></span>
+                <span>Strategic Advisory</span>
+              </div>
+              <h1 class="subpage-hero-title">
                 Tax Solutions
               </h1>
+              <p class="subpage-hero-desc">
+                Navigating complex Indian and international tax frameworks to maximize efficiency, protect your wealth, and ensure total compliance with proactive structuring.
+              </p>
+              <div class="subpage-hero-pills">
+                <span class="subpage-hero-pill">Direct & Indirect Tax</span>
+                <span class="subpage-hero-pill">International Taxation</span>
+                <span class="subpage-hero-pill">Regulatory Compliance</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Overlapping Cards Container -->
-        <div class="container mx-auto px-4 relative -mt-16 md:-mt-32 mb-16">
+        <!-- Feature Card Container -->
+        <div class="subpage-card-container container mx-auto px-4 relative">
           <div class="w-full">
             <!-- First Card -->
             <div
-              class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+              class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
             >
               <div class="p-6 flex flex-col gap-4 md:gap-8">
                 <h2
@@ -440,52 +509,113 @@
           <div
             class="md:grid md:grid-cols-2 gap-8 items-center relative flex flex-col-reverse md:flex-row"
           >
-            <!-- Text Content with border that extends behind the image -->
-            <div class="relative">
-              <!-- The actual content -->
-              <h6
-                class="relative z-10 py-10 p-8 text-md md:text-2xl font-bold text-gray-900 md:text-sm lg:text-xl text-center"
-              >
-                In India, we broadly cover:
-              </h6>
+            <!-- Tax Coverage Card Matching Photo 2 Thick Border -->
+            <div class="relative bg-white border-4 border-primary rounded-xl md:rounded-2xl p-6 sm:p-8 shadow-xl">
+              <!-- Heading with Left Vertical Gold Bar -->
+              <div class="flex items-center gap-3 mb-6">
+                <span class="w-1.5 h-6 sm:h-7 bg-[#CBBA4F] rounded-full inline-block flex-shrink-0"></span>
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#111827] tracking-tight">
+                  In India, we broadly cover:
+                </h3>
+              </div>
+
+              <!-- Capsule Tab Buttons Matching Photo 2 Horizontal Layout -->
               <div
-                class="relative z-10 flex flex-col lg:flex-row justify-center gap-4 mb-4 mx-4"
+                id="tax-capsule-wrapper"
+                class="tax-tab-capsule mb-6"
+                style="display: inline-flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: center !important; gap: 8px !important; background-color: #f3f4f6 !important; padding: 6px !important; border-radius: 12px !important; max-width: 100% !important; box-sizing: border-box !important;"
               >
-                <div class="flex md:flex-col mx-4 md:mx-0 gap-4">
-                  <button
-                    class="relative z-10 cursor-pointer w-fit md:w-full bg-white text-black px-4 py-2 rounded-md font-medium text-primary border-2 border-primary"
-                  >
-                    Direct Tax
-                  </button>
-                  <button
-                    class="relative z-10 bg-primary md:w-full text-white px-4 py-2 rounded-md font-medium"
-                  >
-                    Indirect Tax
-                  </button>
-                </div>
-                <div
-                  class="p-4 md:bg-primary/20 rounded-md mx-4 border-2 border-primary w-fit md:max-w-xl relative z-10"
+                <button
+                  id="btn-indirect-tax"
+                  type="button"
+                  onclick="switchTaxTab('indirect')"
+                  class="tax-tab-btn bg-[#CBBA4F] text-white shadow-sm transition-all duration-200 cursor-pointer"
+                  style="display: inline-flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 8px !important; padding: 8px 16px !important; border-radius: 8px !important; font-weight: 600 !important; font-size: 14px !important; white-space: nowrap !important; border: none !important; cursor: pointer !important; line-height: 1.2 !important;"
                 >
-                  <ul class="list-disc list-inside text-gray-900 mt-4">
-                    <li>Customs Duties</li>
-                    <li>Central Excise</li>
-                    <li>Service Tax</li>
-                    <li>Goods and Services Tax (GST)</li>
-                  </ul>
+                  <i class="fas fa-file-invoice" style="font-size: 14px;"></i>
+                  <span>Indirect Tax</span>
+                </button>
+                <button
+                  id="btn-direct-tax"
+                  type="button"
+                  onclick="switchTaxTab('direct')"
+                  class="tax-tab-btn bg-transparent text-gray-700 hover:text-gray-900 transition-all duration-200 cursor-pointer"
+                  style="display: inline-flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 8px !important; padding: 8px 16px !important; border-radius: 8px !important; font-weight: 600 !important; font-size: 14px !important; white-space: nowrap !important; border: none !important; cursor: pointer !important; line-height: 1.2 !important;"
+                >
+                  <i class="fas fa-file-invoice-dollar text-gray-600" style="font-size: 14px;"></i>
+                  <span>Direct Tax</span>
+                </button>
+              </div>
+
+              <!-- Indirect Tax 2x2 Grid (Active by default in Photo 1) -->
+              <div id="panel-indirect-tax" class="transition-all duration-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                  <!-- Goods and Services Tax (GST) -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Goods and Services Tax (GST)</span>
+                  </div>
+                  <!-- Customs & Import Duties -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Customs &amp; Import Duties</span>
+                  </div>
+                  <!-- Central Excise Levies -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Central Excise Levies</span>
+                  </div>
+                  <!-- Service Tax (Advisory & Legacy) -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Service Tax (Advisory &amp; Legacy)</span>
+                  </div>
                 </div>
               </div>
-              <p
-                class="relative z-10 py-10 p-8 text-md md:text-2xl text-gray-900 md:text-sm lg:text-lg font-medium"
-              >
+
+              <!-- Direct Tax 2x3 Grid (Toggled) -->
+              <div id="panel-direct-tax" class="hidden transition-all duration-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                  <!-- Personal Income Tax -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Personal Income Tax (Individuals &amp; HUFs)</span>
+                  </div>
+                  <!-- Corporate Income Tax & MAT -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Corporate Income Tax &amp; Minimum Alternate Tax (MAT)</span>
+                  </div>
+                  <!-- Capital Gains Tax -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Capital Gains Tax (STCG &amp; LTCG)</span>
+                  </div>
+                  <!-- Tax Deducted at Source -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Tax Deducted at Source (TDS &amp; TCS)</span>
+                  </div>
+                  <!-- Advance Tax & Wealth Structuring -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Advance Tax &amp; Wealth Structuring</span>
+                  </div>
+                  <!-- Double Taxation Avoidance & NRI Advisory -->
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                    <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
+                    <span class="text-sm md:text-base font-medium text-gray-800">Double Taxation Avoidance (DTAA) &amp; NRI</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paragraph Description Matching Photo 1 -->
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed">
                 The Indian tax system is well-structured, with clear authority
                 divided between the Central Government, State Governments, and
                 local bodies. Direct taxes are levied on income and wealth,
                 while indirect taxes apply to goods and services.
               </p>
-              <!-- Border that extends behind the image -->
-              <div
-                class="absolute top-0 bottom-0 left-0 md:-right-24 lg:-right-32 right-0 border-4 border-primary rounded-md -z-5"
-              ></div>
             </div>
             <!-- Image -->
             <div
@@ -521,10 +651,10 @@
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full px-4 py-8 bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary p-6 md:p-8"
           >
-            <h2 class="text-3xl font-bold text-center">Our Expertise:</h2>
-            <p class="text-lg mt-4 text-gray-700 font-medium">
+            <h2 class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center">Our Expertise:</h2>
+            <p class="text-md md:text-lg text-gray-700 font-medium leading-relaxed">
               We deliver practical, commercially focused, and socially
               responsible tax solutions for multinational corporations, Indian
               companies, expatriates, non-residents, and resident Indians. With
@@ -576,21 +706,21 @@
               ></div>
 
               <!-- The actual content -->
-              <div class="relative z-10 p-6 flex flex-col gap-2 md:gap-4">
-                <h2 class="text-3xl font-bold text-center">Our services include:</h2>
-                <ul
-                  class="text-md md:text-lg mt-4 text-gray-700 font-medium list-disc list-inside flex flex-col gap-3"
-                >
-                  <li>Direct and Indirect Tax Advisory</li>
-                  <li>International Tax and Transfer Pricing Solutions</li>
-                  <li>GST Transition and Compliance</li>
-                  <li>Business Setup in India and Overseas</li>
-                  <li>Corporate Structuring and Transaction Advisory</li>
-                </ul>
-                <p class="text-lg mt-4 text-gray-700 font-medium">
-                  Trust TCB to make tax management simpler, smarter, and aligned
-                  with your business goals.
-                </p>
+              <div class="relative z-10 p-6 flex flex-col gap-4">
+                <h2 class="text-xl md:text-3xl font-bold text-gray-800 text-center mb-2">Our services include:</h2>
+                <div class="text-gray-700 text-md md:text-lg font-medium flex flex-col gap-4">
+                  <ul class="list-disc pl-5 space-y-2">
+                    <li>Direct and Indirect Tax Advisory</li>
+                    <li>International Tax and Transfer Pricing Solutions</li>
+                    <li>GST Transition and Compliance</li>
+                    <li>Business Setup in India and Overseas</li>
+                    <li>Corporate Structuring and Transaction Advisory</li>
+                  </ul>
+                  <p class="text-base md:text-lg mt-4 text-gray-700 font-medium leading-relaxed pl-5" style="padding-left: 1.25rem;">
+                    Trust TCB to make tax management simpler, smarter, and aligned
+                    with your business goals.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -604,42 +734,46 @@
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full px-4 py-8 bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-2 border-4 border-primary rounded-lg bg-white"
+            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
           >
-            <h2 class="text-3xl font-bold text-center">How We Can Help</h2>
-            <ul
-              class="text-md md:text-lg mt-4 text-gray-700 font-medium list-disc list-inside"
-            >
-              <li>
-                Design effective tax strategies for corporates and
-                non-corporates, leveraging tax holidays and benefits.
-              </li>
-              <li>
-                Advise on taxation and exchange control regulations for
-                investments or business setup in India and abroad.
-              </li>
-              <li>
-                Evaluate employee compensation structures and recommend
-                tax-efficient solutions.
-              </li>
-              <li>
-                Advise on withholding tax, assist in advance rulings, and
-                represent clients before tax and judicial authorities.
-              </li>
-              <li>
-                Handle and represent clients in income tax search, seizure, and
-                survey cases.
-              </li>
-              <li>Provide expatriate taxation advisory services.</li>
-              <li>
-                Advise on corporate structuring and transactions to optimize tax
-                liabilities.
-              </li>
-              <li>
-                Assist and train businesses for smooth compliance and transition
-                to Goods and Services Tax (GST).
-              </li>
-            </ul>
+            <div class="p-6 md:p-8 flex flex-col gap-4">
+              <h2 class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
+                How We Can Help
+              </h2>
+              <div class="text-gray-700 text-md md:text-lg font-medium">
+                <ul class="list-disc pl-5 space-y-2.5">
+                  <li>
+                    Design effective tax strategies for corporates and
+                    non-corporates, leveraging tax holidays and benefits.
+                  </li>
+                  <li>
+                    Advise on taxation and exchange control regulations for
+                    investments or business setup in India and abroad.
+                  </li>
+                  <li>
+                    Evaluate employee compensation structures and recommend
+                    tax-efficient solutions.
+                  </li>
+                  <li>
+                    Advise on withholding tax, assist in advance rulings, and
+                    represent clients before tax and judicial authorities.
+                  </li>
+                  <li>
+                    Handle and represent clients in income tax search, seizure, and
+                    survey cases.
+                  </li>
+                  <li>Provide expatriate taxation advisory services.</li>
+                  <li>
+                    Advise on corporate structuring and transactions to optimize tax
+                    liabilities.
+                  </li>
+                  <li>
+                    Assist and train businesses for smooth compliance and transition
+                    to Goods and Services Tax (GST).
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -747,54 +881,54 @@
     <!-- TAX PAGE NEW ARTICLES END -->
       
       <!-- consultation -->
-      <section class="consultation-section my-16">
+      <section class="consultation-section my-16 md:my-24">
         <div class="container mx-auto px-4">
-          <div class="flex flex-col md:flex-row-reverse gap-8">
+          <div class="flex flex-col md:flex-row-reverse gap-8 items-stretch">
             <!-- Left Container with Image and Yellow Overlay -->
-            <div class="w-full md:w-1/2 relative">
-              <img
-                src="public/assets/tax-05.webp"
-                alt="Financial consultation"
-                class="w-full h-full object-cover hidden md:block"
-              />
-              <div
-                class="relative md:absolute md:inset-0 bg-[#CBBA4F] bg-opacity-80 m-0 md:m-4 rounded-lg md:rounded-none transform transition duration-500 hover:scale-[1.02]"
-              >
-                <div class="p-6 md:p-8 h-full flex flex-col justify-evenly">
-                  <h2 class="text-xl md:text-3xl font-bold text-black mb-6 text-center">
-                    Tax Services- Advantages TCB
-                  </h2>
-                  <ul class="text-black space-y-3 text-sm md:text-lg">
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span>Investing principles and strategies</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >TCB is the world's fastest network of audit, tax and
-                        consulting firms</span
-                      >
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span>TCB in India is consistently growing in India</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >Extensive experience in advisory, tax and accounting
-                        matters across various sectors</span
-                      >
-                    </li>
-                    <li class="flex items-start">
-                      <span class="mr-2 font-bold">•</span>
-                      <span
-                        >Dedicated team of highly qualified, experienced and
-                        trained professionals</span
-                      >
-                    </li>
-                  </ul>
+            <div class="w-full md:w-1/2 flex">
+              <div class="consultation-card transform transition duration-500 hover:scale-[1.01]">
+                <img
+                  src="public/assets/tax-05.webp"
+                  alt="Financial consultation"
+                  class="consultation-card-bg"
+                />
+                <div class="consultation-card-overlay">
+                  <div class="w-full max-w-lg mx-auto">
+                    <h2 class="text-xl md:text-3xl font-bold text-black mb-6 text-center">
+                      Tax Services- Advantages TCB
+                    </h2>
+                    <ul class="tcb-advantages-list">
+                      <li>
+                        <span class="tcb-advantages-bullet">•</span>
+                        <span class="tcb-advantages-text">Investing principles and strategies</span>
+                      </li>
+                      <li>
+                        <span class="tcb-advantages-bullet">•</span>
+                        <span class="tcb-advantages-text">
+                          TCB is the world's fastest network of audit, tax and
+                          consulting firms
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tcb-advantages-bullet">•</span>
+                        <span class="tcb-advantages-text">TCB in India is consistently growing in India</span>
+                      </li>
+                      <li>
+                        <span class="tcb-advantages-bullet">•</span>
+                        <span class="tcb-advantages-text">
+                          Extensive experience in advisory, tax and accounting
+                          matters across various sectors
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tcb-advantages-bullet">•</span>
+                        <span class="tcb-advantages-text">
+                          Dedicated team of highly qualified, experienced and
+                          trained professionals
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -802,385 +936,152 @@
             <!-- Right Container with Consultation Options -->
             <div class="w-full md:w-1/2">
               <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Consultations</h2>
-              <div class="consultation-accordion">
-                <!-- Option 1 -->
-                <div class="border-b border-gray-300">
+              <div class="consultation-accordion flex flex-col gap-2">
+                <!-- Option 1: Taxation -->
+                <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="taxation">
                   <button
-                    class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                    onclick="togglePopup('taxation')"
-                  >
-                    <span class="text-lg">Taxation</span>
-                    <span class="text-xl">></span>
+                    type="button"
+                    class="consultation-header w-full py-4 px-5 sm:px-6 flex justify-between items-center text-left transition-colors duration-200 group"
+                    aria-expanded="false">
+                    <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Taxation</span>
+                    <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                   </button>
+                  <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                    <div class="pb-6 pt-2 px-5 sm:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p class="mb-3 font-normal">
+                        Taxation plays a crucial role in funding essential public services such as infrastructure, healthcare, education, and national defense. Understanding taxation helps individuals and businesses make informed financial decisions.
+                      </p>
+                      <ul class="space-y-2 pl-3.5 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                        <li><strong>Direct &amp; Indirect Taxes:</strong> Taxes collected directly on earnings or indirectly on consumption.</li>
+                        <li><strong>Types of Taxes:</strong> Income tax, corporate tax, sales tax/GST, capital gains, and customs duties.</li>
+                        <li><strong>Modern Trends:</strong> Digital taxation, green environmental levies, and global minimum tax frameworks.</li>
+                        <li><strong>Strategic Planning:</strong> Proactive compliance avoiding penalties while legally optimizing wealth.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Option 2 -->
-                <div class="border-b border-gray-300">
+                <!-- Option 2: Business Tax -->
+                <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="business">
                   <button
-                    class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                    onclick="togglePopup('business')"
-                  >
-                    <span class="text-lg">Business Tax</span>
-                    <span class="text-xl">></span>
+                    type="button"
+                    class="consultation-header w-full py-4 px-5 sm:px-6 flex justify-between items-center text-left transition-colors duration-200 group"
+                    aria-expanded="false">
+                    <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Business Tax</span>
+                    <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                   </button>
+                  <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                    <div class="pb-6 pt-2 px-5 sm:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p class="mb-3 font-normal">
+                        Business taxation forms the backbone of economic fairness and national development. It ensures companies contribute their fair share while maintaining profitability, expansion capability, and competitive advantage.
+                      </p>
+                      <ul class="space-y-2 pl-3.5 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                        <li><strong>Corporate Income Tax:</strong> Taxes levied on net profits, shaping pricing, investment, and reinvestment strategies.</li>
+                        <li><strong>Sales Tax &amp; GST:</strong> Value-added transaction taxes impacting product margins and consumer demand.</li>
+                        <li><strong>Payroll &amp; Withholding:</strong> Mandatory employer tax withholdings, social security, and statutory compliances.</li>
+                        <li><strong>Global Tax Standards:</strong> Pillar Two global minimum taxation and cross-border transfer pricing compliance.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Option 3 -->
-                <div class="border-b border-gray-300">
+                <!-- Option 3: Personal Funds -->
+                <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="personal">
                   <button
-                    class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                    onclick="togglePopup('personal')"
-                  >
-                    <span class="text-lg">Personal Funds</span>
-                    <span class="text-xl">></span>
+                    type="button"
+                    class="consultation-header w-full py-4 px-5 sm:px-6 flex justify-between items-center text-left transition-colors duration-200 group"
+                    aria-expanded="false">
+                    <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Personal Funds</span>
+                    <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                   </button>
+                  <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                    <div class="pb-6 pt-2 px-5 sm:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p class="mb-3 font-normal">
+                        Managing personal funds wisely is essential for achieving financial independence, lifestyle security, and peace of mind. Structured budgeting, disciplined saving, and tactical asset allocation ensure a resilient financial future.
+                      </p>
+                      <ul class="space-y-2 pl-3.5 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                        <li><strong>Sources of Wealth:</strong> Salaries, business dividends, investment yields, real estate, and family inheritances.</li>
+                        <li><strong>Budgeting Discipline:</strong> Aligning daily household liquidity with medium and long-term milestone goals.</li>
+                        <li><strong>Emergency Reserves:</strong> Tiered liquid reserves safeguarding families against career shifts or market volatility.</li>
+                        <li><strong>Financial Literacy:</strong> Ongoing advisory empowering informed decisions across every stage of wealth.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Option 4 -->
-                <div class="border-b border-gray-300">
+                <!-- Option 4: Insurance -->
+                <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="insurance">
                   <button
-                    class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                    onclick="togglePopup('insurance')"
-                  >
-                    <span class="text-lg">Insurance</span>
-                    <span class="text-xl">></span>
+                    type="button"
+                    class="consultation-header w-full py-4 px-5 sm:px-6 flex justify-between items-center text-left transition-colors duration-200 group"
+                    aria-expanded="false">
+                    <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Insurance</span>
+                    <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                   </button>
+                  <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                    <div class="pb-6 pt-2 px-5 sm:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p class="mb-3 font-normal">
+                        Insurance provides critical financial protection and risk management against life's unforeseen events—accidents, critical illness, and asset liabilities. It is the cornerstone of generational wealth preservation.
+                      </p>
+                      <ul class="space-y-2 pl-3.5 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                        <li><strong>Tailored Life Cover:</strong> Pure term policies designed to replace human economic value and protect family dependents.</li>
+                        <li><strong>Comprehensive Health Shield:</strong> High-sum-insured policies insulating accumulated wealth from hospital inflation.</li>
+                        <li><strong>Asset &amp; Liability Protection:</strong> Commercial, property, and professional indemnity coverage shielding against claims.</li>
+                        <li><strong>Dedicated Claims Advocacy:</strong> End-to-end concierge guidance ensuring speedy settlement when you need it most.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Option 5 -->
-                <div class="border-b border-gray-300">
+                <!-- Option 5: Mutual Funds -->
+                <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="mutual">
                   <button
-                    class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                    onclick="togglePopup('mutual')"
-                  >
-                    <span class="text-lg">Mutual Funds</span>
-                    <span class="text-xl">></span>
+                    type="button"
+                    class="consultation-header w-full py-4 px-5 sm:px-6 flex justify-between items-center text-left transition-colors duration-200 group"
+                    aria-expanded="false">
+                    <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Mutual Funds</span>
+                    <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                   </button>
+                  <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                    <div class="pb-6 pt-2 px-5 sm:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p class="mb-3 font-normal">
+                        Mutual funds allow you to participate in capital markets through professionally managed, diversified portfolios of equities, debt, and gold, tailored to your unique investment horizon and risk tolerance.
+                      </p>
+                      <ul class="space-y-2 pl-3.5 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                        <li><strong>Instant Diversification:</strong> Spreads exposure across sectors and market caps to curb single-stock risk.</li>
+                        <li><strong>Professional Fund Management:</strong> Veteran fund managers and analysts actively monitoring market conditions.</li>
+                        <li><strong>High Liquidity:</strong> Easily purchase or redeem units at transparent daily SEBI-regulated NAVs.</li>
+                        <li><strong>Tax-Advantaged Schemes:</strong> Equity-Linked Savings Schemes (ELSS) delivering 80C deductions plus equity compounding.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Option 6 -->
-                <div class="border-b border-gray-300">
+                <!-- Option 6: SIPs -->
+                <div class="consultation-item border-b border-gray-200 transition-all duration-300 rounded-lg" data-consultation="sips">
                   <button
-                    class="w-full py-4 px-2 flex justify-between items-center text-left transform transition duration-500 hover:-translate-y-2 hover:font-medium hover:text-primary"
-                    onclick="togglePopup('sips')"
-                  >
-                    <span class="text-lg">SIPs</span>
-                    <span class="text-xl">></span>
+                    type="button"
+                    class="consultation-header w-full py-4 px-5 sm:px-6 flex justify-between items-center text-left transition-colors duration-200 group"
+                    aria-expanded="false">
+                    <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">SIPs</span>
+                    <span class="consultation-arrow text-primary text-xl font-bold transition-transform duration-300">›</span>
                   </button>
+                  <div class="consultation-content overflow-hidden max-h-0 transition-all duration-400 ease-in-out opacity-0">
+                    <div class="pb-6 pt-2 px-5 sm:px-6 text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p class="mb-3 font-normal">
+                        A Systematic Investment Plan (SIP) is a powerful, disciplined approach to long-term wealth accumulation. By investing fixed amounts at regular intervals, you bypass emotional market timing and harness compounding.
+                      </p>
+                      <ul class="space-y-2 pl-3.5 border-l-2 border-primary text-xs md:text-sm text-gray-700">
+                        <li><strong>Disciplined Investing Habit:</strong> Automatically routes allocations on fixed dates without emotional bias.</li>
+                        <li><strong>Rupee Cost Averaging:</strong> Automatically accumulates more units during market dips and fewer at market peaks.</li>
+                        <li><strong>Power of Compounding:</strong> Returns reinvested over 5, 10, or 20 years multiply exponentially over time.</li>
+                        <li><strong>Flexible &amp; Accessible:</strong> Begin with amounts as low as ₹500, with full freedom to pause or step-up contributions.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Popup containers (hidden by default) -->
-        <!-- taxation -->
-        <div
-          id="taxation"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Taxation Insights
-              </h3>
-
-              <button onclick="togglePopup('taxation')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Taxation plays a crucial role in funding essential public services
-              such as infrastructure, healthcare, education, and national
-              defense. Understanding taxation helps individuals and businesses
-              make informed financial decisions.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Direct and Indirect Taxes:</strong> Taxes are collected
-                either directly (e.g., income tax) or indirectly (e.g., sales
-                tax) based on earnings and consumption.
-              </li>
-              <li>
-                <strong>Types of Taxes:</strong> Income tax, sales tax, property
-                tax, excise duties, and customs duties each impact different
-                aspects of the economy.
-              </li>
-              <li>
-                <strong>Modern Tax Trends:</strong> Digital taxation,
-                environmental taxes, and international cooperation like the
-                Global Minimum Tax are reshaping global tax systems.
-              </li>
-              <li>
-                <strong>Challenges:</strong> Governments face issues like tax
-                evasion, regulatory complexity, and adapting to digital
-                economies.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- business -->
-        <div
-          id="business"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Business Taxation
-              </h3>
-
-              <button onclick="togglePopup('business')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Business taxation forms the backbone of economic fairness and
-              national development. It ensures that companies contribute their
-              fair share to the growth of public services and infrastructure.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Corporate Income Tax:</strong> Companies are taxed on
-                their net profits, impacting pricing, investment, and
-                operational strategies.
-              </li>
-              <li>
-                <strong>Sales Tax and VAT:</strong> Taxes applied to goods and
-                services, influencing consumer behavior and business margins.
-              </li>
-              <li>
-                <strong>Payroll and Excise Taxes:</strong> Businesses must
-                contribute taxes for employee salaries and specific goods like
-                fuel, alcohol, and tobacco.
-              </li>
-              <li>
-                <strong>Global Tax Reforms:</strong> Initiatives like the Global
-                Minimum Tax aim to create a level playing field internationally,
-                reducing tax evasion through offshore operations.
-              </li>
-              <li>
-                <strong>Digital and Green Taxation:</strong> Modern businesses,
-                especially digital platforms, are now subject to new taxes
-                promoting transparency and environmental responsibility.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Personal Fund -->
-        <div
-          id="personal"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Personal Funds
-              </h3>
-
-              <button onclick="togglePopup('personal')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Managing personal funds wisely is essential for achieving
-              financial security, independence, and peace of mind. Understanding
-              income sources and applying effective strategies ensures a stable
-              financial future.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Sources of Personal Funds:</strong> Salaries,
-                investments, savings, inheritances, and pensions contribute to
-                an individual's wealth.
-              </li>
-              <li>
-                <strong>Importance of Fund Management:</strong> Smart budgeting,
-                saving, and investing help meet daily needs, future goals, and
-                emergency requirements.
-              </li>
-              <li>
-                <strong>Modern Trends:</strong> Digital banking, automated
-                investments, and new asset classes like cryptocurrencies are
-                transforming personal finance management.
-              </li>
-              <li>
-                <strong>Challenges:</strong> Rising living costs, unpredictable
-                expenses, and lack of financial literacy can threaten financial
-                stability if not addressed.
-              </li>
-              <li>
-                <strong>Financial Literacy:</strong> Ongoing education in
-                managing money, investments, and retirement planning is more
-                important than ever for long-term success.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- insurance -->
-        <div
-          id="insurance"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Insurance
-              </h3>
-
-              <button onclick="togglePopup('insurance')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Insurance offers financial protection against unexpected events
-              such as accidents, illness, and emergencies. It is a crucial step
-              toward securing your future and that of your loved ones.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Tailored Coverage:</strong> Insurance plans customized
-                to meet your specific needs, ensuring optimal protection.
-              </li>
-              <li>
-                <strong>Affordable Premiums:</strong> Quality coverage at
-                competitive rates, helping you balance cost and protection.
-              </li>
-              <li>
-                <strong>Expert Support:</strong> Access to professional guidance
-                in selecting the right insurance plan and navigating claims.
-              </li>
-              <li>
-                <strong>Fast Claim Processing:</strong> Hassle-free and quick
-                claims, ensuring you get the support you need when it matters
-                most.
-              </li>
-              <li>
-                <strong>Comprehensive Tax Assistance:</strong> Maximize your tax
-                benefits through eligible insurance policies.
-              </li>
-              <li>
-                <strong>24/7 Customer Service:</strong> Access to help anytime,
-                ensuring you're never left without support.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- mutual -->
-        <div
-          id="mutual"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on Mutual Funds
-              </h3>
-
-              <button onclick="togglePopup('mutual')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              Mutual funds allow you to invest in a diversified portfolio
-              managed by professionals. They offer an opportunity to grow your
-              wealth with relatively low risk and are perfect for both new and
-              experienced investors.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Diversified Portfolio:</strong> Spread your investments
-                across different assets to minimize risk and maximize returns.
-              </li>
-              <li>
-                <strong>Professional Management:</strong> Expert fund managers
-                actively manage your investment for optimal growth.
-              </li>
-              <li>
-                <strong>Affordable Investment:</strong> Start investing with
-                small amounts and gradually build wealth over time.
-              </li>
-              <li>
-                <strong>High Liquidity:</strong> Buy or sell your mutual fund
-                units with ease when you need access to funds.
-              </li>
-              <li>
-                <strong>Tax Benefits:</strong> Certain mutual fund schemes, like
-                ELSS, offer tax-saving advantages under Section 80C.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- SIPs -->
-        <div
-          id="sips"
-          class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
-        >
-          <div
-            class="bg-white p-8 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto mx-4 md:mx-0"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-md md:text-2xl font-semibold text-primary">
-                Important Insights on SIP's
-              </h3>
-
-              <button onclick="togglePopup('sips')" class="text-2xl">
-                &times;
-              </button>
-            </div>
-            <p class="text-gray-700 text-sm md:text-lg">
-              A Systematic Investment Plan (SIP) is an easy and efficient way to
-              invest in mutual funds regularly. It allows you to grow your
-              wealth steadily, without the stress of market fluctuations, by
-              investing small amounts at fixed intervals.
-            </p>
-            <ul
-              class="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-lg"
-            >
-              <li>
-                <strong>Disciplined Saving:</strong> Set aside a fixed amount
-                regularly, ensuring a consistent investment habit without
-                pressure.
-              </li>
-              <li>
-                <strong>Rupee Cost Averaging:</strong> Minimize market
-                volatility by investing at different price points, which
-                smoothens your investment journey.
-              </li>
-              <li>
-                <strong>Flexible Investment:</strong> You can start, stop, or
-                modify your SIP as per your needs and goals.
-              </li>
-              <li>
-                <strong>Power of Compounding:</strong> Over time, your
-                investments grow significantly due to the power of compounding.
-              </li>
-              <li>
-                <strong>Affordable Start:</strong> You can begin your investment
-                journey with amounts as low as ₹500, making SIPs accessible to
-                everyone.
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -1272,7 +1173,7 @@
         </div>
 
         <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2016 All rights reserved |
+            © 2026 All rights reserved |
             <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
         </div>
     </footer>
@@ -1307,5 +1208,10 @@
       }
     </script>
     <script src="main.js"></script>
+    <script>
+      if (typeof initTaxTabs === 'function') {
+        initTaxTabs();
+      }
+    </script>
   </body>
 </html>
