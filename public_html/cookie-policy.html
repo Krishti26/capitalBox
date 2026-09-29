@@ -47,8 +47,12 @@
             font-family: "Montserrat", sans-serif;
         }
 
+                /* Outer wrapper keeps card padded on mobile */
+        .policy-wrapper {
+            padding: 0 16px;
+        }
         /* Policy container */
-        .container {
+        .policy-card {
             max-width: 900px;
             margin: 120px auto 60px auto;
             background: rgba(255, 255, 255, 0.97);
@@ -60,13 +64,23 @@
         }
 
         /* Headings */
-        .container h1 {
+        .policy-card h1 {
             font-size: 36px;
             font-weight: 800;
             color: #111827;
             text-align: center !important;
             margin-bottom: 8px;
             line-height: 1.25;
+        }
+
+        /* Gold accent divider under h1 */
+        .heading-divider {
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #CBBA4F;
+            border-radius: 2px;
+            margin: 10px auto 18px auto;
         }
 
         .updated {
@@ -81,7 +95,7 @@
             font-weight: 700;
         }
 
-        .container h2 {
+        .policy-card h2 {
             margin-top: 32px;
             margin-bottom: 12px;
             font-size: 24px;
@@ -91,7 +105,7 @@
             line-height: 1.35;
         }
 
-        .container h3 {
+        .policy-card h3 {
             margin-top: 22px;
             margin-bottom: 10px;
             font-size: 18px;
@@ -102,7 +116,7 @@
         }
 
         /* Paragraphs */
-        .container p {
+        .policy-card p {
             font-size: 16px;
             line-height: 1.85;
             color: #374151;
@@ -111,7 +125,7 @@
         }
 
         /* Lists */
-        .container ul {
+        .policy-card ul {
             list-style-type: disc !important;
             list-style-position: outside !important;
             padding-left: 24px !important;
@@ -120,7 +134,7 @@
             text-align: left !important;
         }
 
-        .container li {
+        .policy-card li {
             margin-bottom: 8px;
             font-size: 16px;
             line-height: 1.75;
@@ -143,47 +157,47 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .container {
-                margin: 100px 16px 50px 16px;
+            .policy-card {
+                margin: 100px 0 50px 0;
                 padding: 30px 20px;
                 border-radius: 14px;
                 text-align: left !important;
             }
 
-            .container h1 {
+            .policy-card h1 {
                 font-size: 28px;
-                text-align: left !important;
+                text-align: center !important;
                 margin-bottom: 6px;
             }
 
             .updated {
                 font-size: 14px;
-                text-align: left !important;
+                text-align: center !important;
                 margin-bottom: 20px;
             }
 
-            .container h2 {
+            .policy-card h2 {
                 font-size: 20px;
                 text-align: left !important;
                 margin-top: 26px;
                 margin-bottom: 10px;
             }
 
-            .container h3 {
+            .policy-card h3 {
                 font-size: 17px;
                 text-align: left !important;
                 margin-top: 18px;
                 margin-bottom: 8px;
             }
 
-            .container p,
-            .container li {
+            .policy-card p,
+            .policy-card li {
                 font-size: 15px;
                 line-height: 1.75;
                 text-align: left !important;
             }
 
-            .container ul {
+            .policy-card ul {
                 padding-left: 20px !important;
                 margin-bottom: 16px;
                 text-align: left !important;
@@ -307,9 +321,10 @@
     </nav>
 
 
-    <div class="container">
+    <div class="policy-wrapper"><div class="policy-card">
 
         <h1>Cookie Policy</h1>
+        <span class="heading-divider"></span>
         <p class="updated"><strong>Last Updated:</strong> September 28, 2026</p>
 
         <p>
@@ -399,6 +414,7 @@
 
 
     </div>
+</div>
 
 <footer class="bg-[#4B4B4B] text-white py-10 px-6 text-sm md:text-base">
         <div

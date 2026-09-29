@@ -50,8 +50,13 @@
         min-height: 100vh;
     }
 
+    /* Outer wrapper for mobile padding */
+    .policy-wrapper {
+        padding: 0 16px;
+    }
+
     /* Premium Terms Container */
-    .container {
+    .policy-card {
         max-width: 1100px;
         margin: 140px auto 80px auto;
         background: rgba(255, 255, 255, 0.97);
@@ -65,30 +70,41 @@
         text-align: left !important;
     }
 
-    .container::before {
+    .policy-card::before {
         content: "";
         position: absolute;
         top: 0;
-        left: 55px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 80px;
-        height: 4px;
+        height: 6px;
         background: #CBBA4F;
         border-radius: 999px;
     }
 
+    /* Gold accent divider under h1 */
+    .heading-divider {
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #CBBA4F;
+        border-radius: 2px;
+        margin: 10px auto 18px auto;
+    }
+
     /* Main Heading */
-    .container h1 {
+    .policy-card h1 {
         font-size: 40px;
         font-weight: 800;
         color: #111827;
-        text-align: left !important;
-        margin-bottom: 12px;
+        text-align: center !important;
+        margin-bottom: 10px;
         line-height: 1.25;
     }
 
     /* Updated Text */
     .updated {
-        text-align: left !important;
+        text-align: center !important;
         color: #6B7280;
         font-size: 16px;
         margin-bottom: 28px;
@@ -100,7 +116,7 @@
     }
 
     /* Intro Paragraph */
-    .container>p:first-of-type {
+    .policy-card>p:first-of-type {
         text-align: left !important;
         font-size: 19px;
         line-height: 1.85;
@@ -110,7 +126,7 @@
     }
 
     /* Section Headings */
-    .container h2 {
+    .policy-card h2 {
         margin-top: 36px;
         margin-bottom: 14px;
         font-size: 26px;
@@ -123,12 +139,12 @@
         line-height: 1.35;
     }
 
-    .container h2:hover {
+    .policy-card h2:hover {
         transform: translateX(6px);
     }
 
     /* Paragraphs */
-    .container p {
+    .policy-card p {
         font-size: 17px;
         line-height: 1.85;
         color: #374151;
@@ -137,20 +153,20 @@
     }
 
     /* Bold Brand */
-    .container strong {
+    .policy-card strong {
         color: #111827;
         font-weight: 700;
     }
 
     /* Lists */
-    .container ul {
+    .policy-card ul {
         padding-left: 20px;
         margin-top: 10px;
         margin-bottom: 16px;
         text-align: left !important;
     }
 
-    .container li {
+    .policy-card li {
         margin-bottom: 8px;
         font-size: 17px;
         line-height: 1.8;
@@ -173,26 +189,26 @@
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
-        .container {
-            margin: 110px 16px 50px 16px;
+        .policy-card {
+            margin: 110px 0 50px 0;
             padding: 35px 22px;
             border-radius: 18px;
             text-align: left !important;
         }
 
-        .container::before {
+        .policy-card::before {
             left: 22px;
             width: 50px;
         }
 
-        .container h1 {
+        .policy-card h1 {
             font-size: 28px;
-            text-align: left !important;
+            text-align: center !important;
             margin-bottom: 8px;
             line-height: 1.25;
         }
 
-        .container h2 {
+        .policy-card h2 {
             font-size: 20px;
             padding-left: 12px;
             text-align: left !important;
@@ -201,21 +217,21 @@
             line-height: 1.35;
         }
 
-        .container p,
-        .container li,
-        .container>p:first-of-type {
+        .policy-card p,
+        .policy-card li,
+        .policy-card>p:first-of-type {
             font-size: 15px;
             line-height: 1.75;
             text-align: left !important;
         }
 
-        .container>p:first-of-type {
+        .policy-card>p:first-of-type {
             margin-bottom: 22px;
         }
 
         .updated {
             font-size: 14px;
-            text-align: left !important;
+            text-align: center !important;
             margin-bottom: 22px;
         }
     }
@@ -337,9 +353,10 @@
     </nav>
 
 
-    <div class="container" style="margin-top: 100px;">
+    <div class="policy-wrapper"><div class="policy-card">
 
         <h1>Terms & Conditions</h1>
+        <span class="heading-divider"></span>
         <p class="updated"><strong>Last Updated:</strong> September 28, 2026</p>
 
         <p>
@@ -408,6 +425,7 @@
         </p>
 
     </div>
+</div>
 
 <footer class="bg-[#4B4B4B] text-white py-10 px-6 text-sm md:text-base">
         <div
