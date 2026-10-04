@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
   <head>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6537490720599944"
      crossorigin="anonymous"></script>
@@ -41,6 +41,7 @@
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="hyperspeed-bg.css" />
 
     <!-- Preconnect for faster external resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -120,7 +121,7 @@
     }
     .tcb-tax-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:35px;}
     .tcb-tax-card{
-    background:#ffffff;
+    background:#0d1424; border:2px solid #d4af37; color:#ffffff;
     padding:42px;
     border-radius:18px;
     box-shadow:0 14px 36px rgba(0,0,0,0.08);
@@ -148,7 +149,7 @@
     .tcb-tax-note{
     margin-top:25px;
     padding:18px;
-    background:#fff8dc;
+    background:#0a0f1d !important; border:2px solid #d4af37 !important;
     border-left:4px solid #CBBA4F;
     font-style:italic;
     }
@@ -221,253 +222,1141 @@
       }
     }
     </style>
-  </head>
+  
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Local Favicon & Styles -->
+  <link rel="icon" href="public/assets/logo-1.webp" type="image/png" sizes="32x32"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="global.css?v=3"/>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed-variant": "#574500",
+            "primary-fixed": "#ffe088",
+            "on-secondary-container": "#00311f",
+            "surface-container-low": "#171c25",
+            "surface-container-lowest": "#0a0e17",
+            "surface-bright": "#353944",
+            "surface-glass": "#111C35",
+            "on-surface-variant": "#d0c5af",
+            "error-container": "#93000a",
+            "on-tertiary": "#3f2e00",
+            "surface-container": "#1b2029",
+            "on-secondary-fixed-variant": "#005236",
+            "inverse-surface": "#dfe2f0",
+            "tertiary-container": "#e0ab00",
+            "on-tertiary-fixed-variant": "#5a4300",
+            "surface-base": "#070B14",
+            "tertiary-fixed-dim": "#f7be1d",
+            "inverse-on-surface": "#2c303b",
+            "background": "#0f131d",
+            "surface-raised": "#0D1527",
+            "border-hairline": "rgba(255, 255, 255, 0.08)",
+            "secondary": "#4edea3",
+            "on-primary-fixed": "#241a00",
+            "text-primary": "#F8FAFC",
+            "primary-fixed-dim": "#e9c349",
+            "on-surface": "#dfe2f0",
+            "secondary-fixed": "#6ffbbe",
+            "error": "#ffb4ab",
+            "surface-dim": "#0f131d",
+            "on-error": "#690005",
+            "on-background": "#dfe2f0",
+            "accent-chartreuse": "#22C55E",
+            "on-primary-container": "#554300",
+            "tertiary": "#ffc62b",
+            "surface-tint": "#e9c349",
+            "secondary-fixed-dim": "#4edea3",
+            "surface": "#0f131d",
+            "surface-variant": "#31353f",
+            "on-tertiary-fixed": "#251a00",
+            "on-error-container": "#ffdad6",
+            "surface-container-highest": "#31353f",
+            "on-secondary": "#003824",
+            "primary-container": "#d4af37",
+            "tertiary-fixed": "#ffdf9a",
+            "on-tertiary-container": "#584200",
+            "primary": "#f2ca50",
+            "secondary-container": "#00a572",
+            "on-primary": "#3c2f00",
+            "text-muted": "#94A3B8",
+            "border-active": "rgba(212, 175, 55, 0.35)",
+            "outline-variant": "#4d4635",
+            "on-secondary-fixed": "#002113",
+            "outline": "#99907c",
+            "surface-container-high": "#262a34",
+            "inverse-primary": "#735c00"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background-color: #070B14!important; color: #dfe2f0!important; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+    ::-webkit-scrollbar { display: none; }
+    .tcb-about-section, section { background: transparent!important; }
+    .bg-white, .bg-\[\#FAFAFA\], .bg-gray-50, .bg-[#f8f8f8], .bg-[#fff8dc] { background-color: #0d1424!important; border: 2px solid #d4af37!important; color: #ffffff!important; border: 1px solid rgba(242, 202, 80, 0.15)!important; color: #dfe2f0!important; backdrop-filter: blur(16px); }
+    .text-gray-800, .text-gray-900, .text-gray-700, .text-black { color: #f8fafc!important; }
+    .text-gray-600, .text-gray-500 { color: #cbd5e1!important; }
+    h1, h2, h3, .tcb-about-title { color: #f2ca50!important; font-family: 'Outfit', sans-serif; }
+    .tcb-about-card, .tcb-about-dark, .consultation-card { background: rgba(17, 28, 53, 0.75)!important; border: 1px solid rgba(242, 202, 80, 0.2)!important; color: #dfe2f0!important; border-radius: 1.25rem; }
+    .tcb-about-badge { background: linear-gradient(135deg, #f2ca50 0%, #b8860b 100%)!important; color: #070B14!important; font-weight: 700!important; }
+    .border-primary { border-color: rgba(242, 202, 80, 0.4)!important; }
+    .bg-primary { background-color: #f2ca50!important; color: #070B14!important; }
+    input, textarea, select { background-color: rgba(10, 14, 23, 0.8)!important; color: #f8fafc!important; border: 1px solid rgba(242, 202, 80, 0.25)!important; }
+    input:focus, textarea:focus, select:focus { border-color: #f2ca50!important; outline: none; box-shadow: 0 0 15px rgba(242, 202, 80, 0.3)!important; }
+  </style>
+
+
+  <style id="drop-down-animation-style">
+    @keyframes dropDownEntrance {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-drop-down {
+      opacity: 0;
+      animation: dropDownEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.22s; }
+    .delay-300 { animation-delay: 0.35s; }
+    .delay-400 { animation-delay: 0.48s; }
+    .delay-500 { animation-delay: 0.6s; }
+
+    /* Reveal on Scroll Drop Down */
+    .drop-reveal {
+      opacity: 0;
+      transform: translateY(-45px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .drop-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+
+  <style id="avant-garde-stitch-style">
+    /* Custom Glowing Cursor & Spotlight */
+    #cursor-spotlight {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 2;
+      background: radial-gradient(650px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(242, 202, 80, 0.075), rgba(78, 222, 163, 0.03) 40%, transparent 75%);
+    }
+
+    /* Kinetic Animated Aurora Gradient Text */
+    @keyframes aurora-flow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .text-aurora {
+      background: linear-gradient(135deg, #f2ca50 0%, #ffe088 25%, #4edea3 50%, #06b6d4 75%, #f2ca50 100%);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: aurora-flow 8s ease infinite;
+    }
+
+    /* Tactile Squish Jelly Buttons */
+    .jelly-btn {
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      will-change: transform;
+    }
+    .jelly-btn:active {
+      transform: scale(0.92, 1.08) !important;
+    }
+
+    /* Neumorphic Glass Bento Cards */
+    .neu-glass-card {
+      backdrop-filter: blur(24px);
+      background: rgba(17, 28, 53, 0.65)!important;
+      border: 1px solid rgba(242, 202, 80, 0.2)!important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Diagonal Ambient Light Sweep */
+    @keyframes beam-sweep {
+      0% { transform: translateY(-100%) rotate(25deg); opacity: 0; }
+      30% { opacity: 0.25; }
+      70% { opacity: 0.25; }
+      100% { transform: translateY(200%) rotate(25deg); opacity: 0; }
+    }
+    .light-beam {
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 250px;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(242, 202, 80, 0.12), rgba(78, 222, 163, 0.08), transparent);
+      pointer-events: none;
+      animation: beam-sweep 14s infinite linear;
+    }
+  </style>
+
+
+  
+
+
+  <style id="staggered-text-style">
+    /* REACT BITS PRO INSPIRED STAGGERED TEXT COMPONENT */
+    @keyframes staggeredRevealUp {
+      0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.97);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .stagger-word {
+      display: inline-block;
+      opacity: 0;
+      will-change: transform, opacity;
+      margin-right: 0.28em;
+    }
+    .stagger-word.stagger-active {
+      animation: staggeredRevealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+
+
+  <style id="hero-13-pattern-style">
+    /* REACT BITS PRO INSPIRED HERO 13 PATTERN STYLES */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+    @keyframes floatSlowReverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(12px) rotate(-3deg); }
+    }
+    .floating-icon-card {
+      animation: floatSlow 5s ease-in-out infinite;
+    }
+    .floating-icon-card-reverse {
+      animation: floatSlowReverse 6s ease-in-out infinite;
+    }
+    .glow-separator-line {
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent 0%, rgba(242, 202, 80, 0.2) 20%, #f2ca50 50%, rgba(242, 202, 80, 0.2) 80%, transparent 100%);
+      box-shadow: 0 0 20px rgba(242, 202, 80, 0.7);
+    }
+  </style>
+
+
+  
+<style id="particle-text-style">
+  /* REACT BITS PRO INSPIRED PARTICLE TEXT COMPONENT FOR ALL CARDS */
+  .card-particle-text {
+    position: relative;
+    transition: text-shadow 0.35s ease;
+  }
+  .card-particle-text:hover,
+  [class*="card"]:hover .card-particle-text,
+  .bg-white:hover .card-particle-text {
+    text-shadow: 0 0 14px rgba(242, 202, 80, 0.45), 0 0 28px rgba(78, 222, 163, 0.3);
+  }
+  .particle-overlay-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 40;
+  }
+</style>
+
+
+
+  <style id="glitch-text-style">
+    /* REACT BITS PRO INSPIRED GLITCH TEXT COMPONENT */
+    @keyframes glitchJitter {
+      0% { transform: translate(0); }
+      25% { transform: translate(-1.5px, 1px); }
+      50% { transform: translate(1.5px, -1px); }
+      75% { transform: translate(-1px, -1.5px); }
+      100% { transform: translate(0); }
+    }
+    .glitch-text-target {
+      display: inline-block;
+      transition: color 0.25s ease, text-shadow 0.2s ease;
+      will-change: transform;
+    }
+    .glitch-text-target:hover {
+      animation: glitchJitter 0.2s ease infinite;
+      color: #f2ca50 !important;
+      text-shadow: 2px 0 #06b6d4, -2px 0 #4edea3;
+    }
+  </style>
+
+
+  <style id="particle-image-style">
+    /* REACT BITS PRO INSPIRED PARTICLE IMAGE COMPONENT */
+    .particle-image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.25rem;
+    }
+    .particle-image-container img {
+      transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .particle-image-container:hover img {
+      opacity: 0.85;
+      transform: scale(1.03);
+    }
+    .particle-image-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+  </style>
+
+
+  
+
+
+
+
+
+
+
+
+<style id="site-wide-high-contrast-text-style">
+  /* SITE-WIDE HIGH-CONTRAST TEXT COLOR OVERRIDE - 100% VISIBILITY EVERYWHERE */
+  
+  /* Headings: Gold (#f2ca50), Hover to Orange (#f97316) */
+  h1, h2, h3, h4, h5, h6,
+  .hero-title, .subpage-hero-title, .tcb-tax-title, .tcb-about-title, .tcb-retire-title, .tcb-retire-quote {
+    color: #f2ca50 !important;
+  }
+
+  /* Paragraphs, lists, spans, divs, labels: Crisp Pure White (#f8fafc) */
+  p, li, label, td, th {
+    color: #f8fafc !important;
+  }
+
+  /* Neutralize dark text classes across all elements on dark theme */
+  .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500,
+  .text-slate-900, .text-slate-800, .text-slate-700, .text-slate-600,
+  .text-black, .text-zinc-900, .text-zinc-800, .text-zinc-700 {
+    color: #f8fafc !important;
+  }
+
+  /* Footer & Muted text: Bright Light Slate (#cbd5e1) */
+  .text-muted, .subtext, .desc, .subpage-hero-desc, footer p, footer span {
+    color: #cbd5e1 !important;
+  }
+
+  footer a {
+    color: #cbd5e1 !important;
+    transition: color 0.25s ease !important;
+  }
+  footer a:hover {
+    color: #f97316 !important;
+  }
+
+  /* Badges & Tags */
+  .subpage-hero-badge, .tcb-retire-badge, .tcb-about-badge, [class*="badge"] {
+    background: rgba(242, 202, 80, 0.16) !important;
+    border: 1px solid rgba(242, 202, 80, 0.45) !important;
+    color: #f2ca50 !important;
+  }
+
+  /* Form Inputs */
+  input, textarea, select {
+    background-color: rgba(10, 14, 23, 0.9) !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(242, 202, 80, 0.3) !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  /* Scatter Letters: Yellow (#f2ca50) by default, Orange (#f97316) on hover */
+  .scatter-letter {
+    color: #f2ca50 !important;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease, text-shadow 0.3s ease !important;
+  }
+  .scatter-letter.is-scattered,
+  .scatter-letter:hover {
+    color: #f97316 !important;
+    text-shadow: 0 0 14px rgba(249, 115, 22, 0.75) !important;
+  }
+</style>
+
+
+
+<style id="blur-highlight-component-style">
+  /* REACT BITS PRO INSPIRED BLUR HIGHLIGHT COMPONENT */
+  .blur-highlight-word {
+    display: inline-block;
+    filter: blur(6px);
+    opacity: 0.25;
+    transform: translateY(6px);
+    transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease, background 0.3s ease;
+    will-change: filter, opacity, transform;
+    margin-right: 0.28em;
+  }
+  .blur-highlight-word.is-revealed {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Highlighted Keyword Badge inside Blur Highlight Component */
+  .blur-highlight-word.is-keyword {
+    background: rgba(242, 202, 80, 0.16);
+    color: #f2ca50 !important;
+    border: 1px solid rgba(242, 202, 80, 0.35);
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  
+  /* Card Hover Keyword Highlight Boost */
+  [class*="card"]:hover .blur-highlight-word.is-keyword,
+  .service-card:hover .blur-highlight-word.is-keyword,
+  .bg-white:hover .blur-highlight-word.is-keyword {
+    background: rgba(249, 115, 22, 0.22);
+    color: #f97316 !important;
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="permanent-blue-sub-cards-style">
+  /* PERMANENT STATIC DEEP BLUE FOR ALL INNER FEATURE CARDS, CHECKMARK BOXES, SUB-CARDS & COMPONENTS */
+  
+  .tcb-tax-card, 
+  .tcb-retire-card, 
+  .tcb-risk-card, 
+  .tcb-network-card, 
+  .service-card, 
+  .tcb-about-card, 
+  .tcb-contact-article-card, 
+  .faq-item, 
+  .consultation-item, 
+  .consultation-card, 
+  .neu-glass-card, 
+  .purpose-glass-card, 
+  .tcb-tax-dark,
+  .tcb-about-dark,
+  .tcb-retire-hero,
+  .tcb-retire-highlight,
+  .bg-white, 
+  .bg-gray-50,
+  .bg-gray-100,
+  .bg-slate-50,
+  .bg-slate-100,
+  .bg-zinc-50,
+  .bg-zinc-100,
+  .bg-[#FAFAFA],
+  .bg-[#fff8dc],
+  .bg-[#f8f8f8],
+  .card, 
+  [class*="card"],
+  [class*="component"],
+  [class*="box"],
+  [class*="rounded-xl"],
+  [class*="rounded-2xl"],
+  [class*="rounded-3xl"],
+  .tax-tab-content div,
+  .tax-feature-card,
+  div[class*="shadow"] {
+    background: #0d1424 !important;
+    background-color: #0d1424 !important;
+    border: 2px solid #d4af37 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Exclude main page outer body/wrapper containers from getting borders */
+  body, main, nav, header, footer, section, .navbar, .hero-section, .subpage-hero {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Permanent Yellow / Gold Headings (#f2ca50) */
+  h1, h2, h3, h4, h5, h6,
+  .tcb-tax-title, .tcb-about-title, .tcb-retire-title,
+  .card h1, .card h2, .card h3, .card h4,
+  [class*="card"] h1, [class*="card"] h2, [class*="card"] h3, [class*="card"] h4,
+  [class*="rounded-2xl"] h2, [class*="rounded-2xl"] h3,
+  [class*="rounded-xl"] h2, [class*="rounded-xl"] h3 {
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  }
+
+  /* Permanent Pure White Text (#ffffff) for all sub-cards & checkmark text */
+  p, li, span:not(.scatter-letter):not(.user-cursor-name):not(.user-cursor-dot), label, td, th {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  /* Checkmark icons inside feature boxes */
+  .fa-check, .fa-check-circle, svg path[fill="#CBBA4F"], svg path[fill="#f2ca50"] {
+    color: #f2ca50 !important;
+    fill: #f2ca50 !important;
+  }
+
+  /* Hover effect boost */
+  .tcb-tax-card:hover, 
+  .tcb-retire-card:hover, 
+  .tcb-risk-card:hover, 
+  .tcb-network-card:hover, 
+  .service-card:hover, 
+  .tcb-about-card:hover,
+  [class*="card"]:hover,
+  [class*="rounded-2xl"]:hover,
+  [class*="rounded-xl"]:hover {
+    border-color: #f2ca50 !important;
+    background: #0f172a !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 20px rgba(242, 202, 80, 0.25) !important;
+  }
+</style>
+
+
+<style id="static-our-expertise-card-style">
+  /* 100% STATIC OUR EXPERTISE CARD - NO SCROLL ANIMATIONS, NO BLUR, NO COLOR SHIFTS */
+  .our-expertise-card,
+  #our-expertise-card,
+  [data-static="true"] {
+    background: #0d1424 !important;
+    background-color: #0d1424 !important;
+    border: 2px solid #d4af37 !important;
+    border-radius: 20px !important;
+    padding: 38px 32px !important;
+    color: #ffffff !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65) !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .our-expertise-card h2,
+  #our-expertise-card h2,
+  .our-expertise-card h3,
+  [data-static="true"] h2,
+  [data-static="true"] h3 {
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 28px !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+
+  .our-expertise-card p,
+  #our-expertise-card p,
+  .our-expertise-card span,
+  .our-expertise-card div,
+  .our-expertise-card li,
+  [data-static="true"] p,
+  [data-static="true"] span,
+  [data-static="true"] div,
+  [data-static="true"] li {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+    font-weight: 400 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+
+  /* Completely neutralize blur highlight, scatter, or staggered text inside expertise cards */
+  .our-expertise-card .blur-highlight-word,
+  .our-expertise-card .scatter-letter,
+  .our-expertise-card .stagger-word,
+  [data-static="true"] .blur-highlight-word,
+  [data-static="true"] .scatter-letter,
+  [data-static="true"] .stagger-word {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+</style>
+
+<style id="photo1-exact-blue-card-override">
+  /* 100% DARK MIDNIGHT BLUE (#0a0f1d) CARD, SECTION & FAQ OVERRIDE SITE-WIDE */
+  
+  /* Outer card containers, Consultation overlays, Highlight boxes, Sections & FAQ items */
+  html body .bg-white,
+  html body .bg-gray-50,
+  html body .bg-gray-100,
+  html body .bg-slate-50,
+  html body .bg-slate-100,
+  html body .bg-zinc-50,
+  html body .bg-[#FAFAFA],
+  html body .bg-[#fff8dc],
+  html body .bg-[#f8f8f8],
+  html body .bg-[#0d1424],
+  html body .tcb-tax-card,
+  html body .tcb-retire-card,
+  html body .tcb-risk-card,
+  html body .tcb-network-card,
+  html body .tcb-network-highlight,
+  html body .tcb-retire-hero,
+  html body .tcb-retire-highlight,
+  html body .tcb-tax-hero,
+  html body .tcb-tax-highlight,
+  html body .tcb-about-hero,
+  html body .tcb-about-highlight,
+  html body .tcb-risk-hero,
+  html body .tcb-risk-highlight,
+  html body .tcb-network-hero,
+  html body .service-card,
+  html body .tcb-about-card,
+  html body .tcb-contact-article-card,
+  html body .consultation-card,
+  html body .consultation-card-overlay,
+  html body .consultation-item,
+  html body .faq-item,
+  html body .faq-header,
+  html body .faq-header-left,
+  html body .faq-body,
+  html body .neu-glass-card,
+  html body .reactbits-text-path-card,
+  html body [class*="card"] {
+    background-color: #0a0f1d !important;
+    background: #0a0f1d !important;
+    border: 2px solid #d4af37 !important;
+    border-radius: 1.25rem !important;
+    color: #ffffff !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65) !important;
+  }
+
+  /* Force section backgrounds to transparent */
+  section, .tcb-tax-section, .tcb-about-section, .tcb-retire-section, .tcb-risk-section, .tcb-network-section, .tcb-retire-wrap {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  /* FAQ Accordion Styling - Zero White Inner Boxes */
+  html body .faq-item {
+    margin-bottom: 1rem !important;
+  }
+
+  html body .faq-header,
+  html body .faq-header-left {
+    background-color: #0a0f1d !important;
+    background: #0a0f1d !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  html body .faq-item.active .faq-header,
+  html body .faq-item:hover .faq-header {
+    background-color: rgba(242, 202, 80, 0.1) !important;
+    background: rgba(242, 202, 80, 0.1) !important;
+  }
+
+  html body .faq-question {
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.15rem !important;
+    background: transparent !important;
+  }
+
+  html body .faq-number {
+    background-color: rgba(242, 202, 80, 0.2) !important;
+    border: 1px solid rgba(242, 202, 80, 0.4) !important;
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+  }
+
+  html body .faq-icon-wrapper {
+    background-color: rgba(242, 202, 80, 0.2) !important;
+    border: 1px solid rgba(242, 202, 80, 0.4) !important;
+    color: #f2ca50 !important;
+  }
+
+  html body .faq-item.active .faq-icon-wrapper {
+    background-color: #f2ca50 !important;
+    border-color: #f2ca50 !important;
+    color: #0a0f1d !important;
+  }
+
+  html body .faq-body {
+    background-color: #0a0f1d !important;
+    background: #0a0f1d !important;
+    border-top: 1px dashed rgba(242, 202, 80, 0.3) !important;
+  }
+
+  html body .faq-answer {
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    opacity: 1 !important;
+    background: transparent !important;
+  }
+
+  /* Inner checkmark feature items & list items */
+  html body .grid > div.bg-white,
+  html body .grid > div[class*="border-gray"],
+  html body div.p-4.rounded-xl,
+  html body div.p-4.rounded-xl.bg-white {
+    background-color: rgba(10, 15, 29, 0.85) !important;
+    background: rgba(10, 15, 29, 0.85) !important;
+    border: 1px solid rgba(242, 202, 80, 0.35) !important;
+    color: #ffffff !important;
+  }
+
+  /* Headings inside cards & hero quote boxes: Gold (#f2ca50) */
+  html body .bg-white h1, html body .bg-white h2, html body .bg-white h3, html body .bg-white h4,
+  html body div[class*="card"] h1, html body div[class*="card"] h2, html body div[class*="card"] h3, html body div[class*="card"] h4,
+  html body .tcb-tax-card h1, html body .tcb-tax-card h2, html body .tcb-tax-card h3,
+  html body .tcb-network-highlight h3,
+  html body .consultation-card-overlay h2:first-child,
+  html body .tcb-tax-title, html body .tcb-retire-title, html body .tcb-about-title,
+  html body .tcb-retire-quote, html body .tcb-retire-card h3 {
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  }
+
+  /* Text inside cards, consultation overlay & FAQ: Pure Crisp White (#ffffff) */
+  html body .bg-white p, html body .bg-white li, html body .bg-white span:not(.scatter-letter), html body .bg-white div,
+  html body div[class*="card"] p, html body div[class*="card"] li, html body div[class*="card"] span:not(.scatter-letter),
+  html body .tcb-network-highlight p,
+  html body .tcb-tax-text,
+  html body .tcb-about-text,
+  html body .tcb-retire-text,
+  html body .tcb-risk-text,
+  html body .tcb-network-text,
+  html body .consultation-card-overlay h2,
+  html body .consultation-card-overlay p,
+  html body .consultation-card-overlay span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  /* Neutralize light text & black text classes inside components */
+  html body .text-black,
+  html body .bg-white .text-gray-800,
+  html body .bg-white .text-gray-900,
+  html body .bg-white .text-gray-700,
+  html body .bg-white .text-gray-600,
+  html body .bg-white .text-gray-500,
+  html body .bg-white .text-[#111827] {
+    color: #ffffff !important;
+  }
+</style>
+<style id="reactbits-warped-card-style">
+  /* REACT BITS PRO WARPED CARD COMPONENT - APPLIED TO ALL CARDS */
+  .tcb-tax-card,
+  .tcb-retire-card,
+  .tcb-risk-card,
+  .tcb-network-card,
+  .service-card,
+  .tcb-about-card,
+  .consultation-card,
+  .consultation-item,
+  .faq-item,
+  .neu-glass-card,
+  .tcb-network-highlight,
+  .tcb-tax-dark,
+  .tcb-about-dark,
+  [class*="card"] {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 1.25rem !important;
+    border: 2px solid #d4af37 !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65) !important;
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  }
+  
+  /* Warped Card Mouse-Following Radial Bulge Overlay */
+  .tcb-tax-card::before,
+  .tcb-retire-card::before,
+  .tcb-risk-card::before,
+  .tcb-network-card::before,
+  .service-card::before,
+  .tcb-about-card::before,
+  .consultation-card::before,
+  .consultation-item::before,
+  .faq-item::before,
+  .neu-glass-card::before,
+  .tcb-network-highlight::before,
+  [class*="card"]::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 1.25rem;
+    background: radial-gradient(
+      450px circle at var(--warped-mouse-x, 50%) var(--warped-mouse-y, 50%),
+      rgba(242, 202, 80, 0.22),
+      rgba(249, 115, 22, 0.12) 35%,
+      transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 2;
+  }
+
+  .tcb-tax-card:hover::before,
+  .tcb-retire-card:hover::before,
+  .tcb-risk-card:hover::before,
+  .tcb-network-card:hover::before,
+  .service-card:hover::before,
+  .tcb-about-card:hover::before,
+  .consultation-card:hover::before,
+  .consultation-item:hover::before,
+  .faq-item:hover::before,
+  .neu-glass-card:hover::before,
+  .tcb-network-highlight:hover::before,
+  [class*="card"]:hover::before {
+    opacity: 1;
+  }
+
+  .reactbits-warped-canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+    opacity: 0;
+    transition: opacity 0.35s ease !important;
+  }
+</style>
+<style id="site-wide-perfect-alignment-fix">
+  /* SITE-WIDE PERFECT ALIGNMENT & TYPOGRAPHY FIX */
+  
+  /* Reset paragraph and card body text to natural, clean left alignment */
+  html body p,
+  html body div.tcb-tax-text,
+  html body div.tcb-retire-text,
+  html body div.tcb-risk-text,
+  html body div.tcb-network-text,
+  html body .tcb-tax-card p,
+  html body .tcb-retire-card p,
+  html body .tcb-risk-card p,
+  html body .tcb-network-card p,
+  html body .service-card p,
+  html body .tcb-about-card p,
+  html body .consultation-card p,
+  html body .tcb-network-highlight p,
+  html body [class*="card"] p {
+    text-align: left !important;
+    line-height: 1.85 !important;
+    font-size: 1rem !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Center card section headings cleanly */
+  html body [class*="card"] h1,
+  html body [class*="card"] h2,
+  html body [class*="card"] h3,
+  html body [class*="card"] h4,
+  html body .tcb-tax-title,
+  html body .tcb-retire-title,
+  html body .tcb-about-title,
+  html body .tcb-network-highlight h3 {
+    text-align: center !important;
+    line-height: 1.35 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Fix word wrapping inside blur-highlight-word */
+  .blur-highlight-word {
+    display: inline !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-right: 0.22em !important;
+    white-space: normal !important;
+  }
+
+  /* Fix scatter letters alignment */
+  .scatter-letter {
+    display: inline !important;
+    transform: none !important;
+  }
+
+  .blur-highlight-word.is-keyword {
+    background: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure card containers have consistent padding & spacing */
+  html body [class*="card"],
+  html body .tcb-network-highlight {
+    padding: 2.25rem !important;
+    box-sizing: border-box !important;
+  }
+</style>
+<style id="force-faq-blue-card-override">
+  /* 100% FORCE DARK MIDNIGHT BLUE (#0a0f1d) FOR ALL FAQ & ACCORDION COMPONENTS */
+  
+  html body .faq-container,
+  html body .faq-item,
+  html body .faq-header,
+  html body .faq-header-left,
+  html body .faq-body,
+  html body .consultation-item,
+  html body .consultation-header,
+  html body .consultation-content {
+    background-color: #0a0f1d !important;
+    background: #0a0f1d !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  html body .faq-item {
+    border: 2px solid #d4af37 !important;
+    border-radius: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  html body .faq-header-left {
+    border-radius: 0.75rem !important;
+    padding: 0.25rem !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  html body .faq-item.active .faq-header,
+  html body .faq-item:hover .faq-header {
+    background-color: rgba(242, 202, 80, 0.1) !important;
+    background: rgba(242, 202, 80, 0.1) !important;
+  }
+
+  html body .faq-question {
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.15rem !important;
+    background: transparent !important;
+  }
+
+  html body .faq-number {
+    background-color: rgba(242, 202, 80, 0.25) !important;
+    border: 1px solid rgba(242, 202, 80, 0.5) !important;
+    color: #f2ca50 !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+  }
+
+  html body .faq-icon-wrapper {
+    background-color: rgba(242, 202, 80, 0.25) !important;
+    border: 1px solid rgba(242, 202, 80, 0.5) !important;
+    color: #f2ca50 !important;
+  }
+
+  html body .faq-item.active .faq-icon-wrapper {
+    background-color: #f2ca50 !important;
+    border-color: #f2ca50 !important;
+    color: #0a0f1d !important;
+  }
+
+  html body .faq-body {
+    border-top: 1px dashed rgba(242, 202, 80, 0.35) !important;
+  }
+
+  html body .faq-answer {
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+    opacity: 1 !important;
+    background: transparent !important;
+  }
+</style>
+  <style>
+  .floating-icon-card, .floating-icon-card-reverse { display: none !important; visibility: hidden !important; opacity: 0 !important; height: 0 !important; width: 0 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; }
+</style>
+</head>
 
   <body>
     <!-- Loading Spinner -->
     <div
       id="loading-spinner"
-      class="fixed inset-0 flex items-center justify-center bg-white z-50"
+      class="fixed inset-0 flex items-center justify-center bg-[#0a0f1d] border-2 border-[#d4af37] text-white z-50 our-expertise-card" data-static="true"
     >
       <div class="loader"></div>
     </div>
     <!-- Navbar -->
-    <nav
-      id="navbar"
-      class="navbar fixed top-0 w-full z-40 py-4 md:px-6 transition-all duration-300"
-    >
-      <div class="mx-auto flex justify-between items-center px-2">
-        <div class="flex items-center">
-          <a href="/" class="text-white text-xl font-bold">
-            <img
-              src="public/assets/logo-1.webp"
-              alt="the capital box logo"
-              class="h-8"
-            />
-          </a>
-          <div class="flex flex-col ml-4 md:hidden lg:block">
-            <p class="uppercase text-white text-md md:text-xl font-bold">
-              The Capital Box
-            </p>
-            <p class="uppercase text-white text-xs md:text-base font-light">
-              UNCOMMON MONEY FOR COMMON MAN
-            </p>
-          </div>
+    
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl">
+  <nav class="bg-zinc-950/85 backdrop-blur-2xl border border-amber-500/25 rounded-full px-6 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.85)] flex items-center justify-between transition-all duration-300 hover:border-amber-400/50">
+    <div class="flex items-center gap-3">
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" class="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
+        <div class="hidden sm:flex flex-col">
+          <span class="text-white font-bold text-sm tracking-wider uppercase font-['Outfit'] group-hover:text-amber-400 transition-colors">THE CAPITAL BOX</span>
+          <span class="text-amber-400/80 text-[10px] font-medium tracking-widest uppercase">UNCOMMON MONEY FOR COMMON MAN</span>
         </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <a
-            href="/"
-            class="text-white hover:text-primary transition text-lg font-light uppercase"
-            >Home</a
-          >
-          <!-- Dropdown Menu -->
-          <div class="dropdown relative">
-            <button
-              class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
-              id="dropdownToggle"
-            >
-              Services
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 ml-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div class="dropdown-menu bg-white rounded shadow-lg mt-2 w-56">
-              <div class="py-2">
-                <a
-                  href="./taxsolution.html"
-                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
-                  >Tax Solutions</a
-                >
-                <a
-                  href="./retirementsolutions.html"
-                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
-                  >Retirement Solutions</a
-                >
-                <a
-                  href="./networksolution.html"
-                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
-                  >Networking Solutions
-                </a>
-                <a
-                  href="./riskmanagement.html"
-                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
-                  >Risk Management</a
-                >
-              </div>
-            </div>
-          </div>
-          <a
-            href="./about.html"
-            class="text-white hover:text-primary transition text-lg font-light uppercase"
-            >About</a
-          >
-          <a
-            href="./contact.html"
-            class="text-white hover:text-primary transition text-lg font-light uppercase"
-            >Contact</a
-          >
-          <a
-            href="./careers.html"
-            class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal"
-            >Careers</a
-          >
-        </div>
-        <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-white">
-            <!-- Hamburger Icon -->
-            <svg
-              id="hamburger-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-            <!-- X Icon (hidden by default) -->
-            <svg
-              id="close-icon"
-              class="h-6 w-6 hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
+      </a>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="/" class="text-zinc-300 hover:text-amber-400 transition-colors uppercase tracking-wider text-xs">Home</a>
+      <div class="relative group">
+        <button class="text-amber-400 font-bold hover:text-amber-400 transition-colors uppercase tracking-wider text-xs flex items-center gap-1 py-2">
+          Services
+          <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-zinc-950/95 backdrop-blur-xl border border-amber-500/20 rounded-xl p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+          <a href="./taxsolution.html" class="block px-4 py-2.5 rounded-lg text-xs text-amber-400 bg-amber-500/10 font-bold hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Tax Solutions</a>
+          <a href="./retirementsolutions.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Retirement Solutions</a>
+          <a href="./networksolution.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Networking Solutions</a>
+          <a href="./riskmanagement.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Risk Management</a>
         </div>
       </div>
-      <!-- Mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-navColor bg-opacity-40 mt-4 py-2"
-      >
-        <a
-          href="/"
-          class="block px-6 py-2 text-white hover:bg-primary"
-          >Home</a
-        >
-        <div class="relative">
-          <button
-            id="mobile-dropdown-button"
-            class="w-full text-left px-6 py-2 text-white hover:bg-primary flex justify-between items-center"
-          >
-            Services
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <div
-            id="mobile-dropdown"
-            class="hidden bg-[#1F2937] rounded-lg mx-4 my-2"
-          >
-            <a
-              href="./taxsolution.html"
-              class="block px-6 py-2 text-white hover:bg-primary rounded-t-lg"
-              >Tax Solutions</a
-            >
-            <a
-              href="./retirementsolutions.html"
-              class="block px-6 py-2 text-white hover:bg-primary"
-              >Retirement Solutions</a
-            >
-            <a
-              href="./networksolution.html"
-              class="block px-6 py-2 text-white hover:bg-primary rounded-b-lg"
-              >Networking Solutions</a
-            >
-            <a
-              href="./riskmanagement.html"
-              class="block px-6 py-2 text-white hover:bg-primary rounded-b-lg"
-              >Risk Management</a
-            >
-          </div>
-        </div>
-        <a
-          href="./about.html"
-          class="block px-6 py-2 text-white hover:bg-primary"
-          >About</a
-        >
-        <a
-          href="./contact.html"
-          class="block px-6 py-2 text-white hover:bg-primary"
-          >Contact</a
-        >
-        <div class="flex justify-center mt-4">
-          <a
-            href="./careers.html"
-            class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal"
-            >Careers</a
-          >
-        </div>
-      </div>
-    </nav>
+      <a href="./about.html" class="text-zinc-300 hover:text-amber-400 transition-colors uppercase tracking-wider text-xs">About</a>
+      <a href="./contact.html" class="text-zinc-300 hover:text-amber-400 transition-colors uppercase tracking-wider text-xs">Contact</a>
+      <a href="./careers.html" class="px-5 py-2 rounded-full border border-amber-400/40 text-amber-300 text-xs font-semibold uppercase tracking-wider hover:bg-gradient-to-r hover:from-amber-400 hover:to-yellow-500 hover:text-zinc-950 transition-all duration-300 shadow-[0_0_15px_rgba(242,202,80,0.2)]">Careers</a>
+    </div>
+
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-button" class="p-2 text-zinc-300 hover:text-amber-400">
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden mt-3 bg-zinc-950/95 backdrop-blur-2xl border border-amber-500/20 rounded-2xl p-4 space-y-3 text-sm">
+    <a href="/" class="block px-4 py-2.5 rounded-xl text-zinc-200 hover:bg-amber-500/10 hover:text-amber-400 font-medium">Home</a>
+    <div class="space-y-1 pl-4 border-l border-amber-500/20">
+      <div class="text-amber-400/70 text-xs font-semibold uppercase tracking-wider py-1">Services</div>
+      <a href="./taxsolution.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Tax Solutions</a>
+      <a href="./retirementsolutions.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Retirement Solutions</a>
+      <a href="./networksolution.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Networking Solutions</a>
+      <a href="./riskmanagement.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Risk Management</a>
+    </div>
+    <a href="./about.html" class="block px-4 py-2.5 rounded-xl text-zinc-200 hover:bg-amber-500/10 hover:text-amber-400 font-medium">About</a>
+    <a href="./contact.html" class="block px-4 py-2.5 rounded-xl text-zinc-200 hover:bg-amber-500/10 hover:text-amber-400 font-medium">Contact</a>
+    <a href="./careers.html" class="block text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold uppercase tracking-wider text-xs">Careers</a>
+  </div>
+</header>
+
     <!-- -->
-    <main>
+    <main  class="pt-28 relative z-10">
+
+      <div id="aurora-glow-orbs" class="pointer-events-none fixed inset-0 overflow-hidden z-0">
+        <div class="absolute top-10 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[140px]"></div>
+        <div class="absolute top-96 right-10 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[160px]"></div>
+        <div class="absolute bottom-20 left-10 w-[450px] h-[450px] bg-cyan-500/10 rounded-full blur-[150px]"></div>
+      </div>
+    
       <!-- Hero Section -->
       <div class="relative">
         <!-- Hero Image & Content -->
-        <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
-          <img
-            src="public/assets/SERVICES01.webp"
-            alt="Tax Solutions Hero Image"
-            class="subpage-hero-img w-full h-full object-cover"
-          />
-
-          <!-- Hero Content Overlay -->
-          <div class="subpage-hero-overlay">
-            <div class="subpage-hero-content">
-              <div class="subpage-hero-badge">
-                <span class="subpage-hero-badge-dot"></span>
-                <span>Strategic Advisory</span>
-              </div>
-              <h1 class="subpage-hero-title">
-                Tax Solutions
-              </h1>
-              <p class="subpage-hero-desc">
-                Navigating complex Indian and international tax frameworks to maximize efficiency, protect your wealth, and ensure total compliance with proactive structuring.
-              </p>
-              <div class="subpage-hero-pills">
-                <span class="subpage-hero-pill">Direct & Indirect Tax</span>
-                <span class="subpage-hero-pill">International Taxation</span>
-                <span class="subpage-hero-pill">Regulatory Compliance</span>
-              </div>
+        
+      <!-- REACT BITS PRO HERO 13 BLOCK PATTERN START -->
+      <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden py-16 md:py-24">
+        <div class="subpage-hero-overlay relative z-10 flex flex-col items-center text-center px-4">
+          
+              
+          <div class="subpage-hero-content max-w-4xl mx-auto">
+            <div class="subpage-hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-4">
+              <span class="subpage-hero-badge-dot w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+              <span>Strategic Advisory</span>
             </div>
+            
+            <h1 class="subpage-hero-title text-3xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 font-['Outfit'] tracking-tight mb-4">
+              Tax Solutions
+            </h1>
+
+            <!-- REACT BITS PRO HERO 13 GLOW SEPARATOR -->
+            <div class="glow-separator-line w-full max-w-2xl mx-auto my-6"></div>
+
+            <p class="subpage-hero-desc text-zinc-300 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-6 font-light">
+              Navigating complex Indian and international tax frameworks to maximize efficiency, protect your wealth, and ensure total compliance with proactive structuring.
+            </p>
+
+            <div class="subpage-hero-pills flex flex-wrap justify-center gap-3">
+              <span class="subpage-hero-pill px-4 py-2 rounded-full bg-zinc-900/80 border border-amber-500/20 text-zinc-200 text-xs font-semibold uppercase tracking-wider hover:border-amber-400 transition-all">Direct & Indirect Tax</span><span class="subpage-hero-pill px-4 py-2 rounded-full bg-zinc-900/80 border border-amber-500/20 text-zinc-200 text-xs font-semibold uppercase tracking-wider hover:border-amber-400 transition-all">International Taxation</span><span class="subpage-hero-pill px-4 py-2 rounded-full bg-zinc-900/80 border border-amber-500/20 text-zinc-200 text-xs font-semibold uppercase tracking-wider hover:border-amber-400 transition-all">Regulatory Compliance</span>
+            
+            
+        </div>
+      </div>
+        </div>
+        </div>
+      </div>
+      <!-- REACT BITS PRO HERO 13 BLOCK PATTERN END -->
+  
           </div>
         </div>
 
@@ -476,7 +1365,7 @@
           <div class="w-full">
             <!-- First Card -->
             <div
-              class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
+              class="w-full bg-[#0a0f1d] border-2 border-[#d4af37] text-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
             >
               <div class="p-6 flex flex-col gap-4 md:gap-8">
                 <h2
@@ -510,7 +1399,7 @@
             class="md:grid md:grid-cols-2 gap-8 items-center relative flex flex-col-reverse md:flex-row"
           >
             <!-- Tax Coverage Card Matching Photo 2 Thick Border -->
-            <div class="relative bg-white border-4 border-primary rounded-xl md:rounded-2xl p-6 sm:p-8 shadow-xl">
+            <div class="relative bg-[#0a0f1d] border-2 border-[#d4af37] text-white border-4 border-primary rounded-xl md:rounded-2xl p-6 sm:p-8 shadow-xl">
               <!-- Heading with Left Vertical Gold Bar -->
               <div class="flex items-center gap-3 mb-6">
                 <span class="w-1.5 h-6 sm:h-7 bg-[#CBBA4F] rounded-full inline-block flex-shrink-0"></span>
@@ -551,22 +1440,22 @@
               <div id="panel-indirect-tax" class="transition-all duration-300">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
                   <!-- Goods and Services Tax (GST) -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Goods and Services Tax (GST)</span>
                   </div>
                   <!-- Customs & Import Duties -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Customs &amp; Import Duties</span>
                   </div>
                   <!-- Central Excise Levies -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Central Excise Levies</span>
                   </div>
                   <!-- Service Tax (Advisory & Legacy) -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Service Tax (Advisory &amp; Legacy)</span>
                   </div>
@@ -577,32 +1466,32 @@
               <div id="panel-direct-tax" class="hidden transition-all duration-300">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
                   <!-- Personal Income Tax -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Personal Income Tax (Individuals &amp; HUFs)</span>
                   </div>
                   <!-- Corporate Income Tax & MAT -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Corporate Income Tax &amp; Minimum Alternate Tax (MAT)</span>
                   </div>
                   <!-- Capital Gains Tax -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Capital Gains Tax (STCG &amp; LTCG)</span>
                   </div>
                   <!-- Tax Deducted at Source -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Tax Deducted at Source (TDS &amp; TCS)</span>
                   </div>
                   <!-- Advance Tax & Wealth Structuring -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Advance Tax &amp; Wealth Structuring</span>
                   </div>
                   <!-- Double Taxation Avoidance & NRI Advisory -->
-                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
+                  <div class="flex items-center gap-3 p-4 rounded-xl border border-gray-200/90 bg-[#0a0f1d] border-2 border-[#d4af37] text-white shadow-xs hover:border-[#CBBA4F]/60 transition-all duration-200">
                     <span class="w-5 h-5 rounded-full bg-[#CBBA4F] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold leading-none">✓</span>
                     <span class="text-sm md:text-base font-medium text-gray-800">Double Taxation Avoidance (DTAA) &amp; NRI</span>
                   </div>
@@ -651,7 +1540,7 @@
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary p-6 md:p-8"
+            class="w-full bg-[#0a0f1d] border-2 border-[#d4af37] text-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary p-6 md:p-8"
           >
             <h2 class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center">Our Expertise:</h2>
             <p class="text-md md:text-lg text-gray-700 font-medium leading-relaxed">
@@ -734,7 +1623,7 @@
         <div class="w-full">
           <!-- First Card -->
           <div
-            class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
+            class="w-full bg-[#0a0f1d] border-2 border-[#d4af37] text-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
           >
             <div class="p-6 md:p-8 flex flex-col gap-4">
               <h2 class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
@@ -781,7 +1670,7 @@
       <!-- TAX PAGE NEW ARTICLES START -->
 
     <!-- HEADER -->
-    <section class="tcb-tax-section" style="background:#f8f8f8;">
+    <section class="tcb-tax-section" style="background:transparent;">
     <div class="tcb-tax-container" style="text-align:center;">
     <div class="tcb-tax-badge">Tax Intelligence Hub</div>
     <h2 class="tcb-tax-title">Smarter Tax Planning. Stronger Financial Control.</h2>
@@ -802,9 +1691,31 @@
     <br><br>
     At The Capital Box, proactive tax planning focuses on aligning financial decisions with evolving regulations while supporting broader business and personal wealth objectives.
     </p>
-    <div class="tcb-tax-note">
-    Key Insight: Tax planning works best when it becomes a year-round strategy, not a last-minute obligation.
+    <!-- REACT BITS PRO TEXT PATH COMPONENT START -->
+    <div class="reactbits-text-path-card relative w-full rounded-2xl bg-[#0a0f1d] border-2 border-[#d4af37] p-6 shadow-[0_16px_40px_rgba(0,0,0,0.65)] overflow-hidden my-8">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#f2ca50] mb-2 px-2">
+        <span class="w-2 h-2 rounded-full bg-[#f2ca50] animate-pulse"></span>
+        <span>Key Insight</span>
+      </div>
+      <div class="w-full overflow-hidden flex items-center justify-center py-2">
+        <svg viewBox="0 0 1000 120" class="w-full h-28 overflow-visible">
+          <defs>
+            <linearGradient id="textPathGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f2ca50" />
+              <stop offset="50%" stop-color="#ffe088" />
+              <stop offset="100%" stop-color="#f97316" />
+            </linearGradient>
+          </defs>
+          <path id="tcb-key-insight-curve" d="M 0,60 Q 250,15 500,60 T 1000,60" fill="none" stroke="rgba(242, 202, 80, 0.25)" stroke-width="2" stroke-dasharray="6 6" />
+          <text font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="url(#textPathGoldGrad)" letter-spacing="1">
+            <textPath id="tcb-text-path-element" href="#tcb-key-insight-curve" startOffset="0%">
+              Key Insight: Tax planning works best when it becomes a year-round strategy, not a last-minute obligation. — The Capital Box Advisory
+            </textPath>
+          </text>
+        </svg>
+      </div>
     </div>
+    <!-- REACT BITS PRO TEXT PATH COMPONENT END -->
     </div>
     </section>
     
@@ -825,7 +1736,7 @@
     </section>
     
     <!-- ARTICLE 3 + 4 -->
-    <section class="tcb-tax-section" style="background:#f8f8f8;">
+    <section class="tcb-tax-section" style="background:transparent;">
     <div class="tcb-tax-container">
     <div class="tcb-tax-grid">
     
@@ -862,7 +1773,7 @@
     </section>
     
     <!-- ARTICLE 6 -->
-    <section class="tcb-tax-section" style="background:#fff8dc;">
+    <section class="tcb-tax-section" style="background:transparent;">
     <div class="tcb-tax-container">
     <div class="tcb-tax-badge">Financial Control</div>
     <h2 class="tcb-tax-title">Tax Strategy as a Competitive Advantage</h2>
@@ -1087,96 +1998,72 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-[#4B4B4B] text-white py-10 px-6 text-sm md:text-base">
-        <div
-            class="w-full max-w-[90%] 2xl:max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
-            <!-- Logo and Social Icons -->
-            <div class="flex flex-col items-center justify-center md:items-start gap-8">
-                <div class="flex flex-col items-center justify-center gap-6">
-                    <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" />
-                    <div class="flex flex-col">
-                        <h2
-                            class="text-xl text-center md:text-start text-primary md:text-2xl font-bold leading-tight uppercase mb-2">
-                            the capital box
-                        </h2>
-                        <p class="text-primary text-xs md:text-sm text-center md:text-start">
-                            UNCOMMON MONEY FOR COMMON MAN
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 mt-2 justify-center md:justify-start">
-                    <a href="https://www.facebook.com/share/1Eqcw9arBm/" class="hover:text-primary"
-                        aria-label="Facebook"><i
-                            class="fab fa-facebook-f text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
-                    <a href="https://www.instagram.com/thecapitalbox_/?igsh=MWg4c3o0MjdvNjVndQ%3D%3D#"
-                        class="hover:text-primary" aria-label="instagram"><i
-                            class="fab fa-instagram text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
-                    <a href="https://www.linkedin.com/company/finfitt/" class="hover:text-primary"
-                        aria-label="linkedin"><i
-                            class="fab fa-linkedin-in text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
-                </div>
-            </div>
-
-            <!-- Expertise -->
-            <div class="px-4">
-                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
-                    Expertise
-                </h3>
-                <div class="flex flex-col gap-4 text-gray-300">
-                    <a href="./taxsolution.html" class="hover:text-primary">Tax Solutions</a>
-                    <a href="./riskmanagement.html" class="hover:text-primary">Risk Management</a>
-                    <a href="./networksolution.html" class="hover:text-primary">Networking Solutions</a>
-                    <a href="./retirementsolutions.html" class="hover:text-primary">Retirement Solutions</a>
-                </div>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="px-4">
-                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
-                    Have Questions?
-                </h3>
-                <ul class="space-y-2 text-gray-300">
-                    <li>South City 1, Gurugram, Haryana - 122001</li>
-                    <li>+91 124428427</li>
-                    <li>contactus@thecapitalbox.com</li>
-                    <li>
-                        <a href="privacy.html" class="hover:text-primary cursor-pointer">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="terms.html" class="hover:text-primary cursor-pointer">Terms & Conditions</a>
-                    </li>
-                    <li>
-                        <a href="cookie-policy.html" class="hover:text-primary cursor-pointer">Cookie Policy</a>
-                    </li>
-                    <li>
-                        <a href="disclaimer.html" class="hover:text-primary cursor-pointer">Disclaimer</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Business Hours -->
-            <div class="px-4">
-                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
-                    Business Hours
-                </h3>
-                <ul class="space-y-2 text-gray-300">
-                    <li>
-                        <span class="text-yellow-400">Opening Days:</span> <br />
-                        Monday – Saturday: 09:30 AM to 6:30PM
-                    </li>
-                    <li>
-                        <span class="text-yellow-400">Vacations:</span> <br />
-                        Sundays & Official Holidays
-                    </li>
-                </ul>
-            </div>
+    
+<footer class="bg-zinc-950 border-t border-amber-500/15 text-zinc-400 py-16 px-6 text-sm relative z-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center gap-4">
+        <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" class="h-10 w-auto" />
+        <div>
+          <h2 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 uppercase tracking-wider">THE CAPITAL BOX</h2>
+          <p class="text-amber-400/80 text-xs font-medium tracking-widest uppercase">UNCOMMON MONEY FOR COMMON MAN</p>
         </div>
+      </div>
+      <p class="text-xs text-zinc-400 leading-relaxed">
+        Empowering families and businesses with bespoke financial strategies, taxation solutions, risk management, and long-term wealth protection.
+      </p>
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/share/1Eqcw9arBm/" class="w-10 h-10 rounded-full border border-amber-500/20 bg-zinc-900/60 flex items-center justify-center text-zinc-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/thecapitalbox_/?igsh=MWg4c3o0MjdvNjVndQ%3D%3D#" class="w-10 h-10 rounded-full border border-amber-500/20 bg-zinc-900/60 flex items-center justify-center text-zinc-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/finfitt/" class="w-10 h-10 rounded-full border border-amber-500/20 bg-zinc-900/60 flex items-center justify-center text-zinc-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
 
-        <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
-            © 2026 All rights reserved |
-            <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
-        </div>
-    </footer>
+    <div>
+      <h3 class="text-lg font-bold text-amber-300 mb-6 uppercase tracking-wider font-['Outfit']">Expertise</h3>
+      <div class="flex flex-col space-y-3 text-xs">
+        <a href="./taxsolution.html" class="hover:text-amber-400 transition-colors">Tax Solutions</a>
+        <a href="./riskmanagement.html" class="hover:text-amber-400 transition-colors">Risk Management</a>
+        <a href="./networksolution.html" class="hover:text-amber-400 transition-colors">Networking Solutions</a>
+        <a href="./retirementsolutions.html" class="hover:text-amber-400 transition-colors">Retirement Solutions</a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-bold text-amber-300 mb-6 uppercase tracking-wider font-['Outfit']">Have Questions?</h3>
+      <ul class="space-y-3 text-xs">
+        <li class="flex items-start gap-2.5"><i class="fas fa-map-marker-alt text-amber-400 mt-0.5"></i> South City 1, Gurugram, Haryana - 122001</li>
+        <li class="flex items-center gap-2.5"><i class="fas fa-phone-alt text-amber-400"></i> +91 124428427</li>
+        <li class="flex items-center gap-2.5"><i class="fas fa-envelope text-amber-400"></i> contactus@thecapitalbox.com</li>
+        <li class="pt-2 border-t border-zinc-800 flex flex-wrap gap-x-4 gap-y-2 text-zinc-500">
+          <a href="privacy.html" class="hover:text-amber-400 transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-amber-400 transition-colors">Terms & Conditions</a>
+          <a href="cookie-policy.html" class="hover:text-amber-400 transition-colors">Cookie Policy</a>
+          <a href="disclaimer.html" class="hover:text-amber-400 transition-colors">Disclaimer</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-bold text-amber-300 mb-6 uppercase tracking-wider font-['Outfit']">Business Hours</h3>
+      <ul class="space-y-3 text-xs">
+        <li>
+          <span class="text-amber-400 font-semibold block">Opening Days:</span>
+          Monday – Saturday: 09:30 AM to 6:30 PM
+        </li>
+        <li>
+          <span class="text-amber-400 font-semibold block">Vacations:</span>
+          Sundays & Official Holidays
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500">
+    © 2026 All rights reserved | <a href="/" class="text-amber-400 font-semibold hover:underline">The Capital Box</a>
+  </div>
+</footer>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1213,5 +2100,562 @@
         initTaxTabs();
       }
     </script>
+  
+
+
+<div id="cursor-spotlight"></div>
+
+
+
+
+
+
+<script id="drop-down-observer-script">
+  document.addEventListener("DOMContentLoaded", function() {
+    // Hero Elements Initial Drop Down Animation
+    const heroBadge = document.querySelector('.subpage-hero-badge');
+    const heroTitle = document.querySelector('.subpage-hero-title');
+    const heroDesc = document.querySelector('.subpage-hero-desc');
+    const heroPills = document.querySelector('.subpage-hero-pills');
+
+    if (heroBadge) heroBadge.classList.add('animate-drop-down', 'delay-100');
+    if (heroTitle) heroTitle.classList.add('animate-drop-down', 'delay-200');
+    if (heroDesc) heroDesc.classList.add('animate-drop-down', 'delay-300');
+    if (heroPills) heroPills.classList.add('animate-drop-down', 'delay-400');
+
+    // Scroll Drop Reveal for all content sections & cards
+    const elementsToReveal = document.querySelectorAll('.tcb-tax-card, .tcb-tax-dark, .subpage-card-container, .tcb-about-card, .tcb-about-dark, .consultation-card, .consultation-accordion, .faq-container');
+    
+    elementsToReveal.forEach(el => {
+      el.classList.add('drop-reveal');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elementsToReveal.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+
+
+
+<script id="staggered-text-engine">
+  document.addEventListener("DOMContentLoaded", function() {
+    // Target hero subtitles, paragraphs, badges, and descriptions for staggered reveals
+    const textTargets = document.querySelectorAll('.subpage-hero-desc, .subpage-hero-pills, p.font-body-lg, .tcb-about-text, .tcb-tax-text, #get-in-touch-desc');
+
+    textTargets.forEach(target => {
+      if (target.dataset.staggerInit || target.children.length > 3) return;
+      target.dataset.staggerInit = "true";
+
+      const text = target.textContent.trim();
+      if (!text) return;
+
+      const words = text.split(/\s+/);
+      target.innerHTML = '';
+
+      words.forEach((word, idx) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'stagger-word';
+        wordSpan.textContent = word;
+        wordSpan.style.animationDelay = (idx * 0.04) + 's';
+        target.appendChild(wordSpan);
+      });
+
+      // Observer to trigger staggered reveal when in view / on load
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const wordSpans = entry.target.querySelectorAll('.stagger-word');
+            wordSpans.forEach(w => w.classList.add('stagger-active'));
+          }
+        });
+      }, { threshold: 0.08 });
+
+      observer.observe(target);
+    });
+  });
+</script>
+
+
+
+<script id="particle-text-engine">
+  document.addEventListener("DOMContentLoaded", function() {
+    // Target all card titles, headers, paragraphs, and card text elements across the site
+    const cardTextTargets = document.querySelectorAll(
+      '.service-card h3, .service-card p, ' +
+      '.tcb-tax-card h2, .tcb-tax-card h3, .tcb-tax-card p, ' +
+      '.tcb-retire-card h3, .tcb-retire-card p, .tcb-retire-title, ' +
+      '.tcb-about-card h2, .tcb-about-card h3, .tcb-about-card p, .tcb-about-title, ' +
+      '.tcb-contact-article-card h3, .tcb-contact-article-card p, ' +
+      '.faq-question, .consultation-header, ' +
+      '.card h1, .card h2, .card h3, .card p, ' +
+      '[class*="card"] h2, [class*="card"] h3, [class*="card"] h4, [class*="card"] p, ' +
+      '.bg-white h2, .bg-white h3, .bg-white p'
+    );
+
+    cardTextTargets.forEach(el => {
+      if (el.dataset.particleCardInit) return;
+      el.dataset.particleCardInit = "true";
+      el.classList.add('card-particle-text');
+
+      let canvas = null;
+      let ctx = null;
+      let particles = [];
+      let animFrame = null;
+
+      el.addEventListener('mousemove', function(e) {
+        const rect = el.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        if (!canvas) {
+          canvas = document.createElement('canvas');
+          canvas.className = 'particle-overlay-canvas';
+          canvas.style.width = rect.width + 'px';
+          canvas.style.height = rect.height + 'px';
+          canvas.width = rect.width * (window.devicePixelRatio || 1);
+          canvas.height = rect.height * (window.devicePixelRatio || 1);
+
+          ctx = canvas.getContext('2d');
+          if (ctx) {
+            ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+          }
+
+          if (getComputedStyle(el).position === 'static') {
+            el.style.position = 'relative';
+          }
+          el.appendChild(canvas);
+        }
+
+        // Spawn GPU 3D particles around mouse coordinate
+        for (let i = 0; i < 4; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 3 + 1;
+          particles.push({
+            x: mouseX,
+            y: mouseY,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 0.5,
+            size: Math.random() * 2.2 + 0.8,
+            color: Math.random() > 0.4 ? '#f2ca50' : (Math.random() > 0.5 ? '#4edea3' : '#f97316'),
+            alpha: 1,
+            decay: Math.random() * 0.03 + 0.025
+          });
+        }
+
+        if (!animFrame) {
+          render();
+        }
+      });
+
+      function render() {
+        if (!ctx || !canvas) return;
+        const rect = el.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        let active = false;
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.alpha -= p.decay;
+
+          if (p.alpha > 0) {
+            active = true;
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.alpha;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        });
+
+        particles = particles.filter(p => p.alpha > 0);
+
+        if (active) {
+          animFrame = requestAnimationFrame(render);
+        } else {
+          if (canvas) {
+            canvas.remove();
+            canvas = null;
+            ctx = null;
+          }
+          animFrame = null;
+        }
+      }
+
+      el.addEventListener('mouseleave', function() {
+        particles.forEach(p => p.decay *= 1.8);
+      });
+    });
+  });
+</script>
+
+
+
+<script id="glitch-text-engine">
+  document.addEventListener("DOMContentLoaded", function() {
+    // Target badges, metric labels, pill badges, and list items for interactive glitch effect
+    const glitchTargets = document.querySelectorAll('.subpage-hero-badge, .subpage-hero-pill, .tcb-pill-badge, .tcb-about-badge, .tcb-tax-badge, .tcb-article-note, nav a, footer a');
+
+    glitchTargets.forEach(el => {
+      if (el.dataset.glitchInit) return;
+      el.dataset.glitchInit = "true";
+      el.classList.add('glitch-text-target');
+
+      // Mouse Proximity Sticky Chromatic Aberration
+      el.addEventListener('mousemove', function(e) {
+        const rect = el.getBoundingClientRect();
+        const offsetX = (e.clientX - (rect.left + rect.width / 2)) * 0.15;
+        const offsetY = (e.clientY - (rect.top + rect.height / 2)) * 0.15;
+
+        el.style.textShadow = `${offsetX}px ${offsetY}px #06b6d4, ${-offsetX}px ${-offsetY}px #f2ca50`;
+      });
+
+      el.addEventListener('mouseleave', function() {
+        el.style.textShadow = 'none';
+      });
+    });
+  });
+</script>
+
+
+<script id="particle-image-engine">
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.subpage-hero-img, .consultation-card-bg, #history img, img[alt*="About"], img[alt*="Section"]');
+
+    images.forEach(img => {
+      const container = img.parentElement;
+      if (!container || container.dataset.particleImgInit) return;
+      container.dataset.particleImgInit = "true";
+      container.classList.add('particle-image-container');
+
+      container.addEventListener('mouseenter', function(e) {
+        if (container.querySelector('.particle-image-canvas')) return;
+
+        const rect = container.getBoundingClientRect();
+        const canvas = document.createElement('canvas');
+        canvas.className = 'particle-image-canvas';
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+        container.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        // Create 3D GPU Swirl Particles
+        const particleCount = 180;
+        const particles = [];
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * rect.width,
+            y: Math.random() * rect.height,
+            originX: Math.random() * rect.width,
+            originY: Math.random() * rect.height,
+            vx: (Math.random() - 0.5) * 5,
+            vy: (Math.random() - 0.5) * 5,
+            size: Math.random() * 3 + 1,
+            color: Math.random() > 0.5 ? '#f2ca50' : (Math.random() > 0.5 ? '#4edea3' : '#06b6d4'),
+            alpha: 1
+          });
+        }
+
+        let isHovered = true;
+        container.addEventListener('mouseleave', () => { isHovered = false; }, { once: true });
+
+        function animateSwirl() {
+          ctx.clearRect(0, 0, rect.width, rect.height);
+          let active = false;
+
+          particles.forEach(p => {
+            if (isHovered) {
+              p.x += p.vx + Math.sin(p.y * 0.05) * 1.5;
+              p.y += p.vy + Math.cos(p.x * 0.05) * 1.5;
+              p.alpha = Math.max(0, p.alpha - 0.015);
+            } else {
+              // Reassemble back to original form
+              p.x += (p.originX - p.x) * 0.12;
+              p.y += (p.originY - p.y) * 0.12;
+              p.alpha = Math.min(1, p.alpha + 0.05);
+            }
+
+            if (p.alpha > 0.05) {
+              active = true;
+              ctx.fillStyle = p.color;
+              ctx.globalAlpha = p.alpha;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          });
+
+          if (active || isHovered) {
+            requestAnimationFrame(animateSwirl);
+          } else {
+            canvas.remove();
+          }
+        }
+        animateSwirl();
+      });
+    });
+  });
+</script>
+
+
+
+
+
+<script id="blur-highlight-component-script">
+  document.addEventListener("DOMContentLoaded", function() {
+    const cardParagraphs = document.querySelectorAll(
+      '.service-card p, .tcb-tax-card p, .tcb-retire-card p, .tcb-about-card p, ' +
+      '.tcb-contact-article-card p, .consultation-content p, .card p, ' +
+      '[class*="card"] p, .bg-white p'
+    );
+
+    const keywords = [
+      'tax', 'taxes', 'taxation', 'retirement', 'wealth', 'planning', 'financial',
+      'advisory', 'compliance', 'investors', 'solutions', 'management', 'risk',
+      'business', 'growth', 'strategy', 'goals', 'indian', 'central', 'government',
+      'income', 'services', 'security', 'portfolio', 'future', 'trust', 'tcb'
+    ];
+
+    cardParagraphs.forEach(p => { if (p.closest(".our-expertise-card, [data-static=\"true\"]")) return;
+      if (p.dataset.blurHighlightInit) return;
+      p.dataset.blurHighlightInit = "true";
+
+      const rawText = p.textContent.trim();
+      if (!rawText || rawText.length > 500) return;
+
+      const words = rawText.split(/s+/);
+      p.innerHTML = '';
+
+      words.forEach((word) => {
+        const span = document.createElement('span');
+        span.className = 'blur-highlight-word';
+        span.textContent = word;
+
+        const cleanWord = word.toLowerCase().replace(/[^a-z]/g, '');
+        if (keywords.includes(cleanWord)) {
+          span.classList.add('is-keyword');
+        }
+
+        p.appendChild(span);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const wordSpans = entry.target.querySelectorAll('.blur-highlight-word');
+            wordSpans.forEach((wSpan, wIdx) => {
+              setTimeout(() => {
+                wSpan.classList.add('is-revealed');
+              }, wIdx * 22);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(p);
+    });
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script id="reactbits-text-path-gsap-script">
+  document.addEventListener("DOMContentLoaded", function() {
+    const textPath = document.getElementById("tcb-text-path-element");
+    if (!textPath) return;
+
+    let offsetObj = { val: -60 };
+
+    if (typeof gsap !== 'undefined') {
+      gsap.to(offsetObj, {
+        val: 100,
+        duration: 18,
+        repeat: -1,
+        ease: "none",
+        onUpdate: function() {
+          textPath.setAttribute("startOffset", offsetObj.val + "%");
+        }
+      });
+    } else {
+      let offset = -60;
+      function animateTextPath() {
+        offset += 0.1;
+        if (offset > 100) offset = -60;
+        textPath.setAttribute("startOffset", offset + "%");
+        requestAnimationFrame(animateTextPath);
+      }
+      animateTextPath();
+    }
+  });
+</script>
+<script id="reactbits-warped-card-script">
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select ALL card components across Services, About, and all pages
+    const cards = document.querySelectorAll(
+      '.tcb-tax-card, .tcb-retire-card, .tcb-risk-card, .tcb-network-card, .service-card, ' +
+      '.tcb-about-card, .consultation-card, .consultation-item, .faq-item, .neu-glass-card, ' +
+      '.tcb-network-highlight, .tcb-tax-dark, .tcb-about-dark, [class*="card"]'
+    );
+
+    cards.forEach(card => {
+      if (card.dataset.warpedInit) return;
+      card.dataset.warpedInit = "true";
+
+      // 1. Mouse-following 3D Bulge & Tilt Distortion
+      card.addEventListener('mousemove', function(e) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const percentX = (x / rect.width) * 100;
+        const percentY = (y / rect.height) * 100;
+
+        card.style.setProperty('--warped-mouse-x', percentX + '%');
+        card.style.setProperty('--warped-mouse-y', percentY + '%');
+
+        // 3D Bulge Tilt angles
+        const rotateX = ((y - centerY) / centerY) * -6;
+        const rotateY = ((x - centerX) / centerX) * 6;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.borderColor = '#f2ca50';
+      });
+
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        card.style.borderColor = '#d4af37';
+      });
+
+      // 2. WebGL Distortion Shader for Cards with Images
+      const img = card.querySelector('img');
+      if (!img) return;
+
+      const canvas = document.createElement('canvas');
+      canvas.className = 'reactbits-warped-canvas';
+      card.appendChild(canvas);
+
+      let renderer, scene, camera, material;
+      let mouse = { x: 0.5, y: 0.5 };
+      let targetHover = 0, currentHover = 0;
+
+      function initWebGL() {
+        if (typeof THREE === 'undefined') return;
+        const rect = card.getBoundingClientRect();
+        const w = rect.width || 320;
+        const h = rect.height || 220;
+
+        canvas.width = w * (window.devicePixelRatio || 1);
+        canvas.height = h * (window.devicePixelRatio || 1);
+
+        renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setSize(w, h, false);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+        scene = new THREE.Scene();
+        camera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, 0.1, 10);
+        camera.position.z = 1;
+
+        const textureLoader = new THREE.TextureLoader();
+        textureLoader.load(img.src, (texture) => {
+          texture.minFilter = THREE.LinearFilter;
+          texture.generateMipmaps = false;
+
+          const vertexShader = `
+            varying vec2 vUv;
+            void main() {
+              vUv = uv;
+              gl_Position = vec4(position, 1.0);
+            }
+          `;
+
+          const fragmentShader = `
+            uniform sampler2D uTexture;
+            uniform vec2 uMouse;
+            uniform float uHover;
+            varying vec2 vUv;
+
+            void main() {
+              vec2 uv = vUv;
+              vec2 distVec = uv - uMouse;
+              float dist = length(distVec);
+              float radius = 0.38;
+              float strength = 0.22;
+
+              if (dist < radius) {
+                float factor = (1.0 - smoothstep(0.0, radius, dist));
+                uv -= distVec * factor * strength * uHover;
+              }
+
+              vec4 color = texture2D(uTexture, uv);
+              gl_FragColor = color;
+            }
+          `;
+
+          material = new THREE.ShaderMaterial({
+            uniforms: {
+              uTexture: { value: texture },
+              uMouse: { value: new THREE.Vector2(0.5, 0.5) },
+              uHover: { value: 0 }
+            },
+            vertexShader: vertexShader,
+            fragmentShader: fragmentShader,
+            transparent: true
+          });
+
+          const geometry = new THREE.PlaneGeometry(1, 1);
+          const mesh = new THREE.Mesh(geometry, material);
+          scene.add(mesh);
+
+          function render() {
+            requestAnimationFrame(render);
+            currentHover += (targetHover - currentHover) * 0.1;
+            if (material) {
+              material.uniforms.uHover.value = currentHover;
+              material.uniforms.uMouse.value.set(mouse.x, mouse.y);
+            }
+            if (renderer && scene && camera) {
+              renderer.render(scene, camera);
+            }
+          }
+          render();
+        });
+      }
+
+      initWebGL();
+
+      card.addEventListener('mouseenter', () => {
+        targetHover = 1;
+        canvas.style.opacity = '1';
+        if (img) img.style.opacity = '0';
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        mouse.x = (e.clientX - rect.left) / rect.width;
+        mouse.y = 1.0 - (e.clientY - rect.top) / rect.height;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        targetHover = 0;
+        canvas.style.opacity = '0';
+        if (img) img.style.opacity = '1';
+      });
+    });
+  });
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="hyperspeed-bg.js"></script>
   </body>
 </html>

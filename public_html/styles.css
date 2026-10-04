@@ -1,3 +1,14 @@
+/* Hide all moving background canvas elements and floating particle balls */
+#kinetic-canvas,
+#threejs-container-ANIMATION_11,
+.particle-overlay-canvas,
+canvas[id*="kinetic"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 *,
 :after,
 :before {

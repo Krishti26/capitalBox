@@ -1,0 +1,38 @@
+.pixel-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.pixel-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--pixel-card-border, rgba(212, 175, 55, 0.4));
+  background: var(--pixel-card-background, transparent);
+  border-radius: 16px;
+  isolation: isolate;
+  transition: border-color 200ms cubic-bezier(0.5, 1, 0.89, 1), transform 300ms ease;
+}
+
+.pixel-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, var(--pixel-card-active-color, rgba(242, 202, 80, 0.2)), transparent 85%);
+  opacity: 0;
+  transition: opacity 800ms cubic-bezier(0.5, 1, 0.89, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pixel-card:hover::before,
+.pixel-card:focus-within::before {
+  opacity: 1;
+}

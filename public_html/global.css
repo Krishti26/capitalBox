@@ -1,260 +1,27 @@
+/* Hide all moving background canvas elements and floating particle balls */
+#kinetic-canvas,
+#threejs-container-ANIMATION_11,
+.particle-overlay-canvas,
+canvas[id*="kinetic"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
   overflow-x: hidden;
-  background-color: #0B0F17;
-  color: #F9F9FB;
 }
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   width: 100%;
-  background-color: #0B0F17;
-  color: #F9F9FB;
 }
-
-/* ========================================================
-   3D Interactive Card & Perspective Framework
-   ======================================================== */
-.perspective-container {
-  perspective: 1200px;
-  perspective-origin: 50% 50%;
-  transform-style: preserve-3d;
-}
-
-.preserve-3d {
-  transform-style: preserve-3d !important;
-}
-
-.backface-hidden {
-  backface-visibility: hidden !important;
-}
-
-/* 3D Card Base */
-.card-3d {
-  position: relative;
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
-  background: rgba(18, 24, 38, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-}
-
-.card-3d:hover {
-  border-color: rgba(203, 186, 79, 0.4);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 30px rgba(203, 186, 79, 0.15);
-}
-
-/* 3D Internal Layering & Parallax */
-.card-3d-layer-back {
-  transform: translateZ(0px);
-}
-
-.card-3d-layer-mid {
-  transform: translateZ(25px);
-  transition: transform 0.25s ease-out;
-}
-
-.card-3d-layer-front {
-  transform: translateZ(45px);
-  transition: transform 0.25s ease-out;
-}
-
-/* 3D Cursor Lighting & Highlight Glow */
-.card-3d-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(203, 186, 79, 0.18), transparent 45%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  z-index: 10;
-  mix-blend-mode: screen;
-}
-
-.card-3d:hover .card-3d-glow {
-  opacity: 1;
-}
-
-/* 3D Card Stack Container */
-.card-3d-stack-wrapper {
-  position: relative;
-  min-height: 80vh;
-  perspective: 1400px;
-  transform-style: preserve-3d;
-}
-
-.card-3d-stack-item {
-  position: absolute;
-  width: 100%;
-  max-width: 500px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-style: preserve-3d;
-  will-change: transform, opacity;
-}
-
-/* Floating Animation Utility */
-.floating-3d-element {
-  animation: floatLevitate 6s ease-in-out infinite alternate;
-  will-change: transform;
-}
-
-@keyframes floatLevitate {
-  0% {
-    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotateX(3deg) rotateY(-3deg);
-  }
-  100% {
-    transform: translateY(6px) rotateX(-2deg) rotateY(2deg);
-  }
-}
-
-/* ========================================================
-   Junca Studio Custom Interactive Cursor & Magnetic FX
-   ======================================================== */
-@media (min-width: 1024px) {
-  body {
-    cursor: default;
-  }
-  
-  .custom-cursor-dot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background-color: #CBBA4F;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-    will-change: transform;
-  }
-
-  .custom-cursor-ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 38px;
-    height: 38px;
-    border: 1px solid rgba(203, 186, 79, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
-    will-change: transform;
-  }
-
-  body.cursor-hover .custom-cursor-dot {
-    width: 14px;
-    height: 14px;
-    background-color: #FFFFFF;
-  }
-
-  body.cursor-hover .custom-cursor-ring {
-    width: 54px;
-    height: 54px;
-    border-color: rgba(203, 186, 79, 0.9);
-    background-color: rgba(203, 186, 79, 0.08);
-  }
-}
-
-/* Junca Studio 3D Glossy Card Specular Sheen */
-.card-3d::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    115deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.08) 45%,
-    rgba(203, 186, 79, 0.15) 50%,
-    transparent 55%
-  );
-  transform: rotate(-25deg) translateY(-100%);
-  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
-  z-index: 15;
-}
-
-.card-3d:hover::after {
-  transform: rotate(-25deg) translateY(100%);
-}
-
-/* Magnetic Button Utility */
-.magnetic-btn {
-  display: inline-block;
-  will-change: transform;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Editorial Typography */
-.text-display-giant {
-  font-size: clamp(2.4rem, 5.8vw, 5.5rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  color: #FFFFFF;
-}
-
-.text-editorial-sub {
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.78);
-  font-weight: 300;
-}
-
-.editorial-number {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  font-weight: 700;
-  color: #CBBA4F;
-  letter-spacing: 0.1em;
-  font-family: monospace, monospace;
-}
-
-.editorial-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(203, 186, 79, 0.3);
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #CBBA4F;
-  font-weight: 600;
-}
-
-/* Glassmorphic Sticky Header */
-.glass-nav {
-  background: rgba(11, 15, 23, 0.75) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-/* Center align all headings across the website default override */
+/* Center align all headings across the website */
 h1, h2, h3, h4, h5, h6 {
-  text-align: left;
-}
-.text-center-force {
-  text-align: center !important;
+  text-align: center;
 }
 footer h2, footer h3 {
   text-align: left;
@@ -962,17 +729,18 @@ footer h2, footer h3 {
   }
 }
 .faq-item {
-  background-color: #ffffff;
-  border: 1.5px solid #e5e7eb;
+  background-color: #0a0f1d;
+  background: #0a0f1d;
+  border: 2px solid #d4af37;
   border-radius: 14px;
   overflow: hidden;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 .faq-item:hover,
 .faq-item.active {
-  border-color: #CBBA4F;
-  box-shadow: 0 6px 20px rgba(203, 186, 79, 0.15);
+  border-color: #f2ca50;
+  box-shadow: 0 8px 25px rgba(242, 202, 80, 0.25);
 }
 .faq-header {
   display: flex;
@@ -981,7 +749,7 @@ footer h2, footer h3 {
   padding: 1.15rem 1.25rem;
   cursor: pointer;
   user-select: none;
-  background-color: #ffffff;
+  background-color: #0a0f1d;
   transition: background-color 0.25s ease;
   gap: 1rem;
 }
@@ -991,7 +759,7 @@ footer h2, footer h3 {
   }
 }
 .faq-item.active .faq-header {
-  background-color: rgba(203, 186, 79, 0.05);
+  background-color: rgba(242, 202, 80, 0.1);
 }
 .faq-header-left {
   display: flex;
@@ -1013,8 +781,9 @@ footer h2, footer h3 {
   height: 32px;
   min-width: 32px;
   border-radius: 8px;
-  background-color: #f3f4f6;
-  color: #6b7280;
+  background-color: rgba(242, 202, 80, 0.18);
+  border: 1px solid rgba(242, 202, 80, 0.4);
+  color: #f2ca50;
   font-size: 0.8rem;
   font-weight: 700;
   transition: background-color 0.25s ease, color 0.25s ease;
@@ -1029,13 +798,13 @@ footer h2, footer h3 {
 }
 .faq-item.active .faq-number,
 .faq-item:hover .faq-number {
-  background-color: #CBBA4F;
-  color: #ffffff;
+  background-color: #f2ca50;
+  color: #0a0f1d;
 }
 .faq-question {
   font-size: 1.05rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-weight: 700;
+  color: #f2ca50;
   margin: 0;
   text-align: left !important;
   line-height: 1.4;
@@ -1047,7 +816,7 @@ footer h2, footer h3 {
   }
 }
 .faq-item.active .faq-question {
-  color: #8c7c25;
+  color: #f2ca50;
 }
 .faq-icon-wrapper {
   width: 34px;
@@ -1057,9 +826,9 @@ footer h2, footer h3 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  color: #6b7280;
+  background-color: rgba(242, 202, 80, 0.18);
+  border: 1px solid rgba(242, 202, 80, 0.4);
+  color: #f2ca50;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 @media (min-width: 768px) {
@@ -1071,9 +840,9 @@ footer h2, footer h3 {
 }
 .faq-item.active .faq-icon-wrapper {
   transform: rotate(180deg);
-  background-color: #CBBA4F;
-  border-color: #CBBA4F;
-  color: #ffffff;
+  background-color: #f2ca50;
+  border-color: #f2ca50;
+  color: #0a0f1d;
 }
 .faq-body {
   max-height: 0;
@@ -1081,14 +850,14 @@ footer h2, footer h3 {
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease, padding 0.3s ease;
   padding: 0 1.25rem;
-  background-color: rgba(203, 186, 79, 0.02);
+  background-color: #0a0f1d;
 }
 .faq-item.active .faq-body {
   max-height: 380px;
   opacity: 1;
   transition: max-height 0.4s cubic-bezier(1, 0, 1, 0), opacity 0.35s ease, padding 0.3s ease;
   padding: 0.75rem 1.25rem 1.35rem 1.25rem;
-  border-top: 1px dashed rgba(203, 186, 79, 0.25);
+  border-top: 1px dashed rgba(242, 202, 80, 0.3);
 }
 @media (min-width: 768px) {
   .faq-body {
@@ -1099,9 +868,10 @@ footer h2, footer h3 {
   }
 }
 .faq-answer {
-  color: #4b5563;
+  color: #ffffff;
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.8;
+}
   margin: 0;
   text-align: left;
 }
@@ -1123,7 +893,8 @@ footer h2, footer h3 {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  min-height: 480px;
+  min-height: 260px;
+  max-height: 420px;
   display: flex;
   width: 100%;
 }
@@ -1142,14 +913,14 @@ footer h2, footer h3 {
   height: 100%;
   background-color: rgba(203, 186, 79, 0.88);
   backdrop-filter: blur(2px);
-  padding: 2rem 1.5rem;
+  padding: 1.25rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media (min-width: 768px) {
   .consultation-card-overlay {
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 1.75rem;
   }
 }
 
@@ -1336,13 +1107,11 @@ ol.list-decimal.pl-5 p,
 .space-y-2\.5 > li + li {
   margin-top: 0.65rem !important;
 }
-.space-y-3 > :not([hidden]) ~ :not([hidden]),
-.space-y-3 > li + li {
-  margin-top: 0.75rem !important;
-}
 .space-y-4 > :not([hidden]) ~ :not([hidden]),
 .space-y-4 > li + li {
   margin-top: 1rem !important;
 }
+
+
 
 

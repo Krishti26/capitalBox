@@ -1,0 +1,18 @@
+#hyperspeed-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+  transition: opacity 0.5s ease;
+}
+
+#hyperspeed-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
