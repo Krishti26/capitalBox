@@ -1,14 +1,3 @@
-/* Hide all moving background canvas elements and floating particle balls */
-#kinetic-canvas,
-#threejs-container-ANIMATION_11,
-.particle-overlay-canvas,
-canvas[id*="kinetic"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
 *,
 :after,
 :before {
@@ -773,7 +762,7 @@ video {
 .border-t {
     border-top-width: 1px
 }
-.border-\[\#CBBA4F\] {
+.border-\[\#1e1e1e\] {
     --tw-border-opacity: 1;
     border-color: rgb(203 186 79/var(--tw-border-opacity, 1))
 }
@@ -800,11 +789,11 @@ video {
     --tw-bg-opacity: 1;
     background-color: rgb(75 75 75/var(--tw-bg-opacity, 1))
 }
-.bg-\[\#CBBA4F\] {
+.bg-\[\#1e1e1e\] {
     --tw-bg-opacity: 1;
     background-color: rgb(203 186 79/var(--tw-bg-opacity, 1))
 }
-.bg-\[\#CBBA4F\]\/80 {
+.bg-\[\#1e1e1e\]\/80 {
     background-color: rgba(203, 186, 79, .8)
 }
 .bg-\[\#FCFCFC\] {
@@ -1152,11 +1141,11 @@ video {
     --tw-scale-y: 1.02;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
-.hover\:bg-\[\#CBBA4F\]:hover {
+.hover\:bg-\[\#1e1e1e\]:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(203 186 79/var(--tw-bg-opacity, 1))
 }
-.hover\:bg-\[\#CBBA4F\]\/40:hover {
+.hover\:bg-\[\#1e1e1e\]\/40:hover {
     background-color: rgba(203, 186, 79, .4)
 }
 .hover\:bg-blue-700:hover {
@@ -1211,7 +1200,7 @@ video {
 .focus\:border-b-2:focus {
     border-bottom-width: 2px
 }
-.focus\:border-\[\#CBBA4F\]:focus {
+.focus\:border-\[\#1e1e1e\]:focus {
     --tw-border-opacity: 1;
     border-color: rgb(203 186 79/var(--tw-border-opacity, 1))
 }

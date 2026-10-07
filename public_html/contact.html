@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
   <head>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6537490720599944"
      crossorigin="anonymous"></script>
@@ -34,7 +34,6 @@
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="hyperspeed-bg.css" />
     <!-- Preconnect to external domains for faster resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,1206 +117,236 @@
         ]
       }
     </script>
-  
-  <!-- Google Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  <!-- Local Favicon & Styles -->
-  <link rel="icon" href="public/assets/logo-1.webp" type="image/png" sizes="32x32"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="global.css?v=3"/>
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "on-primary-fixed-variant": "#574500",
-            "primary-fixed": "#ffe088",
-            "on-secondary-container": "#00311f",
-            "surface-container-low": "#171c25",
-            "surface-container-lowest": "#0a0e17",
-            "surface-bright": "#353944",
-            "surface-glass": "#111C35",
-            "on-surface-variant": "#d0c5af",
-            "error-container": "#93000a",
-            "on-tertiary": "#3f2e00",
-            "surface-container": "#1b2029",
-            "on-secondary-fixed-variant": "#005236",
-            "inverse-surface": "#dfe2f0",
-            "tertiary-container": "#e0ab00",
-            "on-tertiary-fixed-variant": "#5a4300",
-            "surface-base": "#070B14",
-            "tertiary-fixed-dim": "#f7be1d",
-            "inverse-on-surface": "#2c303b",
-            "background": "#0f131d",
-            "surface-raised": "#0D1527",
-            "border-hairline": "rgba(255, 255, 255, 0.08)",
-            "secondary": "#4edea3",
-            "on-primary-fixed": "#241a00",
-            "text-primary": "#F8FAFC",
-            "primary-fixed-dim": "#e9c349",
-            "on-surface": "#dfe2f0",
-            "secondary-fixed": "#6ffbbe",
-            "error": "#ffb4ab",
-            "surface-dim": "#0f131d",
-            "on-error": "#690005",
-            "on-background": "#dfe2f0",
-            "accent-chartreuse": "#22C55E",
-            "on-primary-container": "#554300",
-            "tertiary": "#ffc62b",
-            "surface-tint": "#e9c349",
-            "secondary-fixed-dim": "#4edea3",
-            "surface": "#0f131d",
-            "surface-variant": "#31353f",
-            "on-tertiary-fixed": "#251a00",
-            "on-error-container": "#ffdad6",
-            "surface-container-highest": "#31353f",
-            "on-secondary": "#003824",
-            "primary-container": "#d4af37",
-            "tertiary-fixed": "#ffdf9a",
-            "on-tertiary-container": "#584200",
-            "primary": "#f2ca50",
-            "secondary-container": "#00a572",
-            "on-primary": "#3c2f00",
-            "text-muted": "#94A3B8",
-            "border-active": "rgba(212, 175, 55, 0.35)",
-            "outline-variant": "#4d4635",
-            "on-secondary-fixed": "#002113",
-            "outline": "#99907c",
-            "surface-container-high": "#262a34",
-            "inverse-primary": "#735c00"
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    body { background-color: #070B14!important; color: #dfe2f0!important; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
-    ::-webkit-scrollbar { display: none; }
-    .tcb-about-section, section { background: transparent!important; }
-    .bg-white, .bg-\[\#FAFAFA\], .bg-gray-50, .bg-[#f8f8f8], .bg-[#fff8dc] { background-color: #0d1424!important; border: 2px solid #d4af37!important; color: #ffffff!important; border: 1px solid rgba(242, 202, 80, 0.15)!important; color: #dfe2f0!important; backdrop-filter: blur(16px); }
-    .text-gray-800, .text-amber-300, .text-zinc-100, .text-black { color: #f8fafc!important; }
-    .text-zinc-100, .text-gray-500 { color: #cbd5e1!important; }
-    h1, h2, h3, .tcb-about-title { color: #f2ca50!important; font-family: 'Outfit', sans-serif; }
-    .tcb-about-card, .tcb-about-dark, .consultation-card { background: rgba(17, 28, 53, 0.75)!important; border: 1px solid rgba(242, 202, 80, 0.2)!important; color: #dfe2f0!important; border-radius: 1.25rem; }
-    .tcb-about-badge { background: linear-gradient(135deg, #f2ca50 0%, #b8860b 100%)!important; color: #070B14!important; font-weight: 700!important; }
-    .border-primary { border-color: rgba(242, 202, 80, 0.4)!important; }
-    .bg-primary { background-color: #f2ca50!important; color: #070B14!important; }
-    input, textarea, select { background-color: rgba(10, 14, 23, 0.8)!important; color: #f8fafc!important; border: 1px solid rgba(242, 202, 80, 0.25)!important; }
-    input:focus, textarea:focus, select:focus { border-color: #f2ca50!important; outline: none; box-shadow: 0 0 15px rgba(242, 202, 80, 0.3)!important; }
-  </style>
-
-
-  <style id="drop-down-animation-style">
-    @keyframes dropDownEntrance {
-      0% {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .animate-drop-down {
-      opacity: 0;
-      animation: dropDownEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.22s; }
-    .delay-300 { animation-delay: 0.35s; }
-    .delay-400 { animation-delay: 0.48s; }
-    .delay-500 { animation-delay: 0.6s; }
-
-    /* Reveal on Scroll Drop Down */
-    .drop-reveal {
-      opacity: 0;
-      transform: translateY(-45px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .drop-reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-
-
-  <style id="avant-garde-stitch-style">
-    /* Custom Glowing Cursor & Spotlight */
-    #cursor-spotlight {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 2;
-      background: radial-gradient(650px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(242, 202, 80, 0.075), rgba(78, 222, 163, 0.03) 40%, transparent 75%);
-    }
-
-    /* Kinetic Animated Aurora Gradient Text */
-    @keyframes aurora-flow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .text-aurora {
-      background: linear-gradient(135deg, #f2ca50 0%, #ffe088 25%, #4edea3 50%, #06b6d4 75%, #f2ca50 100%);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: aurora-flow 8s ease infinite;
-    }
-
-    /* Tactile Squish Jelly Buttons */
-    .jelly-btn {
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-      will-change: transform;
-    }
-    .jelly-btn:active {
-      transform: scale(0.92, 1.08) !important;
-    }
-
-    /* Neumorphic Glass Bento Cards */
-    .neu-glass-card {
-      backdrop-filter: blur(24px);
-      background: rgba(17, 28, 53, 0.65)!important;
-      border: 1px solid rgba(242, 202, 80, 0.2)!important;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
-    }
-
-    /* Diagonal Ambient Light Sweep */
-    @keyframes beam-sweep {
-      0% { transform: translateY(-100%) rotate(25deg); opacity: 0; }
-      30% { opacity: 0.25; }
-      70% { opacity: 0.25; }
-      100% { transform: translateY(200%) rotate(25deg); opacity: 0; }
-    }
-    .light-beam {
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 250px;
-      height: 200%;
-      background: linear-gradient(90deg, transparent, rgba(242, 202, 80, 0.12), rgba(78, 222, 163, 0.08), transparent);
-      pointer-events: none;
-      animation: beam-sweep 14s infinite linear;
-    }
-  </style>
-
-
-  
-
-
-  <style id="staggered-text-style">
-    /* REACT BITS PRO INSPIRED STAGGERED TEXT COMPONENT */
-    @keyframes staggeredRevealUp {
-      0% {
-        opacity: 0;
-        transform: translateY(22px) scale(0.97);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-    .stagger-word {
-      display: inline-block;
-      opacity: 0;
-      will-change: transform, opacity;
-      margin-right: 0.28em;
-    }
-    .stagger-word.stagger-active {
-      animation: staggeredRevealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-  </style>
-
-
-  
-<style id="particle-text-style">
-  /* REACT BITS PRO INSPIRED PARTICLE TEXT COMPONENT FOR ALL CARDS */
-  .card-particle-text {
-    position: relative;
-    transition: text-shadow 0.35s ease;
-  }
-  .card-particle-text:hover,
-  [class*="card"]:hover .card-particle-text,
-  .bg-white:hover .card-particle-text {
-    text-shadow: 0 0 14px rgba(242, 202, 80, 0.45), 0 0 28px rgba(78, 222, 163, 0.3);
-  }
-  .particle-overlay-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 40;
-  }
-</style>
-
-
-
-  <style id="glitch-text-style">
-    /* REACT BITS PRO INSPIRED GLITCH TEXT COMPONENT */
-    @keyframes glitchJitter {
-      0% { transform: translate(0); }
-      25% { transform: translate(-1.5px, 1px); }
-      50% { transform: translate(1.5px, -1px); }
-      75% { transform: translate(-1px, -1.5px); }
-      100% { transform: translate(0); }
-    }
-    .glitch-text-target {
-      display: inline-block;
-      transition: color 0.25s ease, text-shadow 0.2s ease;
-      will-change: transform;
-    }
-    .glitch-text-target:hover {
-      animation: glitchJitter 0.2s ease infinite;
-      color: #f2ca50 !important;
-      text-shadow: 2px 0 #06b6d4, -2px 0 #4edea3;
-    }
-  </style>
-
-
-  <style id="center-flow-component-style">
-    /* REACT BITS PRO CENTER FLOW RADIAL ANIMATION COMPONENT */
-    @keyframes centerFlowPulse {
-      0% {
-        background-size: 100% 100%;
-        box-shadow: 0 0 25px rgba(242, 202, 80, 0.15);
-      }
-      50% {
-        background-size: 140% 140%;
-        box-shadow: 0 0 45px rgba(242, 202, 80, 0.3);
-      }
-      100% {
-        background-size: 100% 100%;
-        box-shadow: 0 0 25px rgba(242, 202, 80, 0.15);
-      }
-    }
-
-    .center-flow-card {
-      position: relative !important;
-      background: radial-gradient(circle at var(--center-x, 50%) var(--center-y, 50%), rgba(242, 202, 80, 0.22) 0%, rgba(10, 14, 23, 0.95) 75%) !important;
-      border: 1px solid rgba(242, 202, 80, 0.3) !important;
-      border-radius: 20px !important;
-      backdrop-filter: blur(20px) !important;
-      color: #f8fafc !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
-      overflow: hidden !important;
-      transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-    }
-
-    .center-flow-card:hover {
-      border-color: rgba(242, 202, 80, 0.7) !important;
-      box-shadow: 0 25px 60px rgba(242, 202, 80, 0.25) !important;
-      transform: translateY(-4px) !important;
-    }
-
-    /* CENTER FLOW RADIAL PULSE OVERLAY */
-    .center-flow-card::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 280%;
-      height: 280%;
-      background: radial-gradient(circle, rgba(242, 202, 80, 0.12) 0%, rgba(78, 222, 163, 0.05) 35%, transparent 70%);
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      animation: centerFlowPulse 8s infinite linear;
-      z-index: 0;
-    }
-
-    .center-flow-card > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* FORCE CRYSTAL CLEAR HIGH-CONTRAST TEXT */
-    .center-flow-card h1, .center-flow-card h2, .center-flow-card h3, .tcb-contact-article-card h3 {
-      color: #f2ca50 !important;
-      font-family: 'Outfit', sans-serif !important;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
-    }
-
-    .center-flow-card p, .tcb-contact-article-card p, .tcb-contact-article-card span, .text-zinc-100, .text-zinc-100, .text-black {
-      color: #f8fafc !important;
-      font-weight: 400 !important;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
-    }
-
-    .tcb-pill-badge {
-      background: linear-gradient(135deg, #f2ca50 0%, #b8860b 100%) !important;
-      color: #070B14 !important;
-      font-weight: 800 !important;
-      box-shadow: 0 0 15px rgba(242, 202, 80, 0.4) !important;
-    }
-
-    .tcb-article-note {
-      background: rgba(242, 202, 80, 0.12) !important;
-      border-left: 4px solid #f2ca50 !important;
-      color: #fef08a !important;
-      text-shadow: none !important;
-    }
-  </style>
-
-
-  <style id="particle-image-style">
-    /* REACT BITS PRO INSPIRED PARTICLE IMAGE COMPONENT */
-    .particle-image-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 1.25rem;
-    }
-    .particle-image-container img {
-      transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .particle-image-container:hover img {
-      opacity: 0.85;
-      transform: scale(1.03);
-    }
-    .particle-image-canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 10;
-    }
-  </style>
-
-
-  
-
-
-
-
-
-
-
-
-<style id="site-wide-high-contrast-text-style">
-  /* SITE-WIDE HIGH-CONTRAST TEXT COLOR OVERRIDE - 100% VISIBILITY EVERYWHERE */
-  
-  /* Headings: Gold (#f2ca50), Hover to Orange (#f97316) */
-  h1, h2, h3, h4, h5, h6,
-  .hero-title, .subpage-hero-title, .tcb-tax-title, .tcb-about-title, .tcb-retire-title, .tcb-retire-quote {
-    color: #f2ca50 !important;
-  }
-
-  /* Paragraphs, lists, spans, divs, labels: Crisp Pure White (#f8fafc) */
-  p, li, label, td, th {
-    color: #f8fafc !important;
-  }
-
-  /* Neutralize dark text classes across all elements on dark theme */
-  .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500,
-  .text-slate-900, .text-slate-800, .text-slate-700, .text-slate-600,
-  .text-black, .text-zinc-900, .text-zinc-800, .text-zinc-700 {
-    color: #f8fafc !important;
-  }
-
-  /* Footer & Muted text: Bright Light Slate (#cbd5e1) */
-  .text-muted, .subtext, .desc, .subpage-hero-desc, footer p, footer span {
-    color: #cbd5e1 !important;
-  }
-
-  footer a {
-    color: #cbd5e1 !important;
-    transition: color 0.25s ease !important;
-  }
-  footer a:hover {
-    color: #f97316 !important;
-  }
-
-  /* Badges & Tags */
-  .subpage-hero-badge, .tcb-retire-badge, .tcb-about-badge, [class*="badge"] {
-    background: rgba(242, 202, 80, 0.16) !important;
-    border: 1px solid rgba(242, 202, 80, 0.45) !important;
-    color: #f2ca50 !important;
-  }
-
-  /* Form Inputs */
-  input, textarea, select {
-    background-color: rgba(10, 14, 23, 0.9) !important;
-    color: #f8fafc !important;
-    border: 1px solid rgba(242, 202, 80, 0.3) !important;
-  }
-  input::placeholder, textarea::placeholder {
-    color: #94a3b8 !important;
-  }
-
-  /* Scatter Letters: Yellow (#f2ca50) by default, Orange (#f97316) on hover */
-  .scatter-letter {
-    color: #f2ca50 !important;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease, text-shadow 0.3s ease !important;
-  }
-  .scatter-letter.is-scattered,
-  .scatter-letter:hover {
-    color: #f97316 !important;
-    text-shadow: 0 0 14px rgba(249, 115, 22, 0.75) !important;
-  }
-</style>
-
-
-
-<style id="blur-highlight-component-style">
-  /* REACT BITS PRO INSPIRED BLUR HIGHLIGHT COMPONENT */
-  .blur-highlight-word {
-    display: inline-block;
-    filter: blur(6px);
-    opacity: 0.25;
-    transform: translateY(6px);
-    transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease, background 0.3s ease;
-    will-change: filter, opacity, transform;
-    margin-right: 0.28em;
-  }
-  .blur-highlight-word.is-revealed {
-    filter: blur(0px);
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Highlighted Keyword Badge inside Blur Highlight Component */
-  .blur-highlight-word.is-keyword {
-    background: rgba(242, 202, 80, 0.16);
-    color: #f2ca50 !important;
-    border: 1px solid rgba(242, 202, 80, 0.35);
-    padding: 1px 6px;
-    border-radius: 6px;
-    font-weight: 600;
-  }
-  
-  /* Card Hover Keyword Highlight Boost */
-  [class*="card"]:hover .blur-highlight-word.is-keyword,
-  .service-card:hover .blur-highlight-word.is-keyword,
-  .bg-white:hover .blur-highlight-word.is-keyword {
-    background: rgba(249, 115, 22, 0.22);
-    color: #f97316 !important;
-    border-color: rgba(249, 115, 22, 0.5);
-    box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
-  }
-</style>
-
-
-
-
-
-
-<style id="rotating-cards-visibility-fix">
-  /* 3D ROTATING CAROUSEL & CARDS VISIBILITY OVERRIDE */
-  #rotating-carousel-container {
-    overflow: visible !important;
-    perspective: 1400px !important;
-    margin-bottom: 2rem !important;
-  }
-  #rotating-carousel-stage {
-    overflow: visible !important;
-  }
-  .rotating-card {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    filter: none !important;
-    background: #111c35 !important;
-    border: 1px solid rgba(242, 202, 80, 0.45) !important;
-    color: #ffffff !important;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5) !important;
-    border-radius: 20px !important;
-  }
-  .rotating-card h3 {
-    color: #f2ca50 !important;
-  }
-  .rotating-card p, .rotating-card span, .rotating-card div {
-    color: #ffffff !important;
-  }
-  .tcb-articles-grid {
-    overflow: visible !important;
-    width: 100% !important;
-  }
-  .tcb-contact-article-card {
-    opacity: 1 !important;
-    visibility: visible !important;
-    background: #111c35 !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(242, 202, 80, 0.35) !important;
-    border-radius: 20px !important;
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="permanent-blue-sub-cards-style">
-  /* PERMANENT STATIC DEEP BLUE FOR ALL INNER FEATURE CARDS, CHECKMARK BOXES, SUB-CARDS & COMPONENTS */
-  
-  .tcb-tax-card, 
-  .tcb-retire-card, 
-  .tcb-risk-card, 
-  .tcb-network-card, 
-  .service-card, 
-  .tcb-about-card, 
-  .tcb-contact-article-card, 
-  .faq-item, 
-  .consultation-item, 
-  .consultation-card, 
-  .neu-glass-card, 
-  .purpose-glass-card, 
-  .tcb-tax-dark,
-  .tcb-about-dark,
-  .tcb-retire-hero,
-  .tcb-retire-highlight,
-  .bg-white, 
-  .bg-gray-50,
-  .bg-gray-100,
-  .bg-slate-50,
-  .bg-slate-100,
-  .bg-zinc-50,
-  .bg-zinc-100,
-  .bg-[#FAFAFA],
-  .bg-[#fff8dc],
-  .bg-[#f8f8f8],
-  .card, 
-  [class*="card"],
-  [class*="component"],
-  [class*="box"],
-  [class*="rounded-xl"],
-  [class*="rounded-2xl"],
-  [class*="rounded-3xl"],
-  .tax-tab-content div,
-  .tax-feature-card,
-  div[class*="shadow"] {
-    background: #0d1424 !important;
-    background-color: #0d1424 !important;
-    border: 2px solid #d4af37 !important;
-    color: #ffffff !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
-  }
-
-  /* Exclude main page outer body/wrapper containers from getting borders */
-  body, main, nav, header, footer, section, .navbar, .hero-section, .subpage-hero {
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Permanent Yellow / Gold Headings (#f2ca50) */
-  h1, h2, h3, h4, h5, h6,
-  .tcb-tax-title, .tcb-about-title, .tcb-retire-title,
-  .card h1, .card h2, .card h3, .card h4,
-  [class*="card"] h1, [class*="card"] h2, [class*="card"] h3, [class*="card"] h4,
-  [class*="rounded-2xl"] h2, [class*="rounded-2xl"] h3,
-  [class*="rounded-xl"] h2, [class*="rounded-xl"] h3 {
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
-  }
-
-  /* Permanent Pure White Text (#ffffff) for all sub-cards & checkmark text */
-  p, li, span:not(.scatter-letter):not(.user-cursor-name):not(.user-cursor-dot), label, td, th {
-    color: #ffffff !important;
-    opacity: 1 !important;
-  }
-
-  /* Checkmark icons inside feature boxes */
-  .fa-check, .fa-check-circle, svg path[fill="#CBBA4F"], svg path[fill="#f2ca50"] {
-    color: #f2ca50 !important;
-    fill: #f2ca50 !important;
-  }
-
-  /* Hover effect boost */
-  .tcb-tax-card:hover, 
-  .tcb-retire-card:hover, 
-  .tcb-risk-card:hover, 
-  .tcb-network-card:hover, 
-  .service-card:hover, 
-  .tcb-about-card:hover,
-  [class*="card"]:hover,
-  [class*="rounded-2xl"]:hover,
-  [class*="rounded-xl"]:hover {
-    border-color: #f2ca50 !important;
-    background: #0f172a !important;
-    transform: translateY(-4px) !important;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 20px rgba(242, 202, 80, 0.25) !important;
-  }
-</style>
-
-
-<style id="static-our-expertise-card-style">
-  /* 100% STATIC OUR EXPERTISE CARD - NO SCROLL ANIMATIONS, NO BLUR, NO COLOR SHIFTS */
-  .our-expertise-card,
-  #our-expertise-card,
-  [data-static="true"] {
-    background: #0d1424 !important;
-    background-color: #0d1424 !important;
-    border: 2px solid #d4af37 !important;
-    border-radius: 20px !important;
-    padding: 38px 32px !important;
-    color: #ffffff !important;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65) !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-    filter: none !important;
-    opacity: 1 !important;
-  }
-
-  .our-expertise-card h2,
-  #our-expertise-card h2,
-  .our-expertise-card h3,
-  [data-static="true"] h2,
-  [data-static="true"] h3 {
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
-    font-size: 28px !important;
-    text-align: center !important;
-    margin-bottom: 20px !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-    filter: none !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  .our-expertise-card p,
-  #our-expertise-card p,
-  .our-expertise-card span,
-  .our-expertise-card div,
-  .our-expertise-card li,
-  [data-static="true"] p,
-  [data-static="true"] span,
-  [data-static="true"] div,
-  [data-static="true"] li {
-    color: #ffffff !important;
-    font-size: 16px !important;
-    line-height: 1.85 !important;
-    font-weight: 400 !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-    filter: none !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-  }
-
-  /* Completely neutralize blur highlight, scatter, or staggered text inside expertise cards */
-  .our-expertise-card .blur-highlight-word,
-  .our-expertise-card .scatter-letter,
-  .our-expertise-card .stagger-word,
-  [data-static="true"] .blur-highlight-word,
-  [data-static="true"] .scatter-letter,
-  [data-static="true"] .stagger-word {
-    filter: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-    color: #ffffff !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-  }
-</style>
-
-<style id="photo1-exact-blue-card-override">
-  /* 100% DARK MIDNIGHT BLUE (#0a0f1d) CARD, SECTION & FAQ OVERRIDE SITE-WIDE */
-  
-  /* Outer card containers, Consultation overlays, Highlight boxes, Sections & FAQ items */
-  html body .bg-white,
-  html body .bg-gray-50,
-  html body .bg-gray-100,
-  html body .bg-slate-50,
-  html body .bg-slate-100,
-  html body .bg-zinc-50,
-  html body .bg-[#FAFAFA],
-  html body .bg-[#fff8dc],
-  html body .bg-[#f8f8f8],
-  html body .bg-[#0d1424],
-  html body .tcb-tax-card,
-  html body .tcb-retire-card,
-  html body .tcb-risk-card,
-  html body .tcb-network-card,
-  html body .tcb-network-highlight,
-  html body .tcb-retire-hero,
-  html body .tcb-retire-highlight,
-  html body .tcb-tax-hero,
-  html body .tcb-tax-highlight,
-  html body .tcb-about-hero,
-  html body .tcb-about-highlight,
-  html body .tcb-risk-hero,
-  html body .tcb-risk-highlight,
-  html body .tcb-network-hero,
-  html body .service-card,
-  html body .tcb-about-card,
-  html body .tcb-contact-article-card,
-  html body .consultation-card,
-  html body .consultation-card-overlay,
-  html body .consultation-item,
-  html body .faq-item,
-  html body .faq-header,
-  html body .faq-header-left,
-  html body .faq-body,
-  html body .neu-glass-card,
-  html body .reactbits-text-path-card,
-  html body [class*="card"] {
-    background-color: #0a0f1d !important;
-    background: #0a0f1d !important;
-    border: 2px solid #d4af37 !important;
-    border-radius: 1.25rem !important;
-    color: #ffffff !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65) !important;
-  }
-
-  /* Force section backgrounds to transparent */
-  section, .tcb-tax-section, .tcb-about-section, .tcb-retire-section, .tcb-risk-section, .tcb-network-section, .tcb-retire-wrap {
-    background-color: transparent !important;
-    background: transparent !important;
-  }
-
-  /* FAQ Accordion Styling - Zero White Inner Boxes */
-  html body .faq-item {
-    margin-bottom: 1rem !important;
-  }
-
-  html body .faq-header,
-  html body .faq-header-left {
-    background-color: #0a0f1d !important;
-    background: #0a0f1d !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  html body .faq-item.active .faq-header,
-  html body .faq-item:hover .faq-header {
-    background-color: rgba(242, 202, 80, 0.1) !important;
-    background: rgba(242, 202, 80, 0.1) !important;
-  }
-
-  html body .faq-question {
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
-    font-size: 1.15rem !important;
-    background: transparent !important;
-  }
-
-  html body .faq-number {
-    background-color: rgba(242, 202, 80, 0.2) !important;
-    border: 1px solid rgba(242, 202, 80, 0.4) !important;
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-  }
-
-  html body .faq-icon-wrapper {
-    background-color: rgba(242, 202, 80, 0.2) !important;
-    border: 1px solid rgba(242, 202, 80, 0.4) !important;
-    color: #f2ca50 !important;
-  }
-
-  html body .faq-item.active .faq-icon-wrapper {
-    background-color: #f2ca50 !important;
-    border-color: #f2ca50 !important;
-    color: #0a0f1d !important;
-  }
-
-  html body .faq-body {
-    background-color: #0a0f1d !important;
-    background: #0a0f1d !important;
-    border-top: 1px dashed rgba(242, 202, 80, 0.3) !important;
-  }
-
-  html body .faq-answer {
-    color: #ffffff !important;
-    font-size: 1rem !important;
-    line-height: 1.8 !important;
-    opacity: 1 !important;
-    background: transparent !important;
-  }
-
-  /* Inner checkmark feature items & list items */
-  html body .grid > div.bg-white,
-  html body .grid > div[class*="border-gray"],
-  html body div.p-4.rounded-xl,
-  html body div.p-4.rounded-xl.bg-white {
-    background-color: rgba(10, 15, 29, 0.85) !important;
-    background: rgba(10, 15, 29, 0.85) !important;
-    border: 1px solid rgba(242, 202, 80, 0.35) !important;
-    color: #ffffff !important;
-  }
-
-  /* Headings inside cards & hero quote boxes: Gold (#f2ca50) */
-  html body .bg-white h1, html body .bg-white h2, html body .bg-white h3, html body .bg-white h4,
-  html body div[class*="card"] h1, html body div[class*="card"] h2, html body div[class*="card"] h3, html body div[class*="card"] h4,
-  html body .tcb-tax-card h1, html body .tcb-tax-card h2, html body .tcb-tax-card h3,
-  html body .tcb-network-highlight h3,
-  html body .consultation-card-overlay h2:first-child,
-  html body .tcb-tax-title, html body .tcb-retire-title, html body .tcb-about-title,
-  html body .tcb-retire-quote, html body .tcb-retire-card h3 {
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
-  }
-
-  /* Text inside cards, consultation overlay & FAQ: Pure Crisp White (#ffffff) */
-  html body .bg-white p, html body .bg-white li, html body .bg-white span:not(.scatter-letter), html body .bg-white div,
-  html body div[class*="card"] p, html body div[class*="card"] li, html body div[class*="card"] span:not(.scatter-letter),
-  html body .tcb-network-highlight p,
-  html body .tcb-tax-text,
-  html body .tcb-about-text,
-  html body .tcb-retire-text,
-  html body .tcb-risk-text,
-  html body .tcb-network-text,
-  html body .consultation-card-overlay h2,
-  html body .consultation-card-overlay p,
-  html body .consultation-card-overlay span {
-    color: #ffffff !important;
-    opacity: 1 !important;
-  }
-
-  /* Neutralize light text & black text classes inside components */
-  html body .text-black,
-  html body .bg-white .text-gray-800,
-  html body .bg-white .text-gray-900,
-  html body .bg-white .text-gray-700,
-  html body .bg-white .text-gray-600,
-  html body .bg-white .text-gray-500,
-  html body .bg-white .text-[#111827] {
-    color: #ffffff !important;
-  }
-</style>
-<style id="reactbits-warped-card-style">
-  /* REACT BITS PRO WARPED CARD COMPONENT - APPLIED TO ALL CARDS */
-  .tcb-tax-card,
-  .tcb-retire-card,
-  .tcb-risk-card,
-  .tcb-network-card,
-  .service-card,
-  .tcb-about-card,
-  .consultation-card,
-  .consultation-item,
-  .faq-item,
-  .neu-glass-card,
-  .tcb-network-highlight,
-  .tcb-tax-dark,
-  .tcb-about-dark,
-  [class*="card"] {
-    position: relative !important;
-    overflow: hidden !important;
-    border-radius: 1.25rem !important;
-    border: 2px solid #d4af37 !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65) !important;
-    will-change: transform;
-    transform-style: preserve-3d;
-    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
-  }
-  
-  /* Warped Card Mouse-Following Radial Bulge Overlay */
-  .tcb-tax-card::before,
-  .tcb-retire-card::before,
-  .tcb-risk-card::before,
-  .tcb-network-card::before,
-  .service-card::before,
-  .tcb-about-card::before,
-  .consultation-card::before,
-  .consultation-item::before,
-  .faq-item::before,
-  .neu-glass-card::before,
-  .tcb-network-highlight::before,
-  [class*="card"]::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: 1.25rem;
-    background: radial-gradient(
-      450px circle at var(--warped-mouse-x, 50%) var(--warped-mouse-y, 50%),
-      rgba(242, 202, 80, 0.22),
-      rgba(249, 115, 22, 0.12) 35%,
-      transparent 70%
-    );
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    z-index: 2;
-  }
-
-  .tcb-tax-card:hover::before,
-  .tcb-retire-card:hover::before,
-  .tcb-risk-card:hover::before,
-  .tcb-network-card:hover::before,
-  .service-card:hover::before,
-  .tcb-about-card:hover::before,
-  .consultation-card:hover::before,
-  .consultation-item:hover::before,
-  .faq-item:hover::before,
-  .neu-glass-card:hover::before,
-  .tcb-network-highlight:hover::before,
-  [class*="card"]:hover::before {
-    opacity: 1;
-  }
-
-  .reactbits-warped-canvas {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    pointer-events: none !important;
-    z-index: 10 !important;
-    opacity: 0;
-    transition: opacity 0.35s ease !important;
-  }
-</style>
-<style id="site-wide-perfect-alignment-fix">
-  /* SITE-WIDE PERFECT ALIGNMENT & TYPOGRAPHY FIX */
-  
-  /* Reset paragraph and card body text to natural, clean left alignment */
-  html body p,
-  html body div.tcb-tax-text,
-  html body div.tcb-retire-text,
-  html body div.tcb-risk-text,
-  html body div.tcb-network-text,
-  html body .tcb-tax-card p,
-  html body .tcb-retire-card p,
-  html body .tcb-risk-card p,
-  html body .tcb-network-card p,
-  html body .service-card p,
-  html body .tcb-about-card p,
-  html body .consultation-card p,
-  html body .tcb-network-highlight p,
-  html body [class*="card"] p {
-    text-align: left !important;
-    line-height: 1.85 !important;
-    font-size: 1rem !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-    margin-bottom: 1rem !important;
-  }
-
-  /* Center card section headings cleanly */
-  html body [class*="card"] h1,
-  html body [class*="card"] h2,
-  html body [class*="card"] h3,
-  html body [class*="card"] h4,
-  html body .tcb-tax-title,
-  html body .tcb-retire-title,
-  html body .tcb-about-title,
-  html body .tcb-network-highlight h3 {
-    text-align: center !important;
-    line-height: 1.35 !important;
-    margin-bottom: 1.25rem !important;
-  }
-
-  /* Fix word wrapping inside blur-highlight-word */
-  .blur-highlight-word {
-    display: inline !important;
-    filter: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    margin-right: 0.22em !important;
-    white-space: normal !important;
-  }
-
-  /* Fix scatter letters alignment */
-  .scatter-letter {
-    display: inline !important;
-    transform: none !important;
-  }
-
-  .blur-highlight-word.is-keyword {
-    background: transparent !important;
-    color: inherit !important;
-    border: none !important;
-    padding: 0 !important;
-  }
-
-  /* Ensure card containers have consistent padding & spacing */
-  html body [class*="card"],
-  html body .tcb-network-highlight {
-    padding: 2.25rem !important;
-    box-sizing: border-box !important;
-  }
-</style>
-<style id="force-faq-blue-card-override">
-  /* 100% FORCE DARK MIDNIGHT BLUE (#0a0f1d) FOR ALL FAQ & ACCORDION COMPONENTS */
-  
-  html body .faq-container,
-  html body .faq-item,
-  html body .faq-header,
-  html body .faq-header-left,
-  html body .faq-body,
-  html body .consultation-item,
-  html body .consultation-header,
-  html body .consultation-content {
-    background-color: #0a0f1d !important;
-    background: #0a0f1d !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-  }
-
-  html body .faq-item {
-    border: 2px solid #d4af37 !important;
-    border-radius: 1.25rem !important;
-    margin-bottom: 1.25rem !important;
-    overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
-  }
-
-  html body .faq-header-left {
-    border-radius: 0.75rem !important;
-    padding: 0.25rem !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
-
-  html body .faq-item.active .faq-header,
-  html body .faq-item:hover .faq-header {
-    background-color: rgba(242, 202, 80, 0.1) !important;
-    background: rgba(242, 202, 80, 0.1) !important;
-  }
-
-  html body .faq-question {
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
-    font-size: 1.15rem !important;
-    background: transparent !important;
-  }
-
-  html body .faq-number {
-    background-color: rgba(242, 202, 80, 0.25) !important;
-    border: 1px solid rgba(242, 202, 80, 0.5) !important;
-    color: #f2ca50 !important;
-    font-weight: 700 !important;
-    border-radius: 8px !important;
-  }
-
-  html body .faq-icon-wrapper {
-    background-color: rgba(242, 202, 80, 0.25) !important;
-    border: 1px solid rgba(242, 202, 80, 0.5) !important;
-    color: #f2ca50 !important;
-  }
-
-  html body .faq-item.active .faq-icon-wrapper {
-    background-color: #f2ca50 !important;
-    border-color: #f2ca50 !important;
-    color: #0a0f1d !important;
-  }
-
-  html body .faq-body {
-    border-top: 1px dashed rgba(242, 202, 80, 0.35) !important;
-  }
-
-  html body .faq-answer {
-    color: #ffffff !important;
-    font-size: 1rem !important;
-    line-height: 1.85 !important;
-    opacity: 1 !important;
-    background: transparent !important;
-  }
-</style>
-  <style>
-  .floating-icon-card, .floating-icon-card-reverse { display: none !important; visibility: hidden !important; opacity: 0 !important; height: 0 !important; width: 0 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; }
-</style>
+      <link rel="stylesheet" href="editorial.css?v=7" />
+  <link rel="stylesheet" href="mobile.css?v=1" />
 </head>
 
   <body>
-    <!-- Loading Spinner -->
-    <div
-      id="loading-spinner"
-      class="fixed inset-0 flex items-center justify-center bg-[#0a0f1d] border-2 border-[#d4af37] text-white z-50 our-expertise-card" data-static="true"
-    >
-      <div class="loader"></div>
-    </div>
-    <!-- Navbar -->
-    
-<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl">
-  <nav class="bg-zinc-950/85 backdrop-blur-2xl border border-amber-500/25 rounded-full px-6 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.85)] flex items-center justify-between transition-all duration-300 hover:border-amber-400/50">
-    <div class="flex items-center gap-3">
-      <a href="/" class="flex items-center gap-3 group">
-        <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" class="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
-        <div class="hidden sm:flex flex-col">
-          <span class="text-white font-bold text-sm tracking-wider uppercase font-['Outfit'] group-hover:text-amber-400 transition-colors">THE CAPITAL BOX</span>
-          <span class="text-amber-400/80 text-[10px] font-medium tracking-widest uppercase">UNCOMMON MONEY FOR COMMON MAN</span>
-        </div>
-      </a>
-    </div>
 
-    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="/" class="text-zinc-300 hover:text-amber-400 transition-colors uppercase tracking-wider text-xs">Home</a>
-      <div class="relative group">
-        <button class="text-zinc-300 hover:text-amber-400 transition-colors uppercase tracking-wider text-xs flex items-center gap-1 py-2">
-          Services
-          <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="absolute top-full left-0 mt-2 w-56 bg-zinc-950/95 backdrop-blur-xl border border-amber-500/20 rounded-xl p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-          <a href="./taxsolution.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Tax Solutions</a>
-          <a href="./retirementsolutions.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Retirement Solutions</a>
-          <a href="./networksolution.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Networking Solutions</a>
-          <a href="./riskmanagement.html" class="block px-4 py-2.5 rounded-lg text-xs text-zinc-300 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">Risk Management</a>
+    <!-- Loading Spinner -->
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="navbar fixed top-0 w-full z-40 py-4 md:px-6 transition-all duration-300"
+    >
+      <div class="mx-auto flex justify-between items-center px-2">
+        <div class="flex items-center">
+          <a href="/" class="text-white text-xl font-bold">
+            <img
+              src="public/assets/logo-1.webp"
+              alt="The Capital Box Logo"
+              class="h-8"
+            />
+          </a>
+          <div class="flex flex-col ml-4 md:hidden lg:block">
+            <p class="uppercase text-white text-md md:text-xl font-bold">
+              The Capital Box
+            </p>
+            <p class="uppercase text-white text-xs md:text-base font-light">
+              UNCOMMON MONEY FOR COMMON MAN
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="/"
+            class="text-white hover:text-primary transition text-lg font-light uppercase"
+            >Home</a
+          >
+
+          <!-- Dropdown Menu -->
+          <div class="dropdown relative">
+            <button
+              class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
+              id="dropdownToggle"
+            >
+              Services
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-menu bg-white rounded shadow-lg mt-2 w-56">
+              <div class="py-2">
+                <a
+                  href="./taxsolution.html"
+                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
+                  >Tax Solutions</a
+                >
+                <a
+                  href="./retirementsolutions.html"
+                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
+                  >Retirement Solutions</a
+                >
+                <a
+                  href="./networksolution.html"
+                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
+                  >Networking Solutions
+                </a>
+                <a
+                  href="./riskmanagement.html"
+                  class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700"
+                  >Risk Management</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="./about.html"
+            class="text-white hover:text-primary transition text-lg font-light uppercase"
+            >About</a
+          >
+          <a
+            href="./contact.html"
+            class="text-white hover:text-primary transition text-lg font-light uppercase"
+            >Contact</a
+          >
+          <a
+            href="./careers.html"
+            class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal"
+            >Careers</a
+          >
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white">
+            <!-- Hamburger Icon -->
+            <svg
+              id="hamburger-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <!-- X Icon (hidden by default) -->
+            <svg
+              id="close-icon"
+              class="h-6 w-6 hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-      <a href="./about.html" class="text-zinc-300 hover:text-amber-400 transition-colors uppercase tracking-wider text-xs">About</a>
-      <a href="./contact.html" class="text-amber-400 font-bold hover:text-amber-400 transition-colors uppercase tracking-wider text-xs">Contact</a>
-      <a href="./careers.html" class="px-5 py-2 rounded-full border border-amber-400/40 text-amber-300 text-xs font-semibold uppercase tracking-wider hover:bg-gradient-to-r hover:from-amber-400 hover:to-yellow-500 hover:text-zinc-950 transition-all duration-300 shadow-[0_0_15px_rgba(242,202,80,0.2)]">Careers</a>
-    </div>
 
-    <div class="md:hidden flex items-center">
-      <button id="mobile-menu-button" class="p-2 text-zinc-300 hover:text-amber-400">
-        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-    </div>
-  </nav>
-
-  <div id="mobile-menu" class="hidden md:hidden mt-3 bg-zinc-950/95 backdrop-blur-2xl border border-amber-500/20 rounded-2xl p-4 space-y-3 text-sm">
-    <a href="/" class="block px-4 py-2.5 rounded-xl text-zinc-200 hover:bg-amber-500/10 hover:text-amber-400 font-medium">Home</a>
-    <div class="space-y-1 pl-4 border-l border-amber-500/20">
-      <div class="text-amber-400/70 text-xs font-semibold uppercase tracking-wider py-1">Services</div>
-      <a href="./taxsolution.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Tax Solutions</a>
-      <a href="./retirementsolutions.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Retirement Solutions</a>
-      <a href="./networksolution.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Networking Solutions</a>
-      <a href="./riskmanagement.html" class="block px-3 py-1.5 text-zinc-400 hover:text-amber-300 text-xs">Risk Management</a>
-    </div>
-    <a href="./about.html" class="block px-4 py-2.5 rounded-xl text-zinc-200 hover:bg-amber-500/10 hover:text-amber-400 font-medium">About</a>
-    <a href="./contact.html" class="block px-4 py-2.5 rounded-xl text-zinc-200 hover:bg-amber-500/10 hover:text-amber-400 font-medium">Contact</a>
-    <a href="./careers.html" class="block text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold uppercase tracking-wider text-xs">Careers</a>
-  </div>
-</header>
-
-    <main class="pt-28 relative z-10">
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-navColor bg-opacity-40 mt-4 py-2"
+      >
+        <a
+          href="/"
+          class="block px-6 py-2 text-white hover:bg-primary"
+          >Home</a
+        >
+        <div class="relative">
+          <button
+            id="mobile-dropdown-button"
+            class="w-full text-left px-6 py-2 text-white hover:bg-primary flex justify-between items-center"
+          >
+            Services
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            id="mobile-dropdown"
+            class="hidden bg-[#1F2937] rounded-lg mx-4 my-2"
+          >
+            <a
+              href="./taxsolution.html"
+              class="block px-6 py-2 text-white hover:bg-primary rounded-t-lg"
+              >Tax Solutions</a
+            >
+            <a
+              href="./retirementsolutions.html"
+              class="block px-6 py-2 text-white hover:bg-primary"
+              >Retirement Solutions</a
+            >
+            <a
+              href="./networksolution.html"
+              class="block px-6 py-2 text-white hover:bg-primary rounded-b-lg"
+              >Networking Solutions</a
+            >
+            <a
+              href="./riskmanagement.html"
+              class="block px-6 py-2 text-white hover:bg-primary rounded-b-lg"
+              >Risk Management</a
+            >
+          </div>
+        </div>
+        <a
+          href="./about.html"
+          class="block px-6 py-2 text-white hover:bg-primary"
+          >About</a
+        >
+        <a
+          href="./contact.html"
+          class="block px-6 py-2 text-white hover:bg-primary"
+          >Contact</a
+        >
+        <div class="flex justify-center mt-4">
+          <a
+            href="./careers.html"
+            class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal"
+            >Careers</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
       <!-- Hero Section -->
       <div class="relative">
         <!-- Hero Image & Content -->
         <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
-          <img src="public/assets/CONTACT.webp" alt="Contact The Capital Box Hero Image" class="subpage-hero-img w-full h-full object-cover" />
+          <img
+            src="public/assets/CONTACT.webp"
+            alt="Contact The Capital Box Hero Image"
+            class="subpage-hero-img w-full h-full object-cover"
+          />
+
+          <!-- Hero Content Overlay -->
           <div class="subpage-hero-overlay">
             <div class="subpage-hero-content">
               <div class="subpage-hero-badge">
@@ -1339,807 +368,168 @@
           </div>
         </div>
 
-      <!-- Feature Card Container -->
+        <!-- Feature Card Container -->
         <div class="subpage-card-container container mx-auto px-4 relative">
           <div class="w-full">
               
-            
-        <!-- FIRST CARD: CONTACT INFORMATION BENTO -->
-        <div class="w-full bg-zinc-900/80 backdrop-blur-2xl rounded-2xl shadow-2xl border border-amber-500/20 p-6 md:p-10 transition-all duration-500 hover:border-amber-400/40">
-          <div class="flex flex-col gap-6">
-            <div class="text-center">
-              <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
-                <i class="fas fa-building text-amber-400"></i> Corporate Headquarters
-              </span>
-              <h2 class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 font-['Outfit']">
-                Contact Information
-              </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
-              <!-- Address -->
-              <div class="p-5 rounded-xl bg-zinc-950/70 border border-amber-500/15 flex flex-col gap-2 hover:border-amber-400/40 transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold mb-1">
-                  <i class="fas fa-map-marker-alt text-lg"></i>
+            <!-- First Card -->
+        <div
+          class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary"
+        >
+          <div class="p-6 flex flex-col gap-2 md:gap-4">
+            <h2
+              class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center"
+            >
+              Contact Information
+            </h2>
+            <div class="flex flex-col md:flex-row gap-8 justify-evenly">
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-row gap-4">
+                  <p class="text-md md:text-lg text-primary font-medium">
+                    Address:
+                  </p>
+                  <p class="text-gray-600 text-md md:text-lg text-black">
+                    South City 1, Gurugram, Haryana - 122001
+                    <br />
+                    India
+                  </p>
                 </div>
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">Address</span>
-                <p class="text-zinc-200 text-sm font-medium leading-relaxed">
-                  South City 1, Gurugram, Haryana - 122001, India
-                </p>
+                <div class="flex flex-row gap-4 mt-2">
+                  <p class="text-md md:text-lg text-primary font-medium">
+                    Phone:
+                  </p>
+                  <p class="text-gray-600 text-md md:text-lg">
+                    +91 124428427
+                  </p>
+                </div>
               </div>
-
-              <!-- Phone -->
-              <div class="p-5 rounded-xl bg-zinc-950/70 border border-amber-500/15 flex flex-col gap-2 hover:border-amber-400/40 transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold mb-1">
-                  <i class="fas fa-phone-alt text-lg"></i>
+        
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col">
+                  <p class="text-md md:text-lg text-primary font-medium">
+                    General Enquiry Email:
+                  </p>
+                  <p class="text-gray-600 text-md md:text-lg">
+                    contactus@thecapitalbox.com
+                  </p>
                 </div>
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">Direct Phone</span>
-                <a href="tel:+91124428427" class="text-zinc-200 hover:text-amber-300 text-sm font-medium transition-colors">
-                  +91 124428427
-                </a>
-              </div>
-
-              <!-- General Email -->
-              <div class="p-5 rounded-xl bg-zinc-950/70 border border-amber-500/15 flex flex-col gap-2 hover:border-amber-400/40 transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold mb-1">
-                  <i class="fas fa-envelope text-lg"></i>
+        
+                <div class="flex flex-col">
+                  <p class="text-md md:text-lg text-primary font-medium">
+                    Career Enquiry Email:
+                  </p>
+                  <a
+                    href="mailto:jobs@thecapitalbox.com"
+                    class="text-gray-600 text-md md:text-lg"
+                    >jobs@thecapitalbox.com</a
+                  >
                 </div>
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">General Enquiries</span>
-                <a href="mailto:contactus@thecapitalbox.com" class="text-zinc-200 hover:text-amber-300 text-sm font-medium transition-colors break-all">
-                  contactus@thecapitalbox.com
-                </a>
-              </div>
-
-              <!-- Career Email -->
-              <div class="p-5 rounded-xl bg-zinc-950/70 border border-amber-500/15 flex flex-col gap-2 hover:border-amber-400/40 transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold mb-1">
-                  <i class="fas fa-briefcase text-lg"></i>
+        
+                <div class="flex flex-col">
+                  <p class="text-md md:text-lg text-primary font-medium">
+                    Website:
+                  </p>
+                  <p class="text-gray-600 text-md md:text-lg">
+                    The Capital Box
+                  </p>
                 </div>
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">Careers Desk</span>
-                <a href="mailto:jobs@thecapitalbox.com" class="text-zinc-200 hover:text-amber-300 text-sm font-medium transition-colors break-all">
-                  jobs@thecapitalbox.com
-                </a>
               </div>
             </div>
           </div>
         </div>
-
-
-        <!-- SECOND CARD: GET IN TOUCH BENTO -->
+        
+        <!-- Second Card -->
         <div class="w-full relative mt-8 md:mt-12">
-          <div class="w-full bg-zinc-900/80 backdrop-blur-2xl rounded-2xl shadow-2xl border border-amber-500/20 p-6 md:p-10 transition-all duration-500 hover:border-amber-400/40">
-            <div class="flex flex-col gap-8">
-              <div class="text-center">
-                <h2 class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 font-['Outfit'] mb-4">
-                  Get in Touch with The Capital Box
-                </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-yellow-500 mx-auto rounded-full mb-6"></div>
-                <p id="get-in-touch-desc" class="text-zinc-300 text-sm md:text-base text-center leading-relaxed max-w-5xl mx-auto mb-4 font-light">
-                  At The Capital Box, we understand that every financial journey is unique. That’s why we focus on building meaningful relationships with individuals, families, and businesses by offering customized financial strategies designed around specific goals. Our expertise covers wealth management, tax planning, risk assessment, business advisory, and long-term financial growth solutions.
+          <div
+            class="w-full bg-white rounded-lg shadow-xl transform transition duration-500 hover:-translate-y-1 border-t-4 border-primary"
+          >
+            <div class="p-8 flex flex-col gap-8">
+              <h2
+                class="text-xl md:text-4xl font-bold text-gray-800 text-center"
+              >
+                Get in Touch with The Capital Box
+              </h2>
+              
+              <p
+                  class="text-gray-600 text-md md:text-lg text-center leading-relaxed max-w-5xl mx-auto"
+                >
+                  At The Capital Box, we understand that every financial journey is unique.
+                  That’s why we focus on building meaningful relationships with individuals,
+                  families, and businesses by offering customized financial strategies designed
+                  around specific goals. Our expertise covers wealth management, tax planning,
+                  risk assessment, business advisory, and long-term financial growth solutions.
+                  We believe in simplifying complex financial decisions through clear guidance,
+                  trusted expertise, and personalized attention so our clients can move forward
+                  with confidence. Whether you are securing your family’s future, optimizing
+                  investments, or strengthening your business finances, our team is committed to
+                  delivering reliable financial solutions that create stability, growth, and
+                  peace of mind.
                 </p>
-                <p class="text-zinc-400 text-xs md:text-sm text-center leading-relaxed max-w-5xl mx-auto font-light">
-                  We’re here to help with all your financial needs—from tax planning and risk management to personalized financial solutions. Whether you’re an individual or a business, our experts are ready to guide you with clarity and confidence.
-                </p>
-              </div>
-
-              <!-- WHY CONNECT WITH US GRID -->
-              <div class="flex flex-col gap-6 pt-6 border-t border-zinc-800">
-                <h3 class="text-lg md:text-2xl font-bold text-amber-300 text-center font-['Outfit'] uppercase tracking-wider">
+                
+              <p
+                class="text-gray-600 text-md md:text-lg text-center leading-relaxed max-w-5xl mx-auto"
+              >
+                We’re here to help with all your financial needs—from tax planning and
+                risk management to personalized financial solutions. Whether you’re an
+                individual or a business, our experts are ready to guide you with
+                clarity and confidence. Reach out to us and let’s build your financial
+                future together.
+              </p>
+        
+              <div class="flex flex-col gap-6">
+                <h3
+                  class="text-lg md:text-3xl font-semibold text-primary text-center"
+                >
                   Why Connect with Us?
                 </h3>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto w-full">
-                  <div class="p-4 rounded-xl bg-zinc-950/60 border border-amber-500/15 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold shrink-0 mt-0.5">
-                      <i class="fas fa-check text-xs"></i>
-                    </div>
-                    <p class="text-zinc-200 text-sm md:text-base font-medium">
+        
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-5xl mx-auto"
+                >
+                  <div class="flex items-start gap-3">
+                    <span class="text-primary font-bold text-2xl">•</span>
+                    <p class="text-gray-700 text-md md:text-lg">
                       Get expert advice on tax and financial planning
                     </p>
                   </div>
-
-                  <div class="p-4 rounded-xl bg-zinc-950/60 border border-amber-500/15 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold shrink-0 mt-0.5">
-                      <i class="fas fa-check text-xs"></i>
-                    </div>
-                    <p class="text-zinc-200 text-sm md:text-base font-medium">
-                      Personalized solutions based on your specific goals
+        
+                  <div class="flex items-start gap-3">
+                    <span class="text-primary font-bold text-2xl">•</span>
+                    <p class="text-gray-700 text-md md:text-lg">
+                      Personalized solutions based on your goals
                     </p>
                   </div>
-
-                  <div class="p-4 rounded-xl bg-zinc-950/60 border border-amber-500/15 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold shrink-0 mt-0.5">
-                      <i class="fas fa-check text-xs"></i>
-                    </div>
-                    <p class="text-zinc-200 text-sm md:text-base font-medium">
-                      Quick response from our experienced advisory team
+        
+                  <div class="flex items-start gap-3">
+                    <span class="text-primary font-bold text-2xl">•</span>
+                    <p class="text-gray-700 text-md md:text-lg">
+                      Quick response from our experienced team
                     </p>
                   </div>
-
-                  <div class="p-4 rounded-xl bg-zinc-950/60 border border-amber-500/15 flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold shrink-0 mt-0.5">
-                      <i class="fas fa-check text-xs"></i>
-                    </div>
-                    <p class="text-zinc-200 text-sm md:text-base font-medium">
-                      Dedicated support for individuals, families, and businesses
+        
+                  <div class="flex items-start gap-3">
+                    <span class="text-primary font-bold text-2xl">•</span>
+                    <p class="text-gray-700 text-md md:text-lg">
+                      Support for individuals, families, and businesses
                     </p>
                   </div>
                 </div>
-
-                <p class="text-zinc-400 text-xs md:text-sm text-center leading-relaxed max-w-5xl mx-auto mt-4 font-light">
-                  Choosing The Capital Box means partnering with professionals who prioritize transparency, strategy, and results. We work proactively to identify opportunities, reduce risks, and help you make smarter financial decisions.
+                <p class="text-gray-600 text-md md:text-lg text-center leading-relaxed max-w-5xl mx-auto mt-6">
+                    Choosing The Capital Box means partnering with professionals who prioritize
+                    transparency, strategy, and results. We work proactively to identify
+                    opportunities, reduce risks, and help you make smarter financial decisions in
+                    an ever-changing economic environment. Our mission is to empower clients with
+                    practical solutions that support both immediate financial needs and future
+                    aspirations.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
-    <!-- CONTACT PAGE 8 ARTICLES START -->
-    <style>
-      .tcb-contact-article-card {
-        background: rgba(17, 28, 53, 0.8) !important;
-        border: 1px solid rgba(242, 202, 80, 0.2) !important;
-        border-radius: 16px !important;
-        backdrop-filter: blur(16px) !important;
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
-        padding: 30px 26px !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-      }
-      .tcb-contact-article-card:hover {
-        transform: translateY(-6px) !important;
-        border-color: rgba(242, 202, 80, 0.45) !important;
-        box-shadow: 0 20px 50px rgba(242, 202, 80, 0.15) !important;
-      }
-      .tcb-contact-article-card h3 {
-        color: #f2ca50 !important;
-        font-family: 'Outfit', sans-serif !important;
-      }
-      .tcb-contact-article-card p {
-        color: #e2e8f0 !important;
-      }
-      .tcb-pill-badge {
-        background: linear-gradient(135deg, #f2ca50 0%, #b8860b 100%) !important;
-        color: #070B14 !important;
-        font-size: 0.75rem !important;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.5px !important;
-        padding: 5px 14px !important;
-        border-radius: 9999px !important;
-        display: inline-block !important;
-      }
-      .tcb-article-note {
-        margin-top: 18px !important;
-        padding: 14px 18px !important;
-        background: rgba(242, 202, 80, 0.08) !important;
-        border-left: 4px solid #f2ca50 !important;
-        border-radius: 0 10px 10px 0 !important;
-        font-size: 0.9rem !important;
-        color: #fef08a !important;
-        font-style: italic !important;
-        line-height: 1.55 !important;
-      }
-      .tcb-articles-header {
-        margin-bottom: 48px;
-      }
-      .tcb-articles-grid {
-        margin-top: 24px;
-      }
-      @media (max-width: 640px) {
-        .tcb-contact-article-card {
-          padding: 24px 18px !important;
-        }
-        .tcb-articles-header {
-          margin-bottom: 36px;
-        }
-        .tcb-articles-grid {
-          margin-top: 18px;
-        }
-      }
-    </style>
-
-    
-    <!-- EXECUTIVE ADVISORY INSIGHTS CARDS START -->
-    <section id="contact-advisory-cards-section" class="w-full py-16 relative z-10 bg-zinc-950/60 border-y border-amber-500/15 my-12">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <!-- Section Title & Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-3">
-          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-          <span>Executive Knowledge Hub • Strategic Insights</span>
-        </div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 mb-3 font-['Outfit']">
-          Executive Contact & Advisory Insights Deck
-        </h2>
-        <p class="text-zinc-400 text-sm md:text-base max-w-2xl mx-auto mb-10 font-light">
-          Explore our expert advisory insights designed to assist high-net-worth individuals and corporate entities in wealth planning.
-        </p>
-
-        <!-- Clean Responsive Cards Grid - Zero Overlap, Fully Legible -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-          
-          <!-- CARD 01 -->
-          <div class="rounded-2xl bg-zinc-900/90 backdrop-blur-2xl border border-amber-500/20 p-6 md:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-amber-400/60 hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/20">Advisory Prep</span>
-                <span class="text-xs text-zinc-400 flex items-center gap-1"><i class="far fa-clock text-amber-400"></i> 4 MIN READ</span>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold text-amber-300 mb-3 font-['Outfit']">
-                How to Prepare for Your First Financial Advisory Consultation
-              </h3>
-              <p class="text-zinc-300 text-xs md:text-sm leading-relaxed mb-4">
-                Engaging with a financial advisor is a transformative step toward achieving clarity, resilience, and wealth acceleration. Catalog your core balance sheet: income tax returns, salary statements, bank deposits, mutual fund folios, and insurance policies.
-              </p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-amber-500/5 border-l-4 border-amber-400 text-xs text-amber-200/90 italic mt-auto">
-              <strong>Key Takeaway:</strong> Thoughtful preparation turns an advisory meeting into a strategic, high-impact blueprint for wealth creation.
-            </div>
-          </div>
-
-          <!-- CARD 02 -->
-          <div class="rounded-2xl bg-zinc-900/90 backdrop-blur-2xl border border-amber-500/20 p-6 md:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-amber-400/60 hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/20">Cross-Border Taxation</span>
-                <span class="text-xs text-zinc-400 flex items-center gap-1"><i class="far fa-clock text-amber-400"></i> 5 MIN READ</span>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold text-amber-300 mb-3 font-['Outfit']">
-                Navigating NRI Taxation & Foreign Asset Disclosures in India
-              </h3>
-              <p class="text-zinc-300 text-xs md:text-sm leading-relaxed mb-4">
-                For Non-Resident Indians (NRIs) and global professionals, Indian tax compliance is governed by intricate physical presence rules under Section 6. Schedule FA disclosure mandates enforce strict compliance on offshore assets and foreign ESOPs.
-              </p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-amber-500/5 border-l-4 border-amber-400 text-xs text-amber-200/90 italic mt-auto">
-              <strong>Key Takeaway:</strong> Proactive DTAA structuring and diligent reporting prevent harsh penalties and maximize post-tax international yields.
-            </div>
-          </div>
-
-          <!-- CARD 03 -->
-          <div class="rounded-2xl bg-zinc-900/90 backdrop-blur-2xl border border-amber-500/20 p-6 md:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-amber-400/60 hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/20">Wealth Preservation</span>
-                <span class="text-xs text-zinc-400 flex items-center gap-1"><i class="far fa-clock text-amber-400"></i> 4 MIN READ</span>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold text-amber-300 mb-3 font-['Outfit']">
-                Structuring a Resilient Family Emergency Liquidity Reserve
-              </h3>
-              <p class="text-zinc-300 text-xs md:text-sm leading-relaxed mb-4">
-                An emergency fund is the shock absorber of personal finance. We recommend structuring emergency liquidity across three distinct tiers: instant access, low-volatility liquid funds, and flexible sweep-in fixed deposits.
-              </p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-amber-500/5 border-l-4 border-amber-400 text-xs text-amber-200/90 italic mt-auto">
-              <strong>Key Takeaway:</strong> Tiered liquidity guards long-term compounding by ensuring market dips never force emergency asset liquidations.
-            </div>
-          </div>
-
-          <!-- CARD 04 -->
-          <div class="rounded-2xl bg-zinc-900/90 backdrop-blur-2xl border border-amber-500/20 p-6 md:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-amber-400/60 hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/20">Corporate Compliance</span>
-                <span class="text-xs text-zinc-400 flex items-center gap-1"><i class="far fa-clock text-amber-400"></i> 5 MIN READ</span>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold text-amber-300 mb-3 font-['Outfit']">
-                Corporate Tax Compliance: Mitigating Audit & Scrutiny Notice Risks
-              </h3>
-              <p class="text-zinc-300 text-xs md:text-sm leading-relaxed mb-4">
-                With AI-powered risk profiling and automated GST-to-ITR data reconciliation, discrepancies flag turnover automatically. Strategic quarterly book reconciliations eliminate surprise scrutiny notices.
-              </p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-amber-500/5 border-l-4 border-amber-400 text-xs text-amber-200/90 italic mt-auto">
-              <strong>Key Takeaway:</strong> Automated compliance reconciliations conducted year-round eliminate surprise scrutiny notices and penalties.
-            </div>
-          </div>
-
-          <!-- CARD 05 -->
-          <div class="rounded-2xl bg-zinc-900/90 backdrop-blur-2xl border border-amber-500/20 p-6 md:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-amber-400/60 hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/20">Retirement Architecture</span>
-                <span class="text-xs text-zinc-400 flex items-center gap-1"><i class="far fa-clock text-amber-400"></i> 6 MIN READ</span>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold text-amber-300 mb-3 font-['Outfit']">
-                The Mathematics of Retirement: 4% Rule vs. Dynamic Bucket Strategies
-              </h3>
-              <p class="text-zinc-300 text-xs md:text-sm leading-relaxed mb-4">
-                Transitioning from wealth accumulation to decumulation requires dynamic Three-Bucket Strategy to mitigate Sequence of Returns Risk and ensure long-term portfolio compounding.
-              </p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-amber-500/5 border-l-4 border-amber-400 text-xs text-amber-200/90 italic mt-auto">
-              <strong>Key Takeaway:</strong> Dynamic bucket allocation prevents retirees from selling equities during bear markets to fund living expenses.
-            </div>
-          </div>
-
-          <!-- CARD 06 -->
-          <div class="rounded-2xl bg-zinc-900/90 backdrop-blur-2xl border border-amber-500/20 p-6 md:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300 hover:border-amber-400/60 hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/20">Risk Management</span>
-                <span class="text-xs text-zinc-400 flex items-center gap-1"><i class="far fa-clock text-amber-400"></i> 5 MIN READ</span>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold text-amber-300 mb-3 font-['Outfit']">
-                Asset Protection & Liability Shielding for HNWIs and Business Owners
-              </h3>
-              <p class="text-zinc-300 text-xs md:text-sm leading-relaxed mb-4">
-                High-net-worth professionals and business promoters require MWPA insurance policies and private family trusts to ring-fence personal assets from commercial liabilities.
-              </p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-amber-500/5 border-l-4 border-amber-400 text-xs text-amber-200/90 italic mt-auto">
-              <strong>Key Takeaway:</strong> MWPA policies and family trusts insulate core family wealth from unexpected business liabilities.
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- EXECUTIVE ADVISORY INSIGHTS CARDS END -->
-
-<section id="contact-articles" class="w-full py-16 bg-[#f8f9fa] border-t border-b border-gray-200 my-8 md:my-16">
-      <div class="container mx-auto px-4 max-w-7xl">
-        <!-- Article Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 tcb-articles-grid">
-          
-          <!-- ARTICLE 1 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Advisory Prep</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  How to Prepare for Your First Financial Advisory Consultation
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Engaging with a financial advisor is a transformative step toward achieving clarity, resilience, and wealth acceleration. To maximize the return on your initial discovery session, thoughtful preparation is key. Begin by cataloging your core financial balance sheet: recent income tax returns, salary statements or corporate audited financials, bank deposits, mutual fund folios, equity portfolios, and existing life/health insurance policies.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Equally important is articulating your family's personal milestones—such as purchasing primary or commercial property, funding children's higher education abroad, or establishing an early retirement timeline. Arriving with clearly defined priorities and open questions allows our advisory team to diagnose inefficiencies immediately and craft a bespoke, actionable roadmap.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Preparation turns a standard advisory meeting into a strategic, high-impact blueprint for wealth creation.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 2 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Cross-Border Taxation</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Navigating NRI Taxation & Foreign Asset Disclosures in India
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                For Non-Resident Indians (NRIs) and global professionals with multi-jurisdictional earnings, Indian tax compliance is governed by intricate residency rules under Section 6 of the Income Tax Act. Residential status must be tracked annually based on physical presence, as a shift from Non-Resident (NR) to Resident and Ordinarily Resident (ROR) subjects worldwide income to domestic tax liabilities.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Furthermore, strict disclosure mandates under Schedule FA (Foreign Assets) and the Black Money Act penalize undisclosed offshore accounts or foreign ESOPs heavily. By proactively leveraging Double Taxation Avoidance Agreements (DTAA) through Tax Residency Certificates (TRC) and Form 10F, investors prevent double taxation on cross-border dividends, capital gains, and consulting royalties.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Proactive DTAA structuring and diligent reporting prevent harsh penalties and maximize post-tax international yields.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 3 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Wealth Preservation</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Structuring a Resilient Family Emergency Liquidity Reserve
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                An emergency fund is the shock absorber of personal finance, yet many families either hold inadequate liquidity or park excessive capital in low-yield traditional savings accounts that steadily lose purchasing power to inflation. A truly resilient safety net should cover 6 to 12 months of non-negotiable living expenses, including household overhead, loan EMIs, and insurance premiums.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                We recommend structuring emergency liquidity across three distinct tiers: Tier 1 maintains 1 to 2 months' requirements in instant-access high-interest accounts; Tier 2 holds 3 to 6 months in low-volatility arbitrage or overnight mutual funds offering T+1 redemption; Tier 3 deploys the remainder in flexible sweep-in fixed deposits. This architecture ensures unforeseen medical or economic shocks never force distress sales of long-term equities.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Tiered liquidity guards long-term compounding by ensuring market dips never force emergency asset liquidations.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 4 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Corporate Compliance</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Corporate Tax Compliance: Mitigating Audit & Scrutiny Notice Risks
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                With the Income Tax Department's deployment of AI-powered risk profiling, automated GST-to-ITR data reconciliation, and comprehensive Annual Information Statements (AIS), discrepancies between reported turnover and third-party data feeds are flagged automatically. For businesses, MSMEs, and high-earning consultants, a minor mismatch in TDS credits or vendor GST filings can swiftly trigger scrutiny notices under Section 143(1) or Section 148.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Mitigating audit risk requires instituting continuous quarterly book reconciliations, maintaining meticulous audit trails for business expenditure, ensuring strict arm's-length transfer pricing, and remitting advance tax installments accurately on statutory dates. Strategic compliance is not just about avoiding penalties—it safeguards corporate reputation and credit ratings.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Automated compliance reconciliations conducted year-round eliminate surprise scrutiny notices and costly interest penalties.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 5 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Retirement Architecture</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  The Mathematics of Retirement: 4% Rule vs. Dynamic Bucket Strategies
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>6 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Transitioning from wealth accumulation during your active working career to systematic decumulation in retirement is one of the most complex financial transitions. While the traditional 4% safe withdrawal rule provides a historical baseline, it often proves inadequate in developing economies experiencing sticky inflation and volatile interest rate cycles. Experiencing negative market returns in early retirement can permanently impair portfolio longevity.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                To mitigate Sequence of Returns Risk, The Capital Box recommends a dynamic Three-Bucket Strategy. Bucket 1 holds 2–3 years of living expenses in guaranteed cash and liquid debt; Bucket 2 manages 4–7 years in conservative hybrid income assets yielding regular cash flows; Bucket 3 keeps remaining capital in high-quality equities compounding undisturbed for 8+ years without forced mid-market withdrawals.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Dynamic bucket allocation prevents retirees from selling equities during bear markets to fund routine living expenses.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 6 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Risk Management</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Asset Protection & Liability Shielding for HNWIs and Business Owners
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                High-net-worth professionals, corporate executives, doctors, and business promoters frequently face legal, contractual, and operational exposure that can threaten accumulated family wealth. Personal guarantees, commercial disputes, and professional liability claims can inadvertently breach personal boundaries unless legal firewalls are established well in advance.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Vital protection instruments include purchasing life insurance policies registered under the Married Women's Property Act (MWPA, 1874), which legally ring-fences policy benefits exclusively for your spouse and children, placing them beyond the reach of creditors and court attachments. Additionally, establishing private family trusts separates asset ownership from operational business exposure, securing multi-generational stability.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> MWPA declarations and private trusts create legally impervious barriers protecting family wealth from commercial claims.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 7 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Investment Discipline</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Systematic Investment Planning: Exploiting Volatility via Rupee Cost Averaging
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Market corrections and volatility often provoke emotional anxiety among retail investors, leading to destructive habits such as panic selling during market troughs and FOMO buying at cyclical market highs. However, in institutional portfolio construction, volatility is recognized as the ultimate return-multiplier when channeled systematically through disciplined Rupee Cost Averaging.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Through Systematic Investment Plans (SIPs) and Systematic Transfer Plans (STPs), regular monthly allocations acquire more fund units when market valuations fall, and fewer units when markets become expensive. This systematically drives down the blended unit acquisition cost over multi-year horizons, ensuring that economic downturns actively accelerate long-term capital compounding.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Systematic averaging transforms market corrections from moments of anxiety into compounding accelerations.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 8 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Estate & Legacy</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Estate Planning & Will Structuring: Shielding Generational Wealth from Probate Disputes
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                A significant percentage of accumulated family wealth in India remains ensnared in protracted civil court disputes due to the absence of unambiguous testamentary documentation. Passing away intestate (without a valid will) triggers statutory succession laws, leading to fragmented asset splits, family discord, and frozen financial accounts during probate proceedings.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                A well-orchestrated estate plan combines a clearly articulated registered will, updated nominations across all demat, bank, and real estate titles, and an inventory of digital assets. For estates with substantial holdings or ongoing family businesses, establishing a private family trust provides uninterrupted wealth transmission, asset protection, and tax efficiency without the delays of court probate.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> A well-orchestrated will and trust structure prevent family conflict and guarantee your legacy unfolds exactly as intended.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 9 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Capital Gains</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Strategic Capital Gains Harvesting: Offsetting Realized Losses & Rebalancing
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Understanding the mechanics of Short-Term Capital Gains (STCG) and Long-Term Capital Gains (LTCG) is vital for active market participants and real estate owners. With recent revisions to capital gains tax slabs under the Union Budget, tax harvesting has become an essential year-end discipline. Tax-loss harvesting allows investors to sell underperforming equity or debt positions at an unrealized loss to offset realized gains from profitable asset sales, effectively lowering their net aggregate tax bill.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Furthermore, Section 54, 54EC, and 54F provide legal exemptions for reinvesting real estate capital gains into eligible residential property or specified capital gains bonds within statutory timelines. The Capital Box works alongside clients during portfolio review cycles to identify tax-loss harvesting windows, analyze grandfathering provisions, and optimize post-tax returns before statutory fiscal year deadlines.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Tax-loss harvesting turns paper losses into tax-reducing assets while re-aligning your target asset allocation.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 10 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Debt Optimization</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Good Debt vs. Toxic Leverage: Structuring Liabilities for Wealth Generation
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Not all liabilities are created equal. Toxic debt—such as revolving credit card balances, unsecured personal loans, and consumer electronics financing—carries punitive interest rates of 18% to 42% that compound against your net worth. Conversely, strategic low-cost leverage—such as tax-deductible home loans or business lines of credit secured against commercial assets—can enhance capital efficiency and preserve working liquidity when deployed prudently.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Managing leverage requires maintaining a Debt-to-Income (DTI) ratio below 35% and prioritizing the systematic retirement of high-interest debt using either the "Debt Avalanche" (highest interest rate first) or "Debt Snowball" (smallest balance first) methodologies. At The Capital Box, our advisors conduct thorough liability diagnostics, helping clients restructure costly borrowing into low-cost structured debt to liberate monthly cash flows for accelerated wealth building.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Eliminating toxic high-interest debt provides a guaranteed, risk-free return equivalent to the interest rate avoided.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 11 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Family Office</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  The Family Office Model: Centralizing Governance, Succession, and Philanthropy
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>6 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                When family wealth surpasses complex multi-asset thresholds, managing investments, real estate, philanthropy, and tax obligations across disparate accountants and brokers leads to administrative friction and strategic drift. A Family Office framework centralizes financial management into a single, cohesive governance structure designed to preserve intergenerational wealth and maintain family harmony.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Key functions include drafting a formal Family Constitution, creating an Investment Policy Statement (IPS) that dictates risk boundaries, setting up private family trusts to ring-fence operating businesses from family assets, and organizing philanthropic endeavors through Section 8 entities. The Capital Box acts as a trusted strategic partner for multi-generational business families, establishing robust oversight protocols that ensure wealth endures across generations.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Centralized family governance prevents wealth dissipation and aligns multi-generational financial values.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 12 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Health Shielding</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Healthcare Inflation Defense: Super Top-Ups and Critical Illness Structuring
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Medical inflation in India persistently outpaces general consumer inflation, averaging 12% to 14% annually. A severe medical diagnosis—such as advanced oncology treatment, organ transplantation, or cardiovascular intervention—can easily exhaust basic corporate health insurance covers of ₹5 Lakhs to ₹10 Lakhs in a matter of weeks, forcing families into devastating out-of-pocket liquidations.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                A robust healthcare risk structure pairs a foundational individual or family-floater indemnity policy (₹10–15 Lakhs) with a high-deductible "Super Top-Up" policy offering ₹50 Lakhs to ₹1 Crore in coverage at an extremely nominal premium. Supplementing this with a standalone, fixed-benefit Critical Illness cover provides lump-sum liquidity upon diagnosis, replacing lost income during recuperation. The Capital Box helps clients stress-test medical coverage against catastrophic healthcare scenarios.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Super Top-Ups and Critical Illness covers provide multi-crore hospitalization protection at a fraction of base policy costs.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 13 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Education Planning</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Funding Global Higher Education: Hedging Against Currency Depreciation
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Planning for your children's higher education at premier overseas institutions (in the US, UK, Canada, or Singapore) requires compounding two compounding variables simultaneously: educational tuition inflation (historically 6–8% annually in foreign currencies) and the steady long-term depreciation of the Indian Rupee against hard reserve currencies (averaging 3–4% annually against USD).
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Funding an overseas degree solely through domestic fixed deposits or conservative debt instruments leaves parents vulnerable to severe purchasing power shortfalls. An optimal global education strategy begins 7 to 10 years in advance, allocating capital into international equity feeder funds, US Dollar-denominated assets, and aggressive equity SIPs. The Capital Box engineers education savings plans that immunize family goals against currency volatility and foreign exchange conversion spikes.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Investing in foreign currency-denominated assets eliminates currency depreciation risk for future overseas tuition costs.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 14 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Portfolio Construction</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Asset Allocation Science: Blending Direct Stocks, Active Funds & Low-Cost ETFs
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                A common debate among investors is whether to pick direct individual stocks or rely on professional fund managers. Behavioral finance data reveals that over 85% of retail direct stock pickers underperform broad market benchmarks over rolling 5-year periods due to lack of diversification, emotional trading, and research fatigue. True portfolio excellence lies not in choosing one vehicle exclusively, but in engineering a Core-Satellite asset allocation.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                The "Core" portfolio (60–70% of assets) is anchored in low-cost passive index funds (Nifty 50, Nifty Next 50) and established large-and-mid-cap active mutual funds that generate steady market returns. The "Satellite" portfolio (30–40%) incorporates high-conviction direct equities, thematic opportunities, or specialized small-cap allocations aimed at generating market-beating alpha. The Capital Box helps clients construct balanced, objective asset allocations that harness professional management while capturing high-conviction growth.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Core-Satellite architecture captures broad market compounding while systematically limiting single-stock drawdown risks.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 15 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Treasury Management</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Treasury Management for MSMEs: Maximizing Yields on Idle Operational Cash
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>4 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Many small-to-midsize business enterprises (MSMEs) leave substantial operational cash balances sitting in current accounts earning zero percent interest, or in standard bank deposits with rigid lock-ins and TDS deductions. In an economic environment where capital efficiency dictates margins, permitting surplus working capital to sit idle constitutes a significant opportunity cost.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                Active corporate treasury management utilizes short-term liquid funds, ultra-short duration debt instruments, and overnight reverse-repo facilities that offer daily liquidity, higher yields, and immediate redemption without lock-in penalties. Furthermore, structuring sweep-in accounts between current accounts and overnight funds ensures that operational cash earns returns every single weekend and bank holiday. The Capital Box assists corporate clients in automating treasury cash sweeps to enhance bottom-line profitability.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Automated treasury cash sweeps transform idle operating balances into an active secondary revenue stream.
-              </div>
-            </div>
-          </article>
-
-          <!-- ARTICLE 16 -->
-          <article class="tcb-contact-article-card center-flow-card">
-            <div>
-              <div class="text-center mb-4">
-                <div class="flex justify-center mb-2.5">
-                  <span class="tcb-pill-badge">Investor Psychology</span>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold text-amber-300 mb-2.5 text-center">
-                  Mastering Behavioral Bias: Why Mindset Outperforms Market Timing
-                </h3>
-                <div class="inline-flex items-center justify-center text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  <i class="far fa-clock mr-1.5 text-[#CBBA4F]"></i>5 Min Read
-                </div>
-              </div>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left mb-3">
-                Nobel laureate Daniel Kahneman and behavioral economists have demonstrated that financial decisions are rarely driven by pure logic. Cognitive biases—such as Loss Aversion (the emotional pain of losing ₹1 Lakh is twice as intense as the joy of gaining ₹1 Lakh), Recency Bias (projecting current market rallies or crashes indefinitely into the future), and Overconfidence—consistently derail even the most mathematically sophisticated financial plans.
-              </p>
-              <p class="text-zinc-100 text-sm md:text-base leading-relaxed text-left">
-                An investor's greatest financial risk is not market volatility—it is their own emotional reaction to market volatility. The most critical role of an independent financial advisory firm is serving as an emotional behavioral anchor during periods of extreme euphoria and panic. The Capital Box institutes systematic rebalancing rules and mandatory cooling-off periods for major portfolio changes, shielding clients from impulsive errors that destroy generational wealth.
-              </p>
-            </div>
-            <div>
-              <div class="tcb-article-note text-left">
-                <strong>Key Takeaway:</strong> Disciplined behavioral frameworks consistently generate more alpha than chasing short-term market timing.
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-    <!-- CONTACT PAGE 16 ARTICLES END -->
 
     <!-- Map + Contact Form -->
     <div
@@ -2150,18 +540,15 @@
           class="block bg-primary w-[26vw] sm:w-[28vw] md:w-[30vw] h-full absolute left-0 top-0 -z-10 pointer-events-none"
         ></div>
         <div class="max-w-7xl mx-auto relative z-10">
-          <div class="grid md:grid-cols-2 gap-8 items-center relative">
-            <!-- Image -->
-            <div
-              class="relative z-10 transform transition duration-500 hover:scale-105"
-            >
-              <!-- Map -->
-              <div class="overflow-hidden rounded-md shadow-lg w-full h-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch relative">
+            <!-- Map Column -->
+            <div class="w-full flex items-center justify-center">
+              <div class="overflow-hidden rounded-xl shadow-md border border-gray-200 w-full h-[380px] md:h-full min-h-[420px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.986624309473!2d77.05910061107345!3d28.457938275659437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18f13b9f9747%3A0x1d435dd79f8088a5!2sTHE%20CAPITAL%20BOX!5e1!3m2!1sen!2sin!4v1745922943606!5m2!1sen!2sin"
                   width="100%"
-                  height="400"
-                  class="w-full h-[380px] md:h-[450px]"
+                  height="100%"
+                  class="w-full h-full min-h-[420px]"
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
@@ -2169,15 +556,8 @@
                 ></iframe>
               </div>
             </div>
-            <!-- Text Content with border that extends behind the image -->
-            <div class="relative h-full py-8 px-4 md:py-12 md:px-8 z-10">
-              <!-- Border that extends behind the image -->
-              <div
-                class="absolute top-0 bottom-0 left-0 md:-left-24 lg:-left-32 right-0 border-4 border-primary rounded-md -z-10 pointer-events-none"
-              ></div>
-              <!-- The actual content -->
-              <!-- Contact Form -->
-
+            <!-- Contact Form Column -->
+            <div class="w-full bg-white border border-gray-200 rounded-xl p-6 sm:p-8 md:p-10 shadow-md flex flex-col justify-center relative z-10">
               <form
                 action="https://api.web3forms.com/submit"
                 method="POST"
@@ -2199,7 +579,7 @@
                   name="name"
                   placeholder="Your Name"
                   required
-                  class="bg-[#0a0f1d] border-2 border-[#d4af37] text-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="400"
                 />
@@ -2210,7 +590,7 @@
                   name="email"
                   placeholder="Your Email"
                   required
-                  class="bg-[#0a0f1d] border-2 border-[#d4af37] text-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="500"
                 />
@@ -2220,7 +600,7 @@
                   name="subject"
                   placeholder="Subject"
                   required
-                  class="bg-[#0a0f1d] border-2 border-[#d4af37] text-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="600"
                 />
@@ -2231,7 +611,7 @@
                   rows="4"
                   placeholder="Message"
                   required
-                  class="bg-[#0a0f1d] border-2 border-[#d4af37] text-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary resize-none shadow-sm"
+                  class="bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary resize-none shadow-sm"
                   data-aos="fade-up"
                   data-aos-delay="700"
                 ></textarea>
@@ -2252,625 +632,98 @@
       </div>
     </main>
     <!-- Footer -->
-    
-<footer class="bg-zinc-950 border-t border-amber-500/15 text-zinc-400 py-16 px-6 text-sm relative z-10">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-    <div class="flex flex-col gap-6">
-      <div class="flex items-center gap-4">
-        <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" class="h-10 w-auto" />
-        <div>
-          <h2 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 uppercase tracking-wider">THE CAPITAL BOX</h2>
-          <p class="text-amber-400/80 text-xs font-medium tracking-widest uppercase">UNCOMMON MONEY FOR COMMON MAN</p>
+    <footer class="bg-[#4B4B4B] text-white py-10 px-6 text-sm md:text-base">
+        <div
+            class="w-full max-w-[90%] 2xl:max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
+            <!-- Logo and Social Icons -->
+            <div class="flex flex-col items-center justify-center md:items-start gap-8">
+                <div class="flex flex-col items-center justify-center gap-6">
+                    <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" />
+                    <div class="flex flex-col">
+                        <h2
+                            class="text-xl text-center md:text-start text-primary md:text-2xl font-bold leading-tight uppercase mb-2">
+                            the capital box
+                        </h2>
+                        <p class="text-primary text-xs md:text-sm text-center md:text-start">
+                            UNCOMMON MONEY FOR COMMON MAN
+                        </p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 mt-2 justify-center md:justify-start">
+                    <a href="https://www.facebook.com/share/1Eqcw9arBm/" class="hover:text-primary"
+                        aria-label="Facebook"><i
+                            class="fab fa-facebook-f text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
+                    <a href="https://www.instagram.com/thecapitalbox_/?igsh=MWg4c3o0MjdvNjVndQ%3D%3D#"
+                        class="hover:text-primary" aria-label="instagram"><i
+                            class="fab fa-instagram text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
+                    <a href="https://www.linkedin.com/company/finfitt/" class="hover:text-primary"
+                        aria-label="linkedin"><i
+                            class="fab fa-linkedin-in text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
+                </div>
+            </div>
+
+            <!-- Expertise -->
+            <div class="px-4">
+                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
+                    Expertise
+                </h3>
+                <div class="flex flex-col gap-4 text-gray-300">
+                    <a href="./taxsolution.html" class="hover:text-primary">Tax Solutions</a>
+                    <a href="./riskmanagement.html" class="hover:text-primary">Risk Management</a>
+                    <a href="./networksolution.html" class="hover:text-primary">Networking Solutions</a>
+                    <a href="./retirementsolutions.html" class="hover:text-primary">Retirement Solutions</a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="px-4">
+                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
+                    Have Questions?
+                </h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>South City 1, Gurugram, Haryana - 122001</li>
+                    <li>+91 124428427</li>
+                    <li>contactus@thecapitalbox.com</li>
+                    <li>
+                        <a href="privacy.html" class="hover:text-primary cursor-pointer">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms.html" class="hover:text-primary cursor-pointer">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="cookie-policy.html" class="hover:text-primary cursor-pointer">Cookie Policy</a>
+                    </li>
+                    <li>
+                        <a href="disclaimer.html" class="hover:text-primary cursor-pointer">Disclaimer</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="px-4">
+                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
+                    Business Hours
+                </h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>
+                        <span class="text-yellow-400">Opening Days:</span> <br />
+                        Monday – Saturday: 09:30 AM to 6:30PM
+                    </li>
+                    <li>
+                        <span class="text-yellow-400">Vacations:</span> <br />
+                        Sundays & Official Holidays
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <p class="text-xs text-zinc-400 leading-relaxed">
-        Empowering families and businesses with bespoke financial strategies, taxation solutions, risk management, and long-term wealth protection.
-      </p>
-      <div class="flex space-x-4">
-        <a href="https://www.facebook.com/share/1Eqcw9arBm/" class="w-10 h-10 rounded-full border border-amber-500/20 bg-zinc-900/60 flex items-center justify-center text-zinc-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/thecapitalbox_/?igsh=MWg4c3o0MjdvNjVndQ%3D%3D#" class="w-10 h-10 rounded-full border border-amber-500/20 bg-zinc-900/60 flex items-center justify-center text-zinc-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/finfitt/" class="w-10 h-10 rounded-full border border-amber-500/20 bg-zinc-900/60 flex items-center justify-center text-zinc-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
 
-    <div>
-      <h3 class="text-lg font-bold text-amber-300 mb-6 uppercase tracking-wider font-['Outfit']">Expertise</h3>
-      <div class="flex flex-col space-y-3 text-xs">
-        <a href="./taxsolution.html" class="hover:text-amber-400 transition-colors">Tax Solutions</a>
-        <a href="./riskmanagement.html" class="hover:text-amber-400 transition-colors">Risk Management</a>
-        <a href="./networksolution.html" class="hover:text-amber-400 transition-colors">Networking Solutions</a>
-        <a href="./retirementsolutions.html" class="hover:text-amber-400 transition-colors">Retirement Solutions</a>
-      </div>
-    </div>
-
-    <div>
-      <h3 class="text-lg font-bold text-amber-300 mb-6 uppercase tracking-wider font-['Outfit']">Have Questions?</h3>
-      <ul class="space-y-3 text-xs">
-        <li class="flex items-start gap-2.5"><i class="fas fa-map-marker-alt text-amber-400 mt-0.5"></i> South City 1, Gurugram, Haryana - 122001</li>
-        <li class="flex items-center gap-2.5"><i class="fas fa-phone-alt text-amber-400"></i> +91 124428427</li>
-        <li class="flex items-center gap-2.5"><i class="fas fa-envelope text-amber-400"></i> contactus@thecapitalbox.com</li>
-        <li class="pt-2 border-t border-zinc-800 flex flex-wrap gap-x-4 gap-y-2 text-zinc-500">
-          <a href="privacy.html" class="hover:text-amber-400 transition-colors">Privacy Policy</a>
-          <a href="terms.html" class="hover:text-amber-400 transition-colors">Terms & Conditions</a>
-          <a href="cookie-policy.html" class="hover:text-amber-400 transition-colors">Cookie Policy</a>
-          <a href="disclaimer.html" class="hover:text-amber-400 transition-colors">Disclaimer</a>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="text-lg font-bold text-amber-300 mb-6 uppercase tracking-wider font-['Outfit']">Business Hours</h3>
-      <ul class="space-y-3 text-xs">
-        <li>
-          <span class="text-amber-400 font-semibold block">Opening Days:</span>
-          Monday – Saturday: 09:30 AM to 6:30 PM
-        </li>
-        <li>
-          <span class="text-amber-400 font-semibold block">Vacations:</span>
-          Sundays & Official Holidays
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500">
-    © 2026 All rights reserved | <a href="/" class="text-amber-400 font-semibold hover:underline">The Capital Box</a>
-  </div>
-</footer>
-
+        <div class="mt-10 text-center text-xs md:text-sm text-gray-400">
+            © 2026 All rights reserved |
+            <a href="/" class="hover:text-primary font-semibold">The Capital Box</a>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
-  
-
-<div id="cursor-spotlight"></div>
-
-
-
-
-
-<script id="drop-down-observer-script">
-  document.addEventListener("DOMContentLoaded", function() {
-    // Hero Elements Initial Drop Down Animation
-    const heroBadge = document.querySelector('.subpage-hero-badge');
-    const heroTitle = document.querySelector('.subpage-hero-title');
-    const heroDesc = document.querySelector('.subpage-hero-desc');
-    const heroPills = document.querySelector('.subpage-hero-pills');
-
-    if (heroBadge) heroBadge.classList.add('animate-drop-down', 'delay-100');
-    if (heroTitle) heroTitle.classList.add('animate-drop-down', 'delay-200');
-    if (heroDesc) heroDesc.classList.add('animate-drop-down', 'delay-300');
-    if (heroPills) heroPills.classList.add('animate-drop-down', 'delay-400');
-
-    // Scroll Drop Reveal for all content sections & cards
-    const elementsToReveal = document.querySelectorAll('.tcb-tax-card, .tcb-tax-dark, .subpage-card-container, .tcb-about-card, .tcb-about-dark, .consultation-card, .consultation-accordion, .faq-container');
-    
-    elementsToReveal.forEach(el => {
-      el.classList.add('drop-reveal');
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    elementsToReveal.forEach(el => observer.observe(el));
-  });
-</script>
-
-
-
-
-
-<script id="staggered-text-engine">
-  document.addEventListener("DOMContentLoaded", function() {
-    // Target hero subtitles, paragraphs, badges, and descriptions for staggered reveals
-    const textTargets = document.querySelectorAll('.subpage-hero-desc, .subpage-hero-pills, p.font-body-lg, .tcb-about-text, .tcb-tax-text, #get-in-touch-desc');
-
-    textTargets.forEach(target => {
-      if (target.dataset.staggerInit || target.children.length > 3) return;
-      target.dataset.staggerInit = "true";
-
-      const text = target.textContent.trim();
-      if (!text) return;
-
-      const words = text.split(/\s+/);
-      target.innerHTML = '';
-
-      words.forEach((word, idx) => {
-        const wordSpan = document.createElement('span');
-        wordSpan.className = 'stagger-word';
-        wordSpan.textContent = word;
-        wordSpan.style.animationDelay = (idx * 0.04) + 's';
-        target.appendChild(wordSpan);
-      });
-
-      // Observer to trigger staggered reveal when in view / on load
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const wordSpans = entry.target.querySelectorAll('.stagger-word');
-            wordSpans.forEach(w => w.classList.add('stagger-active'));
-          }
-        });
-      }, { threshold: 0.08 });
-
-      observer.observe(target);
-    });
-  });
-</script>
-
-
-
-<script id="particle-text-engine">
-  document.addEventListener("DOMContentLoaded", function() {
-    // Target all card titles, headers, paragraphs, and card text elements across the site
-    const cardTextTargets = document.querySelectorAll(
-      '.service-card h3, .service-card p, ' +
-      '.tcb-tax-card h2, .tcb-tax-card h3, .tcb-tax-card p, ' +
-      '.tcb-retire-card h3, .tcb-retire-card p, .tcb-retire-title, ' +
-      '.tcb-about-card h2, .tcb-about-card h3, .tcb-about-card p, .tcb-about-title, ' +
-      '.tcb-contact-article-card h3, .tcb-contact-article-card p, ' +
-      '.faq-question, .consultation-header, ' +
-      '.card h1, .card h2, .card h3, .card p, ' +
-      '[class*="card"] h2, [class*="card"] h3, [class*="card"] h4, [class*="card"] p, ' +
-      '.bg-white h2, .bg-white h3, .bg-white p'
-    );
-
-    cardTextTargets.forEach(el => {
-      if (el.dataset.particleCardInit) return;
-      el.dataset.particleCardInit = "true";
-      el.classList.add('card-particle-text');
-
-      let canvas = null;
-      let ctx = null;
-      let particles = [];
-      let animFrame = null;
-
-      el.addEventListener('mousemove', function(e) {
-        const rect = el.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
-
-        if (!canvas) {
-          canvas = document.createElement('canvas');
-          canvas.className = 'particle-overlay-canvas';
-          canvas.style.width = rect.width + 'px';
-          canvas.style.height = rect.height + 'px';
-          canvas.width = rect.width * (window.devicePixelRatio || 1);
-          canvas.height = rect.height * (window.devicePixelRatio || 1);
-
-          ctx = canvas.getContext('2d');
-          if (ctx) {
-            ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-          }
-
-          if (getComputedStyle(el).position === 'static') {
-            el.style.position = 'relative';
-          }
-          el.appendChild(canvas);
-        }
-
-        // Spawn GPU 3D particles around mouse coordinate
-        for (let i = 0; i < 4; i++) {
-          const angle = Math.random() * Math.PI * 2;
-          const speed = Math.random() * 3 + 1;
-          particles.push({
-            x: mouseX,
-            y: mouseY,
-            vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed - 0.5,
-            size: Math.random() * 2.2 + 0.8,
-            color: Math.random() > 0.4 ? '#f2ca50' : (Math.random() > 0.5 ? '#4edea3' : '#f97316'),
-            alpha: 1,
-            decay: Math.random() * 0.03 + 0.025
-          });
-        }
-
-        if (!animFrame) {
-          render();
-        }
-      });
-
-      function render() {
-        if (!ctx || !canvas) return;
-        const rect = el.getBoundingClientRect();
-        ctx.clearRect(0, 0, rect.width, rect.height);
-
-        let active = false;
-        particles.forEach((p) => {
-          p.x += p.vx;
-          p.y += p.vy;
-          p.alpha -= p.decay;
-
-          if (p.alpha > 0) {
-            active = true;
-            ctx.fillStyle = p.color;
-            ctx.globalAlpha = p.alpha;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fill();
-          }
-        });
-
-        particles = particles.filter(p => p.alpha > 0);
-
-        if (active) {
-          animFrame = requestAnimationFrame(render);
-        } else {
-          if (canvas) {
-            canvas.remove();
-            canvas = null;
-            ctx = null;
-          }
-          animFrame = null;
-        }
-      }
-
-      el.addEventListener('mouseleave', function() {
-        particles.forEach(p => p.decay *= 1.8);
-      });
-    });
-  });
-</script>
-
-
-
-<script id="glitch-text-engine">
-  document.addEventListener("DOMContentLoaded", function() {
-    // Target badges, metric labels, pill badges, and list items for interactive glitch effect
-    const glitchTargets = document.querySelectorAll('.subpage-hero-badge, .subpage-hero-pill, .tcb-pill-badge, .tcb-about-badge, .tcb-tax-badge, .tcb-article-note, nav a, footer a');
-
-    glitchTargets.forEach(el => {
-      if (el.dataset.glitchInit) return;
-      el.dataset.glitchInit = "true";
-      el.classList.add('glitch-text-target');
-
-      // Mouse Proximity Sticky Chromatic Aberration
-      el.addEventListener('mousemove', function(e) {
-        const rect = el.getBoundingClientRect();
-        const offsetX = (e.clientX - (rect.left + rect.width / 2)) * 0.15;
-        const offsetY = (e.clientY - (rect.top + rect.height / 2)) * 0.15;
-
-        el.style.textShadow = `${offsetX}px ${offsetY}px #06b6d4, ${-offsetX}px ${-offsetY}px #f2ca50`;
-      });
-
-      el.addEventListener('mouseleave', function() {
-        el.style.textShadow = 'none';
-      });
-    });
-  });
-</script>
-
-
-<script id="center-flow-script">
-  document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.center-flow-card, .tcb-contact-article-card, .rotating-card');
-
-    cards.forEach(card => {
-      card.classList.add('center-flow-card');
-
-      card.addEventListener('mousemove', function(e) {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-
-        card.style.setProperty('--center-x', x + '%');
-        card.style.setProperty('--center-y', y + '%');
-      });
-
-      card.addEventListener('mouseleave', function() {
-        card.style.setProperty('--center-x', '50%');
-        card.style.setProperty('--center-y', '50%');
-      });
-    });
-  });
-</script>
-
-
-<script id="particle-image-engine">
-  document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.subpage-hero-img, .consultation-card-bg, #history img, img[alt*="About"], img[alt*="Section"]');
-
-    images.forEach(img => {
-      const container = img.parentElement;
-      if (!container || container.dataset.particleImgInit) return;
-      container.dataset.particleImgInit = "true";
-      container.classList.add('particle-image-container');
-
-      container.addEventListener('mouseenter', function(e) {
-        if (container.querySelector('.particle-image-canvas')) return;
-
-        const rect = container.getBoundingClientRect();
-        const canvas = document.createElement('canvas');
-        canvas.className = 'particle-image-canvas';
-        canvas.width = rect.width;
-        canvas.height = rect.height;
-        container.appendChild(canvas);
-
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        // Create 3D GPU Swirl Particles
-        const particleCount = 180;
-        const particles = [];
-        for (let i = 0; i < particleCount; i++) {
-          particles.push({
-            x: Math.random() * rect.width,
-            y: Math.random() * rect.height,
-            originX: Math.random() * rect.width,
-            originY: Math.random() * rect.height,
-            vx: (Math.random() - 0.5) * 5,
-            vy: (Math.random() - 0.5) * 5,
-            size: Math.random() * 3 + 1,
-            color: Math.random() > 0.5 ? '#f2ca50' : (Math.random() > 0.5 ? '#4edea3' : '#06b6d4'),
-            alpha: 1
-          });
-        }
-
-        let isHovered = true;
-        container.addEventListener('mouseleave', () => { isHovered = false; }, { once: true });
-
-        function animateSwirl() {
-          ctx.clearRect(0, 0, rect.width, rect.height);
-          let active = false;
-
-          particles.forEach(p => {
-            if (isHovered) {
-              p.x += p.vx + Math.sin(p.y * 0.05) * 1.5;
-              p.y += p.vy + Math.cos(p.x * 0.05) * 1.5;
-              p.alpha = Math.max(0, p.alpha - 0.015);
-            } else {
-              // Reassemble back to original form
-              p.x += (p.originX - p.x) * 0.12;
-              p.y += (p.originY - p.y) * 0.12;
-              p.alpha = Math.min(1, p.alpha + 0.05);
-            }
-
-            if (p.alpha > 0.05) {
-              active = true;
-              ctx.fillStyle = p.color;
-              ctx.globalAlpha = p.alpha;
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-              ctx.fill();
-            }
-          });
-
-          if (active || isHovered) {
-            requestAnimationFrame(animateSwirl);
-          } else {
-            canvas.remove();
-          }
-        }
-        animateSwirl();
-      });
-    });
-  });
-</script>
-
-
-
-
-
-<script id="blur-highlight-component-script">
-  document.addEventListener("DOMContentLoaded", function() {
-    const cardParagraphs = document.querySelectorAll(
-      '.service-card p, .tcb-tax-card p, .tcb-retire-card p, .tcb-about-card p, ' +
-      '.tcb-contact-article-card p, .consultation-content p, .card p, ' +
-      '[class*="card"] p, .bg-white p'
-    );
-
-    const keywords = [
-      'tax', 'taxes', 'taxation', 'retirement', 'wealth', 'planning', 'financial',
-      'advisory', 'compliance', 'investors', 'solutions', 'management', 'risk',
-      'business', 'growth', 'strategy', 'goals', 'indian', 'central', 'government',
-      'income', 'services', 'security', 'portfolio', 'future', 'trust', 'tcb'
-    ];
-
-    cardParagraphs.forEach(p => { if (p.closest(".our-expertise-card, [data-static=\"true\"]")) return;
-      if (p.dataset.blurHighlightInit) return;
-      p.dataset.blurHighlightInit = "true";
-
-      const rawText = p.textContent.trim();
-      if (!rawText || rawText.length > 500) return;
-
-      const words = rawText.split(/s+/);
-      p.innerHTML = '';
-
-      words.forEach((word) => {
-        const span = document.createElement('span');
-        span.className = 'blur-highlight-word';
-        span.textContent = word;
-
-        const cleanWord = word.toLowerCase().replace(/[^a-z]/g, '');
-        if (keywords.includes(cleanWord)) {
-          span.classList.add('is-keyword');
-        }
-
-        p.appendChild(span);
-      });
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const wordSpans = entry.target.querySelectorAll('.blur-highlight-word');
-            wordSpans.forEach((wSpan, wIdx) => {
-              setTimeout(() => {
-                wSpan.classList.add('is-revealed');
-              }, wIdx * 22);
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      observer.observe(p);
-    });
-  });
-</script>
-
-
-<script id="reactbits-warped-card-script">
-  document.addEventListener("DOMContentLoaded", function() {
-    // Select ALL card components across Services, About, and all pages
-    const cards = document.querySelectorAll(
-      '.tcb-tax-card, .tcb-retire-card, .tcb-risk-card, .tcb-network-card, .service-card, ' +
-      '.tcb-about-card, .consultation-card, .consultation-item, .faq-item, .neu-glass-card, ' +
-      '.tcb-network-highlight, .tcb-tax-dark, .tcb-about-dark, [class*="card"]'
-    );
-
-    cards.forEach(card => {
-      if (card.dataset.warpedInit) return;
-      card.dataset.warpedInit = "true";
-
-      // 1. Mouse-following 3D Bulge & Tilt Distortion
-      card.addEventListener('mousemove', function(e) {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const percentX = (x / rect.width) * 100;
-        const percentY = (y / rect.height) * 100;
-
-        card.style.setProperty('--warped-mouse-x', percentX + '%');
-        card.style.setProperty('--warped-mouse-y', percentY + '%');
-
-        // 3D Bulge Tilt angles
-        const rotateX = ((y - centerY) / centerY) * -6;
-        const rotateY = ((x - centerX) / centerX) * 6;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-        card.style.borderColor = '#f2ca50';
-      });
-
-      card.addEventListener('mouseleave', function() {
-        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-        card.style.borderColor = '#d4af37';
-      });
-
-      // 2. WebGL Distortion Shader for Cards with Images
-      const img = card.querySelector('img');
-      if (!img) return;
-
-      const canvas = document.createElement('canvas');
-      canvas.className = 'reactbits-warped-canvas';
-      card.appendChild(canvas);
-
-      let renderer, scene, camera, material;
-      let mouse = { x: 0.5, y: 0.5 };
-      let targetHover = 0, currentHover = 0;
-
-      function initWebGL() {
-        if (typeof THREE === 'undefined') return;
-        const rect = card.getBoundingClientRect();
-        const w = rect.width || 320;
-        const h = rect.height || 220;
-
-        canvas.width = w * (window.devicePixelRatio || 1);
-        canvas.height = h * (window.devicePixelRatio || 1);
-
-        renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-        renderer.setSize(w, h, false);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-
-        scene = new THREE.Scene();
-        camera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, 0.1, 10);
-        camera.position.z = 1;
-
-        const textureLoader = new THREE.TextureLoader();
-        textureLoader.load(img.src, (texture) => {
-          texture.minFilter = THREE.LinearFilter;
-          texture.generateMipmaps = false;
-
-          const vertexShader = `
-            varying vec2 vUv;
-            void main() {
-              vUv = uv;
-              gl_Position = vec4(position, 1.0);
-            }
-          `;
-
-          const fragmentShader = `
-            uniform sampler2D uTexture;
-            uniform vec2 uMouse;
-            uniform float uHover;
-            varying vec2 vUv;
-
-            void main() {
-              vec2 uv = vUv;
-              vec2 distVec = uv - uMouse;
-              float dist = length(distVec);
-              float radius = 0.38;
-              float strength = 0.22;
-
-              if (dist < radius) {
-                float factor = (1.0 - smoothstep(0.0, radius, dist));
-                uv -= distVec * factor * strength * uHover;
-              }
-
-              vec4 color = texture2D(uTexture, uv);
-              gl_FragColor = color;
-            }
-          `;
-
-          material = new THREE.ShaderMaterial({
-            uniforms: {
-              uTexture: { value: texture },
-              uMouse: { value: new THREE.Vector2(0.5, 0.5) },
-              uHover: { value: 0 }
-            },
-            vertexShader: vertexShader,
-            fragmentShader: fragmentShader,
-            transparent: true
-          });
-
-          const geometry = new THREE.PlaneGeometry(1, 1);
-          const mesh = new THREE.Mesh(geometry, material);
-          scene.add(mesh);
-
-          function render() {
-            requestAnimationFrame(render);
-            currentHover += (targetHover - currentHover) * 0.1;
-            if (material) {
-              material.uniforms.uHover.value = currentHover;
-              material.uniforms.uMouse.value.set(mouse.x, mouse.y);
-            }
-            if (renderer && scene && camera) {
-              renderer.render(scene, camera);
-            }
-          }
-          render();
-        });
-      }
-
-      initWebGL();
-
-      card.addEventListener('mouseenter', () => {
-        targetHover = 1;
-        canvas.style.opacity = '1';
-        if (img) img.style.opacity = '0';
-      });
-
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        mouse.x = (e.clientX - rect.left) / rect.width;
-        mouse.y = 1.0 - (e.clientY - rect.top) / rect.height;
-      });
-
-      card.addEventListener('mouseleave', () => {
-        targetHover = 0;
-        canvas.style.opacity = '0';
-        if (img) img.style.opacity = '1';
-      });
-    });
-  });
-</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="hyperspeed-bg.js"></script>
+      <script src="editorial.js?v=3" defer></script>
   </body>
 </html>

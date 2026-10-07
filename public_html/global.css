@@ -1,14 +1,3 @@
-/* Hide all moving background canvas elements and floating particle balls */
-#kinetic-canvas,
-#threejs-container-ANIMATION_11,
-.particle-overlay-canvas,
-canvas[id*="kinetic"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
@@ -26,8 +15,140 @@ h1, h2, h3, h4, h5, h6 {
 footer h2, footer h3 {
   text-align: left;
 }
+/* Footer branding: Single line brand title with tagline and logo */
+footer > div:first-child > div:first-child {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+footer > div:first-child > div:first-child img {
+  width: 46px !important;
+  height: 46px !important;
+  object-fit: contain !important;
+  filter: none !important;
+}
+footer > div:first-child > div:first-child :is(h2, h3, h4, p.text-xl, div > h2, div > h3) {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-size: 26px !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+  margin: 0 0 6px 0 !important;
+}
+footer > div:first-child > div:first-child div > p:last-child,
+footer > div:first-child > div:first-child p.text-xs,
+footer > div:first-child > div:first-child p.text-sm {
+  font-family: 'Montserrat', 'Barlow Condensed', sans-serif !important;
+  font-size: 8.5px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+/* Universal high contrast text for dark badges and pills */
+.tcb-risk-badge,
+.tcb-retire-badge,
+.tcb-network-badge,
+.tcb-tax-badge,
+[class*='-badge'][style*='background:#1e1e1e'],
+[class*='-badge'][style*='background: #1e1e1e'] {
+  color: #ffffff !important;
+}
+.tcb-risk-banner h3 {
+  color: #CBBA4F !important;
+}
+/* Policy & Disclaimer container heading sizes */
+.container h1 {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  margin-bottom: 8px !important;
+}
+.container h2 {
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+  margin-top: 26px !important;
+  margin-bottom: 10px !important;
+}
+.container h3 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  margin-top: 18px !important;
+  margin-bottom: 8px !important;
+}
+.tcb-about-section > .tcb-about-container > .tcb-about-text {
+  max-width: 680px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
 .navbar {
   transition: background-color 0.3s ease;
+}
+/* Navbar branding: Centered masthead, Logo on left, serif text on right side-by-side */
+.navbar .flex.items-center:first-child,
+#navbar > div:first-child > div:first-child {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+}
+.navbar .flex.items-center:first-child > div,
+#navbar > div:first-child > div:first-child > div {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  margin-left: 8px !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+}
+.navbar .flex.items-center:first-child p:first-child,
+#navbar > div:first-child > div:first-child p:first-child {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-size: 26px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+  margin: 0 !important;
+  text-transform: uppercase !important;
+}
+.navbar .flex.items-center:first-child p:last-child,
+#navbar > div:first-child > div:first-child p:last-child {
+  font-family: 'Montserrat', 'Barlow Condensed', sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.14em !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+  margin: 2px 0 0 0 !important;
+  text-transform: uppercase !important;
+  opacity: 0.85 !important;
+}
+.navbar img,
+#navbar img {
+  height: 34px !important;
+  width: auto !important;
+  max-height: 36px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
 }
 /* ========================================================
    Desktop Dropdown Menu Hover Effect
@@ -325,17 +446,26 @@ footer h2, footer h3 {
   position: absolute;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
+/* Negative z-index utility for background card borders */
+.-z-5 {
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
 /* Overlapping section */
 .section-overlap {
-  margin-top: -10rem;
+  margin-top: 0;
 }
 /* Flip card styles */
 .flip-card {
   perspective: 1000px;
   transform-style: preserve-3d;
+  width: 100%;
+  position: relative;
 }
 .flip-card-inner {
-  transition: transform 0.8s;
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
   transform-style: preserve-3d;
 }
 .flip-card.flipped .flip-card-inner {
@@ -343,15 +473,41 @@ footer h2, footer h3 {
 }
 .flip-card-front,
 .flip-card-back {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
   min-height: 20rem;
+  width: 100%;
+}
+.flip-card-front {
+  position: relative;
+  transform: rotateY(0deg);
+  z-index: 2;
+  transition: visibility 0.4s ease;
 }
 .flip-card-back {
+  position: absolute;
+  inset: 0;
   transform: rotateY(180deg);
+  z-index: 1;
+  transition: visibility 0.4s ease;
+}
+.flip-card:not(.flipped) .flip-card-back {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.flip-card.flipped .flip-card-front {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.flip-card.flipped .flip-card-back {
+  position: relative;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 2;
 }
 /* Gradient background */
 .gradient-bg {
-  background: linear-gradient(to right, #cbba4f, #e2d77a);
+  background: linear-gradient(to right, #1e1e1e, #d8d6cb);
 }
 /* Quote icon */
 .quote-icon,
@@ -365,7 +521,7 @@ footer h2, footer h3 {
 /* Spinner */
 .loader {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid #CBBA4F;
+  border-top: 8px solid #1e1e1e;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -516,17 +672,51 @@ footer h2, footer h3 {
     padding: 6.5rem 2rem 6.5rem 2rem;
   }
 }
-/* Subpage Card Container below Hero - overlapping elegantly onto the hero background */
+/* Subpage Card Container below Hero - clean spacing without overlapping hero text */
 .subpage-card-container {
   position: relative;
   z-index: 20;
-  margin-top: -3.5rem !important;
-  margin-bottom: 3.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2.5rem !important;
 }
 @media (min-width: 768px) {
   .subpage-card-container {
-    margin-top: -5rem !important;
-    margin-bottom: 4.5rem !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 3.5rem !important;
+  }
+}
+/* Ensure card headings, descriptions and pills never truncate or get clipped */
+.service-box-container a span,
+.service-box-container a p,
+.service-card h3,
+.service-card p,
+.tcb-card h3,
+.tcb-card h4,
+.tcb-card p,
+.consultation-card h3,
+.consultation-card p,
+.consultation-card-text,
+.job-card h3,
+.job-card p {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+.consultation-card-overlay p,
+.consultation-card-text {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+@media (min-width: 768px) {
+  .consultation-card-overlay p,
+  .consultation-card-text {
+    font-size: 16px !important;
   }
 }
 .subpage-hero-content {
@@ -549,7 +739,7 @@ footer h2, footer h3 {
   border-radius: 9999px;
   background-color: rgba(203, 186, 79, 0.18);
   border: 1px solid rgba(203, 186, 79, 0.45);
-  color: #CBBA4F;
+  color: #1e1e1e;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -561,7 +751,7 @@ footer h2, footer h3 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #CBBA4F;
+  background-color: #1e1e1e;
   box-shadow: 0 0 6px rgba(203, 186, 79, 0.8);
 }
 .subpage-hero-title {
@@ -652,11 +842,11 @@ footer h2, footer h3 {
 }
 .consultation-item.consultation-active {
   background-color: rgba(203, 186, 79, 0.08);
-  border-left: 4px solid #CBBA4F;
+  border-left: 4px solid #1e1e1e;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
 }
 .consultation-item.consultation-active .consultation-header span:first-child {
-  color: #CBBA4F;
+  color: #1e1e1e;
   font-weight: 600;
 }
 .consultation-header {
@@ -672,7 +862,7 @@ footer h2, footer h3 {
   transition: color 0.25s ease;
 }
 .consultation-header:hover {
-  color: #CBBA4F;
+  color: #1e1e1e;
 }
 .consultation-item.consultation-active .consultation-header {
   padding-bottom: 0.5rem;
@@ -687,7 +877,7 @@ footer h2, footer h3 {
 }
 .consultation-item.consultation-active .consultation-arrow {
   transform: rotate(90deg);
-  color: #CBBA4F;
+  color: #1e1e1e;
 }
 .consultation-content {
   max-height: 0;
@@ -722,25 +912,30 @@ footer h2, footer h3 {
   max-width: 56rem;
   margin-inline: auto;
   margin-top: 2.25rem;
+  margin-bottom: 3.5rem;
 }
 @media (max-width: 640px) {
   .faq-container {
     margin-top: 2.25rem !important;
+    margin-bottom: 2.5rem !important;
   }
 }
+.faq-callout-banner {
+  margin-top: clamp(60px, 7vw, 90px) !important;
+  margin-bottom: 2rem !important;
+}
 .faq-item {
-  background-color: #0a0f1d;
-  background: #0a0f1d;
-  border: 2px solid #d4af37;
+  background-color: #ffffff;
+  border: 1.5px solid #e5e7eb;
   border-radius: 14px;
   overflow: hidden;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 .faq-item:hover,
 .faq-item.active {
-  border-color: #f2ca50;
-  box-shadow: 0 8px 25px rgba(242, 202, 80, 0.25);
+  border-color: #1e1e1e;
+  box-shadow: 0 6px 20px rgba(203, 186, 79, 0.15);
 }
 .faq-header {
   display: flex;
@@ -749,7 +944,7 @@ footer h2, footer h3 {
   padding: 1.15rem 1.25rem;
   cursor: pointer;
   user-select: none;
-  background-color: #0a0f1d;
+  background-color: #ffffff;
   transition: background-color 0.25s ease;
   gap: 1rem;
 }
@@ -759,7 +954,7 @@ footer h2, footer h3 {
   }
 }
 .faq-item.active .faq-header {
-  background-color: rgba(242, 202, 80, 0.1);
+  background-color: rgba(203, 186, 79, 0.05);
 }
 .faq-header-left {
   display: flex;
@@ -781,9 +976,8 @@ footer h2, footer h3 {
   height: 32px;
   min-width: 32px;
   border-radius: 8px;
-  background-color: rgba(242, 202, 80, 0.18);
-  border: 1px solid rgba(242, 202, 80, 0.4);
-  color: #f2ca50;
+  background-color: #f3f4f6;
+  color: #6b7280;
   font-size: 0.8rem;
   font-weight: 700;
   transition: background-color 0.25s ease, color 0.25s ease;
@@ -798,13 +992,13 @@ footer h2, footer h3 {
 }
 .faq-item.active .faq-number,
 .faq-item:hover .faq-number {
-  background-color: #f2ca50;
-  color: #0a0f1d;
+  background-color: #1e1e1e;
+  color: #ffffff;
 }
 .faq-question {
   font-size: 1.05rem;
-  font-weight: 700;
-  color: #f2ca50;
+  font-weight: 600;
+  color: #1f2937;
   margin: 0;
   text-align: left !important;
   line-height: 1.4;
@@ -816,7 +1010,7 @@ footer h2, footer h3 {
   }
 }
 .faq-item.active .faq-question {
-  color: #f2ca50;
+  color: #8c7c25;
 }
 .faq-icon-wrapper {
   width: 34px;
@@ -826,9 +1020,9 @@ footer h2, footer h3 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(242, 202, 80, 0.18);
-  border: 1px solid rgba(242, 202, 80, 0.4);
-  color: #f2ca50;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 @media (min-width: 768px) {
@@ -840,9 +1034,9 @@ footer h2, footer h3 {
 }
 .faq-item.active .faq-icon-wrapper {
   transform: rotate(180deg);
-  background-color: #f2ca50;
-  border-color: #f2ca50;
-  color: #0a0f1d;
+  background-color: #1e1e1e;
+  border-color: #1e1e1e;
+  color: #ffffff;
 }
 .faq-body {
   max-height: 0;
@@ -850,14 +1044,14 @@ footer h2, footer h3 {
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease, padding 0.3s ease;
   padding: 0 1.25rem;
-  background-color: #0a0f1d;
+  background-color: rgba(203, 186, 79, 0.02);
 }
 .faq-item.active .faq-body {
   max-height: 380px;
   opacity: 1;
   transition: max-height 0.4s cubic-bezier(1, 0, 1, 0), opacity 0.35s ease, padding 0.3s ease;
   padding: 0.75rem 1.25rem 1.35rem 1.25rem;
-  border-top: 1px dashed rgba(242, 202, 80, 0.3);
+  border-top: 1px dashed rgba(203, 186, 79, 0.25);
 }
 @media (min-width: 768px) {
   .faq-body {
@@ -868,10 +1062,9 @@ footer h2, footer h3 {
   }
 }
 .faq-answer {
-  color: #ffffff;
+  color: #4b5563;
   font-size: 0.95rem;
-  line-height: 1.8;
-}
+  line-height: 1.65;
   margin: 0;
   text-align: left;
 }
@@ -893,8 +1086,7 @@ footer h2, footer h3 {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  min-height: 260px;
-  max-height: 420px;
+  min-height: 480px;
   display: flex;
   width: 100%;
 }
@@ -913,14 +1105,14 @@ footer h2, footer h3 {
   height: 100%;
   background-color: rgba(203, 186, 79, 0.88);
   backdrop-filter: blur(2px);
-  padding: 1.25rem 1.25rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media (min-width: 768px) {
   .consultation-card-overlay {
-    padding: 1.5rem 1.75rem;
+    padding: 2.5rem 2rem;
   }
 }
 
@@ -1107,11 +1299,13 @@ ol.list-decimal.pl-5 p,
 .space-y-2\.5 > li + li {
   margin-top: 0.65rem !important;
 }
+.space-y-3 > :not([hidden]) ~ :not([hidden]),
+.space-y-3 > li + li {
+  margin-top: 0.75rem !important;
+}
 .space-y-4 > :not([hidden]) ~ :not([hidden]),
 .space-y-4 > li + li {
   margin-top: 1rem !important;
 }
-
-
 
 
