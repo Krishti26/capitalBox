@@ -440,6 +440,13 @@ function initConsultationAccordion() {
   }
 
   items.forEach((item) => {
+    // Hover to reveal answer / content on desktop
+    item.addEventListener("mouseenter", () => {
+      if (window.matchMedia("(pointer: fine)").matches) {
+        openItem(item);
+      }
+    });
+
     // Click / tap toggle — opens on first click, closes on second click
     const header = item.querySelector(".consultation-header");
     header?.addEventListener("click", (e) => {
