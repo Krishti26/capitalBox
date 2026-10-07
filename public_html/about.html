@@ -129,9 +129,12 @@
     }
     .tcb-about-note{
     margin-top:25px;
-    padding:18px;
+    padding:18px 24px;
     background:#e5e4dc;
-    border-left:4px solid #1e1e1e;
+    border-top:1px solid #d8d6cb;
+    border-bottom:1px solid #d8d6cb;
+    border-left:none;
+    text-align:center;
     font-style:italic;
     }
     @media(max-width:768px){
@@ -142,8 +145,8 @@
     .tcb-about-title{font-size:28px;text-align:center;}
     }
     </style>
-    <link rel="stylesheet" href="editorial.css?v=7" />
-  <link rel="stylesheet" href="mobile.css?v=1" />
+    <link rel="stylesheet" href="editorial.css?v=38" />
+  <link rel="stylesheet" href="mobile.css?v=7" />
 </head>
 
 <body>
@@ -241,10 +244,7 @@
       </div>
       <a href="./about.html" class="block px-6 py-2 text-white hover:bg-primary">About</a>
       <a href="./contact.html" class="block px-6 py-2 text-white hover:bg-primary">Contact</a>
-      <div class="flex justify-center mt-4">
-        <a href="./careers.html"
-          class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal">Careers</a>
-      </div>
+      <a href="./careers.html" class="block px-6 py-2 text-white hover:bg-primary">Careers</a>
     </div>
   </nav>
   <main>
@@ -412,7 +412,7 @@
     <br><br>
     A client-first philosophy means listening carefully, identifying real challenges, and creating personalized pathways that align with meaningful outcomes. Rather than applying generic financial advice, we prioritize strategies that reflect specific circumstances.
     </p>
-    <div class="tcb-about-note">
+    <div class="tcb-about-note text-center" style="text-align: center;">
     Key Insight: Strong financial partnerships begin with understanding people before designing solutions.
     </div>
     </div>
@@ -1289,7 +1289,7 @@
       initConsultationAccordion();
     }
   </script>
-    <script src="editorial.js?v=3" defer></script>
+    <script src="editorial.js?v=4" defer></script>
   </body>
 
 </html>

@@ -102,8 +102,8 @@
     </script>
 
     <meta name="google-site-verification" content="EwWbCvllE7eILC873ZeSIS3Y1x_ljD7HaHmv1XHxF_Q" />
-    <link rel="stylesheet" href="editorial.css?v=27" />
-    <link rel="stylesheet" href="mobile.css?v=27" />
+    <link rel="stylesheet" href="editorial.css?v=38" />
+    <link rel="stylesheet" href="mobile.css?v=6" />
     <style>
       .hero-section h1,
       .hero-section .hero-title,
@@ -133,6 +133,23 @@
         font-style: italic !important;
         color: #ffffff !important;
         margin-top: 4px !important;
+      }
+      button[type="submit"],
+      #contact-form button[type="submit"],
+      #form-container button[type="submit"] {
+        background-color: #1e1e1e !important;
+        color: #ffffff !important;
+        border: 1px solid #1e1e1e !important;
+      }
+      footer h3,
+      body footer h3,
+      body footer :is(h2, h3, h4) {
+        text-align: left !important;
+        font-family: 'Instrument Serif', Georgia, serif !important;
+        font-size: clamp(32px, 2.5vw, 42px) !important;
+        font-weight: 400 !important;
+        line-height: 1.15 !important;
+        margin-bottom: 20px !important;
       }
     </style>
 </head>
@@ -357,13 +374,11 @@
           class="block px-6 py-2 text-white hover:bg-primary"
           >Contact</a
         >
-        <div class="flex justify-center mt-4">
-          <a
-            href="./careers.html"
-            class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal"
-            >Careers</a
-          >
-        </div>
+        <a
+          href="./careers.html"
+          class="block px-6 py-2 text-white hover:bg-primary"
+          >Careers</a
+        >
       </div>
     </nav>
     <main>
@@ -1233,7 +1248,7 @@
 
       <!--Get in touch  -->
       <div
-        class="w-full max-w-[95%] sm:max-w-[90%] md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-8 md:py-12 lg:py-16"
+        class="w-full max-w-[700px] mx-auto px-4 sm:px-6 py-8 md:py-12"
       >
         <div class="relative w-full">
           <div class="flip-card w-full">
@@ -1283,23 +1298,41 @@
 
               <!-- Back Side -->
               <div
-                class="flip-card-back bg-white shadow-lg rounded-xl border-y-8 border-[#CBBA4F] p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12"
+                class="flip-card-back bg-[#FAF9F5] shadow-2xl rounded-sm border border-[#D8D6CB] p-5 sm:p-7 md:p-8 transition-all duration-300 relative overflow-hidden"
               >
-                <div id="form-container">
-                  <h3
-                    class="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800 mb-3"
-                  >
-                    Let's discuss how we can grow together!
-                  </h3>
-                  <p
-                    class="text-gray-600 text-center text-sm sm:text-base md:text-lg mb-6"
-                  >
-                    Leave your details below and our Business Development
-                    Manager will get back to you.
-                  </p>
+                <!-- Decorative top gold accent line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-[#CBBA4F]"></div>
+
+                <!-- Close / Flip Back Button in top right -->
+                <button
+                  type="button"
+                  id="cancel-flip-btn"
+                  class="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 text-gray-500 hover:text-black transition-colors p-1.5 text-xs font-semibold flex items-center gap-1 uppercase tracking-wider cursor-pointer z-20"
+                  title="Close form"
+                >
+                  <span>Close</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+
+                <div id="form-container" class="w-full">
+                  <div class="text-center mb-6">
+                    <p class="text-xs uppercase tracking-[0.2em] text-[#8e8d82] mb-1.5 font-semibold">
+                      [ Direct Advisory Inquiry ]
+                    </p>
+                    <h3
+                      class="text-2xl sm:text-3xl text-[#1E1E1E] mb-2"
+                      style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;"
+                    >
+                      Let's discuss how we can grow together
+                    </h3>
+                    <p class="text-[#6E6D64] text-xs sm:text-sm max-w-md mx-auto font-light">
+                      Leave your details below and our wealth advisory team will get back to you promptly.
+                    </p>
+                  </div>
+
                   <form
                     id="contact-form"
-                    class="space-y-5"
+                    class="space-y-4"
                     action="https://api.web3forms.com/submit"
                     method="POST"
                   >
@@ -1316,81 +1349,99 @@
                       style="display: none"
                     />
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <!-- Name -->
                       <div>
-                        <label class="block text-gray-700 font-medium mb-2"
-                          >Name</label
-                        >
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-[#444] mb-1.5">
+                          Your Name <span class="text-[#CBBA4F]">*</span>
+                        </label>
                         <input
                           name="name"
                           type="text"
-                          class="w-full px-4 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-[#CBBA4F]"
+                          placeholder="e.g. Rahul Sharma"
+                          class="w-full px-3.5 py-2.5 bg-white border border-[#D8D6CB] rounded-sm text-sm text-[#1E1E1E] placeholder-gray-400 focus:outline-none focus:border-[#1E1E1E] focus:ring-1 focus:ring-[#1E1E1E] transition duration-200"
                           required
                         />
                       </div>
                       <!-- Email -->
                       <div>
-                        <label class="block text-gray-700 font-medium mb-2"
-                          >Email</label
-                        >
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-[#444] mb-1.5">
+                          Email Address <span class="text-[#CBBA4F]">*</span>
+                        </label>
                         <input
                           name="email"
                           type="email"
-                          class="w-full px-4 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-[#CBBA4F]"
+                          placeholder="name@company.com"
+                          class="w-full px-3.5 py-2.5 bg-white border border-[#D8D6CB] rounded-sm text-sm text-[#1E1E1E] placeholder-gray-400 focus:outline-none focus:border-[#1E1E1E] focus:ring-1 focus:ring-[#1E1E1E] transition duration-200"
                           required
                         />
                       </div>
-                      <!-- Subject -->
-                      <div>
-                        <label class="block text-gray-700 font-medium mb-2"
-                          >Subject</label
-                        >
-                        <input
-                          name="subject"
-                          type="text"
-                          class="w-full px-4 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-[#CBBA4F]"
-                          required
-                        />
-                      </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div>
+                      <label class="block text-xs font-semibold uppercase tracking-wider text-[#444] mb-1.5">
+                        Subject <span class="text-[#CBBA4F]">*</span>
+                      </label>
+                      <input
+                        name="subject"
+                        type="text"
+                        placeholder="e.g. Portfolio Strategy & Taxation"
+                        class="w-full px-3.5 py-2.5 bg-white border border-[#D8D6CB] rounded-sm text-sm text-[#1E1E1E] placeholder-gray-400 focus:outline-none focus:border-[#1E1E1E] focus:ring-1 focus:ring-[#1E1E1E] transition duration-200"
+                        required
+                      />
                     </div>
 
                     <!-- Message -->
                     <div>
-                      <label class="block text-gray-700 font-medium mb-2"
-                        >Message</label
-                      >
+                      <label class="block text-xs font-semibold uppercase tracking-wider text-[#444] mb-1.5">
+                        Message / Requirements <span class="text-[#CBBA4F]">*</span>
+                      </label>
                       <textarea
                         name="message"
-                        rows="4"
-                        class="w-full px-4 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-[#CBBA4F]"
+                        rows="3"
+                        placeholder="Tell us about your financial goals or questions..."
+                        class="w-full px-3.5 py-2.5 bg-white border border-[#D8D6CB] rounded-sm text-sm text-[#1E1E1E] placeholder-gray-400 focus:outline-none focus:border-[#1E1E1E] focus:ring-1 focus:ring-[#1E1E1E] transition duration-200 resize-y"
                         required
                       ></textarea>
                     </div>
 
-                    <!-- Submit -->
-                    <button
-                      type="submit"
-                      class="px-6 py-2 sm:py-3 bg-[#CBBA4F] text-white font-medium rounded hover:bg-[#CBBA4F]/40 transition duration-300"
-                    >
-                      Submit
-                    </button>
+                    <!-- Actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+                      <p class="text-xs text-[#8e8d82] flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-[#CBBA4F]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                        <span>Strict confidentiality guaranteed.</span>
+                      </p>
+                      <button
+                        type="submit"
+                        class="w-full sm:w-auto px-7 py-3 bg-[#1E1E1E] hover:bg-[#383838] text-white font-medium rounded-sm transition duration-300 uppercase tracking-widest text-xs flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                        style="background-color: #1E1E1E !important; color: #FFFFFF !important;"
+                      >
+                        <span>Submit Message</span>
+                        <span class="text-sm font-light">→</span>
+                      </button>
+                    </div>
                   </form>
                 </div>
 
                 <!-- Success -->
-                <div id="success-message" class="text-center py-8 hidden">
-                  <h3 class="text-2xl font-bold text-green-600 mb-4">
-                    Thank you!
+                <div id="success-message" class="text-center py-12 hidden">
+                  <div class="w-16 h-16 bg-[#1E1E1E] text-[#CBBA4F] rounded-full flex items-center justify-center mx-auto mb-5 text-2xl font-bold">
+                    ✓
+                  </div>
+                  <h3 class="text-3xl text-[#1E1E1E] mb-3" style="font-family: 'Instrument Serif', Georgia, serif;">
+                    Thank you for reaching out!
                   </h3>
-                  <p class="text-gray-600 mb-6">
-                    Your message has been sent successfully.
+                  <p class="text-[#6E6D64] max-w-md mx-auto mb-8 text-base font-light">
+                    Your inquiry has been received. Our advisory team will review your message and contact you shortly.
                   </p>
                   <button
                     id="back-btn"
-                    class="px-6 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition duration-300"
+                    type="button"
+                    class="px-8 py-3 bg-[#1E1E1E] hover:bg-[#383838] text-white text-xs uppercase tracking-widest rounded-sm transition duration-300 cursor-pointer"
+                    style="background-color: #1E1E1E !important; color: #ffffff !important;"
                   >
-                    Back
+                    Back to Overview
                   </button>
                 </div>
               </div>
@@ -1431,83 +1482,83 @@
     <!-- Footer -->
 <footer class="bg-[#4B4B4B] text-white py-10 px-6 text-sm md:text-base">
         <div
-            class="w-full max-w-[90%] 2xl:max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
+            class="w-full max-w-[90%] 2xl:max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-start">
             <!-- Logo and Social Icons -->
-            <div class="flex flex-col items-center justify-center md:items-start gap-8">
-                <div class="flex flex-col items-center justify-center gap-6">
-                    <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" />
-                    <div class="flex flex-col">
+            <div class="flex flex-col items-start justify-start gap-6 text-left">
+                <div class="flex flex-col items-start justify-start gap-4 text-left">
+                    <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" class="h-12 w-auto object-contain" />
+                    <div class="flex flex-col text-left">
                         <h3
-                            class="text-xl text-center md:text-start text-primary md:text-2xl font-bold leading-tight uppercase mb-2">
+                            class="text-xl md:text-2xl font-bold leading-tight uppercase mb-1 text-left">
                             the capital box
                         </h3>
-                        <p class="text-primary text-xs md:text-sm text-center md:text-start">
+                        <p class="text-xs md:text-sm text-left opacity-80 uppercase tracking-wider">
                             UNCOMMON MONEY FOR COMMON MAN
                         </p>
                     </div>
                 </div>
-                <div class="flex space-x-4 mt-2 justify-center md:justify-start">
-                    <a href="https://www.facebook.com/share/1Eqcw9arBm/" class="hover:text-primary"
+                <div class="flex space-x-4 mt-1 justify-start">
+                    <a href="https://www.facebook.com/share/1Eqcw9arBm/" class="hover:opacity-60"
                         aria-label="Facebook"><i
-                            class="fab fa-facebook-f text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
+                            class="fab fa-facebook-f text-lg border p-2.5 rounded-full hover:bg-black/10"></i></a>
                     <a href="https://www.instagram.com/thecapitalbox_/?igsh=MWg4c3o0MjdvNjVndQ%3D%3D#"
-                        class="hover:text-primary" aria-label="instagram"><i
-                            class="fab fa-instagram text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
-                    <a href="https://www.linkedin.com/company/finfitt/" class="hover:text-primary"
+                        class="hover:opacity-60" aria-label="instagram"><i
+                            class="fab fa-instagram text-lg border p-2.5 rounded-full hover:bg-black/10"></i></a>
+                    <a href="https://www.linkedin.com/company/finfitt/" class="hover:opacity-60"
                         aria-label="linkedin"><i
-                            class="fab fa-linkedin-in text-xl md:text-2xl border p-2 rounded-full hover:bg-white"></i></a>
+                            class="fab fa-linkedin-in text-lg border p-2.5 rounded-full hover:bg-black/10"></i></a>
                 </div>
             </div>
 
             <!-- Expertise -->
-            <div class="px-4">
-                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
+            <div class="flex flex-col items-start text-left">
+                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-left">
                     Expertise
                 </h3>
-                <div class="flex flex-col gap-4 text-gray-300">
-                    <a href="./taxsolution.html" class="hover:text-primary">Tax Solutions</a>
-                    <a href="./riskmanagement.html" class="hover:text-primary">Risk Management</a>
-                    <a href="./networksolution.html" class="hover:text-primary">Networking Solutions</a>
-                    <a href="./retirementsolutions.html" class="hover:text-primary">Retirement Solutions</a>
+                <div class="flex flex-col gap-3 text-left">
+                    <a href="./taxsolution.html" class="hover:opacity-60">Tax Solutions</a>
+                    <a href="./riskmanagement.html" class="hover:opacity-60">Risk Management</a>
+                    <a href="./networksolution.html" class="hover:opacity-60">Networking Solutions</a>
+                    <a href="./retirementsolutions.html" class="hover:opacity-60">Retirement Solutions</a>
                 </div>
             </div>
 
             <!-- Contact Info -->
-            <div class="px-4">
-                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
+            <div class="flex flex-col items-start text-left">
+                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-left">
                     Have Questions?
                 </h3>
-                <ul class="space-y-2 text-gray-300">
+                <ul class="space-y-2 text-left">
                     <li>South City 1, Gurugram, Haryana - 122001</li>
                     <li>+91 124428427</li>
                     <li>contactus@thecapitalbox.com</li>
                     <li>
-                        <a href="privacy.html" class="hover:text-primary cursor-pointer">Privacy Policy</a>
+                        <a href="privacy.html" class="hover:opacity-60 cursor-pointer">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="terms.html" class="hover:text-primary cursor-pointer">Terms & Conditions</a>
+                        <a href="terms.html" class="hover:opacity-60 cursor-pointer">Terms & Conditions</a>
                     </li>
                     <li>
-                        <a href="cookie-policy.html" class="hover:text-primary cursor-pointer">Cookie Policy</a>
+                        <a href="cookie-policy.html" class="hover:opacity-60 cursor-pointer">Cookie Policy</a>
                     </li>
                     <li>
-                        <a href="disclaimer.html" class="hover:text-primary cursor-pointer">Disclaimer</a>
+                        <a href="disclaimer.html" class="hover:opacity-60 cursor-pointer">Disclaimer</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Business Hours -->
-            <div class="px-4">
-                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-primary">
+            <div class="flex flex-col items-start text-left">
+                <h3 class="text-lg md:text-2xl font-semibold mb-4 text-left">
                     Business Hours
                 </h3>
-                <ul class="space-y-2 text-gray-300">
+                <ul class="space-y-3 text-left">
                     <li>
-                        <span class="text-yellow-400">Opening Days:</span> <br />
+                        <span class="font-medium">Opening Days:</span> <br />
                         Monday – Saturday: 09:30 AM to 6:30PM
                     </li>
                     <li>
-                        <span class="text-yellow-400">Vacations:</span> <br />
+                        <span class="font-medium">Vacations:</span> <br />
                         Sundays & Official Holidays
                     </li>
                 </ul>
@@ -1744,6 +1795,11 @@
         // Flip on send message
         sendMessageBtn.addEventListener("click", handleFlip);
 
+        const cancelFlipBtn = document.getElementById("cancel-flip-btn");
+        if (cancelFlipBtn) {
+          cancelFlipBtn.addEventListener("click", handleFlip);
+        }
+
         // ✅ Web3Forms Integration
         contactForm.addEventListener("submit", async function (e) {
           e.preventDefault();
@@ -1935,6 +1991,6 @@
         updateTestimonialSlides();
       }, 5000);
     </script>
-      <script src="editorial.js?v=3" defer></script>
+      <script src="editorial.js?v=4" defer></script>
   </body>
 </html>

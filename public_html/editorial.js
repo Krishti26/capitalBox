@@ -95,6 +95,27 @@
         el.addEventListener('pointerleave',()=>cursor.classList.remove('is-visible'));
         el.addEventListener('pointermove',e=>{cursor.style.left=`${e.clientX}px`;cursor.style.top=`${e.clientY}px`;});
       });
+      // Dynamic 3D perspective tracking for consultation cards
+      document.querySelectorAll('.consultation-card').forEach(card => {
+        let rafId = null;
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = (((y - centerY) / centerY) * -4.5).toFixed(2);
+          const rotateY = (((x - centerX) / centerX) * 4.5).toFixed(2);
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(() => {
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.015)`;
+          });
+        });
+        card.addEventListener('mouseleave', () => {
+          if (rafId) cancelAnimationFrame(rafId);
+          card.style.transform = '';
+        });
+      });
     }
     // Resolve each icon against its actual surface, including changing tabs and menus.
     const icons = [...document.querySelectorAll('i[class*="fa"], svg')].filter(el => {

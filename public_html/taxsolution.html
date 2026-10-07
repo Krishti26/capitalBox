@@ -147,9 +147,12 @@
     }
     .tcb-tax-note{
     margin-top:25px;
-    padding:18px;
+    padding:18px 24px;
     background:#e5e4dc;
-    border-left:4px solid #1e1e1e;
+    border-top:1px solid #d8d6cb;
+    border-bottom:1px solid #d8d6cb;
+    border-left:none;
+    text-align:center;
     font-style:italic;
     }
     @media(max-width:768px){
@@ -221,8 +224,8 @@
       }
     }
     </style>
-      <link rel="stylesheet" href="editorial.css?v=7" />
-  <link rel="stylesheet" href="mobile.css?v=1" />
+      <link rel="stylesheet" href="editorial.css?v=38" />
+  <link rel="stylesheet" href="mobile.css?v=6" />
 </head>
 
   <body>
@@ -425,13 +428,11 @@
           class="block px-6 py-2 text-white hover:bg-primary"
           >Contact</a
         >
-        <div class="flex justify-center mt-4">
-          <a
-            href="./careers.html"
-            class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal"
-            >Careers</a
-          >
-        </div>
+        <a
+          href="./careers.html"
+          class="block px-6 py-2 text-white hover:bg-primary"
+          >Careers</a
+        >
       </div>
     </nav>
     <!-- -->
@@ -650,7 +651,7 @@
           <div
             class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 hover:-translate-y-1 border-4 border-primary p-6 md:p-8"
           >
-            <h2 class="text-xl md:text-4xl font-bold text-gray-800 mb-4 text-center">Our Expertise:</h2>
+            <h2 class="text-3xl md:text-5xl font-normal text-gray-900 mb-4 text-center">Our Expertise:</h2>
             <p class="text-md md:text-lg text-gray-700 font-medium leading-relaxed">
               We deliver practical, commercially focused, and socially
               responsible tax solutions for multinational corporations, Indian
@@ -799,7 +800,7 @@
     <br><br>
     At The Capital Box, proactive tax planning focuses on aligning financial decisions with evolving regulations while supporting broader business and personal wealth objectives.
     </p>
-    <div class="tcb-tax-note">
+    <div class="tcb-tax-note text-center" style="text-align: center;">
     Key Insight: Tax planning works best when it becomes a year-round strategy, not a last-minute obligation.
     </div>
     </div>
@@ -1210,6 +1211,6 @@
         initTaxTabs();
       }
     </script>
-      <script src="editorial.js?v=3" defer></script>
+      <script src="editorial.js?v=4" defer></script>
   </body>
 </html>
