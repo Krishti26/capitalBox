@@ -312,8 +312,8 @@ body :is(.swiper-pagination-bullet-active,.testimonial-dots button.active){opaci
 /* Center long-form article content beneath its heading. */
 body main .tcb-article-section .tcb-text{margin-left:auto!important;margin-right:auto!important}
 body main .tcb-article-section :is(.tcb-mini-note,.tcb-article-note){max-width:75ch;margin-left:auto!important;margin-right:auto!important}
-body main .tcb-article-section :is(.tcb-text,.tcb-mini-note,.tcb-article-note){width:100%;max-width:820px!important}
-body main .tcb-about-section > .tcb-about-container > .tcb-about-text{width:100%!important;max-width:680px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important;font-size:19px!important;line-height:1.7!important}
+body main :is(.tcb-about-section,.tcb-tax-section,.tcb-article-section) > :is(.tcb-about-container,.tcb-tax-container,.tcb-container) > :is(.tcb-about-text,.tcb-tax-text,.tcb-text){width:100%!important;max-width:680px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important;font-size:19px!important;line-height:1.7!important}
+body main :is(.tcb-tax-card,.tcb-about-card) :is(.tcb-tax-text,.tcb-about-text){text-align:left!important;max-width:none!important}
 /* Remove decorative horizontal section dividers. */
 body main>.editorial-section,body footer{border-top:0!important;border-bottom:0!important}
 body main>.editorial-section>div:not(.service-box-container){border-top:0!important;border-bottom:0!important}
