@@ -629,3 +629,20 @@ body main .show-more-btn {
 body main .show-more-btn:hover {
   opacity: 0.7 !important;
 }
+
+/* ========================================================
+   Consultations & Split Card Container Width Standardization
+   ======================================================== */
+body main div:has(> .flex.flex-col.md\:flex-row > .consultation-accordion),
+body main div:has(> div > div > .consultation-accordion),
+body main .consultation-section > .container {
+  max-width: 1140px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 1024px) {
+  body main .max-w-6xl {
+    max-width: 1140px !important;
+  }
+}
