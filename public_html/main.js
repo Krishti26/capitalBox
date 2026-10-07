@@ -275,7 +275,21 @@ function initFaqAccordion() {
   }
 
   faqItems.forEach((item) => {
-    // Click to toggle: click once to show answer, click again on question to close
+    // Hover on question: immediately show answer
+    item.addEventListener("mouseenter", () => {
+      if (window.matchMedia("(pointer: fine)").matches) {
+        faqItems.forEach((other) => {
+          if (other !== item) {
+            other.classList.remove("active");
+            other.setAttribute("aria-expanded", "false");
+          }
+        });
+        item.classList.add("active");
+        item.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    // Click to toggle: click to show answer or toggle closed
     const header = item.querySelector(".faq-header");
     if (header) {
       header.addEventListener("click", (e) => {

@@ -1046,7 +1046,8 @@ footer > div:first-child > div:first-child p.text-sm {
   padding: 0 1.25rem;
   background-color: rgba(203, 186, 79, 0.02);
 }
-.faq-item.active .faq-body {
+.faq-item.active .faq-body,
+.faq-item:hover .faq-body {
   max-height: 380px;
   opacity: 1;
   transition: max-height 0.4s cubic-bezier(1, 0, 1, 0), opacity 0.35s ease, padding 0.3s ease;
@@ -1057,7 +1058,8 @@ footer > div:first-child > div:first-child p.text-sm {
   .faq-body {
     padding: 0 1.75rem;
   }
-  .faq-item.active .faq-body {
+  .faq-item.active .faq-body,
+  .faq-item:hover .faq-body {
     padding: 0.85rem 1.75rem 1.5rem 1.75rem;
   }
 }
