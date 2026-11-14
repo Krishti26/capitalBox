@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="description"
+    content="The Capital Box Blogs & Insights: Expert articles on tax saving, retirement planning, modern wealth creation, risk protection, and SME corporate finance." />
+  <meta name="keywords"
+    content="The Capital Box blogs, financial planning articles, tax saving tips 2026, retirement planning India, risk management, wealth creation, SME business finance" />
+  <meta name="author" content="The Capital Box" />
+  <meta name="publisher" content="The Capital Box" />
+  <meta name="robots" content="index, follow" />
+  <title>Insights & Blogs | The Capital Box - Uncommon Money for Common Man</title>
+
+  <!-- Preload essential resources -->
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="editorial.css?v=45" />
+  <link rel="stylesheet" href="mobile.css?v=6" />
+
+  <!-- Preconnect and Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="public/assets/logo-1.webp" type="image/png" sizes="32x32" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Insights & Blogs | The Capital Box" />
+  <meta property="og:description"
+    content="Expert financial perspectives, tax optimization breakdowns, retirement blueprints, and risk management strategies." />
+  <meta property="og:image" content="public/assets/logo-1.webp" />
+  <meta property="og:url" content="https://www.thecapitalbox.com/blogs.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="The Capital Box Blogs & Financial Insights" />
+  <meta name="twitter:description" content="In-depth research, tax optimization, and wealth blueprints from The Capital Box team." />
+  <meta name="twitter:image" content="public/assets/logo-1.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    /* Specific Blog Page Resets & Overrides */
+    body {
+      background-color: #f4f3eb !important;
+      font-family: 'Montserrat', sans-serif !important;
+      color: #1e1e1e !important;
+    }
+
+    /* Fixed Search Bar (Photo 1 Fix) */
+    #blogSearchWrapper {
+      max-width: 640px !important;
+      width: 100% !important;
+      margin: 0 auto 22px auto !important;
+      position: relative !important;
+      background: #ffffff !important;
+      border: 2px solid #e5e7eb !important;
+      border-radius: 9999px !important;
+      padding: 4px 18px !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-sizing: border-box !important;
+      transition: all 0.25s ease !important;
+    }
+
+    #blogSearchWrapper:focus-within {
+      border-color: #CBBA4F !important;
+      box-shadow: 0 4px 18px rgba(203, 186, 79, 0.28) !important;
+    }
+
+    #blogSearchWrapper .search-icon {
+      color: #9ca3af !important;
+      font-size: 16px !important;
+      flex-shrink: 0 !important;
+      display: inline-block !important;
+      position: static !important;
+      transform: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    #blogSearchInput {
+      flex: 1 !important;
+      border: none !important;
+      outline: none !important;
+      background: transparent !important;
+      padding: 10px 0 !important;
+      font-size: 14.5px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: 500 !important;
+      color: #1f2937 !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      height: 42px !important;
+      box-sizing: border-box !important;
+    }
+
+    #blogSearchInput::placeholder {
+      color: #9ca3af !important;
+      opacity: 1 !important;
+    }
+
+    #clearSearchBtn {
+      border: none !important;
+      background: transparent !important;
+      color: #9ca3af !important;
+      cursor: pointer !important;
+      padding: 6px !important;
+      font-size: 15px !important;
+      flex-shrink: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    #clearSearchBtn:hover {
+      color: #4b5563 !important;
+    }
+
+    /* Filter Pills */
+    .filter-pill {
+      transition: all 0.2s ease !important;
+      border: 1px solid #d1d5db !important;
+      background: #ffffff !important;
+      color: #374151 !important;
+      padding: 6px 16px !important;
+      border-radius: 9999px !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .filter-pill:hover {
+      background-color: #f9fafb !important;
+      border-color: #9ca3af !important;
+    }
+
+    .filter-pill.active {
+      background-color: #CBBA4F !important;
+      border-color: #CBBA4F !important;
+      color: #1e1e1e !important;
+      font-weight: 700 !important;
+      box-shadow: 0 3px 8px rgba(203, 186, 79, 0.35) !important;
+    }
+
+    /* Featured Article Card (Photo 2 Fix) */
+    .featured-blog-card {
+      display: flex !important;
+      flex-direction: row !important;
+      background: #ffffff !important;
+      border: 1px solid #e5e7eb !important;
+      border-top: 4px solid #CBBA4F !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      margin-bottom: 36px !important;
+      max-height: 240px !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .featured-blog-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+      border-color: #CBBA4F !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .featured-img-container {
+      width: 32% !important;
+      min-width: 220px !important;
+      max-width: 290px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      flex-shrink: 0 !important;
+    }
+
+    .featured-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.5s ease !important;
+    }
+
+    .featured-blog-card:hover .featured-img {
+      transform: scale(1.05) !important;
+    }
+
+    .featured-badge {
+      position: absolute !important;
+      top: 14px !important;
+      left: 14px !important;
+      background: #1e1e1e !important;
+      color: #CBBA4F !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      padding: 4px 10px !important;
+      border-radius: 20px !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+    }
+
+    .featured-content {
+      flex: 1 !important;
+      padding: 24px 28px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      overflow: hidden !important;
+    }
+
+    .featured-meta {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 12px !important;
+      color: #6b7280 !important;
+      margin-bottom: 8px !important;
+      font-weight: 500 !important;
+    }
+
+    .featured-category {
+      color: #9a882a !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+    }
+
+    .featured-title {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      line-height: 1.35 !important;
+      color: #111827 !important;
+      margin-bottom: 8px !important;
+      letter-spacing: normal !important;
+      text-transform: none !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    .featured-blog-card:hover .featured-title {
+      color: #9a882a !important;
+    }
+
+    .featured-summary {
+      font-size: 13.5px !important;
+      line-height: 1.6 !important;
+      color: #4b5563 !important;
+      margin-bottom: 12px !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    .featured-footer {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-top: 12px !important;
+      border-top: 1px solid #f3f4f6 !important;
+    }
+
+    @media (max-width: 850px) {
+      .featured-blog-card {
+        flex-direction: column !important;
+        max-height: none !important;
+      }
+      .featured-img-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 200px !important;
+      }
+      .featured-content {
+        padding: 20px !important;
+      }
+    }
+
+    /* 3-Column Blog Grid (Photo 3 & 4 Fix) */
+    .blogs-grid-container {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 26px !important;
+      margin-top: 20px !important;
+    }
+
+    @media (max-width: 1024px) {
+      .blogs-grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blogs-grid-container {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+      }
+    }
+
+    .blog-card-item {
+      background: #ffffff !important;
+      border: 1px solid #e5e7eb !important;
+      border-top: 4px solid #CBBA4F !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .blog-card-item:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1) !important;
+      border-color: #CBBA4F !important;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .blog-card-thumb-wrap {
+      width: 100% !important;
+      height: 185px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      background: #f3f4f6 !important;
+    }
+
+    .blog-card-thumb {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.5s ease !important;
+    }
+
+    .blog-card-item:hover .blog-card-thumb {
+      transform: scale(1.06) !important;
+    }
+
+    .blog-card-badge {
+      position: absolute !important;
+      top: 10px !important;
+      left: 10px !important;
+      background: #CBBA4F !important;
+      color: #1e1e1e !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      padding: 3px 9px !important;
+      border-radius: 15px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15) !important;
+    }
+
+    .blog-card-body {
+      padding: 18px 20px !important;
+      flex: 1 !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .blog-card-meta {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 11.5px !important;
+      color: #6b7280 !important;
+      margin-bottom: 8px !important;
+      font-weight: 500 !important;
+    }
+
+    .blog-card-title-text {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      line-height: 1.4 !important;
+      color: #111827 !important;
+      margin-bottom: 8px !important;
+      text-transform: none !important;
+      letter-spacing: normal !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    .blog-card-item:hover .blog-card-title-text {
+      color: #9a882a !important;
+    }
+
+    .blog-card-desc {
+      font-size: 13px !important;
+      line-height: 1.55 !important;
+      color: #4b5563 !important;
+      margin-bottom: 12px !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    .blog-card-foot {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 12px 20px !important;
+      border-top: 1px solid #f3f4f6 !important;
+      background: #ffffff !important;
+    }
+
+    .author-pill {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+    }
+
+    .author-circle {
+      width: 28px !important;
+      height: 28px !important;
+      border-radius: 50% !important;
+      background: #CBBA4F !important;
+      color: #1e1e1e !important;
+      font-weight: 700 !important;
+      font-size: 10.5px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+
+    .author-txt-name {
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      color: #111827 !important;
+      line-height: 1.2 !important;
+    }
+
+    .author-txt-role {
+      font-size: 10px !important;
+      color: #6b7280 !important;
+      line-height: 1.1 !important;
+    }
+
+    .read-more-link {
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      color: #111827 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .blog-card-item:hover .read-more-link {
+      color: #9a882a !important;
+      transform: translateX(3px) !important;
+    }
+
+    /* Section Heading Override */
+    .blog-section-title {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 24px !important;
+      font-weight: 800 !important;
+      color: #111827 !important;
+      letter-spacing: -0.02em !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+    }
+
+    /* Modal Reader Styling */
+    .article-modal-backdrop {
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-prose h2 {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 2rem !important;
+      color: #1e1e1e !important;
+      margin-top: 1.75rem !important;
+      margin-bottom: 0.75rem !important;
+      line-height: 1.25 !important;
+      font-weight: 400 !important;
+    }
+
+    .modal-prose h3 {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 1.2rem !important;
+      font-weight: 700 !important;
+      color: #111827 !important;
+      margin-top: 1.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .modal-prose p {
+      color: #374151 !important;
+      font-size: 1.05rem !important;
+      line-height: 1.8 !important;
+      margin-bottom: 1.25rem !important;
+    }
+
+    .modal-prose ul, .modal-prose ol {
+      color: #374151 !important;
+      font-size: 1.05rem !important;
+      line-height: 1.8 !important;
+      margin-bottom: 1.5rem !important;
+      padding-left: 1.5rem !important;
+    }
+
+    .modal-prose li {
+      margin-bottom: 0.5rem !important;
+    }
+
+    .modal-prose blockquote {
+      border-left: 4px solid #CBBA4F !important;
+      background: #faf8f0 !important;
+      padding: 1rem 1.5rem !important;
+      margin: 1.5rem 0 !important;
+      border-radius: 0 8px 8px 0 !important;
+      font-style: italic !important;
+      color: #1e1e1e !important;
+    }
+
+    .modal-prose .highlight-box {
+      background: #fbf9f2 !important;
+      border: 1px solid #e7deba !important;
+      border-left: 4px solid #CBBA4F !important;
+      border-radius: 8px !important;
+      padding: 1.25rem 1.5rem !important;
+      margin: 1.5rem 0 !important;
+    }
+
+    /* Centered Advisory Consultation Box in Modal */
+    .modal-advisory-box {
+      text-align: center !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .modal-advisory-box :is(p, h4, div, span, a) {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Modal Cover Image - Properly Proportioned & Fitted */
+    .modal-cover-wrapper {
+      width: 100% !important;
+      height: 340px !important;
+      max-height: 360px !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      margin-bottom: 28px !important;
+      border: 1px solid #e5e7eb !important;
+      background-color: #1e1e1e !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+      position: relative !important;
+    }
+
+    #modalCoverImage {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 360px !important;
+      object-fit: cover !important;
+      object-position: center 30% !important;
+      display: block !important;
+    }
+
+    @media (max-width: 640px) {
+      .modal-cover-wrapper {
+        height: 220px !important;
+        max-height: 240px !important;
+        margin-bottom: 20px !important;
+      }
+      #modalCoverImage {
+        max-height: 240px !important;
+      }
+    }
+
+    /* Clear spacing between calendar/clock icons and text */
+    .blog-card-meta i,
+    .featured-meta i,
+    #modalPublishDate i,
+    #modalReadTime i {
+      margin-right: 8px !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
+
+    /* Clean Minimal Footer Centering Override */
+    html body footer#blogPageFooter,
+    html body #blogPageFooter {
+      width: 100% !important;
+      background-color: #f4f3eb !important;
+      border-top: 1px solid #e2ded4 !important;
+      padding: 32px 16px !important;
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+
+    html body footer#blogPageFooter *,
+    html body #blogPageFooter * {
+      text-align: center !important;
+    }
+
+    html body footer#blogPageFooter p,
+    html body #blogPageFooter p {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 13.5px !important;
+      color: #6b7280 !important;
+      text-align: center !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      display: block !important;
+    }
+
+    html body footer#blogPageFooter a,
+    html body #blogPageFooter a {
+      color: #111827 !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      display: inline !important;
+      text-align: center !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loading Spinner -->
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar fixed top-0 w-full z-40 py-4 md:px-6 transition-all duration-300">
+    <div class="mx-auto flex justify-between items-center px-2">
+      <div class="flex items-center">
+        <a href="/" class="text-white text-xl font-bold">
+          <img src="public/assets/logo-1.webp" alt="The Capital Box Logo" class="h-8" />
+        </a>
+        <div class="flex flex-col ml-4 md:hidden lg:block">
+          <p class="uppercase text-white text-md md:text-xl font-bold">
+            The Capital Box
+          </p>
+          <p class="uppercase text-white text-xs md:text-base font-light">
+            UNCOMMON MONEY FOR COMMON MAN
+          </p>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-white hover:text-primary transition text-lg font-light uppercase">Home</a>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown relative">
+          <button class="text-white hover:text-primary transition flex items-center text-lg font-light uppercase"
+            id="dropdownToggle">
+            Services
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu bg-white rounded shadow-lg mt-2 w-56">
+            <div class="py-2">
+              <a href="./taxsolution.html"
+                class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700">Tax Solutions</a>
+              <a href="./retirementsolutions.html"
+                class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700">Retirement Solutions</a>
+              <a href="./networksolution.html"
+                class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700">Networking Solutions
+              </a>
+              <a href="./riskmanagement.html"
+                class="block px-4 py-2 hover:bg-gray-100 hover:text-primary text-gray-700">Risk Management</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="./about.html" class="text-white hover:text-primary transition text-lg font-light uppercase">About</a>
+        <a href="./blogs.html" class="text-white hover:text-primary transition text-lg font-light uppercase">Blogs</a>
+        <a href="./contact.html"
+          class="text-white hover:text-primary transition text-lg font-light uppercase">Contact</a>
+        <a href="./careers.html"
+          class="text-white transition text-xl uppercase font-light border border-primary rounded-lg px-4 py-2 hover:bg-[#CBBA4F] hover:text-white hover:font-normal">Careers</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-white">
+          <!-- Hamburger Icon -->
+          <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- X Icon (hidden by default) -->
+          <svg id="close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-navColor bg-opacity-40 mt-4 py-2">
+      <a href="/" class="block px-6 py-2 text-white hover:bg-primary">Home</a>
+      <div class="relative">
+        <button id="mobile-dropdown-button"
+          class="w-full text-left px-6 py-2 text-white hover:bg-primary flex justify-between items-center">
+          Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-dropdown" class="hidden bg-[#1F2937] rounded-lg mx-4 my-2">
+          <a href="./taxsolution.html" class="block px-6 py-2 text-white hover:bg-primary rounded-t-lg">Tax Solutions</a>
+          <a href="./retirementsolutions.html" class="block px-6 py-2 text-white hover:bg-primary">Retirement Solutions</a>
+          <a href="./networksolution.html" class="block px-6 py-2 text-white hover:bg-primary rounded-b-lg">Networking Solutions</a>
+          <a href="./riskmanagement.html" class="block px-6 py-2 text-white hover:bg-primary rounded-b-lg">Risk Management</a>
+        </div>
+      </div>
+      <a href="./about.html" class="block px-6 py-2 text-white hover:bg-primary">About</a>
+      <a href="./blogs.html" class="block px-6 py-2 text-white hover:bg-primary">Blogs</a>
+      <a href="./contact.html" class="block px-6 py-2 text-white hover:bg-primary">Contact</a>
+      <a href="./careers.html" class="block px-6 py-2 text-white hover:bg-primary">Careers</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Subpage Hero Section (matching about.html & careers.html) -->
+    <div class="relative">
+      <div class="subpage-hero w-full bg-cover bg-center relative overflow-hidden">
+        <img src="public/assets/about-hero.webp" alt="The Capital Box Blogs and Insights"
+          class="subpage-hero-img w-full h-full object-cover" />
+
+        <!-- Hero Content Overlay -->
+        <div class="subpage-hero-overlay">
+          <div class="subpage-hero-content">
+            <div class="subpage-hero-badge">
+              <span class="subpage-hero-badge-dot"></span>
+              <span>The Capital Box Knowledge Hub</span>
+            </div>
+            <h1 class="subpage-hero-title">
+              Insights & Blogs
+            </h1>
+            <p class="subpage-hero-desc">
+              Uncommon money for common man — strategic research, tax optimization blueprints, retirement planning, and wealth preservation frameworks.
+            </p>
+            <div class="subpage-hero-pills">
+              <span class="subpage-hero-pill">Tax Planning</span>
+              <span class="subpage-hero-pill">Retirement Solutions</span>
+              <span class="subpage-hero-pill">Wealth Acceleration</span>
+              <span class="subpage-hero-pill">Risk Mitigation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card Container with Search & Filters -->
+      <div class="subpage-card-container container mx-auto px-4 relative">
+        <div class="w-full">
+          <div class="w-full bg-white rounded-xl shadow-xl transform transition duration-500 border-4 border-primary">
+            <div class="p-6 md:p-10 flex flex-col items-center text-center">
+              <h2 class="text-2xl md:text-5xl font-bold text-gray-800 mb-3" style="font-family:'Montserrat',sans-serif !important;">
+                Uncommon Wisdom for Common Wealth
+              </h2>
+              <p class="text-gray-600 text-base md:text-lg font-medium max-w-4xl mx-auto mb-8">
+                Explore in-depth articles written by our certified tax consultants, portfolio managers, and risk advisors. Read the full analysis or filter by your financial priorities.
+              </p>
+
+              <!-- Properly Arranged Search Bar (Fixed Photo 1) -->
+              <div id="blogSearchWrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="blogSearchInput"
+                  placeholder="Search articles by keyword (e.g. Tax, Retirement, Asset Allocation)..."
+                  autocomplete="off" />
+                <button id="clearSearchBtn" type="button" class="hidden" title="Clear search">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+              </div>
+
+              <!-- Filter Pills -->
+              <div class="flex flex-wrap items-center justify-center gap-2 pt-1" id="filterPillsContainer">
+                <button class="filter-pill active" data-category="all">
+                  All Insights (<span id="count-all">6</span>)
+                </button>
+                <button class="filter-pill" data-category="Tax Planning">
+                  Tax Planning (<span id="count-tax">1</span>)
+                </button>
+                <button class="filter-pill" data-category="Retirement Solutions">
+                  Retirement Solutions (<span id="count-retire">1</span>)
+                </button>
+                <button class="filter-pill" data-category="Wealth & Investment">
+                  Wealth & Investment (<span id="count-wealth">2</span>)
+                </button>
+                <button class="filter-pill" data-category="Risk & Protection">
+                  Risk & Protection (<span id="count-risk">1</span>)
+                </button>
+                <button class="filter-pill" data-category="Business Advisory">
+                  Business Advisory (<span id="count-biz">1</span>)
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Blogs Content Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+      <!-- Compact Featured Blog Spotlight (Fixed Photo 2 & 3) -->
+      <section id="featuredArticleSection">
+        <div class="flex items-center gap-2 text-xs font-bold tracking-widest text-[#9a882a] uppercase mb-4">
+          <i class="fas fa-star text-[#CBBA4F]"></i> Featured Financial Breakdown
+        </div>
+        <a href="https://capitalbox.substack.com/p/mastering-the-old-vs-new-tax-regime" target="_blank" rel="noopener noreferrer" class="featured-blog-card group" style="text-decoration: none !important; color: inherit !important;">
+          <div class="featured-img-container">
+            <img src="public/assets/tax-02.webp" alt="Old vs New Tax Regime 2026" class="featured-img" />
+            <span class="featured-badge">Featured Analysis</span>
+          </div>
+          <div class="featured-content">
+            <div>
+              <div class="featured-meta">
+                <span class="featured-category">Tax Planning</span>
+                <span>•</span>
+                <span><i class="far fa-calendar-alt text-[#CBBA4F]" style="margin-right: 8px !important;"></i> Nov 10, 2026</span>
+                <span>•</span>
+                <span><i class="far fa-clock text-[#CBBA4F]" style="margin-right: 6px !important;"></i> 6 min read</span>
+              </div>
+              <h3 class="featured-title">
+                Mastering the Old vs. New Tax Regime: Strategic Decision Guide for High Earners
+              </h3>
+              <p class="featured-summary">
+                With the New Tax Regime established as the default, taxpayers must identify their exact breakeven exemption threshold. Here is a definitive breakdown of slab rates, 87A rebate ceilings, standard deductions, HRA optimization, and when sticking with the Old Regime still saves you lakhs.
+              </p>
+            </div>
+            <div class="featured-footer">
+              <div class="author-pill">
+                <div class="author-circle">RV</div>
+                <div>
+                  <div class="author-txt-name">CA Rajesh Verma</div>
+                  <div class="author-txt-role">Senior Tax Strategist</div>
+                </div>
+              </div>
+              <span class="read-more-link" style="color:#9a882a !important; font-size:13px !important; display: inline-flex; align-items: center; gap: 6px;">
+                Read <i class="fas fa-external-link-alt text-xs"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- Section Title & Status (Fixed Photo 3) -->
+      <div class="flex items-center justify-between mb-8 pb-3 border-b-2 border-gray-200">
+        <h2 class="blog-section-title">
+          <span style="width:6px; height:24px; background:#CBBA4F; border-radius:4px; display:inline-block;"></span>
+          All Financial Articles
+        </h2>
+        <span id="activeFilterLabel" class="text-xs sm:text-sm font-semibold text-gray-500">
+          Showing all articles
+        </span>
+      </div>
+
+      <!-- 3-Column Blogs Grid (Fixed Photo 4) -->
+      <div id="blogsGrid" class="blogs-grid-container">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="noResultsState" class="hidden py-16 text-center bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+        <div class="w-16 h-16 rounded-full bg-gray-100 text-[#CBBA4F] mx-auto flex items-center justify-center text-2xl mb-4">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">No articles match your search</h3>
+        <p class="text-gray-600 text-sm max-w-md mx-auto mb-6">
+          Try adjusting your search terms or click "Reset Filters" to view all available insights.
+        </p>
+        <button onclick="resetFilters()" class="px-6 py-2.5 bg-primary text-black font-bold rounded-lg hover:bg-gray-800 hover:text-white transition text-sm">
+          Reset Filters
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Strategy Session CTA Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="bg-white border-4 border-primary rounded-2xl p-8 sm:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl text-center md:text-left">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#9a882a] bg-primary/20 px-3 py-1 rounded-full">
+            Personalized Wealth Advisory
+          </span>
+          <h3 class="text-2xl md:text-4xl font-bold text-gray-900 mt-3 mb-2" style="font-family:'Montserrat',sans-serif !important;">
+            Need Expert Financial Advice Tailored To Your Goals?
+          </h3>
+          <p class="text-gray-600 text-base leading-relaxed">
+            Our certified specialists in Tax Planning, Retirement Architecture, Risk Mitigation, and Corporate Solutions are ready to build your customized financial blueprint.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <a href="./contact.html" class="text-center px-8 py-4 bg-[#1e1e1e] hover:bg-[#CBBA4F] text-white hover:text-black font-bold uppercase tracking-wider text-sm rounded-lg transition shadow-md whitespace-nowrap">
+            Schedule Free Consultation
+          </a>
+          <a href="tel:+91124428427" class="text-center px-6 py-4 border-2 border-gray-300 hover:border-primary text-gray-800 font-semibold text-sm rounded-lg transition whitespace-nowrap">
+            <i class="fas fa-phone-alt mr-2 text-[#CBBA4F]"></i> Call Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Article Reader Modal -->
+  <div id="blogArticleModal" class="fixed inset-0 z-50 article-modal-backdrop hidden overflow-y-auto custom-scroll"
+    role="dialog" aria-modal="true" aria-labelledby="modalBlogTitle">
+    <div class="min-h-screen px-4 py-8 sm:py-12 flex items-center justify-center">
+      <div class="bg-white border-4 border-primary rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl relative my-auto">
+
+        <!-- Modal Top Bar -->
+        <div class="sticky top-0 bg-white/95 backdrop-blur-md px-6 py-4 border-b border-gray-200 flex items-center justify-between z-20">
+          <div class="flex items-center gap-3">
+            <span id="modalCategoryBadge" class="bg-primary text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+              Category
+            </span>
+            <span id="modalReadTime" class="text-xs font-semibold text-gray-500">
+              5 min read
+            </span>
+            <a id="modalExternalHeaderBtn" href="#" target="_blank" rel="noopener noreferrer" class="hidden text-xs font-bold text-gray-800 hover:text-black bg-[#CBBA4F]/25 hover:bg-[#CBBA4F] px-3 py-1 rounded-full transition items-center gap-1.5 ml-2 shadow-sm">
+              <i class="fas fa-external-link-alt text-[10px]"></i> <span id="modalExternalHeaderTxt">Open Article</span>
+            </a>
+          </div>
+          <button onclick="closeBlogModal()"
+            class="text-gray-500 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100 transition focus:outline-none"
+            title="Close article (Esc)">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body Content -->
+        <div class="p-6 sm:p-10 max-h-[82vh] overflow-y-auto custom-scroll">
+          <!-- Header Meta -->
+          <div class="mb-6">
+            <h1 id="modalBlogTitle" class="text-2xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4" style="font-family:'Montserrat',sans-serif !important;">
+              Article Title Here
+            </h1>
+            <div class="flex flex-wrap items-center justify-between gap-4 py-3 border-y border-gray-200 text-xs sm:text-sm text-gray-600">
+              <div class="flex items-center gap-3">
+                <div id="modalAuthorAvatar" class="w-10 h-10 rounded-full bg-primary text-black font-bold text-sm flex items-center justify-center shadow-sm">
+                  CB
+                </div>
+                <div>
+                  <p id="modalAuthorName" class="font-bold text-gray-900">Author Name</p>
+                  <p id="modalAuthorRole" class="text-xs text-gray-500">Role / Position</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <span id="modalPublishDate"><i class="far fa-calendar-alt text-[#CBBA4F] mr-1.5"></i> Date</span>
+                <!-- Share Button Group -->
+                <div class="flex items-center gap-2">
+                  <button onclick="shareArticle('twitter')" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-primary hover:text-black flex items-center justify-center text-xs transition" title="Share on Twitter/X">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button onclick="shareArticle('linkedin')" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-primary hover:text-black flex items-center justify-center text-xs transition" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </button>
+                  <button onclick="copyArticleLink()" id="copyLinkBtn" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-primary hover:text-black flex items-center justify-center text-xs transition" title="Copy Link">
+                    <i class="fas fa-link"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Cover Image (Properly Sized & Fitted) -->
+          <div class="modal-cover-wrapper mb-8 rounded-xl overflow-hidden border border-gray-200 shadow-sm" style="width: 100% !important; height: 340px !important; max-height: 360px !important; background-color: #1e1e1e !important;">
+            <img id="modalCoverImage" src="public/assets/tax-02.webp" alt="Article Cover" style="width: 100% !important; height: 100% !important; max-height: 360px !important; object-fit: cover !important; object-position: center 30% !important; display: block !important;" />
+          </div>
+
+          <!-- Full Article Markdown/HTML Body -->
+          <div id="modalArticleBody" class="modal-prose">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Author Bio & Consultation Prompt (Centered and Minimized) -->
+          <div class="mt-8 pt-4 border-t border-gray-200">
+            <div class="modal-advisory-box bg-gray-50 border border-primary/40 rounded-xl" style="text-align: center !important; padding: 18px 20px !important;">
+              <p style="text-align: center !important; font-size: 10.5px !important; font-weight: 700 !important; color: #9a882a !important; text-transform: uppercase !important; letter-spacing: 0.12em !important; margin: 0 auto 6px auto !important;">
+                Advisory Consultation
+              </p>
+              <h4 style="text-align: center !important; font-family: 'Montserrat', sans-serif !important; font-size: 17px !important; font-weight: 700 !important; color: #111827 !important; margin: 0 auto 6px auto !important; line-height: 1.3 !important;">
+                Have questions about this financial framework?
+              </h4>
+              <p style="text-align: center !important; font-size: 13px !important; color: #4b5563 !important; max-width: 520px !important; margin: 0 auto 14px auto !important; line-height: 1.5 !important;">
+                Book a confidential 1-on-1 strategy call with our certified advisory team to evaluate your personalized scenario.
+              </p>
+              <div style="text-align: center !important; margin: 0 auto !important; width: 100% !important; display: flex !important; justify-content: center !important;">
+                <a href="./contact.html" style="display: inline-block !important; margin: 0 auto !important; padding: 9px 22px !important; background-color: #1e1e1e !important; color: #ffffff !important; font-weight: 700 !important; border-radius: 6px !important; text-decoration: none !important; font-size: 12px !important; text-transform: uppercase !important; letter-spacing: 0.05em !important; transition: all 0.2s ease !important;" class="hover:bg-[#CBBA4F] hover:text-black shadow">
+                  Book a Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clean Minimal Footer Matching User Request -->
+  <footer id="blogPageFooter" style="width: 100% !important; background-color: #f4f3eb !important; border-top: 1px solid #e2ded4 !important; padding: 32px 16px !important; margin: 0 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;">
+    <div style="width: 100% !important; max-width: 1200px !important; margin: 0 auto !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important;">
+      <p style="margin: 0 auto !important; font-family: 'Montserrat', sans-serif !important; font-size: 13.5px !important; color: #6b7280 !important; text-align: center !important; display: block !important; width: 100% !important;">
+        © 2026 All rights reserved | <a href="./index.html" style="color: #111827 !important; font-weight: 700 !important; text-decoration: none !important; display: inline !important;">The Capital Box</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Blog Data and Scripts -->
+  <script>
+    const blogsData = [
+      {
+        id: "blog-1",
+        title: "Mastering the Old vs. New Tax Regime: Strategic Decision Guide for High Earners",
+        slug: "mastering-old-vs-new-tax-regime-2026",
+        category: "Tax Planning",
+        date: "Nov 10, 2026",
+        readTime: "6 min read",
+        externalUrl: "https://capitalbox.substack.com/p/mastering-the-old-vs-new-tax-regime",
+        platform: "Substack",
+        author: {
+          name: "CA Rajesh Verma",
+          role: "Senior Tax & Estate Advisor",
+          initials: "RV"
+        },
+        image: "public/assets/tax-02.webp",
+        summary: "A numbers-backed comparison between the Old and New Tax Regimes. Learn the exact breakeven exemption threshold, standard deductions, HRA calculations, and optimal salary restructuring strategies to legally minimize your liability.",
+        content: `
+          <h2>The Great Tax Conundrum: Old vs. New Regime</h2>
+          <p>
+            With the recent Union Budgets positioning the New Tax Regime as the default tax filing framework, every salaried professional and business owner faces an essential question: <strong>Should you transition to the simplified lower tax slabs of the New Regime, or retain the deduction-heavy Old Regime?</strong>
+          </p>
+          <p>
+            While the New Regime attracts taxpayers with reduced tax rates and an expanded rebate under Section 87A (rendering taxable income up to ₹7-7.5 Lakh effectively tax-free), the optimal answer for high-earning individuals depends strictly on their eligible deduction basket.
+          </p>
+
+          <div class="highlight-box">
+            <h3 class="text-gray-900 text-base font-bold mb-1"><i class="fas fa-calculator text-[#CBBA4F] mr-2"></i>The Magic Breakeven Point: ₹3.75 Lakhs - ₹4.25 Lakhs</h3>
+            <p class="text-sm text-gray-700 mb-0">
+              If your total deductible investments and allowances (Standard Deduction + 80C + 80D + HRA/Home Loan Interest + NPS) exceed <strong>₹3,75,000 to ₹4,25,000</strong> annually, the <strong>Old Tax Regime</strong> delivers substantial net tax savings. If your total deductions fall below this threshold, the <strong>New Tax Regime</strong> is mathematically superior.
+            </p>
+          </div>
+
+          <h2>Key Deductions to Factor Into Your Calculation</h2>
+          <p>
+            When conducting your annual tax review, ensure you evaluate each of the five core pillars:
+          </p>
+          <ul>
+            <li><strong>Standard Deduction:</strong> Universal ₹50,000 to ₹75,000 deduction applicable across both regimes.</li>
+            <li><strong>Section 80C (Capped at ₹1.5 Lakh):</strong> EPF, PPF, ELSS, life insurance premiums, and children's tuition fees (Old Regime only).</li>
+            <li><strong>Section 80D (Health Insurance):</strong> Up to ₹25,000 for self/family and an additional ₹50,000 for senior citizen parents (Old Regime only).</li>
+            <li><strong>House Rent Allowance (HRA) & Section 24(b):</strong> Rent exemption under Section 10(13A) or up to ₹2,00,000 interest deduction on self-occupied housing loans (Old Regime only).</li>
+            <li><strong>Corporate NPS under Section 80CCD(2):</strong> Employer contribution to NPS up to 10%-14% of Basic Salary is allowed under <em>both</em> regimes—providing one of the strongest remaining tax shelters in India.</li>
+          </ul>
+
+          <blockquote>
+            "Tax efficiency is not about avoiding taxes; it is about structuring your legitimate cash flows so that wealth is preserved for your family's future rather than surrendered to avoidable liabilities."
+          </blockquote>
+
+          <h2>Strategic Salary Restructuring Recommendations</h2>
+          <p>
+            At The Capital Box, our private wealth and tax advisors recommend that salaried executives review their CTC structure with HR departments every April. By restructuring components into flexible benefit allowances (food coupons, broadband reimbursements, company car leases, and employer NPS contributions), individuals can significantly drop their taxable gross under the New Regime or maximize claims under the Old Regime.
+          </p>
+
+          <h2>Next Steps for Taxpayers</h2>
+          <p>
+            Avoid the standard mistake of choosing your tax regime in February when payroll deduction deadlines arrive. Model your financial plan early, calculate your exact investment commitments, and allocate the surplus cash into high-yielding equity and fixed-income portfolios.
+          </p>
+        `
+      },
+      {
+        id: "blog-2",
+        title: "Why the 4% Retirement Rule Fails in India: Building an Inflation-Proof Corpus",
+        slug: "inflation-proof-retirement-corpus-india",
+        category: "Retirement Solutions",
+        date: "Nov 05, 2026",
+        readTime: "8 min read",
+        externalUrl: "https://capitalbox.substack.com/p/why-the-4-retirement-rule-fails-in",
+        platform: "Substack",
+        author: {
+          name: "Ananya Roy",
+          role: "Head of Retirement & Pension Planning",
+          initials: "AR"
+        },
+        image: "public/assets/retire-02.webp",
+        summary: "Western retirement formulas like the Trinity Study's 4% rule fall apart in developing economies with 6-8% real lifestyle inflation. Discover the bucket strategy, dynamic SWP models, and multi-asset retirement architectures.",
+        content: `
+          <h2>The Dangerous Myth of the 4% Rule in Developing Economies</h2>
+          <p>
+            The famous "4% Rule," pioneered by the Trinity Study in the United States, states that if a retiree withdraws 4% of their initial portfolio in Year 1 and adjusts that sum for inflation annually, their portfolio has a 95% probability of lasting 30 years.
+          </p>
+          <p>
+            Unfortunately, directly applying this rule to India and other high-growth emerging economies is a recipe for premature portfolio depletion. Why?
+          </p>
+          <ul>
+            <li><strong>Differential Inflation Rates:</strong> The US long-term CPI benchmark historically hovered between 2-3%. In India, realistic lifestyle and healthcare inflation persistently runs at <strong>7% to 10%</strong>.</li>
+            <li><strong>Currency Volatility & Asset Returns:</strong> Emerging market fixed income yields decline as economies mature, narrowing the spread between real returns and living expenses.</li>
+            <li><strong>Medical Inflation:</strong> Private healthcare costs in metropolitan areas compound at over 12% annually, presenting catastrophic risk to fixed-withdrawal schemes.</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h3 class="text-gray-900 text-base font-bold mb-1"><i class="fas fa-layer-group text-[#CBBA4F] mr-2"></i>The Solution: The Capital Box 3-Bucket Framework</h3>
+            <p class="text-sm text-gray-700 mb-0">
+              Instead of relying on a single static withdrawal rate, modern retirees require a structured bucket architecture that isolates short-term liquidity from volatile growth engines.
+            </p>
+          </div>
+
+          <h2>The 3-Bucket Wealth Preservation Architecture</h2>
+          <p>
+            Here is the framework deployed by The Capital Box for clients approaching or in retirement:
+          </p>
+          <ol>
+            <li>
+              <strong>Bucket 1: The Liquidity Shield (Years 1 to 3):</strong>
+              Stored entirely in ultra-safe instruments—high-yield savings, short-term fixed deposits, and liquid/arbitrage funds. This covers 3 full years of living expenses, ensuring you never have to liquidate equities during a market downturn.
+            </li>
+            <li>
+              <strong>Bucket 2: The Income Generator (Years 4 to 8):</strong>
+              Allocated into high-quality corporate bonds, target-maturity funds, senior secured debt, and conservative hybrid funds. This bucket generates stable yield and periodically replenishes Bucket 1.
+            </li>
+            <li>
+              <strong>Bucket 3: The Compounding Engine (Years 9+):</strong>
+              Composed of diversified large/mid-cap equity index funds, dividend-growth stocks, and Sovereign Gold Bonds. Because this capital will not be touched for at least 8 to 10 years, it safely rides through market cycles and beats inflation.
+            </li>
+          </ol>
+
+          <blockquote>
+            "True retirement independence is not about amassing a giant number; it is about engineering predictable, uninterrupted cash flow that never forces you to check the morning stock market ticker."
+          </blockquote>
+
+          <h2>Dynamic Systematic Withdrawal Plans (SWP)</h2>
+          <p>
+            Rather than taking fixed monthly annuities that are taxed at slab rates, retirees should utilize mutual fund SWPs. Under current tax laws, only the capital gains component of each withdrawal is taxed, dramatically lowering your effective tax burden compared to traditional fixed deposit interest.
+          </p>
+        `
+      },
+      {
+        id: "blog-3",
+        title: "Beyond Fixed Deposits: Modern Asset Allocation for Long-Term Wealth Preservation",
+        slug: "beyond-fixed-deposits-asset-allocation",
+        category: "Wealth & Investment",
+        date: "Oct 28, 2026",
+        readTime: "7 min read",
+        externalUrl: "https://dev.to/capital_box/beyond-fixed-deposits-modern-asset-allocation-for-long-term-wealth-4dlj",
+        platform: "Dev.to",
+        author: {
+          name: "Vikramaditya Sengupta",
+          role: "Chief Investment Strategist",
+          initials: "VS"
+        },
+        image: "public/assets/hero-trading-img.jpg",
+        summary: "Keeping capital locked solely in traditional bank deposits results in negative real purchasing power after taxes and inflation. Discover how multi-asset allocation compounds wealth while minimizing portfolio drawdown.",
+        content: `
+          <h2>The Illusion of Safety in Cash and Fixed Deposits</h2>
+          <p>
+            For generations, the default financial prescription for Indian families was simple: earn, save, and lock money into 5-year bank fixed deposits. While FDs provide absolute capital protection and psychological comfort, they quietly inflict severe purchasing-power erosion.
+          </p>
+          <p>
+            Let's evaluate the math for a taxpayer in the 30% slab:
+          </p>
+          <ul>
+            <li>Nominal FD Interest Rate: <strong>7.0%</strong></li>
+            <li>Post-tax Return (30% + cess): <strong>4.8%</strong></li>
+            <li>Headline Consumer Inflation: <strong>6.0%</strong></li>
+            <li><strong>Net Real Return: -1.2% per annum</strong></li>
+          </ul>
+          <p>
+            In real terms, every ₹10 Lakhs parked purely in FDs loses approximately ₹12,000 of real purchasing capacity every single year.
+          </p>
+
+          <div class="highlight-box">
+            <h3 class="text-gray-900 text-base font-bold mb-1"><i class="fas fa-chart-pie text-[#CBBA4F] mr-2"></i>The Core-Satellite Portfolio Model</h3>
+            <p class="text-sm text-gray-700 mb-0">
+              Institutional investors don't bet on single asset classes. They build an engine where uncorrelated assets balance each other during turbulent market shocks.
+            </p>
+          </div>
+
+          <h2>How Multi-Asset Portfolios Weather Crises</h2>
+          <p>
+            During market corrections, equities dip while sovereign gold and high-grade fixed income often appreciate or hold steady. By maintaining a disciplined <strong>Core-Satellite Asset Allocation</strong>, investors benefit from automatic shock absorption:
+          </p>
+          <ul>
+            <li><strong>Core Portfolio (70-80%):</strong> Low-cost broad market indices (Nifty 50, Nifty Midcap 150), short-to-medium duration debt, and Sovereign Gold Bonds.</li>
+            <li><strong>Satellite Portfolio (20-30%):</strong> Focused alpha strategies, international technology exposure, real estate investment trusts (REITs), and private credit.</li>
+          </ul>
+
+          <h2>The Mechanical Advantage of Annual Rebalancing</h2>
+          <p>
+            The secret weapon of successful wealth creation is not market timing—it is periodic rebalancing. If equities experience a bull run and swell from 60% of your portfolio to 75%, rebalancing forces you to take profits and reallocate into undervalued debt or gold. When equities crash, rebalancing forces you to buy equities at generational discounts.
+          </p>
+        `
+      },
+      {
+        id: "blog-4",
+        title: "Term Insurance vs. ULIPs & Endowments: The Truth About Protecting Your Family",
+        slug: "term-life-vs-ulip-endowment-risk-protection",
+        category: "Risk & Protection",
+        date: "Oct 20, 2026",
+        readTime: "5 min read",
+        externalUrl: "https://www.tumblr.com/capitalbox/833236929170604032/term-insurance-vs-ulips-endowments-the-truth?source=share",
+        platform: "Tumblr",
+        author: {
+          name: "Indranil Mukherjee",
+          role: "Director of Risk Mitigation",
+          initials: "IM"
+        },
+        image: "public/assets/risk-02.webp",
+        summary: "Mixing investment with insurance usually guarantees subpar returns and dangerously insufficient life cover. We break down the math and reveal how unbundling protection from investment saves lakhs while securing millions.",
+        content: `
+          <h2>The Costly Trap of Bundled Insurance Products</h2>
+          <p>
+            Every year, millions of working individuals purchase endowment plans, money-back policies, and Unit Linked Insurance Plans (ULIPs), believing they are smartly achieving two goals in one shot: family protection and wealth accumulation.
+          </p>
+          <p>
+            In reality, combining insurance and investment is the most expensive mistake in personal finance. Traditional endowment policies frequently deliver an annualized internal rate of return (IRR) of just <strong>4% to 5.5%</strong>—lagging behind inflation—while providing a meager life cover of ₹5 to ₹10 Lakhs. For a breadwinner earning ₹15 Lakhs annually, a ₹10 Lakh cover will barely support their family for 8 months.
+          </p>
+
+          <div class="highlight-box">
+            <h3 class="text-gray-900 text-base font-bold mb-1"><i class="fas fa-shield-alt text-[#CBBA4F] mr-2"></i>The Golden Rule: Never Mix Insurance with Investment</h3>
+            <p class="text-sm text-gray-700 mb-0">
+              Buy pure term life insurance for substantial, unencumbered family risk protection, and direct all your remaining investment funds into transparent, high-return mutual funds.
+            </p>
+          </div>
+
+          <h2>The Math: Traditional Policy vs. Pure Term + Index SIP</h2>
+          <p>
+            Consider a 30-year-old non-smoker with a ₹1,00,000 annual budget for life planning:
+          </p>
+          <ul>
+            <li>
+              <strong>Option A (Endowment / ULIP):</strong><br>
+              Pays ₹1,00,000/year for 25 years. Receives a life cover of ~₹15 Lakhs. Expected maturity corpus at age 55: ~₹55 Lakhs (at 5% return).
+            </li>
+            <li>
+              <strong>Option B (Pure Term + Equity Mutual Fund):</strong><br>
+              Buys a ₹2 Crore pure term policy up to age 65 for approximately ₹15,000/year. Invests the remaining ₹85,000/year into an equity index fund. Expected corpus at age 55 (at 12% CAGR): <strong>₹1.27 Crores</strong>—plus <strong>13 times larger life cover</strong> from Day 1!
+            </li>
+          </ul>
+
+          <h2>Essential Riders to Include in Your Term Policy</h2>
+          <p>
+            When purchasing your pure term policy, look beyond the base sum assured:
+          </p>
+          <ol>
+            <li><strong>Waiver of Premium Rider:</strong> If you suffer total permanent disability, all future premiums are waived while the policy remains 100% active.</li>
+            <li><strong>Critical Illness Rider:</strong> Provides an immediate lump-sum payout upon diagnosis of listed ailments (cardiac, cancer, stroke), replacing lost income during recovery.</li>
+          </ol>
+        `
+      },
+      {
+        id: "blog-5",
+        title: "Unlocking Working Capital: How SMEs Can Overcome Cash Crunches & Accelerate Scale",
+        slug: "sme-working-capital-liquidity-growth",
+        category: "Business Advisory",
+        date: "Oct 14, 2026",
+        readTime: "6 min read",
+        externalUrl: "https://medium.com/@blogs2_79757/unlocking-working-capital-how-smes-can-overcome-cash-crunches-build-resilient-liquidity-284a6859fd50?postPublishedType=initial",
+        platform: "Medium",
+        author: {
+          name: "Neha Kapoor",
+          role: "Corporate Advisory & Network Solutions",
+          initials: "NK"
+        },
+        image: "public/assets/network-02.webp",
+        summary: "Cash flow kills more viable businesses than lack of profitability. Explore practical methods for reducing Days Sales Outstanding (DSO), optimizing inventory, and leveraging institutional networking solutions.",
+        content: `
+          <h2>The Paradox of the Profitable But Cash-Poor Enterprise</h2>
+          <p>
+            It is one of the most frustrating dilemmas faced by ambitious SME founders: sales are setting records, the P&L statement shows robust net profits, yet payroll week brings severe anxiety and vendor checks are delayed.
+          </p>
+          <p>
+            The reason is the <strong>Cash Conversion Cycle (CCC)</strong>. In rapid growth phases, businesses must fund raw materials, manufacturing, and inventory long before enterprise clients clear invoices. When customer credit terms stretch from 30 days to 90 or 120 days, growing sales inadvertently consume liquid reserves.
+          </p>
+
+          <div class="highlight-box">
+            <h3 class="text-gray-900 text-base font-bold mb-1"><i class="fas fa-sync-alt text-[#CBBA4F] mr-2"></i>Formula: Cash Conversion Cycle (CCC)</h3>
+            <p class="text-sm text-gray-700 mb-0">
+              <strong>CCC = Days Inventory Outstanding (DIO) + Days Sales Outstanding (DSO) – Days Payable Outstanding (DPO)</strong>. Minimizing this cycle is the fastest way to generate free cash flow without taking on dilutive equity.
+            </p>
+          </div>
+
+          <h2>4 Tactical Moves to Free Up Locked Capital</h2>
+          <ol>
+            <li>
+              <strong>Invoice Discounting & TReDS Integration:</strong><br>
+              Instead of waiting 90 days for corporate clients to settle receivables, SMEs can leverage trade financing platforms to discount accepted invoices and receive 85-90% upfront cash within 48 hours at competitive annualized interest rates.
+            </li>
+            <li>
+              <strong>Structured Vendor Terms:</strong><br>
+              Align your vendor payment schedules with your customer inflow cycles. Request volume rebates or early-settlement discounts only when your cash position supports it.
+            </li>
+            <li>
+              <strong>Replacing High-Cost Unsecured Credit:</strong><br>
+              Many founders plug short-term liquidity holes using expensive merchant cash advances or high-interest personal loans. Transitioning these into structured corporate debt facilities reduces monthly debt servicing by 30-40%.
+            </li>
+            <li>
+              <strong>The 13-Week Rolling Cash Flow Forecast:</strong><br>
+              Never rely on monthly accounting statements for operational decisions. A rolling 13-week cash forecast gives executive leadership direct visibility into upcoming liquidity troughs 6 weeks before they occur.
+            </li>
+          </ol>
+
+          <blockquote>
+            "Revenue is vanity, profit is sanity, but cash flow is king. Sustainable scale occurs when operational growth is backed by disciplined liquidity management."
+          </blockquote>
+        `
+      },
+      {
+        id: "blog-6",
+        title: "The Compounding Flywheel: 5 Uncommon Habits of Financially Independent Individuals",
+        slug: "compounding-flywheel-financial-independence",
+        category: "Wealth & Investment",
+        date: "Oct 02, 2026",
+        readTime: "5 min read",
+        externalUrl: "https://dev.to/capital_box/the-compounding-flywheel-5-uncommon-habits-of-financially-elite-investors-20d5",
+        platform: "Dev.to",
+        author: {
+          name: "The Capital Box Research Desk",
+          role: "Wealth & Market Intelligence",
+          initials: "CB"
+        },
+        image: "public/assets/home-real-02.webp",
+        summary: "Financial independence is not about timing market tops; it is about systematic habits that harness the mathematics of compounding. Learn the five principles practiced by our top wealth advisory clients.",
+        content: `
+          <h2>Building Wealth with Intention: The Long Horizon</h2>
+          <p>
+            The media frequently highlights overnight startup fortunes and viral crypto wins, creating the dangerous illusion that building wealth requires extraordinary luck or speculative timing.
+          </p>
+          <p>
+            In truth, the overwhelming majority of lasting wealth is built quietly, predictably, and methodically through what Charlie Munger called the "relentless discipline of compound interest."
+          </p>
+
+          <h2>The 5 Core Disciplines of the Financially Free</h2>
+
+          <h3>1. The Step-Up SIP Framework</h3>
+          <p>
+            Starting a Systematic Investment Plan (SIP) is great, but maintaining a flat ₹20,000 monthly investment for 10 years fails to capitalize on your rising income. By implementing an annual <strong>10% Step-Up SIP</strong>, your wealth accumulation pace nearly doubles over a 15-year horizon compared to static contributions.
+          </p>
+
+          <h3>2. Defense Before Offense: The 6-Month Moat</h3>
+          <p>
+            High earners often keep all their funds invested in illiquid or high-risk assets. When market corrections or career transitions occur, they are forced to sell stocks at rock-bottom prices. Financially secure individuals maintain a dedicated 6-to-9-month liquid reserve that acts as a psychological buffer, enabling them to stay calm during market panics.
+          </p>
+
+          <h3>3. Decoupling Ego from Consumption</h3>
+          <p>
+            Morgan Housel famously wrote: <em>"Spending money to show people how much money you have is the fastest way to have less money."</em> The greatest accelerator of financial independence is intentionally widening the gap between what you earn and what you consume as your career progresses.
+          </p>
+
+          <h3>4. Tax-Loss Harvesting and Reinvestment Automation</h3>
+          <p>
+            Savvy investors review their portfolios prior to fiscal year ends, offsetting realized short-term and long-term gains with eligible paper losses. More importantly, all dividends and bonuses are automated to reinvest immediately rather than sitting idle in checking accounts.
+          </p>
+
+          <h3>5. Partnering with Fiduciary Advisors</h3>
+          <p>
+            Managing complex assets, cross-border tax compliance, generational succession, and estate documentation requires specialized expertise. Aligning with an advisor whose incentives match your family's lasting peace of mind is the ultimate safeguard of generational wealth.
+          </p>
+        `
+      }
+    ];
+
+    let currentCategory = "all";
+    let currentSearchQuery = "";
+
+    function renderBlogCards() {
+      const container = document.getElementById("blogsGrid");
+      const noResults = document.getElementById("noResultsState");
+      const filterLabel = document.getElementById("activeFilterLabel");
+      const featuredSec = document.getElementById("featuredArticleSection");
+
+      container.innerHTML = "";
+
+      // Hide or show featured section based on filter or search
+      if (currentCategory !== "all" || currentSearchQuery.trim() !== "") {
+        featuredSec.style.display = "none";
+      } else {
+        featuredSec.style.display = "block";
+      }
+
+      const filtered = blogsData.filter(blog => {
+        // If showing all without search, skip blog-1 in grid since it's in featured
+        if (currentCategory === "all" && !currentSearchQuery.trim() && blog.id === "blog-1") {
+          return false;
+        }
+
+        const matchesCategory = currentCategory === "all" || blog.category === currentCategory;
+        const query = currentSearchQuery.toLowerCase().trim();
+        const matchesSearch = !query ||
+          blog.title.toLowerCase().includes(query) ||
+          blog.summary.toLowerCase().includes(query) ||
+          blog.category.toLowerCase().includes(query) ||
+          blog.author.name.toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.style.display = "none";
+        noResults.classList.remove("hidden");
+        filterLabel.textContent = `0 articles found`;
+        return;
+      }
+
+      container.style.display = "grid";
+      noResults.classList.add("hidden");
+      const totalCount = (currentCategory === "all" && !currentSearchQuery.trim()) ? blogsData.length : filtered.length;
+      filterLabel.textContent = `Showing ${totalCount} of ${blogsData.length} articles`;
+
+      filtered.forEach((blog) => {
+        const card = document.createElement(blog.externalUrl ? "a" : "article");
+        card.className = "blog-card-item";
+        if (blog.externalUrl) {
+          card.href = blog.externalUrl;
+          card.target = "_blank";
+          card.rel = "noopener noreferrer";
+        } else {
+          card.setAttribute("onclick", `openBlogModal('${blog.id}')`);
+        }
+
+        const readLabel = "Read";
+        const readIcon = `<i class="fas fa-external-link-alt text-[10px] ml-1"></i>`;
+
+        card.innerHTML = `
+          <div>
+            <div class="blog-card-thumb-wrap">
+              <img src="${blog.image}" alt="${blog.title}" class="blog-card-thumb" loading="lazy" />
+              <span class="blog-card-badge">
+                ${blog.category}
+              </span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="far fa-calendar-alt text-[#CBBA4F]" style="margin-right: 8px !important;"></i> ${blog.date}</span>
+                <span>•</span>
+                <span><i class="far fa-clock text-[#CBBA4F]" style="margin-right: 6px !important;"></i> ${blog.readTime}</span>
+              </div>
+              <h3 class="blog-card-title-text">
+                ${blog.title}
+              </h3>
+              <p class="blog-card-desc">
+                ${blog.summary}
+              </p>
+            </div>
+          </div>
+          <div class="blog-card-foot">
+            <div class="author-pill">
+              <div class="author-circle">
+                ${blog.author.initials}
+              </div>
+              <div>
+                <div class="author-txt-name">${blog.author.name}</div>
+                <div class="author-txt-role">${blog.author.role}</div>
+              </div>
+            </div>
+            <span class="read-more-link">
+              Read <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+            </span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function setupFilterListeners() {
+      const pills = document.querySelectorAll(".filter-pill");
+      pills.forEach(pill => {
+        pill.addEventListener("click", () => {
+          pills.forEach(p => p.classList.remove("active"));
+          pill.classList.add("active");
+          currentCategory = pill.getAttribute("data-category");
+          renderBlogCards();
+        });
+      });
+
+      const searchInput = document.getElementById("blogSearchInput");
+      const clearBtn = document.getElementById("clearSearchBtn");
+
+      searchInput.addEventListener("input", (e) => {
+        currentSearchQuery = e.target.value;
+        if (currentSearchQuery.length > 0) {
+          clearBtn.classList.remove("hidden");
+        } else {
+          clearBtn.classList.add("hidden");
+        }
+        renderBlogCards();
+      });
+
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        currentSearchQuery = "";
+        clearBtn.classList.add("hidden");
+        renderBlogCards();
+        searchInput.focus();
+      });
+    }
+
+    function resetFilters() {
+      currentCategory = "all";
+      currentSearchQuery = "";
+      document.getElementById("blogSearchInput").value = "";
+      document.getElementById("clearSearchBtn").classList.add("hidden");
+      document.querySelectorAll(".filter-pill").forEach(p => {
+        p.classList.toggle("active", p.getAttribute("data-category") === "all");
+      });
+      renderBlogCards();
+    }
+
+    function openBlogModal(blogId) {
+      const blog = blogsData.find(b => b.id === blogId);
+      if (!blog) return;
+
+      document.getElementById("modalCategoryBadge").textContent = blog.category;
+      document.getElementById("modalReadTime").innerHTML = `<i class="far fa-clock text-[#CBBA4F]" style="margin-right: 6px !important;"></i> ${blog.readTime}`;
+      document.getElementById("modalBlogTitle").textContent = blog.title;
+      document.getElementById("modalAuthorName").textContent = blog.author.name;
+      document.getElementById("modalAuthorRole").textContent = blog.author.role;
+      document.getElementById("modalAuthorAvatar").textContent = blog.author.initials;
+      document.getElementById("modalPublishDate").innerHTML = `<i class="far fa-calendar-alt text-[#CBBA4F]" style="margin-right: 8px !important;"></i> ${blog.date}`;
+      document.getElementById("modalCoverImage").src = blog.image;
+      document.getElementById("modalCoverImage").alt = blog.title;
+      document.getElementById("modalArticleBody").innerHTML = blog.content;
+
+      // External link button in modal header
+      const extHeaderBtn = document.getElementById("modalExternalHeaderBtn");
+      const extHeaderTxt = document.getElementById("modalExternalHeaderTxt");
+      if (blog.externalUrl) {
+        extHeaderBtn.href = blog.externalUrl;
+        extHeaderTxt.textContent = 'Read';
+        extHeaderBtn.classList.remove("hidden");
+        extHeaderBtn.classList.add("inline-flex");
+      } else {
+        extHeaderBtn.classList.add("hidden");
+        extHeaderBtn.classList.remove("inline-flex");
+      }
+
+      const modal = document.getElementById("blogArticleModal");
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+
+      // Set URL Hash for shareability
+      window.location.hash = blog.id;
+    }
+
+    function closeBlogModal() {
+      const modal = document.getElementById("blogArticleModal");
+      modal.classList.add("hidden");
+      document.body.style.overflow = "auto";
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
+    function shareArticle(platform) {
+      const currentUrl = window.location.href;
+      const title = encodeURIComponent(document.getElementById("modalBlogTitle").textContent);
+      if (platform === 'twitter') {
+        window.open(`https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(currentUrl)}`, '_blank');
+      } else if (platform === 'linkedin') {
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`, '_blank');
+      }
+    }
+
+    function copyArticleLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        const btn = document.getElementById("copyLinkBtn");
+        btn.innerHTML = `<i class="fas fa-check text-green-500"></i>`;
+        setTimeout(() => {
+          btn.innerHTML = `<i class="fas fa-link"></i>`;
+        }, 2000);
+      });
+    }
+
+    // Close modal on Escape or backdrop click
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeBlogModal();
+    });
+
+    document.getElementById("blogArticleModal").addEventListener("click", (e) => {
+      if (e.target.id === "blogArticleModal") closeBlogModal();
+    });
+
+    // Check URL Hash on load to directly open modal
+    window.addEventListener("DOMContentLoaded", () => {
+      renderBlogCards();
+      setupFilterListeners();
+
+      if (window.location.hash) {
+        const hashId = window.location.hash.replace("#", "");
+        if (blogsData.some(b => b.id === hashId)) {
+          openBlogModal(hashId);
+        }
+      }
+    });
+  </script>
+
+  <!-- Include existing site scripts for smooth navbar and scroll effects -->
+  <script src="main.js"></script>
+  <script src="editorial.js?v=4" defer></script>
+</body>
+
+</html>
